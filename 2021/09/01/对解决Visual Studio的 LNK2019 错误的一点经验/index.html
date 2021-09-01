@@ -15,13 +15,15 @@
 
 
 
+<meta name="description" content="解决Visual Studio的 LNK2019 和 LNK1120 错误问题描述写了一个 text searching 的代码。该代码设计了数个类，并有一个 interface class 通过指向 base class 的 shared_ptr 通过 dynamic binding 来运行。然而结构设计的不是特别好，这也就导致我遇到了下面的问题：  interface class header">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test_my_site">
-<meta property="og:url" content="http://example.com/2021/09/01/test-my-site/index.html">
+<meta property="og:title" content="coding过程中踩过的坑（一）">
+<meta property="og:url" content="http://example.com/2021/09/01/%E5%AF%B9%E8%A7%A3%E5%86%B3Visual%20Studio%E7%9A%84%20LNK2019%20%E9%94%99%E8%AF%AF%E7%9A%84%E4%B8%80%E7%82%B9%E7%BB%8F%E9%AA%8C/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="解决Visual Studio的 LNK2019 和 LNK1120 错误问题描述写了一个 text searching 的代码。该代码设计了数个类，并有一个 interface class 通过指向 base class 的 shared_ptr 通过 dynamic binding 来运行。然而结构设计的不是特别好，这也就导致我遇到了下面的问题：  interface class header">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-09-01T11:45:37.000Z">
-<meta property="article:modified_time" content="2021-09-01T11:45:37.428Z">
+<meta property="article:published_time" content="2021-09-01T13:17:21.039Z">
+<meta property="article:modified_time" content="2021-09-01T13:19:16.707Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -57,7 +59,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>test_my_site | Hexo</title>
+<title>coding过程中踩过的坑（一） | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -97,7 +99,7 @@
 <div class="intrude-less">
     <header id="header" class="inner">
         <a href="/" class="profilepic">
-            <img src="/img/avatar.png" class="animated zoomIn">
+            <img src="/img/QQ图片20210901210637.jpg" class="animated zoomIn">
         </a>
         <hgroup>
           <h1 class="header-author"><a href="/"></a></h1>
@@ -156,7 +158,7 @@
                     <nav class="header-menu">
                         <ul>
                         
-                            <li><a href="/">主页</a></li>
+                            <li><a href="/archives/">主页</a></li>
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
@@ -222,7 +224,7 @@
     <div class="intrude-less">
         <header id="header" class="inner">
             <a href="/" class="profilepic">
-                <img src="/img/avatar.png" class="animated zoomIn">
+                <img src="/img/QQ图片20210901210637.jpg" class="animated zoomIn">
             </a>
             <hgroup>
               <h1 class="header-author"><a href="/" title="回到主页"></a></h1>
@@ -231,7 +233,7 @@
             <nav class="header-menu">
                 <ul>
                 
-                    <li><a href="/">主页</a></li>
+                    <li><a href="/archives/">主页</a></li>
                 
                     <li><a href="/archives/">所有文章</a></li>
                 
@@ -257,11 +259,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-test-my-site" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-对解决Visual Studio的 LNK2019 错误的一点经验" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2021/09/01/test-my-site/" class="article-date">
-      <time datetime="2021-09-01T11:45:37.000Z" itemprop="datePublished">2021-09-01</time>
+      <a href="/2021/09/01/%E5%AF%B9%E8%A7%A3%E5%86%B3Visual%20Studio%E7%9A%84%20LNK2019%20%E9%94%99%E8%AF%AF%E7%9A%84%E4%B8%80%E7%82%B9%E7%BB%8F%E9%AA%8C/" class="article-date">
+      <time datetime="2021-09-01T13:17:21.039Z" itemprop="datePublished">2021-09-01</time>
 </a>
 
 
@@ -276,7 +278,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      test_my_site
+      coding过程中踩过的坑（一）
     </h1>
   
 
@@ -293,7 +295,41 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h1 id="解决Visual-Studio的-LNK2019-和-LNK1120-错误"><a href="#解决Visual-Studio的-LNK2019-和-LNK1120-错误" class="headerlink" title="解决Visual Studio的 LNK2019 和 LNK1120 错误"></a>解决Visual Studio的 LNK2019 和 LNK1120 错误</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>写了一个 text searching 的代码。该代码设计了数个类，并有一个 interface class 通过指向 base class 的 shared_ptr 通过 dynamic binding 来运行。然而结构设计的不是特别好，这也就导致我遇到了下面的问题：</p>
+<blockquote>
+<p>interface class header file：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="keyword">const</span> QueryResult &amp;);</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>interface class source file</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;os, <span class="keyword">const</span> QueryResult &amp;query) &#123;</span><br><span class="line">	<span class="comment">// details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>base class header file, which is included by interface class header file</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">QueryResult</span> &#123;</span></span><br><span class="line">		<span class="comment">//下面的语句是错误来源</span></span><br><span class="line">		<span class="keyword">friend</span> <span class="keyword">inline</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="keyword">const</span> QueryResult &amp;);</span><br><span class="line">		<span class="comment">//details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>接着在尝试运行时就发现了 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk2019?f1url=?appId=Dev16IDEF1&l=ZH-CN&k=k(LNK2019)&rd=true&view=msvc-160">LNK2019</a> 和 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk1120?f1url=?appId=Dev16IDEF1&l=ZH-CN&k=k(LNK1120)&rd=true&view=msvc-160">LNK1120</a> 错误。以下为错误描述：</p>
+<blockquote>
+<p>无法解析的外部符号 “class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp; __cdecl operator&lt;&lt;(class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp;,class QueryResult const &amp;)” (??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVQueryResult@@@Z)，函数 main 中引用了该符号    </p>
+</blockquote>
+<h2 id="尝试分析"><a href="#尝试分析" class="headerlink" title="尝试分析"></a>尝试分析</h2><p>根据错误描述，可以锁定错误出自上面的第一行代码。Visual Studio给出的错误是无法解析，这样一个错误描述有些宽泛，放到 dev cpp 里就会好得多，它的错误提示长下面这样子：</p>
+<blockquote>
+<p>[警告] inline 函数 ‘std::ostream&amp; 运算符&lt;&lt;(std::ostream&amp;, const QueryResult&amp;)’ used but never defined</p>
+</blockquote>
+<p>然而我一开始并没有用 dev ，而是自己看 web 调了半天，还找了我的两个同学帮我看了一下。他们的解决方案是把 source file 给 include 进来（这也让我有点吃惊，为什么大二的计科同学会没有 package 的概念）。这样的方案我显然没办法满意，我无法理解，为什么编译器会找不到一个已经 declaration 并且 defining 的函数。出于这种疑惑，我友善地提醒了一下编译器——产生了我的第一个解决方案：</p>
+<blockquote>
+<p>interface class header file：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="keyword">const</span> QueryResult &amp;);</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>不得不说vs的 CMake 编译器是真的强大，加个 extern 就能联想到同名的inline函数。如果我没有写这个blog的话，我也许会沾沾自喜于这个解决方案并且依然想破头皮都想不明白为什么会出现这种错误。直到我为了验证这个错误用 dev 上又跑了一遍。我的 dev 编译器是 g++ （版本我也不是很清楚，小白都是一键装环境的），没有这么智能，很实诚地提醒了我。由于 operator&lt;&lt; 函数需要调用 QueryResult object 的 members ，再加上这个函数最开始是在base_Query.h 里 declaration 的，且我的 Query.h has included the base_Query.h，所以编译器找到了 inline 版本的 declaration ，而很不幸，这个函数我没有定义。于是，我得到了第二个解决方案：</p>
+<blockquote>
+<p>base class header file, which is included by interface class header file</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">QueryResult</span> &#123;</span></span><br><span class="line">		<span class="comment">//该文件前面的 declaration 也要改</span></span><br><span class="line">		<span class="keyword">friend</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="keyword">const</span> QueryResult &amp;);</span><br><span class="line">		<span class="comment">//details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>顺便提一下我的下一个问题：为什么我会在 base_Query.h 里加上 inline 并且在后面的文件里忘记呢？</p>
+<p>此事说来话长。我的C++是从《C++ Primer》入门的。在这本书里， Lippman 很细致地讲述了 inline 的作用（也就是没啥作用），但他的示例代码里还是会习惯性地带上 inline ，这个习惯也影响到了我。事实上，我原来的 source file 里全部加了 inline declaration ，这使得我一开始遇到的错误比现在多得多——也同样因为这个原因，我只有将 interface class source file 也 include 进来才能工作。后来一个同学在 STFW （Searching The Fucking Web）后告诉我分离式编程不能使用 inline 。然后这个函数是唯一一个声明了两次的函数，所以被我忘记了（笑）。</p>
+<p>关于为什么分离式编程不能使用inline可以看<a target="_blank" rel="noopener" href="https://www.cnblogs.com/GodA/p/6554591.html">这里</a>，这个作者讲得非常细致。也希望我有一天能够变成这样的内容输出者。</p>
+
       
     </div>
     
@@ -301,13 +337,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2021/09/01/test-my-site/">test_my_site</a></p>
+        <p><span>Title:</span><a href="/2021/09/01/%E5%AF%B9%E8%A7%A3%E5%86%B3Visual%20Studio%E7%9A%84%20LNK2019%20%E9%94%99%E8%AF%AF%E7%9A%84%E4%B8%80%E7%82%B9%E7%BB%8F%E9%AA%8C/">coding过程中踩过的坑（一）</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage"></a></p>
-        <p><span>Created:</span>2021-09-01, 04:45:37</p>
-        <p><span>Updated:</span>2021-09-01, 04:45:37</p>
+        <p><span>Created:</span>2021-09-01, 06:17:21</p>
+        <p><span>Updated:</span>2021-09-01, 06:19:16</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2021/09/01/test-my-site/" title="test_my_site">http://example.com/2021/09/01/test-my-site/</a>
-            <span class="copy-path" data-clipboard-text="From http://example.com/2021/09/01/test-my-site/　　By " title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2021/09/01/%E5%AF%B9%E8%A7%A3%E5%86%B3Visual%20Studio%E7%9A%84%20LNK2019%20%E9%94%99%E8%AF%AF%E7%9A%84%E4%B8%80%E7%82%B9%E7%BB%8F%E9%AA%8C/" title="coding过程中踩过的坑（一）">http://example.com/2021/09/01/%E5%AF%B9%E8%A7%A3%E5%86%B3Visual%20Studio%E7%9A%84%20LNK2019%20%E9%94%99%E8%AF%AF%E7%9A%84%E4%B8%80%E7%82%B9%E7%BB%8F%E9%AA%8C/</a>
+            <span class="copy-path" data-clipboard-text="From http://example.com/2021/09/01/%E5%AF%B9%E8%A7%A3%E5%86%B3Visual%20Studio%E7%9A%84%20LNK2019%20%E9%94%99%E8%AF%AF%E7%9A%84%E4%B8%80%E7%82%B9%E7%BB%8F%E9%AA%8C/　　By " title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -321,8 +357,8 @@
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2021/09/01/hello-world/">
-                    Hello World
+                <a href="/2021/09/01/C++%20Learning%20notes_2/">
+                    C++ learning notes 2
                 </a>
             </div>
         
@@ -334,7 +370,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3Visual-Studio%E7%9A%84-LNK2019-%E5%92%8C-LNK1120-%E9%94%99%E8%AF%AF"><span class="toc-number">1.</span> <span class="toc-text">解决Visual Studio的 LNK2019 和 LNK1120 错误</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E5%88%86%E6%9E%90"><span class="toc-number">1.2.</span> <span class="toc-text">尝试分析</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -370,7 +406,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"test_my_site　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"coding过程中踩过的坑（一）　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -396,13 +432,13 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2021/09/01/hello-world/" title="Next: Hello World">
+            <a href="/2021/09/01/C++%20Learning%20notes_2/" title="Next: C++ learning notes 2">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/09/01/test-my-site/">test_my_site</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/01/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/09/01/%E5%AF%B9%E8%A7%A3%E5%86%B3Visual%20Studio%E7%9A%84%20LNK2019%20%E9%94%99%E8%AF%AF%E7%9A%84%E4%B8%80%E7%82%B9%E7%BB%8F%E9%AA%8C/">coding过程中踩过的坑（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/01/C++%20Learning%20notes_2/">C++ learning notes 2</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/01/C++%20Learning%20notes_3/">C++ learning notes 3</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/01/C++%20learning%20notes/">C++ learning notes 1</a></li></ul>
 
 
 
@@ -456,7 +492,7 @@
                 $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
             }
             else {
-                var backgroundnum = 5;
+                var backgroundnum = 3;
                 var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="John Doe" />
+
+
+
+<meta name="description" content="[TOC] C++ learning notestemplate1234567891011121314151617181920212223242526272829303132333435template &lt;typename T&gt; &#x2F;&#x2F;key word:template  					  &#x2F;&#x2F;&lt;template T&gt; is template parameter list">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++ learning notes 3">
+<meta property="og:url" content="http://example.com/2021/09/01/C++%20Learning%20notes_3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[TOC] C++ learning notestemplate1234567891011121314151617181920212223242526272829303132333435template &lt;typename T&gt; &#x2F;&#x2F;key word:template  					  &#x2F;&#x2F;&lt;template T&gt; is template parameter list">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-01T12:54:39.340Z">
+<meta property="article:modified_time" content="2021-09-01T13:17:52.991Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>C++ learning notes 3 | Hexo</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: 
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/QQ图片20210901210637.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/"></a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>Menu</li>
+                        <li>Tags</li>
+                        
+                        <li>Friends</li>
+                        
+                        
+                        <li>About Me</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/archives/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" target="_blank" rel="noopener" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页"></a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/QQ图片20210901210637.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页"></a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap"><article id="post-C++ Learning notes_3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2021/09/01/C++%20Learning%20notes_3/" class="article-date">
+      <time datetime="2021-09-01T12:54:39.340Z" itemprop="datePublished">2021-09-01</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C++ learning notes 3
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>[TOC]</p>
+<h1 id="C-learning-notes"><a href="#C-learning-notes" class="headerlink" title="C++ learning notes"></a>C++ learning notes</h1><h2 id="template"><a href="#template" class="headerlink" title="template"></a>template</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="comment">//key word:template</span></span><br><span class="line">  					  <span class="comment">//&lt;template T&gt; is template parameter list</span></span><br><span class="line">					  <span class="comment">//template parameters are divided by comma</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">*moerover, key word typename is the same with key word class in this situation</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">const</span> T&amp; v1, <span class="keyword">const</span> T&amp; v2)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (v1 &gt; v2) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (v2 &lt; v1) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//type parameter can be used as return type or parameter type</span></span><br><span class="line"><span class="comment">//it can be used as variables declaration and type translation, as well</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function">T <span class="title">foo</span><span class="params">(T* p)</span> </span>&#123;</span><br><span class="line">	T tmp = *p;</span><br><span class="line">	<span class="comment">//omitted details</span></span><br><span class="line">	<span class="keyword">return</span> T;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">*we can define nontype parameter and the parameter&#x27;s value is provided by</span></span><br><span class="line"><span class="comment">*clients or compiler</span></span><br><span class="line"><span class="comment">*in this case, compiler provide nontype parameters int values depends on</span></span><br><span class="line"><span class="comment">*const char array&#x27;s length</span></span><br><span class="line"><span class="comment">*nontype parameter can be int, object/function pointer or lvalue reference</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">unsigned</span> N, <span class="keyword">unsigned</span> M&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> (&amp;p1)[N], <span class="keyword">const</span> <span class="keyword">char</span> (&amp;p2)[M])</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">strcmp</span>(p1,p2);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">*template can be declared as inline or constexpr</span></span><br><span class="line"><span class="comment">*this declaration should be put between template parameter list and return type</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> T <span class="title">min</span><span class="params">(<span class="keyword">const</span> T&amp;, <span class="keyword">const</span> T&amp;)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>principle</strong>: template function’s parameters are supposed to be const reference, which guarantees non-copyable object’s availability.</p>
+<p>if we want to define a class member function out of the class body, it’s type should be:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt;</span><br><span class="line"><span class="keyword">return</span>-type class-name::member-<span class="built_in">name</span>(parameter-list) &#123;function-bod&#125;</span><br></pre></td></tr></table></figure>
+
+<p>By default, template class’ member function is instantiated when it is called, which help us to use a template class even though there are some member function incompatible with a type, we can use part of class functions.</p>
+<h3 id="friend-declaration"><a href="#friend-declaration" class="headerlink" title="friend declaration"></a>friend declaration</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//friend declaration</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="class"><span class="keyword">class</span> <span class="title">Pal</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span> &#123;</span></span><br><span class="line">	<span class="keyword">friend</span> <span class="class"><span class="keyword">class</span> <span class="title">Pal</span>&lt;</span>C&gt;; <span class="comment">//Pal instantiated by class C is a friend</span></span><br><span class="line">	<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">friend</span> <span class="class"><span class="keyword">class</span> <span class="title">Pal2</span>;</span> <span class="comment">//each instantiated Pal2 is C&#x27;s friend</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="class"><span class="keyword">class</span> <span class="title">C2</span> &#123;</span></span><br><span class="line">	<span class="keyword">friend</span> <span class="class"><span class="keyword">class</span> <span class="title">Pal</span>&lt;</span>T&gt;;</span><br><span class="line">	<span class="keyword">template</span> &lt;<span class="keyword">typename</span> X&gt; <span class="keyword">friend</span> <span class="class"><span class="keyword">class</span> <span class="title">Pal2</span>;</span><span class="comment">//each instantiated Pal2 is each instantiated C2&#x27;s friend</span></span><br><span class="line">									   <span class="comment">//notice: friend&#x27;s typename should be different from template class&#x27;</span></span><br><span class="line">	<span class="keyword">friend</span> <span class="class"><span class="keyword">class</span> <span class="title">Pal3</span>;</span> <span class="comment">//Pal3 is a non-template class, every instantiated C2 is Pal3&#x27;s friend</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//let template&#x27;s typename as friend</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;<span class="class"><span class="keyword">class</span> <span class="title">C3</span> &#123;</span></span><br><span class="line">	<span class="keyword">friend</span> T; <span class="comment">//type T is friend of C3 instantiated by T</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>if a template class contains static members, each type instantiated class has its own static members.</p>
+<p>if we access a type name from a template class, we need to use the key word <strong>typename</strong> to explicitly ask compiler treats the name as a type name.</p>
+<p>we can define default template argument, like code below.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> F = less&lt;T&gt;&gt;</span><br><span class="line"><span class="keyword">int</span> <span class="built_in">compare</span>(<span class="keyword">const</span> T&amp; v1, <span class="keyword">const</span> T&amp; v2, F f=<span class="built_in">F</span>())&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">f</span>(v1,v2)) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">f</span>(v2,v1)) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//even if all the parameters of a template&#x27;s typename parameter list is default argued</span></span><br><span class="line"><span class="comment">//we have to use angle brackets to ask compiler instantiate a class from a template</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = <span class="keyword">int</span>&gt; class tmp_array&#123;<span class="comment">/*details*/</span>&#125;;</span><br><span class="line">tmp_array&lt;&gt; a;</span><br></pre></td></tr></table></figure>
+
+<p>Besides, it is known that once we define a template class’ type, compiler instantiates a class instance. But this activity faces an embarrassing situation. Once we create a project and use template class with the same type in different file, the compiler will instantiates several instances in each file. Which may be a mass overhead. We can use the key word <strong>extern</strong> to declare a class to prevent from such overhead.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="keyword">template</span> <span class="class"><span class="keyword">class</span> <span class="title">Blob</span>&lt;</span>string&gt;;				<span class="comment">//declaration</span></span><br><span class="line"><span class="function"><span class="keyword">template</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>&amp;, <span class="keyword">const</span> <span class="keyword">int</span>&amp;)</span></span>;	<span class="comment">//definition</span></span><br><span class="line">												<span class="comment">//in this case, compiler will instantiates the whole members</span></span><br><span class="line">												<span class="comment">//thus the type must apply to every member</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Blob&lt;string&gt; sa1, sa2; <span class="comment">//compiler instantiates class in other file</span></span><br><span class="line">					    <span class="comment">//Thus key word extern expresses that there is a definition in our project</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>and if we can’t make sure what the return type definitely is, we can use the tail-set return to declare function’s return type</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//using tail-set return to explicitly declare function&#x27;s return type</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> It&gt;</span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">fcn</span><span class="params">(It beg, It end)</span> -&gt; <span class="title">decltype</span><span class="params">(*beg)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//details</span></span><br><span class="line">	<span class="keyword">return</span> *beg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="reference-collapsing"><a href="#reference-collapsing" class="headerlink" title="reference collapsing:"></a>reference collapsing:</h3><blockquote>
+<p>X&amp; &amp;, X&amp; &amp;&amp;, X&amp;&amp; &amp; will collapse to X&amp;</p>
+<p>X&amp;&amp; &amp;&amp; will be collapse to X&amp;&amp;</p>
+</blockquote>
+<p>By define a parameter as an rvalue reference, we can save all of argument’s type-info. By using reference, we can save the const-info. By define parameters as rvalue references, we can use reference collapsing to save arguments’ reference characteristic.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> F,<span class="keyword">typename</span> T1, <span class="keyword">typename</span> T2&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">flip</span><span class="params">(F f, T1 &amp;&amp;t1, T2 &amp;&amp;t2)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">f</span>(t1, t2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>However, function expression returns an lvalue, which restrict us from binding an rvalue reference to an rvalue reference. In this case, we need to use the lib function <strong>std::forward</strong>, which is defined in lib <em>utility</em>, to save the reference type(by using the reference collapsing). Thus, we modifies the original code to the below one</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> F,<span class="keyword">typename</span> T1, <span class="keyword">typename</span> T2&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">flip</span><span class="params">(F f, T1 &amp;&amp;t1, T2 &amp;&amp;t2)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">f</span>(std::forward&lt;T1&gt;(t1), std::forward&lt;T2&gt;(t2));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>When we overload a template function, compiler will chose the more specialized one. Thus if we define a template function</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="function">string <span class="title">func</span><span class="params">(T &amp;a)</span> </span>&#123;<span class="comment">/*details*/</span>&#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="function">string <span class="title">func</span><span class="params">(T *a)</span> </span>&#123;<span class="comment">/*details*/</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>and we hope the compiler may cope with <em>char</em> &amp; <em>const char</em> as <em>string</em>, we need to define two specialized overloaded function</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">string <span class="title">func</span><span class="params">(<span class="keyword">const</span> string&amp;)</span></span>; <span class="comment">//declare a string type instance to avoid from default call </span></span><br><span class="line"><span class="function">string <span class="title">func</span><span class="params">(<span class="keyword">char</span> *p)</span> </span>&#123;<span class="keyword">return</span> <span class="built_in">func</span>(<span class="built_in">string</span>(p));&#125;</span><br><span class="line"><span class="function">string <span class="title">func</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *p)</span> </span>&#123;<span class="keyword">return</span> <span class="built_in">func</span>(<span class="built_in">string</span>(p));&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="parameter-packet"><a href="#parameter-packet" class="headerlink" title="parameter packet"></a>parameter packet</h3><p>we use symbol <strong>…</strong> after keyword <em>typename</em> or <em>class</em> to express indefinite number of parameters  </p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Args is a template parameter packet, rest is a function parameter packet</span></span><br><span class="line"><span class="comment">//Args means zero or several template parameters</span></span><br><span class="line"><span class="comment">//rest means zero or several function parameters</span></span><br><span class="line"><span class="comment">//types in packet can be different from each other</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">foo</span><span class="params">(<span class="keyword">const</span> T &amp;t, <span class="keyword">const</span> Args&amp;... rest)</span></span>&#123;</span><br><span class="line">    cout&lt;&lt;T&lt;&lt;<span class="string">&quot;\t&quot;</span>;</span><br><span class="line">    <span class="built_in">print</span>(cout, rest)...;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>we can use <strong>sizeof</strong> to calculate the number of parameters in the packet</p>
+<p><strong>call packet parameters</strong>:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//end the recursion and print the last element</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function">ostream &amp;<span class="title">print</span><span class="params">(ostream &amp;os, <span class="keyword">const</span> T &amp;t)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> os &lt;&lt; t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//recursion call</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</span><br><span class="line"><span class="function">ostream &amp;<span class="title">print</span><span class="params">(ostream &amp;os, <span class="keyword">const</span> T &amp;t, <span class="keyword">const</span> Args&amp;... rest)</span> </span>&#123;</span><br><span class="line">	os &lt;&lt; t &lt;&lt; <span class="string">&quot;\t&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">print</span>(os, rest...);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">double</span> d = <span class="number">2.0</span>;</span><br><span class="line">	<span class="keyword">long</span> l = <span class="number">321</span>;</span><br><span class="line">	string s = <span class="string">&quot;hello world!&quot;</span>;</span><br><span class="line">	<span class="built_in">foo</span>(cout, i, d, l, s);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//output:1       2       321     hello world!</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="specialize"><a href="#specialize" class="headerlink" title="specialize"></a>specialize</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//specialize</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">const</span> T &amp;, <span class="keyword">const</span> T &amp;)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">size_t</span> N, <span class="keyword">size_t</span> M&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>(&amp;)[N], <span class="keyword">const</span> <span class="keyword">char</span>(&amp;)[M])</span></span>; <span class="comment">//const char(&amp;)[M] is a reference to an char array</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//a specialized instance of function compare</span></span><br><span class="line"><span class="keyword">template</span> &lt;&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *<span class="keyword">const</span> &amp;, <span class="keyword">const</span> <span class="keyword">char</span> *<span class="keyword">const</span> &amp;)</span></span>;<span class="comment">//a reference to an const (or not) pointer</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>notice</strong>: Once we need a specialized instance but forget to declare or define one, where there is a template suits to this instance’s type, the compiler will instantiate an instance. This mistake won’t be checked up. Thus we are supposed to define templates with the same name in the same header file. And put the specialized instances after those template. Certainly we need to check up whether we have declared an instance or not.</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2021/09/01/C++%20Learning%20notes_3/">C++ learning notes 3</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage"></a></p>
+        <p><span>Created:</span>2021-09-01, 05:54:39</p>
+        <p><span>Updated:</span>2021-09-01, 06:17:52</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2021/09/01/C++%20Learning%20notes_3/" title="C++ learning notes 3">http://example.com/2021/09/01/C++%20Learning%20notes_3/</a>
+            <span class="copy-path" data-clipboard-text="From http://example.com/2021/09/01/C++%20Learning%20notes_3/　　By " title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2021/09/01/C++%20Learning%20notes_2/">
+                    C++ learning notes 2
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2021/09/01/C++%20learning%20notes/">
+                    C++ learning notes 1
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-learning-notes"><span class="toc-number">1.</span> <span class="toc-text">C++ learning notes</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#template"><span class="toc-number">1.1.</span> <span class="toc-text">template</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#friend-declaration"><span class="toc-number">1.1.1.</span> <span class="toc-text">friend declaration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reference-collapsing"><span class="toc-number">1.1.2.</span> <span class="toc-text">reference collapsing:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#parameter-packet"><span class="toc-number">1.1.3.</span> <span class="toc-text">parameter packet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#specialize"><span class="toc-number">1.1.4.</span> <span class="toc-text">specialize</span></a></li></ol></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"C++ learning notes 3　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2021/09/01/C++%20Learning%20notes_2/" title="Pre: C++ learning notes 2">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2021/09/01/C++%20learning%20notes/" title="Next: C++ learning notes 1">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/09/01/%E5%AF%B9%E8%A7%A3%E5%86%B3Visual%20Studio%E7%9A%84%20LNK2019%20%E9%94%99%E8%AF%AF%E7%9A%84%E4%B8%80%E7%82%B9%E7%BB%8F%E9%AA%8C/">coding过程中踩过的坑（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/01/C++%20Learning%20notes_2/">C++ learning notes 2</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/01/C++%20Learning%20notes_3/">C++ learning notes 3</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/09/01/C++%20learning%20notes/">C++ learning notes 1</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2021 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 3;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
