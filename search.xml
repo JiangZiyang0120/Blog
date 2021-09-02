@@ -177,6 +177,13 @@
 <p>now, we need to consider this situation where we delete a derived object pointed by a base class pointer. we must ensure that the delete command executes the derived object’s destructor. So we declare the base class’ destructor as a virtual function to solve this problem. what’s more, virtual destructor will impede generating movement operation.</p>
 <p>What’s more, if we use containers to save objects, it is supposed to indirectly save it. An common usage is using pointer. Then we are able to use base class pointer calling derived objects.</p>
 ]]></content>
+      <categories>
+        <category>C++ learning</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>notes</tag>
+      </tags>
   </entry>
   <entry>
     <title>C++ learning notes 3</title>
@@ -230,6 +237,13 @@
 
 <p><strong>notice</strong>: Once we need a specialized instance but forget to declare or define one, where there is a template suits to this instance’s type, the compiler will instantiate an instance. This mistake won’t be checked up. Thus we are supposed to define templates with the same name in the same header file. And put the specialized instances after those template. Certainly we need to check up whether we have declared an instance or not.</p>
 ]]></content>
+      <categories>
+        <category>C++ learning</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>notes</tag>
+      </tags>
   </entry>
   <entry>
     <title>C++ learning notes 1</title>
@@ -323,6 +337,13 @@
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span>&#123;</span></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		<span class="function">Foo <span class="title">sorted</span><span class="params">()</span> &amp;&amp;</span>;</span><br><span class="line">		<span class="function">Foo <span class="title">sorted</span><span class="params">()</span> <span class="keyword">const</span> &amp;</span>;</span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">		vector&lt;<span class="keyword">int</span>&gt; data;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//because object is an rvalue, we can change itself without any affection</span></span><br><span class="line"><span class="function">Foo <span class="title">Foo::sorted</span><span class="params">()</span> &amp;&amp;</span>&#123; </span><br><span class="line">	<span class="built_in">sort</span>(data.<span class="built_in">begin</span>(), data.<span class="built_in">end</span>());</span><br><span class="line">	<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//object is an lvalue, thus we can&#x27;t affect its value</span></span><br><span class="line"><span class="function">Foo <span class="title">Foo::sorted</span><span class="params">()</span> <span class="keyword">const</span> &amp;</span>&#123;</span><br><span class="line">	<span class="function">Foo <span class="title">temp</span><span class="params">(*<span class="keyword">this</span>)</span></span>;</span><br><span class="line">	<span class="built_in">sort</span>(temp.data.<span class="built_in">begin</span>(), temp.data.<span class="built_in">end</span>());</span><br><span class="line">	<span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>C++ learning</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>notes</tag>
+      </tags>
   </entry>
   <entry>
     <title>coding过程中踩过的坑（一）</title>
@@ -364,5 +385,12 @@
 <p>此事说来话长。我的C++是从《C++ Primer》入门的。在这本书里， Lippman 很细致地讲述了 inline 的作用（也就是没啥作用），但他的示例代码里还是会习惯性地带上 inline ，这个习惯也影响到了我。事实上，我原来的 source file 里全部加了 inline declaration ，这使得我一开始遇到的错误比现在多得多——也同样因为这个原因，我只有将 interface class source file 也 include 进来才能工作。后来一个同学在 STFW （Searching The Fucking Web）后告诉我分离式编程不能使用 inline 。然后这个函数是唯一一个声明了两次的函数，所以被我忘记了（笑）。</p>
 <p>关于为什么分离式编程不能使用inline可以看<a href="https://www.cnblogs.com/GodA/p/6554591.html">这里</a>，这个作者讲得非常细致。也希望我有一天能够变成这样的内容输出者。</p>
 ]]></content>
+      <categories>
+        <category>coding过程中踩过的坑</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>debug</tag>
+      </tags>
   </entry>
 </search>
