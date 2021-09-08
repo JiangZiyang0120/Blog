@@ -358,7 +358,7 @@
 </blockquote>
 <p>接着在尝试运行时就发现了 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk2019?f1url=?appId=Dev16IDEF1&l=ZH-CN&k=k(LNK2019)&rd=true&view=msvc-160">LNK2019</a> 和 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk1120?f1url=?appId=Dev16IDEF1&l=ZH-CN&k=k(LNK1120)&rd=true&view=msvc-160">LNK1120</a> 错误。以下为错误描述：</p>
 <blockquote>
-<p>无法解析的外部符号 “class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp; __cdecl operator&lt;&lt;(class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp;,class QueryResult const &amp;)” (??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVQueryResult@@@Z)，函数 main 中引用了该符号    </p>
+<p>无法解析的外部符号 “class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp; __cdecl operator&lt;&lt;(class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp;,class QueryResult const &amp;)” (??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVQueryResult@@@Z)，函数 main 中引用了该符号    </char></char></p>
 </blockquote>
 <h2 id="尝试分析"><a href="#尝试分析" class="headerlink" title="尝试分析"></a>尝试分析</h2><p>根据错误描述，可以锁定错误出自上面的第一行代码。Visual Studio给出的错误是无法解析，这样一个错误描述有些宽泛，放到 dev cpp 里就会好得多，它的错误提示长下面这样子：</p>
 <blockquote>
