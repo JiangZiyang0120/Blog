@@ -1,6 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>也许，无问西东？</title>
+    <url>/2021/09/20/%E4%B9%9F%E8%AE%B8_%E6%97%A0%E9%97%AE%E8%A5%BF%E4%B8%9C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>打了很多字，又删掉了。不妨让这篇博客简单一点。我后面应该会有很多时间来充实它的。当然，既然打开了还是不妨写点什么。</p>
+<p>出于我奇怪的坚持和兴趣，我成为了一个课余喜欢撸代码的伪数学学子。然而，由于专业和个人能力所限，我日常其实很少能接触代码能力很强的同学，也很少有机会实操项目和工程。这让我一度非常不自信，觉得自己与科班学子相比毫无竞争力。假期期间鼓起勇气参加了一个很有实力的团队的面试，虽然面试过程有些窘迫，发现自己确实缺乏一些项目经验和相关知识。面试结束后却异常惊喜和 humble 地被告知自己还不差。</p>
+<p>今天去实验室参观了。学长非常细致地跟我讲了目前项目的架构，帮助本小白度过了完全抓瞎的新手期。之后又和团队的队长聊了聊，队长给了我两个不太一样的项目方向，并告诉和给我充分的帮助和自由（意味着我有比较长的ddl，还能自己探索实现方式，还有来自队长博士学历的经验和帮助。超级幸福有木有！）接下来就是痛并快乐着的学习&amp;爆肝过程了。希望能在这里得到足够多的经验和成长，能够和大家一起快乐打比赛撸代码。</p>
+<p>最后上个价值。柳青曾经说过一句话：”人生的道路虽然漫长，但紧要处常常只有几步，特别是当人年轻的时候。“不过就我看来，这里”决定性的几步“往往没那么明显和紧要。它可能藏在一本书里，一张志愿单上，亦或是无意间看向某个人的眼神中。但往往是这种无意间的举动改变了我们之后的生活。诚然，我们很难分辨这些紧要的几步究竟藏在哪里。不过就我而言，我想我会认真地对待这些疑似的每一步。这个鼓起勇气的一次尝试，很难说它会带给我多少改变和影响，但我猜它会带给我很不一样的体验。所以，但行前路，无问西东？</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>informal essay</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>黎明静悄悄</title>
+    <url>/2021/09/08/%E9%BB%8E%E6%98%8E%E9%9D%99%E6%82%84%E6%82%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="黎明静悄悄"><a href="#黎明静悄悄" class="headerlink" title="黎明静悄悄"></a>黎明静悄悄</h1><h2 id="子夜"><a href="#子夜" class="headerlink" title="子夜"></a>子夜</h2><blockquote>
+<p>She was still too young to know that life never gives anything for nothing, and that a price is always exacted for what fate bestows.</p>
+<p align="right"><i>Marie Antoinette: Bildnis eines mittleren</i></p>
+</blockquote>
+<p>在我年纪尚小时，平日总喜欢抱着一本书看，大概是为了消遣，也有些文青情怀还未退却。可惜我对文学的热爱并不如何浓郁——它远不能使我埋头案牍皓首穷经，顶多是让我读两本入门门槛不那么高，与他人闲聊时能引那么一两句的图书罢了。而且很明显我的筛选能力也并不强——每当有女孩子看见我在读书，凑过来问一句：“你在读什么书啊？”，不出意外她们总会被书名吓走。即使出了意外，她们也大概率被我接下来尝试概括书本内容的话吓走——这证明我对门槛的判断还是有点高了。</p>
+<p>本节开头引的这句话出自斯蒂芬·茨威格的《断头皇后》。很显然，作为一个文青，我应该是在某一期的《意林》或《读者》上看到了这句话然后记了下来；至于这本书，那是万万不可能读的。当然，有些书读完以后，你确实能感觉到整本书唯一有价值的地方就是书封上写的那句“名言”——当然不是这本书，这本书我确实没读过。引这句话的缘由呢，是我一个朋友托我写文记录一件事情，他的事情让我想起了这句话。当然，后面会引的一些语句和写法，提前声明一下，都出于我之手。我的这个朋友是个纯理工直男，半点文学细菌都没有，后面的理工科术语都出自他之口。</p>
+<p>故事的开头是惯例的假语村言、真事隐什么的，我们权称我的这个朋友叫yzj吧。早在十余天前，yzj正温温吞吞地赶着自己某门课程的大作业。彼时距ddl尚早，又兼大作业的要求很隐晦，不上手根本掂不出斤两。粗瞟了两眼要求文件的yzj仗着自己学过一点相关课程，会两句C++语法，不免有些飘飘然。尽管老师提醒在先，yzj总觉得自己不算所谓的“很多同学”。后来的事实证明了他的观点，yzj确实不算很多同学，而是正态分布曲线最左边的那一撮。</p>
+<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114183/image-20210908023538649_axllra.png"></p>
+<p>总而言之，yzj在ddl十余天前才新建了名为finalproject的文件夹，开始了造轮子之旅。起初为了写得顺手，他按照matlab的操作方式写了个矩阵类，这个类重载了很多方法，也写了一些基本的计算，加了很多语法糖。据yzj表示，这是他后面写其他代码时唯一的慰籍，用起来太顺手了。而且这个类一个很大的好处就是漂亮，很好地遵循了设计模式，也针对性能做了很多优化。不过据他反思，在项目完成前就搞优化是大忌，属于新手小白最容易犯的错误之一。这个很漂亮的轮子花了他很多时间，等到他真的开始接触核心计算代码时，时间已经不允许他设计漂亮的类了。</p>
+<h2 id="鸡鸣"><a href="#鸡鸣" class="headerlink" title="鸡鸣"></a>鸡鸣</h2><blockquote>
+<p>Is life always this hard, or is it just when you’re working on your ddl?</p>
+<p>Always like this.</p>
+<p align="right"><i>re-creation from Léon</i></p>
+</blockquote>
+<p>其实设计不了漂亮的类不算一个大问题。虽然就yzj所言，他设计了一个封装地油盐不进丝毫不漏的类用来储存数据，后来才发现很多函数、方法都要用到这里面的数据，不得不设计一个个奇怪的接口以供操作；最后甚至恨不得把private scope改成public scope一劳永逸。然而就笔者来看，这对治疗我这个朋友吹毛求疵的审美洁癖简直是大功一件。而且我这个朋友写出来的拙劣代码，这辈子都不可能有第二个人去看了（哦，除了这门课的可怜助教，may destiny bless him），也免得拖累别人，小问题小问题。</p>
+<p>在我看来，更大的问题在于,你要先解决一个问题，然后才再考虑如何漂亮地解决问题。我这个朋友时常拎不清这两者之间的关系。这在平日里他自学一些东西的时候问题倒也不大，有充足的时间拿来处理细节。而且他自学的时候总是拿经典教材一张张地翻过去，这些教材总是事无巨细地列出所有细节，这往往可以解答yzj的困惑。然而实操项目时，问题就变得不可控了起来。遇到的问题往往很偏，也没有足够详细的解决方案；网上的教程多半杂拼乱凑不求甚解，yzj甚至遇到几个Google都没办法解答的bug。这种时候一般人会换个方法或思路，但我这个朋友，他还有强迫症——什么人呐这是——他会继续死磕，直到撞南墙为止。举个例子，yzj一开始想自己写绘图包，尝试了两天发现自己水平不够，于是换了一个开源的绘图包。这个包倒是能跑，可惜太丑，yzj不满意，跑去写python绘图逻辑。写完后他一拍大脑想搞嵌入代码，遂迷之自信地跑去跑去看Cython tutorial，网上的教程很少，也解决不了yzj的问题，他又跑去看Cython Document。被环境变量绕晕后又跑去看CMake Document（他强烈要求我不告诉你们，他一开始还看了几天Makefile Document）。一番下来，几天光阴虚度，项目一点没做。纵观yzj的整个项目流程，基本上都耗在这种细枝末节但往往耗费巨细的地方上了。对了，yzj表示Cython确实很有意思，想填到自己的技术栈里。既然大作业ddl已经结束了，接下来他大概会继续看Cython Document并写些博客笔记什么的吧。</p>
+<p>总之我这个朋友身上还有些学生思维没转变过来，这我得好好劝劝他。</p>
+<p>站在一个旁人的角度，上面的话语可能有些平淡，好像在讲述一个平平无奇的故事。然而站在当事人的角度，时间的流逝却是无比真切的。每天显示屏左下角的日期都会跳一个数字，这昭示着自己可以拿来赶ddl的时间又少了一天。屏幕左上角的todo-list也总有一两个任务变成红色——这意味着他没有在自己设定的期限前完成这个模块。我的这个朋友，不知道出于压力还是什么原因，停掉了晚上的跑步，和其他人的聊天也会尽快结束掉，每天晚上睡觉越来越迟，第二天中午才能醒来；日常活动也变成了每天两次的取外卖。可惜他发质好，就这样的生活过了几天都不掉头发，殊为可气。</p>
+<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114184/QQ%E5%9B%BE%E7%89%8720210908163738_xhqv9u.jpg"></p>
+<h2 id="平旦"><a href="#平旦" class="headerlink" title="平旦"></a>平旦</h2><blockquote>
+<p>A half-million years in the future that twinkling of curiosity would have led his mind out into the universe to explore the mathematical mysteries of relativity. Now …</p>
+<p align="right"><i>Dragon's Egg</i></p>
+</blockquote>
+<p>赶ddl的过程的确痛苦，然而当你发现其他人和你一样痛苦的时候，这种痛苦就会无形之中减轻一点。</p>
+<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114184/QQ%E5%9B%BE%E7%89%8720210908165420_zwxqgw.png"></p>
+<p>当然，上述表情包纯属开玩笑。在yzj赶ddl中，发现这次大作业确实有点超纲，不少同学都表示难以下手。写累了和同在肝作业的同学&amp;朋友吐槽便成了yzj枯燥生活的少有的乐趣。果然世界上没有真正的感同身受，只有真的经此一劫，yzj才明白苏联笑话为什么会成为世界非遗。</p>
+<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114183/image-20210908170757983_gr2gzm.png"></p>
+<p>当然，也有大佬比较超脱，靠自己出色的英文文献阅读能力与代码能力一骑绝尘于yzj这等凡夫俗子。他的进度远快于其他人，也在ddl过程中给予了yzj足够的帮助。在此谨代表yzj向他致以深深的respect。</p>
+<p>在各种各种调侃和帮助下，yzj还是慢慢地把自己的大作业做了出来。从一开始的望之不似人形的拟合图形到渐渐能看出大概轮廓，再到多少有那么一点感觉。（可以看出最后一张图还是有异常点，可能是出于计算机精度和异常矩阵的原因，或是还有yzj没有考虑到的bug；不过实在太累就没心情调了）</p>
+<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114184/QQ%E5%9B%BE%E7%89%8720210908200114_dsy4ru.png"></p>
+<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114184/QQ%E5%9B%BE%E7%89%8720210908200123_adlhe8.png"></p>
+<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114185/QQ%E5%9B%BE%E7%89%8720210908200126_z2hzqn.jpg"></p>
+<p>做出效果后，后面的题就好做了很多。前面的成果和轮子也能继续跑下去。yzj用最后仅剩的两三天时间紧赶慢赶地做完了后面的要求。</p>
+<h2 id="破晓"><a href="#破晓" class="headerlink" title="破晓"></a>破晓</h2><blockquote>
+<p>There is only one heroism in the world: to see the world as it is and to love it.</p>
+<p align="right"><i>Romain Rolland</i></p>
+</blockquote>
+<p>时间来到了9月8日凌晨有余。离交作业的ddl还有约九个小时。这时候，yzj已经实现了大作业的基本要求，然而还有另外一些要求等待实现。“反正都熬了这么多天了，再熬一天把功能做完吧。”yzj心想，随机创建了一个新的header file，打开了文献和Google。</p>
+<blockquote>
+<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114183/image-20210908204043478_bdmuin.png"></p>
+</blockquote>
+<p>9月8日凌晨两点，yzj看完论文内的相关算法后又上Google搜了一下成熟的前置算法，发现自己即使刷穿了夜，也可能完不成剩下的内容了。在自己的document里放一个完成了一半，甚至没有可视化和可以供 clients 调用的 interface，纯靠不成体系的代码央求助教给点分实在不大体面。况且主要功能都做出来了，大部分的分都能拿到，索性直接交了，也免得掉头发。于是，yzj把代码又调试了最后一遍，检查了一下自己的document，将它们打包好，邮件发给了助教。粗算了一下，最终文件一共1300行左右的代码量，4.5kb的测试用例（考虑到代码写得实在太烂的因素，有效代码可能要打对折或三分之一）。这的确只是一个小的不能再小的项目代码量了，但对于没多少项目经验的yzj来说，这确实是一个值得一提的挑战。这也提醒了yzj，还是要注意项目经验的积累。</p>
+<p>据yzj表示，当他点击了邮箱界面那个小小的【发送】按钮，只觉得浑身的负担一扫而空。他几乎在一瞬间就忘掉了发现自己没办法实现大作业其他要求时的懊恼。这也让他有点想到，让自己这么多天熬夜和自闭的压力究竟来自于哪里。</p>
+<p>一身轻后，yzj还是没有什么睡意，于是打开了一个文档，想记录一下自己的心情。yzj刚选上课时，这门课的老师就曾提醒过大家，这门课比较难，需要付出更多的努力，也随之能够获得更多的收获。在上课的过程中，yzj的确感受到了这门课老师想要传道授业的苦心。他一遍又一遍地向大家阐述道：“数学是美的，学数学是探寻美发现美的过程，而非死记硬背的过程。”然而奈何yzj愚且鲁，不能体会到所谓的数学之美。但在做这门大作业的过程中yzj确实学到了很多知识。有了一个代码量合适的可以训练自己 C++ programing language 的机会，也了解了一些和编译器知识，可以和更底层的东西打交道。也被老师安利了linux系统并被深深吸引（linux ubuntu真的超级赞，都去试！）。然而学到这么多东西的过程却并非是在课程中，而是在自己独自做大作业的过程中。这个老师的角色更像是一个鞭策者，用一门有些超纲的大作业促使yzj继续学下去。嗯，其实也有榜样的作用，对yzj来说，这个老师身上的认真，和他对待自己热爱的东西时的态度简直自带光环。</p>
+<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114183/image-20210908211520814_reitge.png"></p>
+<p>约凌晨四点，同样选了这个老师课的室友也完成了自己的大作业。他拍了拍yzj的肩头，轻轻说了声：“我先睡了。”yzj点了点头。看了看窗外，已经有点微曦的晨光了。黎明静悄悄的，只有偶尔传来的极轻微的鸟鸣。</p>
+<p>又是新的一天了。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>informal essay</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>coding过程中踩过的坑（一）</title>
+    <url>/2021/09/01/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="解决Visual-Studio的-LNK2019-和-LNK1120-错误"><a href="#解决Visual-Studio的-LNK2019-和-LNK1120-错误" class="headerlink" title="解决Visual Studio的 LNK2019 和 LNK1120 错误"></a>解决Visual Studio的 LNK2019 和 LNK1120 错误</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>写了一个 text searching 的代码。该代码设计了数个类，并有一个 interface class 通过指向 base class 的 shared_ptr 通过 dynamic binding 来运行。然而结构设计的不是特别好，这也就导致我遇到了下面的问题：</p>
+<span id="more"></span>
+
+<blockquote>
+<p>interface class header file：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="keyword">const</span> QueryResult &amp;);</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>interface class source file</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;os, <span class="keyword">const</span> QueryResult &amp;query) &#123;</span><br><span class="line">	<span class="comment">// details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>base class header file, which is included by interface class header file</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">QueryResult</span> &#123;</span></span><br><span class="line">		<span class="comment">//下面的语句是错误来源</span></span><br><span class="line">		<span class="keyword">friend</span> <span class="keyword">inline</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="keyword">const</span> QueryResult &amp;);</span><br><span class="line">		<span class="comment">//details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>接着在尝试运行时就发现了 <a href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk2019?f1url=?appId=Dev16IDEF1&l=ZH-CN&k=k(LNK2019)&rd=true&view=msvc-160">LNK2019</a> 和 <a href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk1120?f1url=?appId=Dev16IDEF1&l=ZH-CN&k=k(LNK1120)&rd=true&view=msvc-160">LNK1120</a> 错误。以下为错误描述：</p>
+<blockquote>
+<p>无法解析的外部符号 “class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp; __cdecl operator&lt;&lt;(class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp;,class QueryResult const &amp;)” (??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVQueryResult@@@Z)，函数 main 中引用了该符号    </char></char></p>
+</blockquote>
+<h2 id="尝试分析"><a href="#尝试分析" class="headerlink" title="尝试分析"></a>尝试分析</h2><p>根据错误描述，可以锁定错误出自上面的第一行代码。Visual Studio给出的错误是无法解析，这样一个错误描述有些宽泛，放到 dev cpp 里就会好得多，它的错误提示长下面这样子：</p>
+<blockquote>
+<p>[警告] inline 函数 ‘std::ostream&amp; 运算符&lt;&lt;(std::ostream&amp;, const QueryResult&amp;)’ used but never defined</p>
+</blockquote>
+<p>然而我一开始并没有用 dev ，而是自己看 web 调了半天，还找了我的两个同学帮我看了一下。他们的解决方案是把 source file 给 include 进来（这也让我有点吃惊，为什么大二的计科同学会没有 package 的概念）。这样的方案我显然没办法满意，我无法理解，为什么编译器会找不到一个已经 declaration 并且 defining 的函数。出于这种疑惑，我友善地提醒了一下编译器——产生了我的第一个解决方案：</p>
+<blockquote>
+<p>interface class header file：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">extern</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="keyword">const</span> QueryResult &amp;);</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>不得不说vs的 MSVC 编译器是真的强大，加个 extern 就能联想到同名的inline函数。如果我没有写这个blog的话，我也许会沾沾自喜于这个解决方案并且依然想破头皮都想不明白为什么会出现这种错误。直到我为了验证这个错误用 dev 上又跑了一遍。我的 dev 编译器是 g++ （版本我也不是很清楚，小白都是一键装环境的），没有这么智能，很实诚地提醒了我。由于 operator&lt;&lt; 函数需要调用 QueryResult object 的 members ，再加上这个函数最开始是在base_Query.h 里 declaration 的，且我的 Query.h has included the base_Query.h，所以编译器找到了 inline 版本的 declaration ，而很不幸，这个函数我没有定义。于是，我得到了第二个解决方案：</p>
+<blockquote>
+<p>base class header file, which is included by interface class header file</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">QueryResult</span> &#123;</span></span><br><span class="line">		<span class="comment">//该文件前面的 declaration 也要改</span></span><br><span class="line">		<span class="keyword">friend</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="keyword">const</span> QueryResult &amp;);</span><br><span class="line">		<span class="comment">//details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>顺便提一下我的下一个问题：为什么我会在 base_Query.h 里加上 inline 并且在后面的文件里忘记呢？</p>
+<p>此事说来话长。我的C++是从《C++ Primer》入门的。在这本书里， Lippman 很细致地讲述了 inline 的作用（也就是没啥作用），但他的示例代码里还是会习惯性地带上 inline ，这个习惯也影响到了我。事实上，我原来的 source file 里全部加了 inline declaration ，这使得我一开始遇到的错误比现在多得多——也同样因为这个原因，我只有将 interface class source file 也 include 进来才能工作。后来一个同学在 STFW （Searching The Fucking Web）后告诉我分离式编程不能使用 inline 。然后这个函数是唯一一个声明了两次的函数，所以被我忘记了（笑）。</p>
+<p>关于为什么分离式编程不能使用inline可以看<a href="https://www.cnblogs.com/GodA/p/6554591.html">这里</a>，这个作者讲得非常细致。也希望我有一天能够变成这样的内容输出者。</p>
+]]></content>
+      <categories>
+        <category>技术笔记</category>
+        <category>coding过程中踩过的坑</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>debug</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ learning notes 2</title>
     <url>/2021/09/01/C++%20Learning%20notes_2/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>[TOC]</p>
@@ -346,113 +468,6 @@
       <tags>
         <tag>C++</tag>
         <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>coding过程中踩过的坑（一）</title>
-    <url>/2021/09/01/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="解决Visual-Studio的-LNK2019-和-LNK1120-错误"><a href="#解决Visual-Studio的-LNK2019-和-LNK1120-错误" class="headerlink" title="解决Visual Studio的 LNK2019 和 LNK1120 错误"></a>解决Visual Studio的 LNK2019 和 LNK1120 错误</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>写了一个 text searching 的代码。该代码设计了数个类，并有一个 interface class 通过指向 base class 的 shared_ptr 通过 dynamic binding 来运行。然而结构设计的不是特别好，这也就导致我遇到了下面的问题：</p>
-<span id="more"></span>
-
-<blockquote>
-<p>interface class header file：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="keyword">const</span> QueryResult &amp;);</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>interface class source file</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;os, <span class="keyword">const</span> QueryResult &amp;query) &#123;</span><br><span class="line">	<span class="comment">// details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>base class header file, which is included by interface class header file</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">QueryResult</span> &#123;</span></span><br><span class="line">		<span class="comment">//下面的语句是错误来源</span></span><br><span class="line">		<span class="keyword">friend</span> <span class="keyword">inline</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="keyword">const</span> QueryResult &amp;);</span><br><span class="line">		<span class="comment">//details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>接着在尝试运行时就发现了 <a href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk2019?f1url=?appId=Dev16IDEF1&l=ZH-CN&k=k(LNK2019)&rd=true&view=msvc-160">LNK2019</a> 和 <a href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk1120?f1url=?appId=Dev16IDEF1&l=ZH-CN&k=k(LNK1120)&rd=true&view=msvc-160">LNK1120</a> 错误。以下为错误描述：</p>
-<blockquote>
-<p>无法解析的外部符号 “class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp; __cdecl operator&lt;&lt;(class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp;,class QueryResult const &amp;)” (??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVQueryResult@@@Z)，函数 main 中引用了该符号    </char></char></p>
-</blockquote>
-<h2 id="尝试分析"><a href="#尝试分析" class="headerlink" title="尝试分析"></a>尝试分析</h2><p>根据错误描述，可以锁定错误出自上面的第一行代码。Visual Studio给出的错误是无法解析，这样一个错误描述有些宽泛，放到 dev cpp 里就会好得多，它的错误提示长下面这样子：</p>
-<blockquote>
-<p>[警告] inline 函数 ‘std::ostream&amp; 运算符&lt;&lt;(std::ostream&amp;, const QueryResult&amp;)’ used but never defined</p>
-</blockquote>
-<p>然而我一开始并没有用 dev ，而是自己看 web 调了半天，还找了我的两个同学帮我看了一下。他们的解决方案是把 source file 给 include 进来（这也让我有点吃惊，为什么大二的计科同学会没有 package 的概念）。这样的方案我显然没办法满意，我无法理解，为什么编译器会找不到一个已经 declaration 并且 defining 的函数。出于这种疑惑，我友善地提醒了一下编译器——产生了我的第一个解决方案：</p>
-<blockquote>
-<p>interface class header file：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">extern</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="keyword">const</span> QueryResult &amp;);</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>不得不说vs的 MSVC 编译器是真的强大，加个 extern 就能联想到同名的inline函数。如果我没有写这个blog的话，我也许会沾沾自喜于这个解决方案并且依然想破头皮都想不明白为什么会出现这种错误。直到我为了验证这个错误用 dev 上又跑了一遍。我的 dev 编译器是 g++ （版本我也不是很清楚，小白都是一键装环境的），没有这么智能，很实诚地提醒了我。由于 operator&lt;&lt; 函数需要调用 QueryResult object 的 members ，再加上这个函数最开始是在base_Query.h 里 declaration 的，且我的 Query.h has included the base_Query.h，所以编译器找到了 inline 版本的 declaration ，而很不幸，这个函数我没有定义。于是，我得到了第二个解决方案：</p>
-<blockquote>
-<p>base class header file, which is included by interface class header file</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">QueryResult</span> &#123;</span></span><br><span class="line">		<span class="comment">//该文件前面的 declaration 也要改</span></span><br><span class="line">		<span class="keyword">friend</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="keyword">const</span> QueryResult &amp;);</span><br><span class="line">		<span class="comment">//details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>顺便提一下我的下一个问题：为什么我会在 base_Query.h 里加上 inline 并且在后面的文件里忘记呢？</p>
-<p>此事说来话长。我的C++是从《C++ Primer》入门的。在这本书里， Lippman 很细致地讲述了 inline 的作用（也就是没啥作用），但他的示例代码里还是会习惯性地带上 inline ，这个习惯也影响到了我。事实上，我原来的 source file 里全部加了 inline declaration ，这使得我一开始遇到的错误比现在多得多——也同样因为这个原因，我只有将 interface class source file 也 include 进来才能工作。后来一个同学在 STFW （Searching The Fucking Web）后告诉我分离式编程不能使用 inline 。然后这个函数是唯一一个声明了两次的函数，所以被我忘记了（笑）。</p>
-<p>关于为什么分离式编程不能使用inline可以看<a href="https://www.cnblogs.com/GodA/p/6554591.html">这里</a>，这个作者讲得非常细致。也希望我有一天能够变成这样的内容输出者。</p>
-]]></content>
-      <categories>
-        <category>技术笔记</category>
-        <category>coding过程中踩过的坑</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>debug</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>黎明静悄悄</title>
-    <url>/2021/09/08/%E9%BB%8E%E6%98%8E%E9%9D%99%E6%82%84%E6%82%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="黎明静悄悄"><a href="#黎明静悄悄" class="headerlink" title="黎明静悄悄"></a>黎明静悄悄</h1><h2 id="子夜"><a href="#子夜" class="headerlink" title="子夜"></a>子夜</h2><blockquote>
-<p>She was still too young to know that life never gives anything for nothing, and that a price is always exacted for what fate bestows.</p>
-<p align="right"><i>Marie Antoinette: Bildnis eines mittleren</i></p>
-</blockquote>
-<p>在我年纪尚小时，平日总喜欢抱着一本书看，大概是为了消遣，也有些文青情怀还未退却。可惜我对文学的热爱并不如何浓郁——它远不能使我埋头案牍皓首穷经，顶多是让我读两本入门门槛不那么高，与他人闲聊时能引那么一两句的图书罢了。而且很明显我的筛选能力也并不强——每当有女孩子看见我在读书，凑过来问一句：“你在读什么书啊？”，不出意外她们总会被书名吓走。即使出了意外，她们也大概率被我接下来尝试概括书本内容的话吓走——这证明我对门槛的判断还是有点高了。</p>
-<p>本节开头引的这句话出自斯蒂芬·茨威格的《断头皇后》。很显然，作为一个文青，我应该是在某一期的《意林》或《读者》上看到了这句话然后记了下来；至于这本书，那是万万不可能读的。当然，有些书读完以后，你确实能感觉到整本书唯一有价值的地方就是书封上写的那句“名言”——当然不是这本书，这本书我确实没读过。引这句话的缘由呢，是我一个朋友托我写文记录一件事情，他的事情让我想起了这句话。当然，后面会引的一些语句和写法，提前声明一下，都出于我之手。我的这个朋友是个纯理工直男，半点文学细菌都没有，后面的理工科术语都出自他之口。</p>
-<p>故事的开头是惯例的假语村言、真事隐什么的，我们权称我的这个朋友叫yzj吧。早在十余天前，yzj正温温吞吞地赶着自己某门课程的大作业。彼时距ddl尚早，又兼大作业的要求很隐晦，不上手根本掂不出斤两。粗瞟了两眼要求文件的yzj仗着自己学过一点相关课程，会两句C++语法，不免有些飘飘然。尽管老师提醒在先，yzj总觉得自己不算所谓的“很多同学”。后来的事实证明了他的观点，yzj确实不算很多同学，而是正态分布曲线最左边的那一撮。</p>
-<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114183/image-20210908023538649_axllra.png"></p>
-<p>总而言之，yzj在ddl十余天前才新建了名为finalproject的文件夹，开始了造轮子之旅。起初为了写得顺手，他按照matlab的操作方式写了个矩阵类，这个类重载了很多方法，也写了一些基本的计算，加了很多语法糖。据yzj表示，这是他后面写其他代码时唯一的慰籍，用起来太顺手了。而且这个类一个很大的好处就是漂亮，很好地遵循了设计模式，也针对性能做了很多优化。不过据他反思，在项目完成前就搞优化是大忌，属于新手小白最容易犯的错误之一。这个很漂亮的轮子花了他很多时间，等到他真的开始接触核心计算代码时，时间已经不允许他设计漂亮的类了。</p>
-<h2 id="鸡鸣"><a href="#鸡鸣" class="headerlink" title="鸡鸣"></a>鸡鸣</h2><blockquote>
-<p>Is life always this hard, or is it just when you’re working on your ddl?</p>
-<p>Always like this.</p>
-<p align="right"><i>re-creation from Léon</i></p>
-</blockquote>
-<p>其实设计不了漂亮的类不算一个大问题。虽然就yzj所言，他设计了一个封装地油盐不进丝毫不漏的类用来储存数据，后来才发现很多函数、方法都要用到这里面的数据，不得不设计一个个奇怪的接口以供操作；最后甚至恨不得把private scope改成public scope一劳永逸。然而就笔者来看，这对治疗我这个朋友吹毛求疵的审美洁癖简直是大功一件。而且我这个朋友写出来的拙劣代码，这辈子都不可能有第二个人去看了（哦，除了这门课的可怜助教，may destiny bless him），也免得拖累别人，小问题小问题。</p>
-<p>在我看来，更大的问题在于,你要先解决一个问题，然后才再考虑如何漂亮地解决问题。我这个朋友时常拎不清这两者之间的关系。这在平日里他自学一些东西的时候问题倒也不大，有充足的时间拿来处理细节。而且他自学的时候总是拿经典教材一张张地翻过去，这些教材总是事无巨细地列出所有细节，这往往可以解答yzj的困惑。然而实操项目时，问题就变得不可控了起来。遇到的问题往往很偏，也没有足够详细的解决方案；网上的教程多半杂拼乱凑不求甚解，yzj甚至遇到几个Google都没办法解答的bug。这种时候一般人会换个方法或思路，但我这个朋友，他还有强迫症——什么人呐这是——他会继续死磕，直到撞南墙为止。举个例子，yzj一开始想自己写绘图包，尝试了两天发现自己水平不够，于是换了一个开源的绘图包。这个包倒是能跑，可惜太丑，yzj不满意，跑去写python绘图逻辑。写完后他一拍大脑想搞嵌入代码，遂迷之自信地跑去跑去看Cython tutorial，网上的教程很少，也解决不了yzj的问题，他又跑去看Cython Document。被环境变量绕晕后又跑去看CMake Document（他强烈要求我不告诉你们，他一开始还看了几天Makefile Document）。一番下来，几天光阴虚度，项目一点没做。纵观yzj的整个项目流程，基本上都耗在这种细枝末节但往往耗费巨细的地方上了。对了，yzj表示Cython确实很有意思，想填到自己的技术栈里。既然大作业ddl已经结束了，接下来他大概会继续看Cython Document并写些博客笔记什么的吧。</p>
-<p>总之我这个朋友身上还有些学生思维没转变过来，这我得好好劝劝他。</p>
-<p>站在一个旁人的角度，上面的话语可能有些平淡，好像在讲述一个平平无奇的故事。然而站在当事人的角度，时间的流逝却是无比真切的。每天显示屏左下角的日期都会跳一个数字，这昭示着自己可以拿来赶ddl的时间又少了一天。屏幕左上角的todo-list也总有一两个任务变成红色——这意味着他没有在自己设定的期限前完成这个模块。我的这个朋友，不知道出于压力还是什么原因，停掉了晚上的跑步，和其他人的聊天也会尽快结束掉，每天晚上睡觉越来越迟，第二天中午才能醒来；日常活动也变成了每天两次的取外卖。可惜他发质好，就这样的生活过了几天都不掉头发，殊为可气。</p>
-<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114184/QQ%E5%9B%BE%E7%89%8720210908163738_xhqv9u.jpg"></p>
-<h2 id="平旦"><a href="#平旦" class="headerlink" title="平旦"></a>平旦</h2><blockquote>
-<p>A half-million years in the future that twinkling of curiosity would have led his mind out into the universe to explore the mathematical mysteries of relativity. Now …</p>
-<p align="right"><i>Dragon's Egg</i></p>
-</blockquote>
-<p>赶ddl的过程的确痛苦，然而当你发现其他人和你一样痛苦的时候，这种痛苦就会无形之中减轻一点。</p>
-<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114184/QQ%E5%9B%BE%E7%89%8720210908165420_zwxqgw.png"></p>
-<p>当然，上述表情包纯属开玩笑。在yzj赶ddl中，发现这次大作业确实有点超纲，不少同学都表示难以下手。写累了和同在肝作业的同学&amp;朋友吐槽便成了yzj枯燥生活的少有的乐趣。果然世界上没有真正的感同身受，只有真的经此一劫，yzj才明白苏联笑话为什么会成为世界非遗。</p>
-<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114183/image-20210908170757983_gr2gzm.png"></p>
-<p>当然，也有大佬比较超脱，靠自己出色的英文文献阅读能力与代码能力一骑绝尘于yzj这等凡夫俗子。他的进度远快于其他人，也在ddl过程中给予了yzj足够的帮助。在此谨代表yzj向他致以深深的respect。</p>
-<p>在各种各种调侃和帮助下，yzj还是慢慢地把自己的大作业做了出来。从一开始的望之不似人形的拟合图形到渐渐能看出大概轮廓，再到多少有那么一点感觉。（可以看出最后一张图还是有异常点，可能是出于计算机精度和异常矩阵的原因，或是还有yzj没有考虑到的bug；不过实在太累就没心情调了）</p>
-<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114184/QQ%E5%9B%BE%E7%89%8720210908200114_dsy4ru.png"></p>
-<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114184/QQ%E5%9B%BE%E7%89%8720210908200123_adlhe8.png"></p>
-<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114185/QQ%E5%9B%BE%E7%89%8720210908200126_z2hzqn.jpg"></p>
-<p>做出效果后，后面的题就好做了很多。前面的成果和轮子也能继续跑下去。yzj用最后仅剩的两三天时间紧赶慢赶地做完了后面的要求。</p>
-<h2 id="破晓"><a href="#破晓" class="headerlink" title="破晓"></a>破晓</h2><blockquote>
-<p>There is only one heroism in the world: to see the world as it is and to love it.</p>
-<p align="right"><i>Romain Rolland</i></p>
-</blockquote>
-<p>时间来到了9月8日凌晨有余。离交作业的ddl还有约九个小时。这时候，yzj已经实现了大作业的基本要求，然而还有另外一些要求等待实现。“反正都熬了这么多天了，再熬一天把功能做完吧。”yzj心想，随机创建了一个新的header file，打开了文献和Google。</p>
-<blockquote>
-<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114183/image-20210908204043478_bdmuin.png"></p>
-</blockquote>
-<p>9月8日凌晨两点，yzj看完论文内的相关算法后又上Google搜了一下成熟的前置算法，发现自己即使刷穿了夜，也可能完不成剩下的内容了。在自己的document里放一个完成了一半，甚至没有可视化和可以供 clients 调用的 interface，纯靠不成体系的代码央求助教给点分实在不大体面。况且主要功能都做出来了，大部分的分都能拿到，索性直接交了，也免得掉头发。于是，yzj把代码又调试了最后一遍，检查了一下自己的document，将它们打包好，邮件发给了助教。粗算了一下，最终文件一共1300行左右的代码量，4.5kb的测试用例（考虑到代码写得实在太烂的因素，有效代码可能要打对折或三分之一）。这的确只是一个小的不能再小的项目代码量了，但对于没多少项目经验的yzj来说，这确实是一个值得一提的挑战。这也提醒了yzj，还是要注意项目经验的积累。</p>
-<p>据yzj表示，当他点击了邮箱界面那个小小的【发送】按钮，只觉得浑身的负担一扫而空。他几乎在一瞬间就忘掉了发现自己没办法实现大作业其他要求时的懊恼。这也让他有点想到，让自己这么多天熬夜和自闭的压力究竟来自于哪里。</p>
-<p>一身轻后，yzj还是没有什么睡意，于是打开了一个文档，想记录一下自己的心情。yzj刚选上课时，这门课的老师就曾提醒过大家，这门课比较难，需要付出更多的努力，也随之能够获得更多的收获。在上课的过程中，yzj的确感受到了这门课老师想要传道授业的苦心。他一遍又一遍地向大家阐述道：“数学是美的，学数学是探寻美发现美的过程，而非死记硬背的过程。”然而奈何yzj愚且鲁，不能体会到所谓的数学之美。但在做这门大作业的过程中yzj确实学到了很多知识。有了一个代码量合适的可以训练自己 C++ programing language 的机会，也了解了一些和编译器知识，可以和更底层的东西打交道。也被老师安利了linux系统并被深深吸引（linux ubuntu真的超级赞，都去试！）。然而学到这么多东西的过程却并非是在课程中，而是在自己独自做大作业的过程中。这个老师的角色更像是一个鞭策者，用一门有些超纲的大作业促使yzj继续学下去。嗯，其实也有榜样的作用，对yzj来说，这个老师身上的认真，和他对待自己热爱的东西时的态度简直自带光环。</p>
-<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1631114183/image-20210908211520814_reitge.png"></p>
-<p>约凌晨四点，同样选了这个老师课的室友也完成了自己的大作业。他拍了拍yzj的肩头，轻轻说了声：“我先睡了。”yzj点了点头。看了看窗外，已经有点微曦的晨光了。黎明静悄悄的，只有偶尔传来的极轻微的鸟鸣。</p>
-<p>又是新的一天了。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>informal essay</tag>
       </tags>
   </entry>
 </search>
