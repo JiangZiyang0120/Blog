@@ -30,6 +30,11 @@
 <meta property="og:site_name" content="江子扬的鱼塘">
 <meta property="og:description" content="自用笔记：仅供参考 note of 《Computer System —— a programmer&#39;s perspective》, written in English">
 <meta property="og:locale">
+<meta property="og:image" content="https://math.now.sh?inline=T_%7Bold%7D">
+<meta property="og:image" content="https://math.now.sh?inline=%5Calpha">
+<meta property="og:image" content="https://math.now.sh?inline=k">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AT_%7Bnew%7D%20%26%3D%20%281-%5Calpha%29T_%7Bold%7D%20%2B%20(%5Calpha%20T_%7Bold%7D)%2Fk%5C%5C%5C%5C%0A%20%20%20%20%20%20%20%20%26%3DT_%7Bold%7D%5B(1-%5Calpha)%20%2B%20%5Calpha%2Fk%5D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%09S%20%26%3D%20T_%7Bold%7D%2FT_%7Bnew%7D%5C%5C%5C%5C%0A%09%20%20%26%3D%20%5Cfrac%7B1%7D%7B%281-%5Calpha%29%2B%5Calpha%2Fk%7D%0A%5Cend%7Baligned%7D%0A">
 <meta property="og:image" content="https://res.cloudinary.com/dwy9slegd/image/upload/v1632847633/lb_cr7ijb.gif">
 <meta property="article:published_time" content="2021-09-28T15:46:03.003Z">
 <meta property="article:modified_time" content="2021-09-28T16:48:51.576Z">
@@ -37,7 +42,7 @@
 <meta property="article:tag" content="notes">
 <meta property="article:tag" content="computer system">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://res.cloudinary.com/dwy9slegd/image/upload/v1632847633/lb_cr7ijb.gif">
+<meta name="twitter:image" content="https://math.now.sh?inline=T_%7Bold%7D">
 
 
 <link rel="canonical" href="http://example.com/2021/09/28/Computer%20System_1/">
@@ -56,7 +61,11 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -181,7 +190,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Computer-System-%E2%80%94%E2%80%94-A-Programmer%E2%80%99s-Perspective"><span class="nav-number">1.</span> <span class="nav-text">Computer System —— A Programmer’s Perspective</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quotion-and-Self-talking"><span class="nav-number">1.1.</span> <span class="nav-text">Quotion and Self-talking</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#some-parts-of-the-Section-1"><span class="nav-number">1.2.</span> <span class="nav-text">some parts of the Section 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Amdahl%E2%80%99s-Law"><span class="nav-number">1.2.1.</span> <span class="nav-text">Amdahl’s Law</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#three-level-of-abstractions-of-parallelism"><span class="nav-number">1.2.2.</span> <span class="nav-text">three level of abstractions of parallelism</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-2"><span class="nav-number">1.3.</span> <span class="nav-text">Section 2</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">Computer System —— A Programmer’s Perspective</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quotion-and-Self-talking"><span class="nav-number">1.1.</span> <span class="nav-text">Quotion and Self-talking</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#some-parts-of-the-Section-1"><span class="nav-number">1.2.</span> <span class="nav-text">some parts of the Section 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Amdahl%E2%80%99s-Law"><span class="nav-number">1.2.1.</span> <span class="nav-text">Amdahl’s Law</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#three-level-of-abstractions-of-parallelism"><span class="nav-number">1.2.2.</span> <span class="nav-text">three level of abstractions of parallelism</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-2"><span class="nav-number">1.3.</span> <span class="nav-text">Section 2</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -197,18 +206,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -337,19 +346,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="Computer-System-——-A-Programmer’s-Perspective"><a href="#Computer-System-——-A-Programmer’s-Perspective" class="headerlink" title="Computer System —— A Programmer’s Perspective"></a>Computer System —— A Programmer’s Perspective</h1><h2 id="Quotion-and-Self-talking"><a href="#Quotion-and-Self-talking" class="headerlink" title="Quotion and Self-talking"></a>Quotion and Self-talking</h2><p>This note should be finished about a week ago. But I was stuck in infinite and variable works in this past week, and finally I find that I’ll never finish all works. If you do do want to finish a specific task, maybe the only way is putting it in front of every to-do tasks and strive to finish it immediately.</p>
+        <h1>Computer System —— A Programmer’s Perspective</h1>
+<h2 id="Quotion-and-Self-talking">Quotion and Self-talking</h2>
+<p>This note should be finished about a week ago. But I was stuck in infinite and variable works in this past week, and finally I find that I’ll never finish all works. If you do do want to finish a specific task, maybe the only way is putting it in front of every to-do tasks and strive to finish it immediately.</p>
 <p>Well, though I made such a claim, this note is still, unfortunately unfinished. This Section has more than 100 pages, which is upon my English reading ability and computer-related comprehension in two hours. And I want to push myself by submitting an unfinished blog, which will make me fill up the margin soon (certainly this “soon” won’t be guaranteed [doge]).</p>
 <p>Moreover, the reason why I did this blog is trying to input my inlet by output. After all, this is a technical blog. Thus from now on, I’ll try to submit at least one blog page per week. Wish this blog would get richer and more than richer.</p>
-<h2 id="some-parts-of-the-Section-1"><a href="#some-parts-of-the-Section-1" class="headerlink" title="some parts of the Section 1"></a>some parts of the Section 1</h2><h3 id="Amdahl’s-Law"><a href="#Amdahl’s-Law" class="headerlink" title="Amdahl’s Law"></a>Amdahl’s Law</h3><p>Suppose a system requires time $T_{old}$ to execute. And it exists a part of manipulation requires a fraction $\alpha$ of the whole time. Then, we improve this manipulation’s performance by a factor of $k$. Thus, the overall execution time will turn to<br>$$<br>\begin{aligned}<br>T_{new} &amp;= (1-\alpha)T_{old} + (\alpha T_{old})/k\\<br>        &amp;=T_{old}[(1-\alpha) + \alpha/k]<br>\end{aligned}<br>$$<br>And the speedup is<br>$$<br>\begin{aligned}<br>    S &amp;= T_{old}/T_{new}\\<br>      &amp;= \frac{1}{(1-\alpha)+\alpha/k}<br>\end{aligned}<br>$$<br>This function indicates that in order to speed up the entire system, we must improve the speed of a very large fraction of the overall system.</p>
-<h3 id="three-level-of-abstractions-of-parallelism"><a href="#three-level-of-abstractions-of-parallelism" class="headerlink" title="three level of abstractions of parallelism"></a>three level of abstractions of parallelism</h3><ul>
+<h2 id="some-parts-of-the-Section-1">some parts of the Section 1</h2>
+<h3 id="Amdahl’s-Law">Amdahl’s Law</h3>
+<p>Suppose a system requires time <img src="https://math.now.sh?inline=T_%7Bold%7D" style="display:inline-block;margin: 0;"> to execute. And it exists a part of manipulation requires a fraction <img src="https://math.now.sh?inline=%5Calpha" style="display:inline-block;margin: 0;"> of the whole time. Then, we improve this manipulation’s performance by a factor of <img src="https://math.now.sh?inline=k" style="display:inline-block;margin: 0;">. Thus, the overall execution time will turn to</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AT_%7Bnew%7D%20%26%3D%20%281-%5Calpha%29T_%7Bold%7D%20%2B%20(%5Calpha%20T_%7Bold%7D)%2Fk%5C%5C%5C%5C%0A%20%20%20%20%20%20%20%20%26%3DT_%7Bold%7D%5B(1-%5Calpha)%20%2B%20%5Calpha%2Fk%5D%0A%5Cend%7Baligned%7D%0A"></p><p>And the speedup is</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%09S%20%26%3D%20T_%7Bold%7D%2FT_%7Bnew%7D%5C%5C%5C%5C%0A%09%20%20%26%3D%20%5Cfrac%7B1%7D%7B%281-%5Calpha%29%2B%5Calpha%2Fk%7D%0A%5Cend%7Baligned%7D%0A"></p><p>This function indicates that in order to speed up the entire system, we must improve the speed of a very large fraction of the overall system.</p>
+<h3 id="three-level-of-abstractions-of-parallelism">three level of abstractions of parallelism</h3>
+<ul>
 <li>Thread-Level Concurrency</li>
 <li>Instruction-Level Parallelism</li>
 <li>Single-Instruction, Multiple-Data (SIMD) Parallelism</li>
 </ul>
-<h2 id="Section-2"><a href="#Section-2" class="headerlink" title="Section 2"></a>Section 2</h2><p> A programmer should strive to make programs portable across different machines and compilers, which requires the programmer be sensitive to the exact size of different data types. And some tips are as follow. The C standard doesn’t guarantee type <em>char</em> as a signed type. Thus it’s better to declare <em>signed char</em>. To control the size of data, it is supposed to use type <em>int32_t</em> and <em>int64_t</em>. Using <em>sizeof</em> instead of an exact value is a better way to ensure the cord is portable across different machines. </p>
+<h2 id="Section-2">Section 2</h2>
+<p>A programmer should strive to make programs portable across different machines and compilers, which requires the programmer be sensitive to the exact size of different data types. And some tips are as follow. The C standard doesn’t guarantee type <em>char</em> as a signed type. Thus it’s better to declare <em>signed char</em>. To control the size of data, it is supposed to use type <em>int32_t</em> and <em>int64_t</em>. Using <em>sizeof</em> instead of an exact value is a better way to ensure the cord is portable across different machines.</p>
 <p>in virtually all machines, a multi-byte object is sttored as a contiguous sequence of bytes, and the address of this object is the smallest address of the bytes used. And there are two types of storage order as below. Most Intel-compatible machines operate exclusively in little-endian mode, while most machines from IBM and oracle operate in big-endian mode. What’s more, many recent microprocessor chips (like ARM’s) are bi-endian, which is compatible with little-endian and big-endian.</p>
 <p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1632847633/lb_cr7ijb.gif" alt="Lightbox"></p>
-<p>The above distinction is almost invisible and ineffable, but some times it matters. For instance, when two machines communicate over a network or you are inspecting assembly programs with debug (to be honest, it indeed bothered me, in every sense). </p>
+<p>The above distinction is almost invisible and ineffable, but some times it matters. For instance, when two machines communicate over a network or you are inspecting assembly programs with debug (to be honest, it indeed bothered me, in every sense).</p>
 
     </div>
 
@@ -389,6 +406,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2021/09/29/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" rel="next" title="机器学习（一）">
+                  机器学习（一） <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -463,7 +483,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"per_page":true,"cdn":"//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
