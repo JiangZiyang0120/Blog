@@ -25,18 +25,18 @@
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 <meta name="description" content="自用笔记：仅供参考 note of Introduction to Mathematical Statistics, written in English">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mathematical Statistics 1">
-<meta property="og:url" content="http://example.com/2021/10/08/Mathematical-Statistics-1/index.html">
+<meta property="og:title" content="Mathematical Statistics">
+<meta property="og:url" content="http://example.com/2021/12/28/Mathematical-Statistics/index.html">
 <meta property="og:site_name" content="江子扬的鱼塘">
 <meta property="og:description" content="自用笔记：仅供参考 note of Introduction to Mathematical Statistics, written in English">
 <meta property="og:locale">
 <meta property="og:image" content="https://math.now.sh?inline=P%28C%29">
-<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%26%28a%29%5C%3BP(C)%20%5Cgeq%200%5Cnewline%0A%26(b)%5C%3BP(C_1%5Ccup%20C_2%5Ccup%20C_3%5Ccup%5Ccdots)%20%3D%20P(C_1)%2BP(C_2)%2BP(C_3)%2B%5Ccdots%2C%20%5C%3B(C_i%5Ccap%20C_j%3D%5CO%2Ci%5Cneq%20j)%5Cnewline%0A%26(c)%5C%3BP(%5Cmathscr%7BC%7D)%20%3D%201%5Cnewline%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%26%28a%29%5C%3BP(C)%20%5Cgeq%200%5C%5C%0A%26(b)%5C%3BP(C_1%5Ccup%20C_2%5Ccup%20C_3%5Ccup%5Ccdots)%20%3D%20P(C_1)%2BP(C_2)%2BP(C_3)%2B%5Ccdots%2C%20%5C%3B(C_i%5Ccap%20C_j%3D%5CO%2Ci%5Cneq%20j)%5C%5C%0A%26(c)%5C%3BP(%5Cmathscr%7BC%7D)%20%3D%201%5C%5C%0A%5Cend%7Baligned%7D%0A">
 <meta property="og:image" content="https://math.now.sh?inline=P%28C%29">
 <meta property="og:image" content="https://math.now.sh?inline=C">
 <meta property="og:image" content="https://math.now.sh?inline=P%28C%29">
 <meta property="og:image" content="https://math.now.sh?inline=C">
-<meta property="og:image" content="https://math.now.sh?from=P%28C_2%7CC_1%29%20%3D%20%5Cfrac%7BP(C_1%5Ccap%20C_2)%7D%7BP(C_1)%7D%5Cnewline%0AP(C_1%5Ccap%20C_2%5Ccap%5Ccdots%5Ccap%20C_n)%20%3D%20P(C_1)P(C_2%7CC_1)P(C_3%7CC_1%5Ccap%20C_2)%5Ccdots%20P(C_n%7CC_1%5Ccap%20C_2%5Ccap%20%5Ccdots%20%5Ccap%20C_%7Bn-1%7D)%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AP%28C_2%7CC_1%29%20%26%3D%20%5Cfrac%7BP(C_1%5Ccap%20C_2)%7D%7BP(C_1)%7D%5C%5C%0AP(C_1%5Ccap%20C_2%5Ccap%5Ccdots%5Ccap%20C_n)%20%26%3D%20P(C_1)%5Ccdot%20P(C_2%7CC_1)P(C_3%7CC_1%5Ccap%20C_2)%5Ccdots%20P(C_n%7CC_1%5Ccap%20C_2%5Ccap%20%5Ccdots%20%5Ccap%20C_%7Bn-1%7D)%0A%5Cend%7Baligned%7D%0A">
 <meta property="og:image" content="https://math.now.sh?from=P%28C%29%20%3D%20%5Csum%5E%7Bn%7D_%7Bi%3D1%7DP(C_i)P(C%7CC_i)%0A">
 <meta property="og:image" content="https://math.now.sh?from=P%28C_j%7CC%29%20%3D%20%5Cfrac%7BP(C_j%5Ccap%20C)%7D%7BP(C)%7D%20%3D%20%5Cfrac%7BP(C_j)P(C%7CC_j)%7D%7B%5Csum%5E%7Bn%7D_%7Bi%3D1%7DP(C_i)P(C%7CC_i)%7D%0A">
 <meta property="og:image" content="https://math.now.sh?inline=P%28C_i%29">
@@ -67,7 +67,7 @@
 <meta property="og:image" content="https://math.now.sh?inline=f%28x%29">
 <meta property="og:image" content="https://math.now.sh?from=F%28x%29%20%3D%20%5Csum_%7Bw%5Cleq%20x%7Df(w)%0A">
 <meta property="og:image" content="https://math.now.sh?inline=X">
-<meta property="og:image" content="https://math.now.sh?from=%5Cint_%7B%5Cmathscr%7BA%7D%7Df%28x%29%20%3D%201%5Cnewline%0AP(A)%20%3D%20Pr(X%20%5Cin%20A)%20%3D%20%5Cint_%7BA%7Df(x)dx%5Cnewline%0AF(x)%20%3D%20%5Cint%5E%7Bx%7D_%7B-%5Cinfty%7Df(w)dw%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cint_%7B%5Cmathscr%7BA%7D%7Df%28x%29%20%26%3D%201%5C%5C%0AP(A)%20%26%3D%20Pr(X%20%5Cin%20A)%20%3D%20%5Cint_%7BA%7Df(x)dx%5C%5C%0AF(x)%20%26%3D%20%5Cint%5E%7Bx%7D_%7B-%5Cinfty%7Df(w)dw%0A%5Cend%7Baligned%7D%0A">
 <meta property="og:image" content="https://math.now.sh?from=Pr%28a%20%3C%20X%20%5Cleq%20b%29%20%3D%20F(b)%20-%20F(a)%0A">
 <meta property="og:image" content="https://math.now.sh?inline=X">
 <meta property="og:image" content="https://math.now.sh?inline=%5Cmathscr%7BA%7D">
@@ -86,20 +86,20 @@
 <meta property="og:image" content="https://math.now.sh?inline=%5Cmathscr%7BA%7D">
 <meta property="og:image" content="https://math.now.sh?inline=Y%20%3D%20u%28X%29">
 <meta property="og:image" content="https://math.now.sh?inline=y%3Du%28x%29%5CRightarrow%20x%3Dw(y)">
-<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AG%28y%29%20%26%3D%20Pr(Y%5Cleq%20y)%20%3D%20Pr%5Bu(X)%5Cleq%20y%5D%20%3D%20Pr(X%20%5Cleq%20w(y))%5Cnewline%0A%26%3D%20%5Cint%5E%7Bw(y)%7D_%7B-%5Cinfty%7Df(x)dx%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AG%28y%29%20%26%3D%20Pr(Y%5Cleq%20y)%20%3D%20Pr%5Bu(X)%5Cleq%20y%5D%20%3D%20Pr(X%20%5Cleq%20w(y))%5C%5C%0A%26%3D%20%5Cint%5E%7Bw(y)%7D_%7B-%5Cinfty%7Df(x)dx%0A%5Cend%7Baligned%7D%0A">
 <meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Ag%28y%29%20%3D%20G">
-<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AE%28Y%29%20%26%3D%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Dyg(y)dy%5Cnewline%0A%26%3D%20E%5Bu(x)%5D%20%3D%20%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Du(x)f(x)dy%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AE%28Y%29%20%26%3D%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Dyg(y)dy%5C%5C%0A%26%3D%20E%5Bu(x)%5D%20%3D%20%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Du(x)f(x)dy%0A%5Cend%7Baligned%7D%0A">
 <meta property="og:image" content="https://math.now.sh?inline=X">
 <meta property="og:image" content="https://math.now.sh?from=%5Cmu%20%3D%20E%28X%29%0A">
 <meta property="og:image" content="https://math.now.sh?inline=%5Cmu">
 <meta property="og:image" content="https://math.now.sh?inline=X">
-<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AVar%28X%29%3D%5Csigma%5E2%20%3D%20E%5B(X-%5Cmu)%5E2%5D%20%26%3D%20E(X%5E2-2%5Cmu%20X%2B%5Cmu%5E2)%5Cnewline%0A%26%3D%20E(X%5E2)%20-%202%5Cmu%20E(X)%20%2B%20%5Cmu%5E2%5Cnewline%0A%26%3D%20E(X%5E2)%20-%202%5Cmu%5E2%20%2B%20%5Cmu%5Cnewline%0A%26%3D%20E(X%5E2)%20-%20%5Cmu%5E2%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AVar%28X%29%3D%5Csigma%5E2%20%3D%20E%5B(X-%5Cmu)%5E2%5D%20%26%3D%20E(X%5E2-2%5Cmu%20X%2B%5Cmu%5E2)%5C%5C%0A%26%3D%20E(X%5E2)%20-%202%5Cmu%20E(X)%20%2B%20%5Cmu%5E2%5C%5C%0A%26%3D%20E(X%5E2)%20-%202%5Cmu%5E2%20%2B%20%5Cmu%5C%5C%0A%26%3D%20E(X%5E2)%20-%20%5Cmu%5E2%0A%5Cend%7Baligned%7D%0A">
 <meta property="og:image" content="https://math.now.sh?inline=%5Csigma%5E2">
 <meta property="og:image" content="https://math.now.sh?inline=X">
 <meta property="og:image" content="https://math.now.sh?from=%5Csigma%20%3D%20%5Csqrt%7B%5Csigma%5E2%7D%0A">
 <meta property="og:image" content="https://math.now.sh?inline=%5Csigma">
 <meta property="og:image" content="https://math.now.sh?inline=X">
-<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AM%28t%29%20%3D%20E(e%5E%7BtX%7D)%20%26%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7De%5E%7BtX%7Df(x)dx%2C%20%26%26X%5C%3Bis%5C%3Ba%5C%3Bcontinuous%5C%3Btype%5Cnewline%0A%26%3D%5Csum_%7BX%7De%5E%7BtX%7Df(x)%2C%20%26%26X%5C%3Bis%5C%3Ba%5C%3Bdiscrete%5C%3Btype%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AM%28t%29%20%3D%20E(e%5E%7BtX%7D)%20%26%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7De%5E%7BtX%7Df(x)dx%2C%20%26%26X%5C%3Bis%5C%3Ba%5C%3Bcontinuous%5C%3Btype%5C%5C%0A%26%3D%5Csum_%7BX%7De%5E%7BtX%7Df(x)%2C%20%26%26X%5C%3Bis%5C%3Ba%5C%3Bdiscrete%5C%3Btype%0A%5Cend%7Baligned%7D%0A">
 <meta property="og:image" content="https://math.now.sh?inline=M%28t%29">
 <meta property="og:image" content="https://math.now.sh?inline=X">
 <meta property="og:image" content="https://math.now.sh?inline=M%28t%29%20%3D%20%5Cfrac%7B1%7D%7B10%7De%5E%7Bt%7D%20%2B%20%5Cfrac%7B2%7D%7B10%7De%5E%7B2t%7D%20%2B%20%5Cfrac%7B3%7D%7B10%7De%5E%7B3t%7D%20%2B%20%5Cfrac%7B4%7D%7B10%7De%5E%7B4t%7D">
@@ -111,15 +111,15 @@
 <meta property="og:image" content="https://math.now.sh?inline=%5Cforall%20t%20%5Cin%20%5Cmathbb%7BR%7D">
 <meta property="og:image" content="https://math.now.sh?inline=a%3D1%2Cf%28a%29%3D0.1%2C%20b%20%3D%202%2C%20f(b)%20%3D%200.2">
 <meta property="og:image" content="https://math.now.sh?inline=M%28t%29">
-<meta property="og:image" content="https://math.now.sh?from=%5Cfrac%7BdM%28t%29%7D%7Bdt%7D%20%3D%20M">
-<meta property="og:image" content="https://math.now.sh?from=M">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cfrac%7BdM%28t%29%7D%7Bdt%7D%20%3D%20M">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%26M">
 <meta property="og:image" content="https://math.now.sh?inline=M%5E%7B%28m%29%7D(0)%20%3D%20E(X%5E%7Bm%7D)">
 <meta property="og:image" content="https://math.now.sh?inline=M%28t%29">
 <meta property="og:image" content="https://math.now.sh?inline=E%28X%5Em%29%2Cm%3D1%2C2%2C3%2C%5Ccdots%2C">
 <meta property="og:image" content="https://math.now.sh?from=%5Cvarphi%28t%29%20%3D%20E(e%5E%7BitX%7D)%0A">
 <meta property="og:image" content="https://math.now.sh?inline=i">
 <meta property="og:image" content="https://math.now.sh?inline=t">
-<meta property="og:image" content="https://math.now.sh?from=%7C%5Cvarphi%28t%29%7C%20%3D%20%5Cleft%7C%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7De%5E%7Bitx%7Df(x)dx%5Cright%7C%5Cleq%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7D%5Cleft%7Ce%5E%7Bitx%7Df(x)%5Cright%7Cdx%5Cnewline%0Af(x)%5Cgeq%200%20%5CRightarrow%20%7Cf(x)%7C%20%3D%20f(x)%5Cnewline%0A%7Ce%5E%7Bitx%7D%7C%20%3D%20%7Ccos%5C%3Btx%20%2B%20i%5C%3Bsin%5C%3Btx%7C%20%3D%20%5Csqrt%7Bcos%5E2%5C%3Btx%20%2B%20sin%5E2%5C%3Btx%7D%20%3D%201%5Cnewline%0A%5CRightarrow%20%7C%5Cvarphi(t)%7C%5Cleq%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Df(x)dx%20%3D%201%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7C%5Cvarphi%28t%29%7C%20%26%3D%20%5Cleft%7C%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7De%5E%7Bitx%7Df(x)dx%5Cright%7C%5Cleq%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7D%5Cleft%7Ce%5E%7Bitx%7Df(x)%5Cright%7Cdx%5C%5C%0Af(x)%5Cgeq%200%20%26%5CRightarrow%20%7Cf(x)%7C%20%3D%20f(x)%5C%5C%0A%7Ce%5E%7Bitx%7D%7C%20%26%3D%20%7Ccos%5C%3Btx%20%2B%20i%5C%3Bsin%5C%3Btx%7C%20%3D%20%5Csqrt%7Bcos%5E2%5C%3Btx%20%2B%20sin%5E2%5C%3Btx%7D%20%3D%201%5C%5C%0A%26%5CRightarrow%20%7C%5Cvarphi(t)%7C%5Cleq%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Df(x)dx%20%3D%201%0A%5Cend%7Baligned%7D%0A">
 <meta property="og:image" content="https://math.now.sh?inline=%5Cvarphi%28t%29">
 <meta property="og:image" content="https://math.now.sh?inline=%5Cvarphi%28t%29%20%3D%20M(it)">
 <meta property="og:image" content="https://math.now.sh?inline=iE%28x%29%20%3D%20%5Cvarphi">
@@ -127,14 +127,14 @@
 <meta property="og:image" content="https://math.now.sh?inline=X">
 <meta property="og:image" content="https://math.now.sh?inline=E%5Bu%28X%29%5D">
 <meta property="og:image" content="https://math.now.sh?from=Pr%5Bu%28X%29%5Cgeq%20c%5D%5Cleq%20%5Cfrac%7BE%5Bu(X)%5D%7D%7Bc%7D.%0A">
-<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Bmultline%7D%0AProof.%5Cnewline%0ALet%5C%3BA%3D%5C%7Bx%3Au%28x%29%5Cgeq%20c%5C%7D%5Cnewline%0AE%5Bu(X)%5D%20%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Du(x)f(x)dx%20%3D%20%5Cint_%7BA%7Du(x)f(x)dx%20%2B%20%5Cint_%7BA%5E*%7Du(x)f(x)dx%5Cnewline%0A%5Cleft.%0A%5Cbegin%7Bmatrix%7D%0A%5Cint_%7BA%5E*%7Du(x)f(x)dx%20%5Cgeq%200%20%5CRightarrow%20E%5Bu(X)%5D%20%5Cgeq%20%5Cint_%7BA%7Du(x)f(x)dx%5Cnewline%0AX%20%5Cin%20A%5CRightarrow%20u(x)%5Cgeq%20c%0A%5Cend%7Bmatrix%7D%0A%5Cright%20%5C%7D%0A%5CRightarrow%20E%5Bu(X)%5D%20%5Cgeq%20c%5Cint_%7BA%7Df(x)dx.%5Cnewline%0A%5Cint_%7BA%7Df(x)dx%20%3D%20Pr(X%5Cin%20A)%20%3D%20Pr%5Bu(X)%5Cgeq%20c%5D%5Cnewline%0Acertificated.%0A%5Cend%7Bmultline%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AProof.%5C%5C%0A%26Let%5C%3BA%3D%5C%7Bx%3Au%28x%29%5Cgeq%20c%5C%7D%5C%5C%0A%26E%5Bu(X)%5D%20%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Du(x)f(x)dx%20%3D%20%5Cint_%7BA%7Du(x)f(x)dx%20%2B%20%5Cint_%7BA%5E*%7Du(x)f(x)dx%5C%5C%0A%26%5Cleft.%0A%5Cbegin%7Bmatrix%7D%0A%5Cint_%7BA%5E*%7Du(x)f(x)dx%20%5Cgeq%200%20%5CRightarrow%20E%5Bu(X)%5D%20%5Cgeq%20%5Cint_%7BA%7Du(x)f(x)dx%5C%5C%0AX%20%5Cin%20A%5CRightarrow%20u(x)%5Cgeq%20c%0A%5Cend%7Bmatrix%7D%0A%5Cright%20%5C%7D%0A%5CRightarrow%20E%5Bu(X)%5D%20%5Cgeq%20c%5Cint_%7BA%7Df(x)dx.%5C%5C%0A%26%5Cint_%7BA%7Df(x)dx%20%3D%20Pr(X%5Cin%20A)%20%3D%20Pr%5Bu(X)%5Cgeq%20c%5D%5C%5C%0A%26%26certificated.%0A%5Cend%7Baligned%7D%0A">
 <meta property="og:image" content="https://math.now.sh?inline=%5Cmu">
 <meta property="og:image" content="https://math.now.sh?inline=%5Csigma">
 <meta property="og:image" content="https://math.now.sh?inline=X">
-<meta property="og:image" content="https://math.now.sh?from=Pr%28%7CX-%5Cmu%7C%5Cgeq%20k%5Csigma%29%20%5Cleq%20%5Cfrac%7B1%7D%7Bk%5E2%7D%2C%5Cnewline%0APr(%7CX-%5Cmu%7C%3C%20k%5Csigma)%20%5Cgeq%201%20-%20%5Cfrac%7B1%7D%7Bk%5E2%7D%0A">
-<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Bmultline%7D%0AProof.%5Cnewline%0Aas%5C%3BTheorem%5C%3B1%5C%3Band%5C%3Bset%5C%3Bu%28X%29%20%3D%20(X-%5Cmu)%5E2%2Cc%20%3D%20k%5E2%5Csigma%5E2%5Cnewline%0Awe%5C%3Bhave%5C%3BPr%5B(X-%5Cmu)%5E2%5Cgeq%20k%5E2%5Csigma%5E2%5D%5Cleq%5Cfrac%7BE%5B(X-%5Cmu)%5E2%5D%7D%7Bk%5E2%5Csigma%5E2%7D.%5Cnewline%0A%5CRightarrow%20Pr(%7CX-%5Cmu%7C%5Cgeq%20k%5Csigma)%20%5Cleq%20%5Cfrac%7B1%7D%7Bk%5E2%7D%5Cnewline%0Acertificated.%0A%5Cend%7Bmultline%7D%0A">
-<meta property="article:published_time" content="2021-10-08T11:00:30.000Z">
-<meta property="article:modified_time" content="2021-10-15T13:24:15.599Z">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%26Pr%28%7CX-%5Cmu%7C%5Cgeq%20k%5Csigma%29%20%5Cleq%20%5Cfrac%7B1%7D%7Bk%5E2%7D%2C%5C%5C%0A%26Pr(%7CX-%5Cmu%7C%3C%20k%5Csigma)%20%5Cgeq%201%20-%20%5Cfrac%7B1%7D%7Bk%5E2%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AProof.%5C%5C%0A%26as%5C%3BTheorem%5C%3B1%5C%3Band%5C%3Bset%5C%3Bu%28X%29%20%3D%20(X-%5Cmu)%5E2%2Cc%20%3D%20k%5E2%5Csigma%5E2%5C%5C%0A%26we%5C%3Bhave%5C%3BPr%5B(X-%5Cmu)%5E2%5Cgeq%20k%5E2%5Csigma%5E2%5D%5Cleq%5Cfrac%7BE%5B(X-%5Cmu)%5E2%5D%7D%7Bk%5E2%5Csigma%5E2%7D.%5C%5C%0A%26%5CRightarrow%20Pr(%7CX-%5Cmu%7C%5Cgeq%20k%5Csigma)%20%5Cleq%20%5Cfrac%7B1%7D%7Bk%5E2%7D%5C%5C%0A%26%26certificated.%0A%5Cend%7Baligned%7D%0A">
+<meta property="article:published_time" content="2021-12-28T17:50:38.977Z">
+<meta property="article:modified_time" content="2021-12-28T18:03:46.372Z">
 <meta property="article:author" content="江子扬-Jasper Young">
 <meta property="article:tag" content="notes">
 <meta property="article:tag" content="machine learning">
@@ -142,14 +142,14 @@
 <meta name="twitter:image" content="https://math.now.sh?inline=P%28C%29">
 
 
-<link rel="canonical" href="http://example.com/2021/10/08/Mathematical-Statistics-1/">
+<link rel="canonical" href="http://example.com/2021/12/28/Mathematical-Statistics/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh","comments":true,"permalink":"http://example.com/2021/10/08/Mathematical-Statistics-1/","path":"2021/10/08/Mathematical-Statistics-1/","title":"Mathematical Statistics 1"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh","comments":true,"permalink":"http://example.com/2021/12/28/Mathematical-Statistics/","path":"2021/12/28/Mathematical-Statistics/","title":"Mathematical Statistics"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Mathematical Statistics 1 | 江子扬的鱼塘</title>
+<title>Mathematical Statistics | 江子扬的鱼塘</title>
   
 
 
@@ -297,13 +297,13 @@
     <img class="site-author-image" itemprop="image" alt="江子扬-Jasper Young"
       src="/images/QQ%E5%9B%BE%E7%89%8720210901210637.jpg">
   <p class="site-author-name" itemprop="name">江子扬-Jasper Young</p>
-  <div class="site-description" itemprop="description">这个人很懒，之后才会留下些什么~</div>
+  <div class="site-description" itemprop="description">Stay Hungry. Stay Foolish</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -314,7 +314,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -368,12 +368,12 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/08/Mathematical-Statistics-1/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/28/Mathematical-Statistics/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/QQ%E5%9B%BE%E7%89%8720210901210637.jpg">
       <meta itemprop="name" content="江子扬-Jasper Young">
-      <meta itemprop="description" content="这个人很懒，之后才会留下些什么~">
+      <meta itemprop="description" content="Stay Hungry. Stay Foolish">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -381,7 +381,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Mathematical Statistics 1
+          Mathematical Statistics
         </h1>
 
         <div class="post-meta-container">
@@ -391,16 +391,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-10-08 04:00:30" itemprop="dateCreated datePublished" datetime="2021-10-08T04:00:30-07:00">2021-10-08</time>
+      <time title="Created: 2021-12-28 09:50:38 / Modified: 10:03:46" itemprop="dateCreated datePublished" datetime="2021-12-28T09:50:38-08:00">2021-12-28</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-10-15 06:24:15" itemprop="dateModified" datetime="2021-10-15T06:24:15-07:00">2021-10-15</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -432,8 +426,8 @@
       <span class="post-meta-item-text">Changyan: </span>
     
     
-      <a title="changyan" href="/2021/10/08/Mathematical-Statistics-1/#SOHUCS" itemprop="discussionUrl">
-        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2021/10/08/Mathematical-Statistics-1/" itemprop="commentCount"></span>
+      <a title="changyan" href="/2021/12/28/Mathematical-Statistics/#SOHUCS" itemprop="discussionUrl">
+        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2021/12/28/Mathematical-Statistics/" itemprop="commentCount"></span>
       </a>
     
   </span>
@@ -455,9 +449,9 @@
 <h2 id="Probability-and-Distribution">Probability and Distribution</h2>
 <h3 id="Definition-1">Definition 1:</h3>
 <p>If <img src="https://math.now.sh?inline=P%28C%29" style="display:inline-block;margin: 0;"> satisfies below properties</p>
-<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%26%28a%29%5C%3BP(C)%20%5Cgeq%200%5Cnewline%0A%26(b)%5C%3BP(C_1%5Ccup%20C_2%5Ccup%20C_3%5Ccup%5Ccdots)%20%3D%20P(C_1)%2BP(C_2)%2BP(C_3)%2B%5Ccdots%2C%20%5C%3B(C_i%5Ccap%20C_j%3D%5CO%2Ci%5Cneq%20j)%5Cnewline%0A%26(c)%5C%3BP(%5Cmathscr%7BC%7D)%20%3D%201%5Cnewline%0A%5Cend%7Baligned%7D%0A"></p><p>Then <img src="https://math.now.sh?inline=P%28C%29" style="display:inline-block;margin: 0;"> is called <em>probability set function</em> of the outcome of the random experiment. For each subset <img src="https://math.now.sh?inline=C" style="display:inline-block;margin: 0;">, <img src="https://math.now.sh?inline=P%28C%29" style="display:inline-block;margin: 0;"> is the probability of the event <img src="https://math.now.sh?inline=C" style="display:inline-block;margin: 0;">.</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%26%28a%29%5C%3BP(C)%20%5Cgeq%200%5C%5C%0A%26(b)%5C%3BP(C_1%5Ccup%20C_2%5Ccup%20C_3%5Ccup%5Ccdots)%20%3D%20P(C_1)%2BP(C_2)%2BP(C_3)%2B%5Ccdots%2C%20%5C%3B(C_i%5Ccap%20C_j%3D%5CO%2Ci%5Cneq%20j)%5C%5C%0A%26(c)%5C%3BP(%5Cmathscr%7BC%7D)%20%3D%201%5C%5C%0A%5Cend%7Baligned%7D%0A"></p><p>Then <img src="https://math.now.sh?inline=P%28C%29" style="display:inline-block;margin: 0;"> is called <em>probability set function</em> of the outcome of the random experiment. For each subset <img src="https://math.now.sh?inline=C" style="display:inline-block;margin: 0;">, <img src="https://math.now.sh?inline=P%28C%29" style="display:inline-block;margin: 0;"> is the probability of the event <img src="https://math.now.sh?inline=C" style="display:inline-block;margin: 0;">.</p>
 <h3 id="Definition-2">Definition 2:</h3>
-<p style><img src="https://math.now.sh?from=P%28C_2%7CC_1%29%20%3D%20%5Cfrac%7BP(C_1%5Ccap%20C_2)%7D%7BP(C_1)%7D%5Cnewline%0AP(C_1%5Ccap%20C_2%5Ccap%5Ccdots%5Ccap%20C_n)%20%3D%20P(C_1)P(C_2%7CC_1)P(C_3%7CC_1%5Ccap%20C_2)%5Ccdots%20P(C_n%7CC_1%5Ccap%20C_2%5Ccap%20%5Ccdots%20%5Ccap%20C_%7Bn-1%7D)%0A"></p><p>is called the <em>conditional probability</em>. And this function meets the three characteristics of <em>probability set function</em>.</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AP%28C_2%7CC_1%29%20%26%3D%20%5Cfrac%7BP(C_1%5Ccap%20C_2)%7D%7BP(C_1)%7D%5C%5C%0AP(C_1%5Ccap%20C_2%5Ccap%5Ccdots%5Ccap%20C_n)%20%26%3D%20P(C_1)%5Ccdot%20P(C_2%7CC_1)P(C_3%7CC_1%5Ccap%20C_2)%5Ccdots%20P(C_n%7CC_1%5Ccap%20C_2%5Ccap%20%5Ccdots%20%5Ccap%20C_%7Bn-1%7D)%0A%5Cend%7Baligned%7D%0A"></p><p>is called the <em>conditional probability</em>. And this function meets the three characteristics of <em>probability set function</em>.</p>
 <p style><img src="https://math.now.sh?from=P%28C%29%20%3D%20%5Csum%5E%7Bn%7D_%7Bi%3D1%7DP(C_i)P(C%7CC_i)%0A"></p><p>is called the <em>law of total probability</em>.</p>
 <p style><img src="https://math.now.sh?from=P%28C_j%7CC%29%20%3D%20%5Cfrac%7BP(C_j%5Ccap%20C)%7D%7BP(C)%7D%20%3D%20%5Cfrac%7BP(C_j)P(C%7CC_j)%7D%7B%5Csum%5E%7Bn%7D_%7Bi%3D1%7DP(C_i)P(C%7CC_i)%7D%0A"></p><p>is called the <em>Bayes’ theorem</em>. Where <img src="https://math.now.sh?inline=P%28C_i%29" style="display:inline-block;margin: 0;"> is called the <em>prior probability</em> and the <img src="https://math.now.sh?inline=P%28C_j%7CC%29" style="display:inline-block;margin: 0;"> is called the <em>posterior probability</em>.</p>
 <h3 id="Definition-3">Definition 3:</h3>
@@ -474,36 +468,36 @@
 <p>Let <img src="https://math.now.sh?inline=F%28x%29%20%3D%20Pr(X%20%5Cleq%20x)" style="display:inline-block;margin: 0;">, <img src="https://math.now.sh?inline=F%28x%29" style="display:inline-block;margin: 0;"> is called the <em>distribution function</em> of the random variable <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;">. And with <img src="https://math.now.sh?inline=f%28x%29" style="display:inline-block;margin: 0;"> the p.d.f., we have</p>
 <p style><img src="https://math.now.sh?from=F%28x%29%20%3D%20%5Csum_%7Bw%5Cleq%20x%7Df(w)%0A"></p><p>for the discrete type.</p>
 <p>Extended the random variable <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;"> into continuous case, we have</p>
-<p style><img src="https://math.now.sh?from=%5Cint_%7B%5Cmathscr%7BA%7D%7Df%28x%29%20%3D%201%5Cnewline%0AP(A)%20%3D%20Pr(X%20%5Cin%20A)%20%3D%20%5Cint_%7BA%7Df(x)dx%5Cnewline%0AF(x)%20%3D%20%5Cint%5E%7Bx%7D_%7B-%5Cinfty%7Df(w)dw%0A"></p><p>And both distribution function have</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cint_%7B%5Cmathscr%7BA%7D%7Df%28x%29%20%26%3D%201%5C%5C%0AP(A)%20%26%3D%20Pr(X%20%5Cin%20A)%20%3D%20%5Cint_%7BA%7Df(x)dx%5C%5C%0AF(x)%20%26%3D%20%5Cint%5E%7Bx%7D_%7B-%5Cinfty%7Df(w)dw%0A%5Cend%7Baligned%7D%0A"></p><p>And both distribution function have</p>
 <p style><img src="https://math.now.sh?from=Pr%28a%20%3C%20X%20%5Cleq%20b%29%20%3D%20F(b)%20-%20F(a)%0A"></p><p><strong>Conversion:</strong> <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;"> is a random variable of <img src="https://math.now.sh?inline=%5Cmathscr%7BA%7D" style="display:inline-block;margin: 0;">, let <img src="https://math.now.sh?inline=Y%20%3D%20u%28X%29" style="display:inline-block;margin: 0;">. Obviously it exists sample space <img src="https://math.now.sh?inline=%5Cmathscr%7BB%7D%20%3D%20%5C%7By%3Ay%3Du%28x%29%2Cx%5Cin%5Cmathscr%7BA%7D%5C%7D" style="display:inline-block;margin: 0;">. Let <img src="https://math.now.sh?inline=X%5Cin%20A%20%5Csubset%20%5Cmathscr%7BA%7D" style="display:inline-block;margin: 0;"> where <img src="https://math.now.sh?inline=A%20%3D%20%5C%7Bx%3Au%28x%29%5Cleq%20y%5C%7D" style="display:inline-block;margin: 0;">. We have the distribution function of <img src="https://math.now.sh?inline=Y" style="display:inline-block;margin: 0;"> as below</p>
 <p style><img src="https://math.now.sh?from=G%28y%29%20%3D%20Pr(Y%20%5Cleq%20y)%20%3D%20Pr%5Bu(X)%20%5Cleq%20y%5D%20%3D%20P(A)%0A"></p><h3 id="Definition-6">Definition 6:</h3>
 <p>If for a random variable <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;"> we have a certain absolute convergent p.d.f. <img src="https://math.now.sh?inline=f%28x%29" style="display:inline-block;margin: 0;">  as below</p>
 <p style><img src="https://math.now.sh?from=%5Csum_%7BX%7D%7Cx%7Cf%28x%29%5C%3Bor%5C%3B%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7D%7Cx%7Cf(x)dx%0A"></p><p>converges to a finite limit, we have</p>
 <p style><img src="https://math.now.sh?from=E%28X%29%20%3D%20%5Csum_%7BX%7Dxf(x)%5C%3Bor%5C%3BE(X)%20%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Dxf(x)dx%0A"></p><p>We name <img src="https://math.now.sh?inline=E%28X%29" style="display:inline-block;margin: 0;"> as <em>mathematical expectation</em>.</p>
 <p>Suppose a random variable <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;"> with space <img src="https://math.now.sh?inline=%5Cmathscr%7BA%7D" style="display:inline-block;margin: 0;"> and <img src="https://math.now.sh?inline=Y%20%3D%20u%28X%29" style="display:inline-block;margin: 0;">. We can get <img src="https://math.now.sh?inline=y%3Du%28x%29%5CRightarrow%20x%3Dw(y)" style="display:inline-block;margin: 0;">. Therefore,</p>
-<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AG%28y%29%20%26%3D%20Pr(Y%5Cleq%20y)%20%3D%20Pr%5Bu(X)%5Cleq%20y%5D%20%3D%20Pr(X%20%5Cleq%20w(y))%5Cnewline%0A%26%3D%20%5Cint%5E%7Bw(y)%7D_%7B-%5Cinfty%7Df(x)dx%0A%5Cend%7Baligned%7D%0A"></p><p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Ag%28y%29%20%3D%20G'(y)%20%26%3D%20f%5Bw(y)%5Dw'(y)%2C%20%26%26y%20%5Cin%20%5Cmathscr%7BB%7D%2C%5Cnewline%0A%26%3D0%20%26%26elsewhere%2C%0A%5Cend%7Baligned%7D%0A"></p><p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AE%28Y%29%20%26%3D%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Dyg(y)dy%5Cnewline%0A%26%3D%20E%5Bu(x)%5D%20%3D%20%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Du(x)f(x)dy%0A%5Cend%7Baligned%7D%0A"></p><h3 id="Definition-7">Definition 7:</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AG%28y%29%20%26%3D%20Pr(Y%5Cleq%20y)%20%3D%20Pr%5Bu(X)%5Cleq%20y%5D%20%3D%20Pr(X%20%5Cleq%20w(y))%5C%5C%0A%26%3D%20%5Cint%5E%7Bw(y)%7D_%7B-%5Cinfty%7Df(x)dx%0A%5Cend%7Baligned%7D%0A"></p><p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Ag%28y%29%20%3D%20G'(y)%20%26%3D%20f%5Bw(y)%5Dw'(y)%2C%20%26%26y%20%5Cin%20%5Cmathscr%7BB%7D%2C%5C%5C%0A%26%3D0%20%26%26elsewhere%2C%0A%5Cend%7Baligned%7D%0A"></p><p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AE%28Y%29%20%26%3D%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Dyg(y)dy%5C%5C%0A%26%3D%20E%5Bu(x)%5D%20%3D%20%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Du(x)f(x)dy%0A%5Cend%7Baligned%7D%0A"></p><h3 id="Definition-7">Definition 7:</h3>
 <p>Suppose we have a random variable <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;">,</p>
 <p style><img src="https://math.now.sh?from=%5Cmu%20%3D%20E%28X%29%0A"></p><p><img src="https://math.now.sh?inline=%5Cmu" style="display:inline-block;margin: 0;"> is the <em>mean value</em> of <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;">.</p>
-<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AVar%28X%29%3D%5Csigma%5E2%20%3D%20E%5B(X-%5Cmu)%5E2%5D%20%26%3D%20E(X%5E2-2%5Cmu%20X%2B%5Cmu%5E2)%5Cnewline%0A%26%3D%20E(X%5E2)%20-%202%5Cmu%20E(X)%20%2B%20%5Cmu%5E2%5Cnewline%0A%26%3D%20E(X%5E2)%20-%202%5Cmu%5E2%20%2B%20%5Cmu%5Cnewline%0A%26%3D%20E(X%5E2)%20-%20%5Cmu%5E2%0A%5Cend%7Baligned%7D%0A"></p><p><img src="https://math.now.sh?inline=%5Csigma%5E2" style="display:inline-block;margin: 0;"> is the <em>variance</em> of <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;">.</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AVar%28X%29%3D%5Csigma%5E2%20%3D%20E%5B(X-%5Cmu)%5E2%5D%20%26%3D%20E(X%5E2-2%5Cmu%20X%2B%5Cmu%5E2)%5C%5C%0A%26%3D%20E(X%5E2)%20-%202%5Cmu%20E(X)%20%2B%20%5Cmu%5E2%5C%5C%0A%26%3D%20E(X%5E2)%20-%202%5Cmu%5E2%20%2B%20%5Cmu%5C%5C%0A%26%3D%20E(X%5E2)%20-%20%5Cmu%5E2%0A%5Cend%7Baligned%7D%0A"></p><p><img src="https://math.now.sh?inline=%5Csigma%5E2" style="display:inline-block;margin: 0;"> is the <em>variance</em> of <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;">.</p>
 <p style><img src="https://math.now.sh?from=%5Csigma%20%3D%20%5Csqrt%7B%5Csigma%5E2%7D%0A"></p><p><img src="https://math.now.sh?inline=%5Csigma" style="display:inline-block;margin: 0;"> is the <em>standard deviation</em> of <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;">.</p>
-<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AM%28t%29%20%3D%20E(e%5E%7BtX%7D)%20%26%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7De%5E%7BtX%7Df(x)dx%2C%20%26%26X%5C%3Bis%5C%3Ba%5C%3Bcontinuous%5C%3Btype%5Cnewline%0A%26%3D%5Csum_%7BX%7De%5E%7BtX%7Df(x)%2C%20%26%26X%5C%3Bis%5C%3Ba%5C%3Bdiscrete%5C%3Btype%0A%5Cend%7Baligned%7D%0A"></p><p><img src="https://math.now.sh?inline=M%28t%29" style="display:inline-block;margin: 0;"> is the <em>moment-generating function</em>(m.g.f.) of <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;">. Not every distribution has an m.g.f., but the m.g.f. is unique and completely determines the distribution of the random variable. Therefore, if two random variable have the same m.g.f., they have the same distribution.</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AM%28t%29%20%3D%20E(e%5E%7BtX%7D)%20%26%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7De%5E%7BtX%7Df(x)dx%2C%20%26%26X%5C%3Bis%5C%3Ba%5C%3Bcontinuous%5C%3Btype%5C%5C%0A%26%3D%5Csum_%7BX%7De%5E%7BtX%7Df(x)%2C%20%26%26X%5C%3Bis%5C%3Ba%5C%3Bdiscrete%5C%3Btype%0A%5Cend%7Baligned%7D%0A"></p><p><img src="https://math.now.sh?inline=M%28t%29" style="display:inline-block;margin: 0;"> is the <em>moment-generating function</em>(m.g.f.) of <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;">. Not every distribution has an m.g.f., but the m.g.f. is unique and completely determines the distribution of the random variable. Therefore, if two random variable have the same m.g.f., they have the same distribution.</p>
 <p><strong>Example:</strong> Suppose <img src="https://math.now.sh?inline=M%28t%29%20%3D%20%5Cfrac%7B1%7D%7B10%7De%5E%7Bt%7D%20%2B%20%5Cfrac%7B2%7D%7B10%7De%5E%7B2t%7D%20%2B%20%5Cfrac%7B3%7D%7B10%7De%5E%7B3t%7D%20%2B%20%5Cfrac%7B4%7D%7B10%7De%5E%7B4t%7D" style="display:inline-block;margin: 0;">, and let <img src="https://math.now.sh?inline=a%2Cb%2Cc%2Cd%2C%5Ccdots" style="display:inline-block;margin: 0;"> be discrete points of <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;">, <img src="https://math.now.sh?inline=f%28a%29%2Cf(b)%2C%5Ccdots" style="display:inline-block;margin: 0;"> is these points’ density function.</p>
 <p>For <img src="https://math.now.sh?inline=M%28t%29%20%3D%20%5Csum_Xe%5E%7Btx%7Df(x)" style="display:inline-block;margin: 0;"> we have</p>
 <p style><img src="https://math.now.sh?from=%5Cfrac%7B1%7D%7B10%7De%5E%7Bt%7D%20%2B%20%5Cfrac%7B2%7D%7B10%7De%5E%7B2t%7D%20%2B%20%5Cfrac%7B3%7D%7B10%7De%5E%7B3t%7D%20%2B%20%5Cfrac%7B4%7D%7B10%7De%5E%7B4t%7D%20%3D%20f%28a%29e%5E%7Bat%7D%20%2B%20f(b)e%5E%7Bbt%7D%20%2B%20f(c)e%5E%7Bct%7D%20%2B%20f(d)e%5E%7Bdt%7D%20%2B%20%5Ccdots%0A"></p><p>Because <img src="https://math.now.sh?inline=%5Cforall%20t%20%5Cin%20%5Cmathbb%7BR%7D" style="display:inline-block;margin: 0;"> the above function establishes, we have <img src="https://math.now.sh?inline=a%3D1%2Cf%28a%29%3D0.1%2C%20b%20%3D%202%2C%20f(b)%20%3D%200.2" style="display:inline-block;margin: 0;"> and so on.</p>
 <p><strong>Theorem:</strong></p>
 <p>Let <img src="https://math.now.sh?inline=M%28t%29" style="display:inline-block;margin: 0;"> of the continuous type as an example.</p>
-<p style><img src="https://math.now.sh?from=%5Cfrac%7BdM%28t%29%7D%7Bdt%7D%20%3D%20M'(t)%20%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Dxe%5E%7Btx%7Df(x)dx%5Cnewline%0A%5CRightarrow%20M'(0)%20%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Dxf(x)dx%20%3D%20E(X)%20%3D%20%5Cmu%0A"></p><p style><img src="https://math.now.sh?from=M''%28t%29%20%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Dx%5E2e%5E%7Btx%7Df(x)dx%5Cnewline%0A%5CRightarrow%20M''(0)%20%3D%20E(X%5E2)%5Cnewline%0A%5CRightarrow%20Var(X)%20%3D%20%5Csigma%5E2%20%3D%20E(X%5E2)-%5Cmu%5E2%20%3D%20M''(0)%20-%20%5BM'(0)%5D%5E2%0A"></p><p>Similarly, we have <img src="https://math.now.sh?inline=M%5E%7B%28m%29%7D(0)%20%3D%20E(X%5E%7Bm%7D)" style="display:inline-block;margin: 0;"></p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cfrac%7BdM%28t%29%7D%7Bdt%7D%20%3D%20M'(t)%20%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Dxe%5E%7Btx%7Df(x)dx%5C%5C%0A%5CRightarrow%20M'(0)%20%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Dxf(x)dx%20%3D%20E(X)%20%3D%20%5Cmu%0A%5Cend%7Baligned%7D%0A"></p><p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%26M''%28t%29%20%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Dx%5E2e%5E%7Btx%7Df(x)dx%5C%5C%0A%26%5CRightarrow%20M''(0)%20%3D%20E(X%5E2)%5C%5C%0A%26%5CRightarrow%20Var(X)%20%3D%20%5Csigma%5E2%20%3D%20E(X%5E2)-%5Cmu%5E2%20%3D%20M''(0)%20-%20%5BM'(0)%5D%5E2%0A%5Cend%7Baligned%7D%0A"></p><p>Similarly, we have <img src="https://math.now.sh?inline=M%5E%7B%28m%29%7D(0)%20%3D%20E(X%5E%7Bm%7D)" style="display:inline-block;margin: 0;"></p>
 <p>In mechanics, the exceptions (integrals or sums) of the above sort are called <em>moment</em>. Since <img src="https://math.now.sh?inline=M%28t%29" style="display:inline-block;margin: 0;"> generates the values of <img src="https://math.now.sh?inline=E%28X%5Em%29%2Cm%3D1%2C2%2C3%2C%5Ccdots%2C" style="display:inline-block;margin: 0;"> is called <em>the moment-generating function (m.g.f.)</em>.</p>
 <p><strong>Extension:</strong></p>
 <p>We mentioned that m.g.f. doesn’t exist on any p.d.f… Nevertheless, the function</p>
 <p style><img src="https://math.now.sh?from=%5Cvarphi%28t%29%20%3D%20E(e%5E%7BitX%7D)%0A"></p><p>exists on every p.d.f., where <img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;"> in imaginary unit and <img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;"> is an arbitrary real (I guess the reason is that the field of real numbers is not algebraically closed). The proof is as below</p>
-<p style><img src="https://math.now.sh?from=%7C%5Cvarphi%28t%29%7C%20%3D%20%5Cleft%7C%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7De%5E%7Bitx%7Df(x)dx%5Cright%7C%5Cleq%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7D%5Cleft%7Ce%5E%7Bitx%7Df(x)%5Cright%7Cdx%5Cnewline%0Af(x)%5Cgeq%200%20%5CRightarrow%20%7Cf(x)%7C%20%3D%20f(x)%5Cnewline%0A%7Ce%5E%7Bitx%7D%7C%20%3D%20%7Ccos%5C%3Btx%20%2B%20i%5C%3Bsin%5C%3Btx%7C%20%3D%20%5Csqrt%7Bcos%5E2%5C%3Btx%20%2B%20sin%5E2%5C%3Btx%7D%20%3D%201%5Cnewline%0A%5CRightarrow%20%7C%5Cvarphi(t)%7C%5Cleq%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Df(x)dx%20%3D%201%0A"></p><p>and the function <img src="https://math.now.sh?inline=%5Cvarphi%28t%29" style="display:inline-block;margin: 0;"> is called the <em>characteristic function</em> and it satisfies the property <img src="https://math.now.sh?inline=%5Cvarphi%28t%29%20%3D%20M(it)" style="display:inline-block;margin: 0;"> and for the same reason we have <img src="https://math.now.sh?inline=iE%28x%29%20%3D%20%5Cvarphi'(0)%2C%20i%5E2E(x)%20%3D%20%5Cvarphi''(0)%2C" style="display:inline-block;margin: 0;"> and so on.</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7C%5Cvarphi%28t%29%7C%20%26%3D%20%5Cleft%7C%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7De%5E%7Bitx%7Df(x)dx%5Cright%7C%5Cleq%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7D%5Cleft%7Ce%5E%7Bitx%7Df(x)%5Cright%7Cdx%5C%5C%0Af(x)%5Cgeq%200%20%26%5CRightarrow%20%7Cf(x)%7C%20%3D%20f(x)%5C%5C%0A%7Ce%5E%7Bitx%7D%7C%20%26%3D%20%7Ccos%5C%3Btx%20%2B%20i%5C%3Bsin%5C%3Btx%7C%20%3D%20%5Csqrt%7Bcos%5E2%5C%3Btx%20%2B%20sin%5E2%5C%3Btx%7D%20%3D%201%5C%5C%0A%26%5CRightarrow%20%7C%5Cvarphi(t)%7C%5Cleq%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Df(x)dx%20%3D%201%0A%5Cend%7Baligned%7D%0A"></p><p>and the function <img src="https://math.now.sh?inline=%5Cvarphi%28t%29" style="display:inline-block;margin: 0;"> is called the <em>characteristic function</em> and it satisfies the property <img src="https://math.now.sh?inline=%5Cvarphi%28t%29%20%3D%20M(it)" style="display:inline-block;margin: 0;"> and for the same reason we have <img src="https://math.now.sh?inline=iE%28x%29%20%3D%20%5Cvarphi'(0)%2C%20i%5E2E(x)%20%3D%20%5Cvarphi''(0)%2C" style="display:inline-block;margin: 0;"> and so on.</p>
 <h3 id="Theorem-1">Theorem 1</h3>
 <p>Let <img src="https://math.now.sh?inline=u%28X%29" style="display:inline-block;margin: 0;"> be a nonnegative function of the random variable <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;">. If <img src="https://math.now.sh?inline=E%5Bu%28X%29%5D" style="display:inline-block;margin: 0;"> exists, for every positive constant c,</p>
-<p style><img src="https://math.now.sh?from=Pr%5Bu%28X%29%5Cgeq%20c%5D%5Cleq%20%5Cfrac%7BE%5Bu(X)%5D%7D%7Bc%7D.%0A"></p><p style><img src="https://math.now.sh?from=%5Cbegin%7Bmultline%7D%0AProof.%5Cnewline%0ALet%5C%3BA%3D%5C%7Bx%3Au%28x%29%5Cgeq%20c%5C%7D%5Cnewline%0AE%5Bu(X)%5D%20%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Du(x)f(x)dx%20%3D%20%5Cint_%7BA%7Du(x)f(x)dx%20%2B%20%5Cint_%7BA%5E*%7Du(x)f(x)dx%5Cnewline%0A%5Cleft.%0A%5Cbegin%7Bmatrix%7D%0A%5Cint_%7BA%5E*%7Du(x)f(x)dx%20%5Cgeq%200%20%5CRightarrow%20E%5Bu(X)%5D%20%5Cgeq%20%5Cint_%7BA%7Du(x)f(x)dx%5Cnewline%0AX%20%5Cin%20A%5CRightarrow%20u(x)%5Cgeq%20c%0A%5Cend%7Bmatrix%7D%0A%5Cright%20%5C%7D%0A%5CRightarrow%20E%5Bu(X)%5D%20%5Cgeq%20c%5Cint_%7BA%7Df(x)dx.%5Cnewline%0A%5Cint_%7BA%7Df(x)dx%20%3D%20Pr(X%5Cin%20A)%20%3D%20Pr%5Bu(X)%5Cgeq%20c%5D%5Cnewline%0Acertificated.%0A%5Cend%7Bmultline%7D%0A"></p><h3 id="Theorem-2">Theorem 2</h3>
+<p style><img src="https://math.now.sh?from=Pr%5Bu%28X%29%5Cgeq%20c%5D%5Cleq%20%5Cfrac%7BE%5Bu(X)%5D%7D%7Bc%7D.%0A"></p><p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AProof.%5C%5C%0A%26Let%5C%3BA%3D%5C%7Bx%3Au%28x%29%5Cgeq%20c%5C%7D%5C%5C%0A%26E%5Bu(X)%5D%20%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B-%5Cinfty%7Du(x)f(x)dx%20%3D%20%5Cint_%7BA%7Du(x)f(x)dx%20%2B%20%5Cint_%7BA%5E*%7Du(x)f(x)dx%5C%5C%0A%26%5Cleft.%0A%5Cbegin%7Bmatrix%7D%0A%5Cint_%7BA%5E*%7Du(x)f(x)dx%20%5Cgeq%200%20%5CRightarrow%20E%5Bu(X)%5D%20%5Cgeq%20%5Cint_%7BA%7Du(x)f(x)dx%5C%5C%0AX%20%5Cin%20A%5CRightarrow%20u(x)%5Cgeq%20c%0A%5Cend%7Bmatrix%7D%0A%5Cright%20%5C%7D%0A%5CRightarrow%20E%5Bu(X)%5D%20%5Cgeq%20c%5Cint_%7BA%7Df(x)dx.%5C%5C%0A%26%5Cint_%7BA%7Df(x)dx%20%3D%20Pr(X%5Cin%20A)%20%3D%20Pr%5Bu(X)%5Cgeq%20c%5D%5C%5C%0A%26%26certificated.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="Theorem-2">Theorem 2</h3>
 <p><strong>Chebyshev’s Inequality:</strong></p>
 <p>As it is claimed above, we set <img src="https://math.now.sh?inline=%5Cmu" style="display:inline-block;margin: 0;"> as the mean value and <img src="https://math.now.sh?inline=%5Csigma" style="display:inline-block;margin: 0;"> as a finite variance value of random variable <img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;">. Then we have</p>
-<p style><img src="https://math.now.sh?from=Pr%28%7CX-%5Cmu%7C%5Cgeq%20k%5Csigma%29%20%5Cleq%20%5Cfrac%7B1%7D%7Bk%5E2%7D%2C%5Cnewline%0APr(%7CX-%5Cmu%7C%3C%20k%5Csigma)%20%5Cgeq%201%20-%20%5Cfrac%7B1%7D%7Bk%5E2%7D%0A"></p><p style><img src="https://math.now.sh?from=%5Cbegin%7Bmultline%7D%0AProof.%5Cnewline%0Aas%5C%3BTheorem%5C%3B1%5C%3Band%5C%3Bset%5C%3Bu%28X%29%20%3D%20(X-%5Cmu)%5E2%2Cc%20%3D%20k%5E2%5Csigma%5E2%5Cnewline%0Awe%5C%3Bhave%5C%3BPr%5B(X-%5Cmu)%5E2%5Cgeq%20k%5E2%5Csigma%5E2%5D%5Cleq%5Cfrac%7BE%5B(X-%5Cmu)%5E2%5D%7D%7Bk%5E2%5Csigma%5E2%7D.%5Cnewline%0A%5CRightarrow%20Pr(%7CX-%5Cmu%7C%5Cgeq%20k%5Csigma)%20%5Cleq%20%5Cfrac%7B1%7D%7Bk%5E2%7D%5Cnewline%0Acertificated.%0A%5Cend%7Bmultline%7D%0A"></p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%26Pr%28%7CX-%5Cmu%7C%5Cgeq%20k%5Csigma%29%20%5Cleq%20%5Cfrac%7B1%7D%7Bk%5E2%7D%2C%5C%5C%0A%26Pr(%7CX-%5Cmu%7C%3C%20k%5Csigma)%20%5Cgeq%201%20-%20%5Cfrac%7B1%7D%7Bk%5E2%7D%0A%5Cend%7Baligned%7D%0A"></p><p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AProof.%5C%5C%0A%26as%5C%3BTheorem%5C%3B1%5C%3Band%5C%3Bset%5C%3Bu%28X%29%20%3D%20(X-%5Cmu)%5E2%2Cc%20%3D%20k%5E2%5Csigma%5E2%5C%5C%0A%26we%5C%3Bhave%5C%3BPr%5B(X-%5Cmu)%5E2%5Cgeq%20k%5E2%5Csigma%5E2%5D%5Cleq%5Cfrac%7BE%5B(X-%5Cmu)%5E2%5D%7D%7Bk%5E2%5Csigma%5E2%7D.%5C%5C%0A%26%5CRightarrow%20Pr(%7CX-%5Cmu%7C%5Cgeq%20k%5Csigma)%20%5Cleq%20%5Cfrac%7B1%7D%7Bk%5E2%7D%5C%5C%0A%26%26certificated.%0A%5Cend%7Baligned%7D%0A"></p>
     </div>
 
     
@@ -520,7 +514,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>Post link: </strong>
-      <a href="http://example.com/2021/10/08/Mathematical-Statistics-1/" title="Mathematical Statistics 1">http://example.com/2021/10/08/Mathematical-Statistics-1/</a>
+      <a href="http://example.com/2021/12/28/Mathematical-Statistics/" title="Mathematical Statistics">http://example.com/2021/12/28/Mathematical-Statistics/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -537,13 +531,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/09/29/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" rel="prev" title="机器学习（一）">
-                  <i class="fa fa-chevron-left"></i> 机器学习（一）
+                <a href="/2021/09/20/%E4%B9%9F%E8%AE%B8_%E6%97%A0%E9%97%AE%E8%A5%BF%E4%B8%9C/" rel="prev" title="也许，无问西东？">
+                  <i class="fa fa-chevron-left"></i> 也许，无问西东？
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/10/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" rel="next" title="机器学习（二）">
-                  机器学习（二） <i class="fa fa-chevron-right"></i>
+                <a href="/2021/12/28/2022%E8%AF%A5%E7%AB%8B%E4%BA%9B%E4%BB%80%E4%B9%88flag/" rel="next" title="2022该立些什么flag">
+                  2022该立些什么flag <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -619,8 +613,66 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"per_page":true,"cdn":"//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"per_page":true,"cdn":"https://cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    // window.MathJax = {
+    //   loader: {
+    //
+    //     source: {
+    //       '[tex]/amsCd': '[tex]/amscd',
+    //       '[tex]/AMScd': '[tex]/amscd'
+    //     }
+    //   },
+    //   tex: {
+    //     inlineMath: {'[+]': [['$', '$']]},
+    //
+    //     tags: 'ams'
+    //   },
+    //   options: {
+    //     renderActions: {
+    //       findScript: [10, doc => {
+    //         document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+    //           const display = !!node.type.match(/; *mode=display/);
+    //           const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+    //           const text = document.createTextNode('');
+    //           node.parentNode.replaceChild(text, node);
+    //           math.start = {node: text, delim: '', n: 0};
+    //           math.end = {node: text, delim: '', n: 0};
+    //           doc.math.push(math);
+    //         });
+    //       }, '', false],
+    //       insertedScript: [200, () => {
+    //         document.querySelectorAll('mjx-container').forEach(node => {
+    //           let target = node.parentNode;
+    //           if (target.nodeName.toLowerCase() === 'li') {
+    //             target.parentNode.classList.add('has-jax');
+    //           }
+    //         });
+    //       }, '', false]
+    //     }
+    //   }
+    // };
+    window.MathJax = {
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '[object Object]';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
 
 <script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyvDBNEmH","appkey":"yzjzwthpy"}</script>

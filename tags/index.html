@@ -189,13 +189,13 @@
     <img class="site-author-image" itemprop="image" alt="江子扬-Jasper Young"
       src="/images/QQ%E5%9B%BE%E7%89%8720210901210637.jpg">
   <p class="site-author-name" itemprop="name">江子扬-Jasper Young</p>
-  <div class="site-description" itemprop="description">这个人很懒，之后才会留下些什么~</div>
+  <div class="site-description" itemprop="description">Stay Hungry. Stay Foolish</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -206,7 +206,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -271,10 +271,10 @@
       
       <div class="post-body"><div class="tag-cloud">
   <div class="tag-cloud-title">
-    6 tags in total
+    7 tags in total
   </div>
   <div class="tag-cloud-tags">
-    <a href="/tags/C/" style="font-size: 25.5px;" class="tag-cloud-8">C++</a> <a href="/tags/computer-system/" style="font-size: 12px;" class="tag-cloud-0">computer system</a> <a href="/tags/debug/" style="font-size: 12px;" class="tag-cloud-0">debug</a> <a href="/tags/informal-essay/" style="font-size: 16.5px;" class="tag-cloud-3">informal essay</a> <a href="/tags/machine-learning/" style="font-size: 21px;" class="tag-cloud-5">machine learning</a> <a href="/tags/notes/" style="font-size: 30px;" class="tag-cloud-10">notes</a>
+    <a href="/tags/informal-essay/" style="font-size: 12px;" class="tag-cloud-0">-informal essay</a> <a href="/tags/C/" style="font-size: 21px;" class="tag-cloud-5">C++</a> <a href="/tags/computer-system/" style="font-size: 12px;" class="tag-cloud-0">computer system</a> <a href="/tags/debug/" style="font-size: 12px;" class="tag-cloud-0">debug</a> <a href="/tags/informal-essay/" style="font-size: 21px;" class="tag-cloud-5">informal essay</a> <a href="/tags/machine-learning/" style="font-size: 21px;" class="tag-cloud-5">machine learning</a> <a href="/tags/notes/" style="font-size: 30px;" class="tag-cloud-10">notes</a>
   </div>
 </div>
 
@@ -350,8 +350,66 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"per_page":true,"cdn":"//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"per_page":true,"cdn":"https://cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    // window.MathJax = {
+    //   loader: {
+    //
+    //     source: {
+    //       '[tex]/amsCd': '[tex]/amscd',
+    //       '[tex]/AMScd': '[tex]/amscd'
+    //     }
+    //   },
+    //   tex: {
+    //     inlineMath: {'[+]': [['$', '$']]},
+    //
+    //     tags: 'ams'
+    //   },
+    //   options: {
+    //     renderActions: {
+    //       findScript: [10, doc => {
+    //         document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+    //           const display = !!node.type.match(/; *mode=display/);
+    //           const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+    //           const text = document.createTextNode('');
+    //           node.parentNode.replaceChild(text, node);
+    //           math.start = {node: text, delim: '', n: 0};
+    //           math.end = {node: text, delim: '', n: 0};
+    //           doc.math.push(math);
+    //         });
+    //       }, '', false],
+    //       insertedScript: [200, () => {
+    //         document.querySelectorAll('mjx-container').forEach(node => {
+    //           let target = node.parentNode;
+    //           if (target.nodeName.toLowerCase() === 'li') {
+    //             target.parentNode.classList.add('has-jax');
+    //           }
+    //         });
+    //       }, '', false]
+    //     }
+    //   }
+    // };
+    window.MathJax = {
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '[object Object]';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
 
 <script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyvDBNEmH","appkey":"yzjzwthpy"}</script>
