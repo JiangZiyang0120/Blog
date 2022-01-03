@@ -23,25 +23,36 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="Stay Hungry. Stay Foolish">
-<meta property="og:type" content="website">
-<meta property="og:title" content="江子扬的鱼塘">
-<meta property="og:url" content="http://example.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.html">
+<meta name="description" content="自用笔记：仅供参考 note of 《Computer System —— a programmer&#39;s perspective》, written in English">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Computer System notes">
+<meta property="og:url" content="http://example.com/2021/10/02/Computer%20System/index.html">
 <meta property="og:site_name" content="江子扬的鱼塘">
-<meta property="og:description" content="Stay Hungry. Stay Foolish">
+<meta property="og:description" content="自用笔记：仅供参考 note of 《Computer System —— a programmer&#39;s perspective》, written in English">
 <meta property="og:locale">
+<meta property="og:image" content="https://math.now.sh?inline=T_%7Bold%7D">
+<meta property="og:image" content="https://math.now.sh?inline=%5Calpha">
+<meta property="og:image" content="https://math.now.sh?inline=k">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AT_%7Bnew%7D%20%26%3D%20%281-%5Calpha%29T_%7Bold%7D%20%2B%20(%5Calpha%20T_%7Bold%7D)%2Fk%5C%5C%5C%5C%0A%20%20%20%20%20%20%20%20%26%3DT_%7Bold%7D%5B(1-%5Calpha)%20%2B%20%5Calpha%2Fk%5D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%09S%20%26%3D%20T_%7Bold%7D%2FT_%7Bnew%7D%5C%5C%5C%5C%0A%09%20%20%26%3D%20%5Cfrac%7B1%7D%7B%281-%5Calpha%29%2B%5Calpha%2Fk%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://res.cloudinary.com/dwy9slegd/image/upload/v1632847633/lb_cr7ijb.gif">
+<meta property="article:published_time" content="2021-10-02T15:30:00.000Z">
+<meta property="article:modified_time" content="2021-11-21T17:33:00.000Z">
 <meta property="article:author" content="江子扬-Jasper Young">
+<meta property="article:tag" content="notes">
+<meta property="article:tag" content="computer system">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://math.now.sh?inline=T_%7Bold%7D">
 
 
-<link rel="canonical" href="http://example.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+<link rel="canonical" href="http://example.com/2021/10/02/Computer%20System/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh","comments":"","permalink":"","path":"categories/技术笔记/机器学习/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh","comments":true,"permalink":"http://example.com/2021/10/02/Computer%20System/","path":"2021/10/02/Computer System/","title":"Computer System notes"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Category: 机器学习 | 江子扬的鱼塘</title>
+<title>Computer System notes | 江子扬的鱼塘</title>
   
 
 
@@ -141,7 +152,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
     <!-- require APlayer -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
 
@@ -179,6 +190,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">Computer System —— A Programmer’s Perspective</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#some-parts-of-the-Section-1"><span class="nav-number">1.1.</span> <span class="nav-text">some parts of the Section 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Amdahl%E2%80%99s-Law"><span class="nav-number">1.1.1.</span> <span class="nav-text">Amdahl’s Law</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#three-level-of-abstractions-of-parallelism"><span class="nav-number">1.1.2.</span> <span class="nav-text">three level of abstractions of parallelism</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Section-2"><span class="nav-number">1.2.</span> <span class="nav-text">Section 2</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -248,51 +260,169 @@
 </noscript>
 
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h2 class="collection-header">机器学习
-          <small>Category</small>
-        </h2>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/02/Computer%20System/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/QQ%E5%9B%BE%E7%89%8720210901210637.jpg">
+      <meta itemprop="name" content="江子扬-Jasper Young">
+      <meta itemprop="description" content="Stay Hungry. Stay Foolish">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="江子扬的鱼塘">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Computer System notes
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-10-02 23:30" itemprop="dateCreated datePublished" datetime="2021-10-02T23:30:00+08:00">2021-10-02</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-11-22 01:33" itemprop="dateModified" datetime="2021-11-22T01:33:00+08:00">2021-11-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">技术笔记</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/" itemprop="url" rel="index"><span itemprop="name">Computer Science</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan: </span>
+    
+    
+      <a title="changyan" href="/2021/10/02/Computer%20System/#SOHUCS" itemprop="discussionUrl">
+        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2021/10/02/Computer System/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+</div>
+
+            <div class="post-description"><strong>自用笔记</strong>：仅供参考<br> note of 《Computer System —— a programmer's perspective》, written in English</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1>Computer System —— A Programmer’s Perspective</h1>
+<h2 id="some-parts-of-the-Section-1">some parts of the Section 1</h2>
+<h3 id="Amdahl’s-Law">Amdahl’s Law</h3>
+<p>Suppose a system requires time <img src="https://math.now.sh?inline=T_%7Bold%7D" style="display:inline-block;margin: 0;"> to execute. And it exists a part of manipulation requires a fraction <img src="https://math.now.sh?inline=%5Calpha" style="display:inline-block;margin: 0;"> of the whole time. Then, we improve this manipulation’s performance by a factor of <img src="https://math.now.sh?inline=k" style="display:inline-block;margin: 0;">. Thus, the overall execution time will turn to</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AT_%7Bnew%7D%20%26%3D%20%281-%5Calpha%29T_%7Bold%7D%20%2B%20(%5Calpha%20T_%7Bold%7D)%2Fk%5C%5C%5C%5C%0A%20%20%20%20%20%20%20%20%26%3DT_%7Bold%7D%5B(1-%5Calpha)%20%2B%20%5Calpha%2Fk%5D%0A%5Cend%7Baligned%7D%0A"></p><p>And the speedup is</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%09S%20%26%3D%20T_%7Bold%7D%2FT_%7Bnew%7D%5C%5C%5C%5C%0A%09%20%20%26%3D%20%5Cfrac%7B1%7D%7B%281-%5Calpha%29%2B%5Calpha%2Fk%7D%0A%5Cend%7Baligned%7D%0A"></p><p>This function indicates that in order to speed up the entire system, we must improve the speed of a very large fraction of the overall system.</p>
+<h3 id="three-level-of-abstractions-of-parallelism">three level of abstractions of parallelism</h3>
+<ul>
+<li>Thread-Level Concurrency</li>
+<li>Instruction-Level Parallelism</li>
+<li>Single-Instruction, Multiple-Data (SIMD) Parallelism</li>
+</ul>
+<h2 id="Section-2">Section 2</h2>
+<p>A programmer should strive to make programs portable across different machines and compilers, which requires the programmer be sensitive to the exact size of different data types. And some tips are as follow. The C standard doesn’t guarantee type <em>char</em> as a signed type. Thus it’s better to declare <em>signed char</em>. To control the size of data, it is supposed to use type <em>int32_t</em> and <em>int64_t</em>. Using <em>sizeof</em> instead of an exact value is a better way to ensure the cord is portable across different machines.</p>
+<p>in virtually all machines, a multi-byte object is sttored as a contiguous sequence of bytes, and the address of this object is the smallest address of the bytes used. And there are two types of storage order as below. Most Intel-compatible machines operate exclusively in little-endian mode, while most machines from IBM and oracle operate in big-endian mode. What’s more, many recent microprocessor chips (like ARM’s) are bi-endian, which is compatible with little-endian and big-endian.</p>
+<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1632847633/lb_cr7ijb.gif" alt="Lightbox"></p>
+<p>The above distinction is almost invisible and ineffable, but some times it matters. For instance, when two machines communicate over a network or you are inspecting assembly programs with debug (to be honest, it indeed bothered me, in every sense).</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-03-04T19:20:00+08:00"
-              content="2021-03-04">
-          03-04
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url">
-            <span itemprop="name">机器学习</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          
 
-      
-    </header>
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>江子扬-Jasper Young
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="http://example.com/2021/10/02/Computer%20System/" title="Computer System notes">http://example.com/2021/10/02/Computer System/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/notes/" rel="tag"><i class="fa fa-tag"></i><i class="fa fa-tag"></i> notes</a>
+              <a href="/tags/computer-system/" rel="tag"><i class="fa fa-tag"></i><i class="fa fa-tag"></i> computer system</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/09/19/%E4%B9%9F%E8%AE%B8_%E6%97%A0%E9%97%AE%E8%A5%BF%E4%B8%9C/" rel="prev" title="也许，无问西东？">
+                  <i class="fa fa-chevron-left"></i> 也许，无问西东？
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/10/07/Mathematical-Statistics/" rel="next" title="Mathematical Statistics">
+                  Mathematical Statistics <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
 
+
+
+
+
+    <div class="comments" id="SOHUCS"></div>
 </div>
   </main>
 
