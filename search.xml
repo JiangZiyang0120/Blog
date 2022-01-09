@@ -1,6 +1,372 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>寿险精算基础</title>
+    <url>/2022/01/06/%E5%AF%BF%E9%99%A9%E7%B2%BE%E7%AE%97%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>本笔记作为大纲的梳理写得较详细，可用作复习/补天使用。对于借这份笔记复习的同学，更建议通过这份笔记了解各部分费用的计算方法和表达符号。而具体的表达式完全可以通过简单的数学知识和理解推导。不建议强行记忆。</p>
+<h1>利息的度量</h1>
+<h2 id="利息的支付">利息的支付</h2>
+<p>期末支付（滞后利息）：</p>
+<p style><img src="https://math.now.sh?from=i%28t%29%20%3D%20%5Cfrac%7BA(t)%20-%20A(t-1)%7D%7BA(t-1)%7D%20%3D%20%5Cfrac%7BI(t)%7D%7BA(t-1)%7D%0A"></p><p>期初支付（贴现）：</p>
+<p style><img src="https://math.now.sh?from=d%28t%29%20%3D%20%5Cfrac%7BI(t)%7D%7BA(t)%7D%0A"></p><h2 id="利息的度量">利息的度量</h2>
+<p>名义利率:<br>
+设单位时间利率为<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">，则<img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;">时间内名义利率为</p>
+<p style><img src="https://math.now.sh?from=i%28h%29%3D%20hi%0A"></p><p>有效利率:<br>
+设单位时间利率为<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">，则<img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;">时间内有效利率为</p>
+<p style><img src="https://math.now.sh?from=i%28h%29%3D%20(1%2Bi)%5E%7Bh%7D-%201%0A"></p><p>贴现率:</p>
+<p style><img src="https://math.now.sh?from=d%20%3D%20%5Cfrac%7Bi%7D%7B1%2Bi%7D%0A"></p><h3 id="利息力">利息力</h3>
+<p>利息力即瞬间获息的大小</p>
+<p style><img src="https://math.now.sh?from=%5Cdelta%28t%29%20%3D%20%5Clim_%7Bh%5Crightarrow0%7D%5Cfrac%7Ba(t%2Bh)-a(t)%7D%7Bha(t)%7D%20%3D%20%5Cfrac%7BA'(t)%7D%7BA(t)%7D%0A"></p><p>积累因子</p>
+<p style><img src="https://math.now.sh?from=a%28t%29%20%3D%20%5Cexp(%5Cint%5E%7Bt%7D_%7B0%7D%5Cdelta(s)ds)%0A"></p><p>贴现因子(假设利率不变，n年后价值<img src="https://math.now.sh?inline=V" style="display:inline-block;margin: 0;">的某金融产品的现值<img src="https://math.now.sh?inline=V_%7Bnow%7D%20%3D%20Vv%28t%29." style="display:inline-block;margin: 0;">）</p>
+<p style><img src="https://math.now.sh?from=v%28t%29%20%3D%20%5Cexp(-%5Cint%5E%7Bt%7D_%7B0%7D%5Cdelta(s)ds)%0A"></p><h1>年金</h1>
+<ol>
+<li><strong>年金</strong>： 在相等时间间隔内的一系列支付。</li>
+<li><strong>分类</strong>：
+<ul>
+<li>风险年金（不确定，如生产保险）</li>
+<li>确定年金（如购买债券定期获利）</li>
+</ul>
+</li>
+</ol>
+<h2 id="确定年金">确定年金</h2>
+<h3 id="期末支付定期（即期）年金">期末支付定期（即期）年金</h3>
+<p>设年金额为1，每年年末支付，共支付<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年，年有效利率为<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">。称此年金为期末支付定期年金。记<img src="https://math.now.sh?inline=a_%7B%5Cbar%7Bn%7D%7Ci%7D%2CS_%7B%5Cbar%7Bn%7D%7Ci%7D" style="display:inline-block;margin: 0;">分别为表示在利率<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">下的年金现值和终值，也可省略<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">写作<img src="https://math.now.sh?inline=a_%7B%5Cbar%20n%7C%7D%2CS_%7B%5Cbar%20n%7C%7D" style="display:inline-block;margin: 0;">。</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Aa_%7B%5Cbar%20n%7C%7D%20%26%3D%20%5Csum%5Climits%5E%7Bn%7D_%7Bj%3D1%7Dv%5E%7Bj%7D%3D%20%5Cfrac%7Bv%281-v%5E%7Bn%7D%29%7D%7B1-v%7D%3D%20%5Cfrac%7B1-v%5En%7D%7Bi%7D%5C%5C%0AS_%7B%5Cbar%20n%7C%7D%20%26%3D%20%5Csum%5Climits%5E%7Bn%7D_%7Bj%3D1%7D(1%2Bi)%5E%7Bj-1%7D%20%3D%20%5Cfrac%7B(1%2Bi)%5E%7Bn%7D-%201%7D%7Bi%7D%20%3D%20a_%7B%5Cbar%20n%7D(1%2Bi)%5En%0A%5Cend%7Baligned%7D%0A"></p><h3 id="期初支付定期年金">期初支付定期年金</h3>
+<p>设年金额为1，每年年初支付，共支付<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年，年有效利率为<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">。称此年金为期初支付定期年金。记<img src="https://math.now.sh?inline=%5Cddot%20a_%7B%5Cbar%7Bn%7D%7Ci%7D%2C%5Cddot%20S_%7B%5Cbar%7Bn%7D%7Ci%7D" style="display:inline-block;margin: 0;">分别为表示在利率<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">下的年金现值和终值，也可省略<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">写作<img src="https://math.now.sh?inline=%5Cddot%20a_%7B%5Cbar%20n%7C%7D%2C%5Cddot%20S_%7B%5Cbar%20n%7C%7D" style="display:inline-block;margin: 0;">。</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cddot%20a_%7B%5Cbar%20n%7C%7D%20%26%3D%20%5Csum%5Climits%5E%7Bn-1%7D_%7Bj%3D0%7Dv%5E%7Bj%7D%3D%20%5Cfrac%7B1-v%5E%7Bn%7D%7D%7B1-v%7D%20%3D%20%5Cfrac%7B1-v%5En%7D%7Bd%7D%2C%5C%5C%0A%5Cddot%20S_%7B%5Cbar%20n%7C%7D%20%26%3D%20%5Csum%5Climits%5E%7Bn%7D_%7Bj%3D1%7D%281%2Bi%29%5Ej%20%3D%20%5Cfrac%7B(1%2Bi)%5B(1%2Bi)%5En%20-%201%5D%7D%7Bi%7D%20%3D%20%5Cfrac%7B(1%2Bi)%5En%20-%201%7D%7Bd%7D%5C%5C%0A%26%3D%20%5Cddot%20a_%7B%5Cbar%20n%7C%7D(1%2Bi)%5En.%20%0A%5Cend%7Baligned%7D%0A"></p><h3 id="期末支付定期延期年金">期末支付定期延期年金</h3>
+<p>以<img src="https://math.now.sh?inline=%7B_%7Bm%7C%7Da_%7B%5Cbar%20n%7C%7D%7D%2C%7B_%7Bm%7C%7DS_%7B%5Cbar%20n%7C%7D%7D" style="display:inline-block;margin: 0;">分别为表示延期<img src="https://math.now.sh?inline=m" style="display:inline-block;margin: 0;">年支付的<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年年金的现值和终值</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_%7Bm%7C%7Da_%7B%5Cbar%20n%7C%7D%7D%20%26%3D%20%5Csum%5E%7Bn%7D_%7Bj%3D1%7Dv%5E%7Bm%2Bj%7D%20%3D%20%5Cfrac%7Bv%5E%7Bm%2B1%7D%281-v%5En%29%7D%7B1-v%7D%5C%5C%0A%7B_%7Bm%7C%7DS_%7B%5Cbar%20n%7C%7D%7D%26%3D%20%5Csum%5Climits%5E%7Bn%7D_%7Bj%3D1%7D(1%2Bi)%5E%7Bj-1%7D%20%3D%20S_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A"></p><h3 id="期初支付定期延期年金">期初支付定期延期年金</h3>
+<p>以<img src="https://math.now.sh?inline=%7B_%7Bm%7C%7D%5Cddot%20a_%7B%5Cbar%20n%7C%7D%7D%2C%7B_%7Bm%7C%7D%5Cddot%20S_%7B%5Cbar%20n%7C%7D%7D" style="display:inline-block;margin: 0;">分别为表示延期<img src="https://math.now.sh?inline=m" style="display:inline-block;margin: 0;">年支付的<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年年金的现值和终值</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_%7Bm%7C%7D%5Cddot%20a_%7B%5Cbar%20n%7C%7D%7D%20%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bj%3D0%7Dv%5E%7Bm%2Bj%7D%20%3D%20v%5Em%20a_%7B%5Cbar%20n%7C%7D%5C%5C%0A%7B_%7Bm%7C%7D%5Cddot%20S_%7B%5Cbar%20n%7C%7D%7D%26%3D%20%5Csum%5E%7Bn%7D_%7Bj%3D1%7D%281%2Bi%29%5E%7Bj%7D%20%3D%20%5Cddot%20S_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A"></p><h3 id="每年期末支付p次的年金">每年期末支付p次的年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Aa_%7B%5Cbar%20n%7C%7D%5E%7B%28%5Cdot%20p%29%7D%20%26%3D%20%5Csum%5E%7Bn%7D_%7Bj%3D0%7D%5Csum%5E%7Bp%7D_%7Bk%3D1%7D%5Cfrac%7B1%7D%7Bp(1%2Bi%5E%7B(p)%7D%2Fp)%5E%7Bjp%2Bk%7D%7D%3D%20%5Cfrac%7B1-v%5En%7D%7Bp%5B(1%2Bi)%5E%7B1%2Fp%7D-1%5D%7D%20%3D%20%5Cfrac%7B1-v%5En%7D%7Bi%5E%7B(p)%7D%7D%5C%5C%0AS_%7B%5Cbar%20n%7C%7D%5E%7B(p)%7D%26%3Da_%7B%5Cbar%20n%7C%7D%5E%7B(p)%7D(1%2Bi)%5En%0A%5Cend%7Baligned%7D%0A"></p><h3 id="每年期初支付p次的年金">每年期初支付p次的年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cddot%20a_%7B%5Cbar%20n%7C%7D%5E%7B%28p%29%7D%20%26%3D%20%5Cfrac1p%5Cleft(1%20%2B%20%5Cfrac%7B1%7D%7B(1%2Bi)%5E%7B1%2Fp%7D%7D%20%2B%20%5Ccdots%20%2B%20%5Cfrac%7B1%7D%7B(1%2Bi)%5E%7B(np-1)%2Fp%7D%7D%5Cright)%5C%5C%0A%26%3D%20%5Cfrac%7B1-v%5En%7D%7Bp(1-v%5E%7B1%2Fp%7D)%7D%5C%5C%0A%26%3D%20%5Cfrac%7B(1%2Bi)%5Ep(1-v%5En)%7D%7Bp((1%2Bi)%5Ep-1)%7D%20%3D%20%5Cfrac%7B1-v%5En%7D%7Bd%5E%7B(p)%7D%7D%0A%5Cend%7Baligned%7D%0A"></p><h2 id="变动年金">变动年金</h2>
+<h3 id="标准逐年递增年金">标准逐年递增年金</h3>
+<p>（简记法类同确定年金）<br>
+期末支付：</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%28Ia%29_%7B%5Cbar%20n%7C%7D%2C%20%26%26(IS)_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A"></p><p>期初支付：</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cddot%7B%28Ia%29%7D_%7B%5Cbar%20n%7C%7D%2C%20%26%26%5Cddot%7B(IS)%7D_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A"></p><h3 id="标准逐年递降年金">标准逐年递降年金</h3>
+<p>期末支付：</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%28Da%29_%7B%5Cbar%20n%7C%7D%2C%20%26%26(DS)_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A"></p><h2 id="连续年金">连续年金</h2>
+<p>设连续支付年金在时刻<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">的支付率为<img src="https://math.now.sh?inline=%5Crho%28t%29" style="display:inline-block;margin: 0;">，则该年金的现值</p>
+<ul>
+<li>若<img src="https://math.now.sh?inline=%5Crho%28t%29%20%3D%201%2C%20%5Cbar%20a_%7B%5Cbar%20n%7C%7D%20%3D%20%5Cint%5E%7Bn%7D_%7B0%7Dv%5Etdt%20%3D%20(1-v%5En)%2F%5Cdelta" style="display:inline-block;margin: 0;">。</li>
+<li>若<img src="https://math.now.sh?inline=%5Crho%28t%29%20%3D%20%5Bt%5D%20%2B%201%2C%5Cbar%20a_%7B%5Cbar%20n%7C%7D%20%3D%20%5Cint%5E%7B1%7D_%7B0%7Dv%5Etdt%20%2B%20%5Cint%5E%7B2%7D_%7B1%7D2v%5Etdt%2B%5Ccdots" style="display:inline-block;margin: 0;">。</li>
+</ul>
+<h2 id="债务的偿还">债务的偿还</h2>
+<p>记<img src="https://math.now.sh?inline=X_t%20%3D%20I_t%20%2B%20%5CDelta%20B_t" style="display:inline-block;margin: 0;">为<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">时刻偿还的利息和本金，。共分<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">期还完。<img src="https://math.now.sh?inline=B_t" style="display:inline-block;margin: 0;">为<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">时刻未偿还本金（恰好在<img src="https://math.now.sh?inline=X_t" style="display:inline-block;margin: 0;">支付之后）<img src="https://math.now.sh?inline=B_0%20%3D%20L" style="display:inline-block;margin: 0;">为初始时刻借入的本金。则</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AB_t%20%26%3D%20L%281%2Bi%29%5Et%20-%20%5Csum%5E%7Bt%7D_%7Bk%3D1%7DX_k(1%2Bi)%5E%7Bt-k%7D%5C%5C%0A%26%3D(1%2Bi)%5Et%5BB_0%20-%20X_1v%20-%20X_2v%5E2%20-%20%5Ccdots%20-%20X_tv%5Et%5D%5C%5C%0A%26%3D%20(i%2Bi)%5Et%5Cleft%5B%5Csum%5E%7Bn%7D_%7Bk%3D1%7DX_kv%5Ek%20-%20X_1v%20-%20X_2v%5E2%20-%20%5Ccdots%20-%20X_tv%5Et%5Cright%5D%5C%5C%0A%26%3D%5Csum%5E%7Bn%7D_%7Bk%3Dt%2B1%7DX_kv%5E%7Bk-t%7D%0A%5Cend%7Baligned%7D%0A"></p><h1>单生命生存模型</h1>
+<h2 id="生存分布">生存分布</h2>
+<p>记<img src="https://math.now.sh?inline=T%280%29" style="display:inline-block;margin: 0;">为新生婴儿（0岁个体）未来存活的时间（余寿）。则<img src="https://math.now.sh?inline=F_0%28t%29%20%3D%20P(T(0)%5Cleqslant%20t)" style="display:inline-block;margin: 0;">为<img src="https://math.now.sh?inline=T%280%29" style="display:inline-block;margin: 0;">的分布函数。记</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AS_0%28t%29%20%26%3D%20P(T(0)%20%3E%20t)%20%3D%201%20-%20F_0(t).%20%26t%20%5Cin%20%5B0%2C%2B%5Cinfty)%0A%5Cend%7Baligned%7D%0A"></p><p>则称<img src="https://math.now.sh?inline=s_0%28t%29" style="display:inline-block;margin: 0;">为新生婴儿的生存函数，表示新生婴儿至少活过<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">岁的概率。<br>
+生存函数有以下几个性质：</p>
+<ol>
+<li><img src="https://math.now.sh?inline=S_0%280%29%20%3D%201" style="display:inline-block;margin: 0;">；</li>
+<li><img src="https://math.now.sh?inline=S_0%28t%29" style="display:inline-block;margin: 0;">单调下降；</li>
+<li><img src="https://math.now.sh?inline=S_o%28t%29" style="display:inline-block;margin: 0;">为右连续函数。</li>
+</ol>
+<p>新生儿在<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">到<img src="https://math.now.sh?inline=y" style="display:inline-block;margin: 0;">岁间死亡的概率为：</p>
+<p style><img src="https://math.now.sh?from=P%28x%3CT(0%29%3Cy)%20%3D%20S_0(x)%20-%20S_0(y).%0A"></p><p>记<img src="https://math.now.sh?inline=T%28x%29" style="display:inline-block;margin: 0;">为（<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁个体）未来存活的时间（余寿），其密度函数为<img src="https://math.now.sh?inline=f_x%28t%29%20%3D%20dF_x(t)%2Fdt" style="display:inline-block;margin: 0;">，则<img src="https://math.now.sh?inline=F_x%28t%29%20%3D%20P(T(x)%5Cleqslant%20t)" style="display:inline-block;margin: 0;">为<img src="https://math.now.sh?inline=T%28x%29" style="display:inline-block;margin: 0;">的分布函数。寿命<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">的个体的生存函数为</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AS%28t%29%20%26%3D%20P(X%20%3E%20t)%2C%20%5C%5C%0A%26P(T(0)%3Ex%2Bt%7CT(0)%3Ex)%5C%5C%0A%26%3D%20%5Cfrac%7BP(T(0)%3Ex%2Bt)%7D%7BP(T(0)%20%3E%20x)%7D%20%3D%20%5Cfrac%7BS_0(x%2Bt)%7D%7BS_0(x)%7D.%0A%5Cend%7Baligned%7D%0A"></p><p>表示个体活过<img src="https://math.now.sh?inline=x%2Bt" style="display:inline-block;margin: 0;">岁的概率。<br>
+更一般得，<img src="https://math.now.sh?inline=S_x%28t%2B%5Cmu%29%20%3D%20S_x(t)S_%7Bx%2Bt%7D(%5Cmu)." style="display:inline-block;margin: 0;"></p>
+<h3 id="一些精算表示法">一些精算表示法</h3>
+<p><img src="https://math.now.sh?inline=_tp_x" style="display:inline-block;margin: 0;">：<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁个体至少再活<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">年的概率。<br>
+<img src="https://math.now.sh?inline=_tq_x" style="display:inline-block;margin: 0;">：<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁个体在未来<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">年死亡的概率。<br>
+<img src="https://math.now.sh?inline=_%7Bu%7Ct%7Dq_x" style="display:inline-block;margin: 0;">：<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁个体在<img src="https://math.now.sh?inline=%5Bx%2Bu%2Cx%2Bu%2Bt%5D" style="display:inline-block;margin: 0;">岁间死亡的概率。<br>
+<img src="https://math.now.sh?inline=t%3D1" style="display:inline-block;margin: 0;">时采用如下的化简方法：</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Ap_%7Bx%7D%3D%20%7B_1p_%7Bx%2C%7D%7D%26%26q_%7Bx%7D%3D%20%7B_1q_x%7D%2C%26%26%7B_%7Bu%7C%7Dq_%7Bx%7D%7D%20%3D%20%7B_%7Bu%7C1%7Dq_x%7D.%0A%5Cend%7Baligned%7D%0A"></p><p>从上面的表示法可以看出<img src="https://math.now.sh?inline=%7B_tp_%7Bx%7D%7D%3D%20S_x%28t%29%2C%7B_tq_%7Bx%7D%7D%3D%20F_x(t)" style="display:inline-block;margin: 0;">.</p>
+<h2 id="死亡力">死亡力</h2>
+<p>寿命<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">个体的死亡力定义为</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cmu_x%20%26%3D%20%5Clim_%7B%5CDelta%20x%5Crightarrow%200%7D%5Cfrac%7BP%28T(x%29%5Cleqslant%20%5CDelta%20x)%7D%7B%5CDelta%20x%7D%5C%5C%0A%26%3D%20%5Clim_%7B%5CDelta%20x%5Crightarrow%200%7D%5Cfrac%7BP(T(0)%5Cleqslant%20x%20%2B%20%5CDelta%20x%7CT(0)%3Ex)%7D%7B%5CDelta%20x%7D%5C%5C%0A%26%3D%5Clim_%7B%5CDelta%20x%5Crightarrow%200%7D%5Cfrac%7BS_0(x)%20-%20S_0(x%2B%5CDelta%20x)%7D%7B%5CDelta%20x%7D%5C%5C%0A%26%3D%20-%5Cfrac%7BS_0'(x)%7D%7BS_0(x)%7D%20%3D%20-(%5Cln%20S_0(x))'.%0A%5Cend%7Baligned%7D%0A"></p><p>死亡力可理解为一个活了<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">岁的个体恰在该年死亡的概率。<br>
+由上式可得</p>
+<p style><img src="https://math.now.sh?from=%7B_t%5Cmu_x%7D%20%3D%20%5Cexp%5Cleft%28-%5Cint%5E%7Bx%2Bt%7D_%7Bx%7D%5Cmu_ydy%5Cright%29%20%3D%20%5Cexp%5Cleft(-%5Cint%5E%7Bt%7D_%7B0%7D%5Cmu_%7Bx%2By%7Ddy%5Cright)%0A"></p><p>故生存函数<img src="https://math.now.sh?inline=s%28t%29" style="display:inline-block;margin: 0;">和密度函数<img src="https://math.now.sh?inline=f_X%28t%29" style="display:inline-block;margin: 0;">可以由死亡力表示</p>
+<p style><img src="https://math.now.sh?from=%5Cmu_x%20%3D%20-%5Cfrac%7BS_0'%28x%29%7D%7BS_0(x)%7D%20%3D%20%5Cfrac%7Bf_0(x)%7D%7BS_0(x)%7D%5CRightarrow%20f_0(x)%20%3D%20%5Cmu_xS_0(x).%0A"></p><p>更一般地</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Af_x%28t%29%20%26%3D%20%5Cfrac%7BdF_x(t)%7D%7Bdt%7D%20%3D%20-%5Cfrac%7BdS_x(t)%7D%7Bdt%7D%5C%5C%0A%26%3D%20-%5Cfrac%7Bd%5Cexp%5C%7B-%5Cint%5E%7Bt%7D_%7B0%7D%5Cmu_%7Bx%2By%7Ddy%5C%7D%7D%7Bdt%7D%5C%5C%0A%26%3D%20S_x(t)%5Cmu_%7Bx%2Bt%7D%20%3D%20%7B_tp_x%7D%5Cmu_%7Bx%2Bt%7D%0A%5Cend%7Baligned%7D%0A"></p><p>从而</p>
+<p style><img src="https://math.now.sh?from=%7B_tq_x%7D%20%3D%20%5Cint%5E%7Bt%7D_%7B0%7D%7B_sp_t%7D%5Cmu_%7Bx%2Bs%7Dds.%0A"></p><p>寿命的期望<img src="https://math.now.sh?inline=%5Coverset%7B%5Ccirc%7D%7Be%7D_0" style="display:inline-block;margin: 0;">和生存整年数的期望<img src="https://math.now.sh?inline=e_0" style="display:inline-block;margin: 0;">分别定义如下</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Coverset%7B%5Ccirc%7D%7Be%7D_%7B0%7D%20%26%3D%20E%28X%29%20%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B0%7Ds(t)dt%2C%20%5C%5C%5C%5C%0Ae_%7B0%7D%20%26%3D%20E(K(0))%20%3D%20%5Csum%5Climits_%7Bs%5Cgeqslant1%7Ds(n).%0A%5Cend%7Baligned%7D%0A"></p><p>(上面的<img src="https://math.now.sh?inline=K%280%29" style="display:inline-block;margin: 0;">是生存整年数）<br>
+它们的二阶矩定义如下</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AE%28X%5E%7B2%29%7D%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B0%7D2ts(t)dt%2C%20%26%26E(K(0)%5E%7B2)%7D%3D%20%5Csum%5Climits_%7Bn%5Cgeqslant1%7D(2n-1)s(n)%0A%5Cend%7Baligned%7D%0A"></p><p>几种常见的死亡力公式（仅作了解）</p>
+<table>
+<thead>
+<tr>
+<th>提出者</th>
+<th><img src="https://math.now.sh?inline=%5Cmu%28x%29" style="display:inline-block;margin: 0;"></th>
+<th><img src="https://math.now.sh?inline=s%28x%29" style="display:inline-block;margin: 0;"></th>
+<th>参数的要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>de Moivre (1729))</td>
+<td><img src="https://math.now.sh?inline=%28w-x%29%5E%7B-1%7D" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=1%3D%5Cfrac%7Bx%7D%7Bw%7D%2C0%3Cx%3Cw" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=w%3E0" style="display:inline-block;margin: 0;"></td>
+</tr>
+<tr>
+<td>Gompertz (1825)</td>
+<td><img src="https://math.now.sh?inline=BC%5Ex" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=%5Cexp%5B-m%28X%5Ex-1%29%5D%2Cx%5Cgeqslant0" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=B%3E0%2CC%5Cgeqslant1" style="display:inline-block;margin: 0;"></td>
+</tr>
+<tr>
+<td>Makeham (1860)</td>
+<td><img src="https://math.now.sh?inline=A%2BBC%5Ex" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=%5Cexp%5B-Ax-%20m%28C%5Ex-1%29%5D%2Cx%5Cgeqslant0" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=B%3E0%2CA%5Cgeqslant-B%2CC%3E1" style="display:inline-block;margin: 0;"></td>
+</tr>
+<tr>
+<td>Weibull (1939)</td>
+<td><img src="https://math.now.sh?inline=kx%5En" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=%5Cexp%28-ux%5E%7Bn%2B1%7D%29%2Cx%5Cgeqslant0" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=k%3E0%2Cn%3E0" style="display:inline-block;margin: 0;"></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>其中<img src="https://math.now.sh?inline=m%20%3D%20%5Cfrac%7BB%7D%7B%5Clog%28C%29%7D%2Cu%3D%5Cfrac%7Bk%7D%7Bn%2B1%7D" style="display:inline-block;margin: 0;"></p>
+</blockquote>
+<h2 id="结论">结论</h2>
+<ol>
+<li>生存概率</li>
+</ol>
+<p style><img src="https://math.now.sh?from=%20%20%20%5Cbegin%7Baligned%7D%0A%20%20%20%20%7B_tp_%7Bx%7D%7D%3D%20%5Cfrac%7Bs%28t%2Bx%29%7D%7Bs(x)%7D.%0A%20%20%20%20%5Cend%7Baligned%7D%0A"></p><ol start="2">
+<li>对<img src="https://math.now.sh?inline=t%3E0%2Cu%3E0" style="display:inline-block;margin: 0;">，生存概率和死亡概率有如下关系：</li>
+</ol>
+<p style><img src="https://math.now.sh?from=%20%20%20%5Cbegin%7Baligned%7D%0A%20%20%20%7B_tq_%7Bx%7D%7D%3D%201-%7B_tp_%7Bx%7D%2C%7D%26%26%20%7B_%7Bu%7Ct%7Dq_%7Bx%7D%7D%3D%20%7B_up_%7Bx%7D%7D%5C%20%7B_tq_%7Bx%2Bu%7D%7D%2C%20%26%26%7B_%7Bu%7Ct%7Dq_%7Bx%7D%3D%20%7B_up_%7Bx%7D%7D-%20%7B_%7Bu%2Bt%7Dp_x%7D%7D.%0A%20%20%20%5Cend%7Baligned%7D%0A"></p><ol start="3">
+<li>对<img src="https://math.now.sh?inline=0%3Ch%3Ct" style="display:inline-block;margin: 0;">，有</li>
+</ol>
+<p style><img src="https://math.now.sh?from=%7B_tp_%7Bx%7D%7D%3D%20%7B_hp_%7Bx%7D%7D%5C%20%7B_%7Bt-h%7Dp_%7Bx%2Bh%7D%7D%3B%0A"></p><ol start="4">
+<li><img src="https://math.now.sh?inline=f_x%28t%29%20%3D%20%7B_tp_x%7D%5Ccdot%5Cmu_%7Bx%2Bt%7D%2C%5C%20%5Cfrac%7Bd%7D%7Bdt%7D(%7B_tp_%7Bx%7D%7D)%3D%20-%7B_tp_x%7D%5Cmu_%7Bx%2Bt%7D" style="display:inline-block;margin: 0;"></li>
+</ol>
+<h1>死亡保险的精算值</h1>
+<p>以人的死亡为给付条件的险种。若投保人在保险期内死亡，则给付保险金，否则不给付。<br>
+<strong>分类</strong>：定期寿险、终生寿险、延付寿险、生死合险（两全保险）。<br>
+<strong>保额</strong>：保费的总额<br>
+<strong>保额的精算现值</strong>：保额现值的期望值，记为趸缴纯保费。</p>
+<h2 id="离散死亡保险">离散死亡保险</h2>
+<h3 id="n年期纯粹生存年金">n年期纯粹生存年金</h3>
+<p><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁投保，若活过<img src="https://math.now.sh?inline=x%2Bn" style="display:inline-block;margin: 0;">岁，则保险公司支付1单位的保额。记<img src="https://math.now.sh?inline=Z" style="display:inline-block;margin: 0;">为该险种的现值，<img src="https://math.now.sh?inline=A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%20%5C%201%7D" style="display:inline-block;margin: 0;">（或<img src="https://math.now.sh?inline=%7B_nE_x%7D" style="display:inline-block;margin: 0;">）为该年金的精算现值，则</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5EnI%28K%5Cgeqslant%20n%29%2C%5C%5C%0AA_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%20%5C%201%7D%26%3D%20EZ%20%3D%20v%5En%5Ccdot%20%7B_np_x%7D.%0A%5Cend%7Baligned%7D%0A"></p><h2 id="n年期死亡保险">n年期死亡保险</h2>
+<p><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁投保，若在<img src="https://math.now.sh?inline=x%2Bn" style="display:inline-block;margin: 0;">岁前死亡，则保险公司支付1单位的保额。记<img src="https://math.now.sh?inline=Z" style="display:inline-block;margin: 0;">为该险种的现值，<img src="https://math.now.sh?inline=A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B1%7D" style="display:inline-block;margin: 0;">为该年金的精算现值，则</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5E%7BK%2B1%7DI%28K%3Cn%29%5C%5C%0AA_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B1%7D%26%3D%20EZ%20%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7DP(K%3Dk)%5C%5C%0A%26%3D%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7D%7B_%7Bk%7C%7Dq_x%7D%5C%5C%0A%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7D%7B_kp_x%7D%5Ccdot%7Bq_%7Bx%2Bk%7D%7D.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="终生死亡保险">终生死亡保险</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5E%7BK%2B1%7D%2C%5C%5C%0AA_x%20%26%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7DP%28K%3Dk%29%5C%5C%0A%26%3D%20%5Csum%5E%5Cinfty_0v%5E%7Bk%2B1%7D%7B_kp_x%7D%5Ccdot%20q_%7Bx%2Bk%7D%0A%5Cend%7Baligned%7D%0A"></p><p>定义<img src="https://math.now.sh?inline=%7B%5E2A_x%7D" style="display:inline-block;margin: 0;">为<img src="https://math.now.sh?inline=EZ%5E2" style="display:inline-block;margin: 0;">，则<img src="https://math.now.sh?inline=%7B%5E2A_x%7D%20%3D%20EZ%5E2%20%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%3D0%7Dv%5E%7B2%28k%2B1%29%7D%7B_kp_x%7D%5Ccdot%20q_%7Bx%2Bk%7D" style="display:inline-block;margin: 0;">。</p>
+<h3 id="两全保险">两全保险</h3>
+<p><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁个体，若在<img src="https://math.now.sh?inline=x%2Bn" style="display:inline-block;margin: 0;">岁前死亡，则保险公司在死亡当年年末支付1单位保额，若活过<img src="https://math.now.sh?inline=x%2Bn" style="display:inline-block;margin: 0;">岁，保险公司在<img src="https://math.now.sh?inline=x%2Bn" style="display:inline-block;margin: 0;">岁时支付1单位保额。该险种被称为两全保险，也被称为生死合险。记<img src="https://math.now.sh?inline=Z" style="display:inline-block;margin: 0;">为该险种的现值，<img src="https://math.now.sh?inline=A_%7Bx%3A%5Cbar%20n%7C%7D" style="display:inline-block;margin: 0;">为该险种的精算现值，则</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5E%7BK%2B1%7DI%28k%3Cn%29%20%2B%20v%5EnI(K%5Cgeqslant%20n)%2C%5C%5C%0AA_%7Bx%3A%5Cbar%20n%7C%7D%26%3D%20%5Csum%5E%7Bn%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7D%7B_kp_x%7D%5Ccdot%20q_%7Bx%2Bk%7D%20%2B%20v%5En%7B_np_x%7D%0A%5Cend%7Baligned%7D%0A"></p><h3 id="延付m年的n年期死亡保险">延付m年的n年期死亡保险</h3>
+<p><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁投保，若在<img src="https://math.now.sh?inline=%5Bx%2Bm%2Cx%2Bm%2Bn%5D" style="display:inline-block;margin: 0;">岁之间死亡，则保险公司死亡当年年末支付1单位保额。否则分文不付。记<img src="https://math.now.sh?inline=Z" style="display:inline-block;margin: 0;">为该险种的现值，<img src="https://math.now.sh?inline=%7B_%7Bm%7Cn%7DA_x%7D" style="display:inline-block;margin: 0;">为该险种的精算现值，则</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5E%7BK%2B1%7DI%28m%5Cleq%20K%20%3C%20m%2Bn%29%5C%5C%0A%7B_%7Bm%7Cn%7DA_x%7D%26%3D%20EZ%20%3D%20%5Csum%5E%7Bm%2Bn%2B1%7D_%7Bk%3Dm%7Dv%5E%7Bk%2B1%7DP(K%3Dk)%5C%5C%0A%26%3D%20%5Csum%5E%7Bm%2Bn%2B1%7D_%7Bk%3Dm%7Dv%5E%7Bk%2B1%7D%7B_%7Bk%7C%7Dq_x%7D%5C%5C%0A%26%3D%5Csum%5E%7Bm%2Bn%2B1%7D_%7Bk%3Dn%7Dv%5E%7Bk%2B1%7D%7B_kp_%7Bx%7D%7D%5Ccdot%20q_%7Bx%2Bk%7D.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="延付m年的终身死亡保险">延付m年的终身死亡保险</h3>
+<p style><img src="https://math.now.sh?from=%7B_%7Bm%7C%7DA_x%7D%20%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%3Dm%7Dv%5E%7Bk%2B1%7D%7B_kp_x%7D%5Ccdot%20q_%7Bx%2Bk%7D.%0A"></p><h3 id="变动保额死亡保险">变动保额死亡保险</h3>
+<ul>
+<li>单调递增的死亡保险：<img src="https://math.now.sh?inline=%28IA%29_x%2C(IA)%5E1_%7Bx%3A%5Cbar%20n%7C%7D%2C(IA)_%7Bx%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%201%7D%2C%7B_%7Bm%7C%7D(IA)_x%7D" style="display:inline-block;margin: 0;">；</li>
+<li>单调递减的死亡保险：<img src="https://math.now.sh?inline=%28DA%29_x%2C(DA)%5E1_%7Bx%3A%5Cbar%20n%7C%7D" style="display:inline-block;margin: 0;"></li>
+</ul>
+<h2 id="连续死亡保险">连续死亡保险</h2>
+<h3 id="连续支付死亡保险">连续支付死亡保险</h3>
+<p>保额在死亡时立即支付的寿险，用<img src="https://math.now.sh?inline=%5Cbar%20A" style="display:inline-block;margin: 0;">表示。</p>
+<ol>
+<li>n年期死亡保险<img src="https://math.now.sh?inline=%5Cbar%20A_%7Bx%3A%5Cbar%20n%7C%7D" style="display:inline-block;margin: 0;">：记<img src="https://math.now.sh?inline=T%28x%29" style="display:inline-block;margin: 0;">为投保人的余寿，则</li>
+</ol>
+<p style><img src="https://math.now.sh?from=A_%7Bx%3A%5Cbar%20n%7C%7D%20%3D%20E%5C%7Bv%5E%7BT%28x%29%7DI(T(x)%5Cleq%20n)%5C%7D%20%3D%20%5Cint%5En_0v%5Etf_x(t)dt%20%3D%20%5Cint%5En_0v%5Et%5Cmu_x(t)%5Ccdot%7B_tp_x%7Ddt%0A"></p><ol start="2">
+<li>终身死亡保险：<img src="https://math.now.sh?inline=%5Cbar%20A_x%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%5Cmu_x%28t%29%5Ccdot%20%7B_tp_x%7Ddt." style="display:inline-block;margin: 0;"></li>
+<li>延付m年的终身寿险：<img src="https://math.now.sh?inline=%7B_%7Bm%7C%7D%5Cbar%20A_x%7D%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%5Cmu_x%28t%29%5Ccdot%7B_tp_x%7Ddt." style="display:inline-block;margin: 0;"></li>
+<li>单调递增寿险<img src="https://math.now.sh?inline=%28I%5Cbar%20A%29_x%2C(%5Cbar%20I%5Cbar%20A)_x" style="display:inline-block;margin: 0;">：前者每一年的支付率相等且逐年增长，后者在t时刻支付率为<img src="https://math.now.sh?inline=I_t" style="display:inline-block;margin: 0;">。</li>
+</ol>
+<h3 id="UUD下，连续与离散寿险的关系">UUD下，连续与离散寿险的关系</h3>
+<blockquote>
+<p>UUD (Uniform Distribution of Deaths) 均匀死亡假设<br>
+在 UUD 假设下，<img src="https://math.now.sh?inline=%5Cforall%20x%5Cin%20%5Cmathbb%20N" style="display:inline-block;margin: 0;"> 及 <img src="https://math.now.sh?inline=0%20%5Cleq%20s%20%3C%201" style="display:inline-block;margin: 0;">，存在</p>
+<p style><img src="https://math.now.sh?from=%7B_sq_x%7D%20%5Coverset%7BUUD%7D%7B%3D%7D%20sq_x%2C0%5Cleq%20s%3C1%0A"></p><p>即假设某一年龄的人在接下来一年每一天死亡的概率都相同。<br>
+因此我们可以定义生存函数</p>
+<p style><img src="https://math.now.sh?from=s_%7Bx%2Bt%7D%20%5Coverset%7BUUD%7D%7B%3D%7D%20%281-s%29s_%7Bx%7D%20%2B%20s_%7Bx%2B1%7D%0A"></p><p>同时我们亦可以得出</p>
+<p style><img src="https://math.now.sh?from=%7B_sp_x%7D%5Cmu_%7Bx%2Bs%7D%20%5Coverset%7BUUD%7D%7B%3D%7D%20q_x%0A"></p></blockquote>
+<p>此时</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cbar%20A_x%20%26%3D%20Ev%5E%7BT%28x%29%7D%20%3D%20Ev%5E%7BK(x)%2BS(x)%7D%20%3D%20Ev%5E%7BK(x)%2B1%2BS(x)-1%7D%5C%5C%0A%26%3D%20A_xEv%5E%7BS(x)-1%7D%20%3D%20%5Cfrac%7BAi%7D%7B%5Cdelta%7D.%0A%5Cend%7Baligned%7D%0A"></p><h2 id="循环方程">循环方程</h2>
+<ol>
+<li><img src="https://math.now.sh?inline=A_x%20%3D%20vq_x%20%2B%20vp_x%5Ccdot%20A_%7Bx%2B1%7D." style="display:inline-block;margin: 0;"></li>
+</ol>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AA_x%20%26%3D%20Ev%5E%7BK%2B1%7D%5C%5C%0A%26%3D%20E%28v%5E%7BK%2B1%7D%7CK%3D0%29P(K%3D0)%20%2B%20E(v%5E%7BK%2B1%7D%7CK%5Cgeq1)P(K%5Cgeq1)%5C%5C%0A%26%3Dvq_x%20%2B%20vp_xE%5Bv%5E%7B(K-1)%7D%7CK%5Cgeq1%5D%5C%5C%0A%26%3Dvq_x%20%2B%20vp_xA_%7Bx%2B1%7D.%0A%5Cend%7Baligned%7D%0A"></p><p><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">	岁个体投保终身保险所需的趸缴纯保费=该个体在投保当年死亡的成本+活过一年后终身寿险的趸缴纯保费。<br>
+2. <img src="https://math.now.sh?inline=A_x%20%3D%20vq_x%20%2B%20vp_x%5Ccdot%20A_%7Bx%2B1%7D%20%3D%20A_%7Bx%2B1%7D%20%2B%20vq_x%281-A_%7Bx%2B1%7D%29." style="display:inline-block;margin: 0;"><br>
+<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁个体投保终身寿险所需的趸缴纯保费=下一年度终身寿险的现值+保额为<img src="https://math.now.sh?inline=%281-A_%7Bx%2B1%7D%29" style="display:inline-block;margin: 0;">的一年定期死亡保险的纯保费。<br>
+3. <img src="https://math.now.sh?inline=%281%2Bi%29A_x%20%3D%20q_x%20%2B%20(1-q_x)%5Ccdot%20A_%7Bx%2B1%7D" style="display:inline-block;margin: 0;">，即<img src="https://math.now.sh?inline=iA_x%20%3D%20%28A_%7Bx%2B1%7D-A_x%29%2Bq_x(1-A_%7Bx%2B1%7D)" style="display:inline-block;margin: 0;"><br>
+一年中趸缴纯保费的利息=由年龄<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">到<img src="https://math.now.sh?inline=x%2B1" style="display:inline-block;margin: 0;">增加的趸缴纯保费+1年定期保险的成本。</p>
+<h1>生存年金的精算现值</h1>
+<ul>
+<li><strong>确定年金</strong>：在合同期限内，相等间隔时间内的一系列给付。</li>
+<li><strong>生存年金</strong>：在合同期内，被保人在活着的时间内每年定期从保险人获得的一系列的年金。</li>
+<li><strong>年金分类</strong>：定期生存、终身生存年金和延付生存年金。</li>
+<li><strong>支付方式</strong>：离散（期初、期末），连续支付。</li>
+</ul>
+<h2 id="间断生存年金">间断生存年金</h2>
+<h3 id="单一支付生存年金">单一支付生存年金</h3>
+<p>若被保人在保单生效后若活过<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年，则在第<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年年末一次性给付1单位保额，称该保单为<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年期生存保险（纯粹生存年金），其精算现值为<img src="https://math.now.sh?inline=nE_x%20%3D%20A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%201%7D." style="display:inline-block;margin: 0;"><br>
+![[寿险精算基础#n年期纯粹生存年金]]</p>
+<h2 id="期末支付生存年金">期末支付生存年金</h2>
+<h3 id="终身生存年金">终身生存年金</h3>
+<p>被保人在活着的每一年年末获得1单位的年金。记<img src="https://math.now.sh?inline=Z" style="display:inline-block;margin: 0;">和<img src="https://math.now.sh?inline=a_x" style="display:inline-block;margin: 0;">为现值和精算现值，则<img src="https://math.now.sh?inline=Z%20%3D%20a_K%28x%29" style="display:inline-block;margin: 0;">,</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Aa_x%20%3D%20Ea_%7B%5Coverline%7BK%28x%29%7D%7C%7D%20%26%3D%20%5Csum%5E%5Cinfty_%7Bk%3D0%7Da_%7B%5Cbar%20k%7C%7DP(K(x)%20%3D%20k)%5C%5C%0A%26%3D%5Csum%5E%5Cinfty_%7Bk%3D0%7Da_%7B%5Cbar%20n%7C%7D(%7B_kp_x%7D%20-%20%7B_%7Bk%2B1%7Dp_x%7D)%5C%5C%0A%26%3D%20%5Csum%5E%5Cinfty_%7Bk%3D1%7Dv%5Ek%7B_kp_x%7D.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="n年期生存年金">n年期生存年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20a_%7B%5Coverline%7BK%28x%29%7D%7C%7DI(K(x)%3Cn)%5C%5C%0Aa_%7Bx%3A%5Cbar%20n%7C%7D%26%3DEZ%20%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Da_%7B%5Cbar%20k%7C%7DP(K(x)%20%3D%20k)%20%3D%20%5Csum%5En_%7Bk%3D1%7Dv%5Ek%7B_kp_x%7D.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="延付m年的终身生存年金">延付m年的终身生存年金</h3>
+<p style><img src="https://math.now.sh?from=%7B_%7Bm%7C%7Da_x%7D%20%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%20%3D%20m%2B1%7Dv%5Ek%7B_kp_x%7D.%0A"></p><h3 id="延付m年的n年期生存年金">延付m年的n年期生存年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%0A0%2C%20%26%20if%5C%200%5Cleq%20K%28x%29%20%3C%20m%2C%20%5C%5C%0Aa_%7B%5Coverline%7BK(x)%7D%7C%7D%20-%20a_%7B%5Cbar%20m%7C%7D%2C%20%26if%5C%20m%5Cleq%20K(x)%20%3C%20m%2Bn-1%2C%20%5C%5C%20%0Aa_%7B%5Coverline%7Bm%2Bn%7D%7C%7D%20-%20a_%7B%5Cbar%20m%7C%7D%2C%20%26if%5C%20K(x)%5Cgeq%20m%2Bn.%0A%5Cend%7Bmatrix%7D%5Cright.%5C%5C%0A%7B_%7Bm%7Cn%7Da_x%7D%20%26%3D%20EZ%20%3D%20%5Csum%5E%7Bm%2Bn%7D_%7Bk%3Dm%2B1%7Dv%5Ek%7B_kp_x%7D.%0A%5Cend%7Baligned%7D%0A"></p><h2 id="期初支付生存年金">期初支付生存年金</h2>
+<h3 id="终身生存年金-2">终身生存年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20%5Cddot%7Ba%7D_%7B%5Coverline%7BK%28x%29%2B1%7D%7C%7D%2C%5C%5C%0A%5Cddot%7Ba%7D_x%20%26%3D%20EZ%20%3D%20%5Csum%5E%5Cinfty_%7Bk%3D0%7D%5Cddot%7Ba%7D_%7B%5Coverline%7BK(x)%2B1%7D%7C%7DP(K(x)%20%3D%20k)%20%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%3D0%7Dv%5Ek%20%5Ccdot%20%7B_kp_x%7D%20%3D%201%2Ba_x.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="n年期生存年金-2">n年期生存年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cddot%7Ba%7D_%7Bx%3A%5Cbar%20n%7C%7D%20%26%3D%20EZ%20%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7D%5Cddot%7Ba%7D_%7B%5Coverline%7BK%2B1%7D%7C%7DP%28K%3Dk%29%2B%5Cddot%7Ba%7D_%7B%5Cbar%20n%7C%7DP(K(x)%5Cgeq%20n)%5C%5C%0A%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Dv%5Ek%20%5Ccdot%20%7B_kp_x%7D%20%3D%201%2Ba_%7Bx%3A%5Cbar%20n%7C%7D%20-%20%7B_nE_x%7D.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="延付m年的终身生存年金-2">延付m年的终身生存年金</h3>
+<p style><img src="https://math.now.sh?from=%7B_%7Bm%7C%7D%5Cddot%7Ba%7D_x%7D%20%3D%20%5Csum%5E%5Cinfty_%7Bk%3Dm%7Dv%5Ek%20%5Ccdot%20%7B_kp_x%7D.%0A"></p><h3 id="延付m年的n年期生存年金-2">延付m年的n年期生存年金</h3>
+<p style><img src="https://math.now.sh?from=%7B_%7Bm%7Cn%7D%5Cddot%7Ba%7D_x%7D%20%3D%20%5Csum%5E%7Bn%2Bm-1%7D_%7Bk%3Dm%7Dv%5E%7Bk%2Bm%7D%5Ccdot%20%7B_kp_x%7D.%0A"></p><h2 id="连续支付生存年金">连续支付生存年金</h2>
+<h3 id="终身生存年金-3">终身生存年金</h3>
+<p><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁投保，只要活着，保险公司在任意<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">时刻支付率都为1.记<img src="https://math.now.sh?inline=%5Cbar%20a_x" style="display:inline-block;margin: 0;">为其精算现值</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cbar%20a_x%20%26%3D%20%5Cint%5E%5Cinfty_0%5Cbar%20a_%7B%5Cbar%20t%7C%7Df_x%28t%29dt%5C%5C%0A%26%3D%20-%5Cint%5E%5Cinfty_0%5Cbar%20a_%7B%5Cbar%20t%7C%7Dd(%7B_tp_x%7D)%5C%5C%0A%26%3D%20-%5Cint%5E%5Cinfty_0%5Cfrac%7B1-v%5Et%7D%7B%5Cdelta%7Dd(%7B_tp_x%7D)%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%20%5Ccdot%7B_yp_x%7Ddt.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="n年期生存年金-3">n年期生存年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cbar%20a_%7Bx%3A%5Cbar%20n%7C%7D%20%26%3D%20%5Cint%5En_t%5Cbar%20a_t%20%5Ccdot%20f_x%28t%29dt%20%2B%20%5Cbar%20a_%7B%5Cbar%20n%7C%7D%5Ccdot%7B_np_x%7D%5C%5C%0A%26%3D%20-%5Cint%5En_0%5Cbar%20a_%7B%5Cbar%20t%7C%7Dd(%7B_tp_x%7D)%20%2B%20%5Cbar%20a_%7B%5Cbar%20n%7C%7D%5Ccdot%7B_np_x%7D%5C%5C%0A%26%3D%20%5Cint%5En_0%20v%5Et%20%5Ccdot%7B_tp_x%7Ddt.%20%0A%5Cend%7Baligned%7D%0A"></p><h3 id="延付m年的n年期生存年金-3">延付m年的n年期生存年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_%7Bm%7Cn%7D%5Cbar%20a_x%7D%20%26%3D%20v%5Em%20%5Ccdot%7B_mp_x%7D%5Ccdot%5Cbar%20a_%7Bx%2Bm%3A%5Cbar%20n%7C%7D%5C%5C%0A%26%3D%20%5Cint%5E%7Bm%2Bn%7D_m%20v%5Et%20%5Ccdot%7B_tp_x%7Ddt%5C%5C%0A%26%3D%20%5Cbar%20a_%7Bx%3A%5Coverline%7Bm%2Bn%7D%7C%7D%20-%20%5Cbar%20a_%7Bx%3A%5Cbar%20m%7C%7D.%0A%5Cend%7Baligned%7D%0A"></p><p>让<img src="https://math.now.sh?inline=n%5Crightarrow%5Cinfty" style="display:inline-block;margin: 0;">，则有延付m年的终身生存年金：</p>
+<p style><img src="https://math.now.sh?from=%7B_%7Bm%7C%7D%5Cbar%20a_x%7D%20%3D%20%5Cbar%20a_x%20-%20%5Cbar%20a_%7Bx%3A%5Cbar%20m%7C%7D%20%3D%20%5Cint%5E%5Cinfty_m%20v%5Et%20%5Ccdot%7B_tp_x%7Ddt.%0A"></p><h1>保费的计算</h1>
+<p><strong>保费</strong>：为履行保险责任向投保人收取的实际金额<br>
+<strong>分类</strong>：(a). 净（纯）保费；(b). 费用负荷保费（用于保额及费用支付）； ©. 毛保费。<br>
+<strong>支付方式</strong>：(a). 趸交保费（一次性缴清）； (b). 定期定额缴纳（均衡）保费； ©. 定期缴纳非均衡（变额）保费。<br>
+<strong>保费的计算特点和原则</strong>：</p>
+<ul>
+<li>特点：根据过去的经验数据计算</li>
+<li>原则：(a). 充分性； (b). 公平性：应根据不同的死亡率制定不同的保费； ©. 适量性：应考虑到投保人的利益。</li>
+</ul>
+<p>保费的收取应根据期望收支平衡原则，遵循以下等值方程：</p>
+<ol>
+<li>纯保费的精算现值=保额的精算现值（APV）；</li>
+<li>费用负荷毛保费的APV=保额APV+费用APV+风险、林润等加成的APV；</li>
+<li>设<img src="https://math.now.sh?inline=L" style="display:inline-block;margin: 0;">为保险人的签单损失量，则<img src="https://math.now.sh?inline=EL%3D0" style="display:inline-block;margin: 0;">；</li>
+</ol>
+<h2 id="趸缴纯保费">趸缴纯保费</h2>
+<h3 id="定期死亡保险">定期死亡保险</h3>
+<p>考虑某生存群中，<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁个体投保<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年期死亡保险，每个个体所缴的保费为<img src="https://math.now.sh?inline=P" style="display:inline-block;margin: 0;">，则保额的<img src="https://math.now.sh?inline=APV%20%3D%20d_xv%20%2B%20d_%7Bx%2B1%7Dv%5E2%20%2B%20%5Ccdot%20%2B%20d_%7Bx%2Bn-1%7Dv%5En" style="display:inline-block;margin: 0;">，保额的<img src="https://math.now.sh?inline=APV%20%3D%20l_xP" style="display:inline-block;margin: 0;">。从而</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AP%20%3D%20A_%7Bx%3A%5Cbar%20n%7C%7D%5E1%20%26%3D%20%5Cfrac%7Bd_xv%20%2B%20d_%7Bx%2B1%7Dv%5E2%20%2B%20%5Ccdot%20%2B%20d_%7Bx%2Bn-1%7Dv%5En%7D%7Bl_x%7D%5C%5C%0A%26%3D%5Cfrac%7B%28d_xv%20%2B%20d_%7Bx%2B1%7Dv%5E2%20%2B%20%5Ccdot%20%2B%20d_%7Bx%2Bn-1%7Dv%5En%29v%5Ex%7D%7Bl_xv%5Ex%7D%5C%5C%0A%26%3D%3A%20%5Cfrac%7BC_x%20%2B%20%5Ccdot%20%2B%20C_%7Bx%2Bn%2B1%7D%7D%7BD_x%7D%20%3D%20%5Cfrac%7BM_x%20-%20X_%7Bx%2Bn%7D%7D%7BD_x%7D%0A%5Cend%7Baligned%7D%0A"></p><p>其中<img src="https://math.now.sh?inline=C_x%20%3D%20d_xv%5E%7Bx%2B1%7D%2CM_x%20%3D%20%5Csum%5E%5Cinfty_%7Bi%3D0%7DC_%7Bx%2Bi%7D." style="display:inline-block;margin: 0;"></p>
+<h3 id="终身寿险">终身寿险</h3>
+<h4 id="期末支付">期末支付</h4>
+<p style><img src="https://math.now.sh?from=P%20%3D%20A_x%20%3D%20%5Cfrac%7Bd_xv%20%2B%20d_%7Bx%2B1%7Dv%5E2%20%2B%20%5Ccdot%7D%7Bl_x%7D%20%3D%20%5Cfrac%7BM_x%7D%7BD_x%7D%0A"></p><h4 id="死亡时支付">死亡时支付</h4>
+<p style><img src="https://math.now.sh?from=%5Cbar%20P%20%3D%20%5Cbar%20A_x%20%3D%20%5Cfrac%7B%5Cbar%20M_x%7D%7BD_x%7D%0A"></p><h3 id="定期纯粹生存年金">定期纯粹生存年金</h3>
+<p style><img src="https://math.now.sh?from=A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%201%7D%20%3D%20%5Cfrac%7Bl_%7Bx%2Bn%7Dv%5En%7D%7Bl_x%7D%20%3D%20%5Cfrac%7BD_%7Bx%2Bn%7D%7D%7BD_x%7D%0A"></p><h3 id="n年期两全保险">n年期两全保险</h3>
+<p style><img src="https://math.now.sh?from=A_%7Bx%3A%5Cbar%20n%7C%7D%20%3D%20A%5E1_%7Bx%3A%5Cbar%20n%7C%7D%20%2B%20A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%201%7D%20%3D%20%5Cfrac%7BM_x%20-%20M_%7Bx%2Bn%7D%20%2B%20D_%7Bx%2Bn%7D%7D%7BD_x%7D%0A"></p><h3 id="期初支付生存年金-2">期初支付生存年金</h3>
+<p>仅需考虑贴现率的变动。</p>
+<h3 id="连续支付生存年金-2">连续支付生存年金</h3>
+<h4 id="终身生存年金-4">终身生存年金</h4>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cbar%20a_x%20%26%3D%20%5Cint%5E%5Cinfty_0v%5Et%20%5Ccdot%7B_tp_x%7Ddt%5C%5C%0A%26%3D%20%5Cfrac%7B%5Csum%5E%5Cinfty_%7Bi%3D0%7D%5Cint%5E%7Bi%2B1%7D_iv%5E%7Bx%2Bt%7Dl_%7Bx%2Bt%7Ddt%7D%7Bl_xv%5Ex%7D%20%3D%20%5Cfrac%7B%5Csum%5E%5Cinfty_%7Bi%3D0%7D%5Cbar%20D_%7Bx%2Bi%7D%7D%7BD_x%7D%20%3D%20%5Cfrac%7B%5Cbar%20N_x%7D%7BD_x%7D%2C%0A%5Cend%7Baligned%7D%0A"></p><h4 id="n年期生存年金-4">n年期生存年金</h4>
+<p style><img src="https://math.now.sh?from=%5Cbar%20a_%7Bx%3A%5Cbar%20n%7C%7D%20%3D%20%5Cfrac%7B%5Cbar%20N_x%20-%20%5Cbar%20N_%7Bx%2Bn%7D%7D%7BD_x%7D%0A"></p><h3 id="变动保额的保险">变动保额的保险</h3>
+<h4 id="单增寿险">单增寿险</h4>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AIA_%7Bx%3A%5Cbar%20n%7C%7D%5E1%20%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7D%28k%2B1%29v%5E%7Bk%2B1%7D%5Ccdot%7B_kp_x%7D%5Ccdot%7Bq_%7Bx%2Bk%7D%7D%5C%5C%0A%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7D(k%2B1)%5Cfrac%7Bl_%7Bx%2Bk%7D%7D%7Bl_x%7D%5Cfrac%7Bd_%7Bx%2Bk%7D%7D%7Bl_%7Bx%2Bk%7D%7Dv%5E%7Bk%2B1%7D%20%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7D(k%2B1)%5Cfrac%7Bd_%7Bx%2Bk%7Dv%5E%7Bx%2Bk%2B1%7D%7D%7BD_x%7D%5C%5C%0A%26%5Cfrac%7B%5Csum%5E%7Bn-1%7D_%7Bi%3D0%7DM_%7Bx%2Bi%7D%20-%20nM_%7Bx%2Bn%7D%7D%7BD_x%7D%20%3D%3A%5Cfrac%7BR_x%20-%20R_%7Bx%2Bn%7D%20-%20nM_%7Bx%2Bn%7D%7D%7BD_x%7D.%0A%5Cend%7Baligned%7D%0A"></p><h4 id="单增年金">单增年金</h4>
+<p style><img src="https://math.now.sh?from=I%5Cddot%7Ba%7D_%7Bx%3A%5Cbar%20n%7C%7D%20%3D%20%5Cfrac%7BN_x%20%2B%20N_%7Bx%2B1%7D%20%2B%20%5Ccdots%7D%7BD_x%7D%20%3D%3A%20%5Cfrac%7BS_x%7D%7BD_x%7D.%0A"></p><h1>理论（责任）准备金</h1>
+<h2 id="责任准备金的计算">责任准备金的计算</h2>
+<h3 id="未来法">未来法</h3>
+<p>前瞻亏损的期望，即某一时刻<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">的准备金<img src="https://math.now.sh?inline=%28%7B_tV%7D%29" style="display:inline-block;margin: 0;">保险公司未尽的责任金的精算现值=保险人未来所有支出在<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">时刻的现值和未来所有收入在该时刻的现值之差<img src="https://math.now.sh?inline=%28%7B_tL%7D%29" style="display:inline-block;margin: 0;">的期望。</p>
+<p>以完全连续（保费和保额都是连续支付）和完全间断的<img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;">年缴费的保单说明如何计算</p>
+<h4 id="完全连续情况">完全连续情况</h4>
+<ul>
+<li><img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;">年付费的终身寿险<img src="https://math.now.sh?inline=%28%7B_t%5EhV(%5Cbar%20A_x%29%7D)" style="display:inline-block;margin: 0;"></li>
+</ul>
+<p style><img src="https://math.now.sh?from=%28%7B_t%5EhV(%5Cbar%20A_x%29%7D)%20%3D%20%5Cleft%5C%7B%5Cbegin%7Baligned%7D%0A%26%5Cbar%20A_%7Bx%2Bt%7D%20-%20%5Cbar%20a_%7Bx%2Bt%3A%5Coverline%7Bh-t%7D%7C%7D%5Ccdot%7B_h%5Cbar%20P(%5Cbar%20A_x)%7D%2C%20%26if%5C%20t%3Ch.%20%5C%5C%0A%26%5Cbar%20A_%7Bx%2Bt%7D%2C%20%26if%5C%20t%5Cgeq%20h.%20%0A%5Cend%7Baligned%7D%5Cright.%0A"></p><ul>
+<li><img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;">年付费的<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年期两全保险</li>
+</ul>
+<p style><img src="https://math.now.sh?from=%7B_t%5Eh%5Cbar%20V%28%5Cbar%20A_%7Bx%3A%5Cbar%20n%7C%7D%29%7D%20%3D%5Cleft%5C%7B%5Cbegin%7Baligned%7D%0A%26%5Cbar%20A_%7Bx%2Bt%3A%5Coverline%7Bn-t%7D%7C%7D%20-%20%5Cbar%20a_%7Bx%2Bt%3A%5Coverline%7Bh-t%7D%7C%7D%5Ccdot%7B_h%5Cbar%20P(%5Cbar%20A_%7Bx%3A%5Cbar%20n%7C%7D)%7D%2C%20%26%26if%5C%20t%3Ch%2C%20%5C%5C%20%0A%26%5Cbar%20A_%7Bx%2Bt%3A%5Coverline%7Bn-t%7D%7C%7D%2C%20%26%26if%5C%20h%5Cleq%20t%3Cn%2C%20%5C%5C%20%0A%261%2C%20%26%26if%5C%20t%3Dn.%0A%5Cend%7Baligned%7D%5Cright.%0A"></p><h4 id="完全间断情况">完全间断情况</h4>
+<ul>
+<li><img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;">年付费的<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年死亡保险</li>
+</ul>
+<p style><img src="https://math.now.sh?from=%7B_t%5EhV_%7Bx%3A%5Cbar%20n%7C%7D%5E1%7D%20%3D%20%5Cleft%5C%7B%5Cbegin%7Baligned%7D%0A%26A_%7Bx%2Bt%3A%5Coverline%7Bn-t%7D%7C%7D%5E1-%5Cddot%7Ba%7D_%7Bx%2Bt%3A%5Coverline%7Bh-t%7D%7C%7D%5Ccdot%7B_hP_%7Bx%3A%5Cbar%20n%7C%7D%5E1%7D%2C%20%26%26if%5C%20t%3Ch%2C%5C%5C%0A%26A_%7Bx%2Bt%3A%5Coverline%7Bn-t%7D%7C%7D%5E1%2C%20%26%26if%5C%20h%5Cleq%20t%3Cn%2C%5C%5C%0A%260%2C%20%26%26if%5C%20h%5Cgeq%20n.%0A%5Cend%7Baligned%7D%5Cright.%0A"></p><ul>
+<li><img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;">年付费的终身寿险</li>
+</ul>
+<p style><img src="https://math.now.sh?from=%7B_t%5EhV_x%7D%20%3D%20%5Cleft%5C%7B%5Cbegin%7Baligned%7D%0A%26A_%7Bx%2Bt%7D%20-%20%5Cddot%7Ba%7D_%7Bx%2Bt%3A%5Coverline%7Bh-t%7D%7C%7D%5Ccdot%7B_hP_x%7D%2C%20%26%26if%5C%20t%3Ch%2C%5C%5C%0A%26A_%7Bx%2Bt%7D%2C%20%26%26if%20t%5Cgeq%20h.%0A%5Cend%7Baligned%7D%5Cright.%0A"></p><h3 id="保费差公式">保费差公式</h3>
+<p>责任准备金 = 剩余缴纳保费差的精算现值。</p>
+<h3 id="过去法">过去法</h3>
+<p>责任准备金 = 已付保费在<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">时刻的累计值与保险成本累计值之差，即</p>
+<p style><img src="https://math.now.sh?from=%7B_tV%7D%20%3D%20P.S%20-%20A%2FE%2C%0A"></p><p>其中，<img src="https://math.now.sh?inline=S" style="display:inline-block;margin: 0;">为已缴纳的单位保费在<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">时刻的精算终值，<img src="https://math.now.sh?inline=A" style="display:inline-block;margin: 0;">为已付保额的精算现值，<img src="https://math.now.sh?inline=E" style="display:inline-block;margin: 0;">为<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">年期纯粹生存年金。</p>
+<h2 id="相邻年度期末准备金之间的关系">相邻年度期末准备金之间的关系</h2>
+<h3 id="单位保额终身寿险的准备金">单位保额终身寿险的准备金</h3>
+<p>由<img src="https://math.now.sh?inline=%7B_kV_x%7D%20%3D%20A_%7Bx%2Bk%7D-P_x%20%5Ccdot%20%5Cddot%7Ba%7D_%7Bx%2Bk%7D" style="display:inline-block;margin: 0;">，可得</p>
+<p style><img src="https://math.now.sh?from=%7B_kV_x%7D%20%2B%20%7BP_x%7D%20%3D%20A_%7Bx%2Bk%7D%20-%20P_x%20%5Ccdot%20%5Cddot%7Ba%7D_%7Bx%2Bk%7D%20%2B%20P_x%20%3D%20A_%7Bx%2Bk%7D%20-%20P_x%20%5Ccdot%20a_%7Bx%2Bk%7D.%0A"></p><p>另一方面，由于</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AA_x%20%26%3D%20vA_%7Bx%2B1%7D%20%2B%20vq_x%28q-A_%7Bx%2B1%7D%29%20%3D%20vq_x%20%2B%20vp_xA_%7Bx%2B1%7D%5C%5C%0Aa_x%20%26%3D%20%5Csum%5E%5Cinfty_%7Bk%3D1%7Dv%5Ek%20%5Ccdot%7B_kp_x%7D%20%3D%20vp_x%5Csum%5E%5Cinfty_%7Bt%3D0%7Dv%5Et%20%5Ccdot%7B_lp_%7Bx%2B1%7D%7D%20%3D%20vp_x%20%5Cddot%7Ba%7D_%7Bx%2B1%7D%0A%5Cend%7Baligned%7D%0A"></p><p>从而</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_kV_x%7D%20%2B%20%7BP_x%7D%20%26%3D%20vq_%7Bx%2Bk%7D%20%2B%20vp_%7Bx%2Bk%7DA_%7Bx%2Bk%2B1%7D%20-%20P_x%20%5Ccdot%20vp_%7Bx%2Bk%20%5Cddot%7Ba%7D_%7Bx%2Bk%2B1%7D%7D%5C%5C%0A%26%3D%20vq_%7Bx%2Bk%7D%20%2B%20vp_%7Bx%2Bk%7D%28%7B_%7Bk%2B1%7DV_x%7D%29%5C%5C%0A%26%3D%20v(%7B_%7Bk%2B1%7DV_x%7D)%20%2B%20vq_%7Bx%2Bk%7D(1-%7B_%7Bk%2B1%7DV_x%7D).%0A%5Cend%7Baligned%7D%0A"></p><p>解释：</p>
+<ol>
+<li>第<img src="https://math.now.sh?inline=k" style="display:inline-block;margin: 0;">年年末的准备金与第<img src="https://math.now.sh?inline=k" style="display:inline-block;margin: 0;">年年初所收到的保费<img src="https://math.now.sh?inline=P_x" style="display:inline-block;margin: 0;">之和，恰能提供次年保额为1的一年期死亡保险的给付和次年保额为<img src="https://math.now.sh?inline=%7B_%7Bk%2B1%7DV_x%7D" style="display:inline-block;margin: 0;">的一年期纯粹生存年金的给付。</li>
+<li>将上式两边同乘以<img src="https://math.now.sh?inline=%281%2Bi%29l_%7Bx%2Bk%7D" style="display:inline-block;margin: 0;">，则</li>
+</ol>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%28%7B_kV_x%7D%2BP_x%29(1%2Bi)l_%7Bx%2Bk%7D%20%26%3D%20v(1%2Bi)d_%7Bx%2Bk%7D%20-%20v(1%2Bi)l_%7Bx%2Bk%2B1%7D(%7B_%7Bk%2B1%7DV_x%7D)%5C%5C%0A%26%3Dd_%7Bx%2Bk%7D%20%2B%20l_%7Bx%2Bk%2B1%7D(%7B_%7Bk%2B1%7DV_x%7D)%0A%5Cend%7Baligned%7D%0A"></p><p>第<img src="https://math.now.sh?inline=k" style="display:inline-block;margin: 0;">年年末保险人总储备金与年初所受纯保费<img src="https://math.now.sh?inline=P_xl_%7Bx%2Bk%7D" style="display:inline-block;margin: 0;">，累计一年的终值恰好等于当年所有死亡者每人1单位保额的支付和存活者每人<img src="https://math.now.sh?inline=%7B_%7Bk%2B1%7DV_x%7D" style="display:inline-block;margin: 0;">单位的储备金。</p>
+<h3 id="定义">定义</h3>
+<ul>
+<li>称<img src="https://math.now.sh?inline=%281-%7B_%7Bk%2B1%7DV_x%7D%29" style="display:inline-block;margin: 0;">为第<img src="https://math.now.sh?inline=k%2B1" style="display:inline-block;margin: 0;">年的风险净额；</li>
+<li><img src="https://math.now.sh?inline=q_%7Bx%2Bk%7D%281-%7B_%7Bk%2B1%7DV_x%7D%29" style="display:inline-block;margin: 0;">为保险成本；</li>
+<li><img src="https://math.now.sh?inline=%5Cpi_k%5Er%20%3D%20q_%7Bx%2Bk%7D%281-%7B_%7Bk%2B1%7DV_x%7D%29" style="display:inline-block;margin: 0;">为风险纯保费；</li>
+<li><img src="https://math.now.sh?inline=%5Cpi%5Es_k%20%3D%20%28v%20%5Ccdot%7B_%7Bk%2B1%7DV_x%7D%20-%20%7B_kV_x%7D%29" style="display:inline-block;margin: 0;">为储蓄纯保费。</li>
+</ul>
+<p>可得</p>
+<p style><img src="https://math.now.sh?from=P_x%20%3D%20vq_%7Bx%2Bk%7D%281-%7B_k%2B1%7DV_x%29%20%2B%20v(%7B_%7Bk%2B1%7DV_x%7D)%20-%20%7B_kV_x%7D%20%3D%20%5Cpi%5Er_k%20%2B%20%5Cpi%5Es_k.%0A"></p><h1>多生命函数</h1>
+<p><strong>定义</strong>：设计多个生命剩余余寿的函数。<br>
+<strong>作用</strong>：</p>
+<ul>
+<li>养老金场合的给付</li>
+<li>合伙联保场合</li>
+<li>遗产税计算场合</li>
+</ul>
+<h2 id="联合生命状态">联合生命状态</h2>
+<p><strong>定义</strong>：当集合中所有成员都存活，则该状态存活；否则该状态死亡。<br>
+<strong>余寿</strong>：</p>
+<p style><img src="https://math.now.sh?from=T%28x_1%2Cx_2%2C%5Ccdots%2Cx_n%29%20%3D%20%5Cmin%5C%7BT(x_1)%2CT(x_2)%2C%5Ccdots%2CT(x_n)%5C%7D.%0A"></p><p><strong>余寿的分布</strong>：设<img src="https://math.now.sh?inline=T%28x%29%2CT(y)" style="display:inline-block;margin: 0;">分别为<img src="https://math.now.sh?inline=x%2Cy" style="display:inline-block;margin: 0;">的余寿，则它们的联合生命状态的余寿<img src="https://math.now.sh?inline=T%28xy%29" style="display:inline-block;margin: 0;">的分布为：</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AF_%7Bxy%7D%28t%29%20%26%3D%20P(T(xy)%3Ct)%5C%5C%0A%26%3D%201-P(T(xy)%3Et)%5C%5C%0A%26%3D%201-P(T(x)%3Et%2CT(y)%3Et)%5C%5C%0A%26%3D%201-%7B_tp_x%7D%5Ccdot%7B_tp_y%7D.%0A%5Cend%7Baligned%7D%0A"></p><p><strong>生存函数</strong>：</p>
+<p style><img src="https://math.now.sh?from=%7B_tp_%7Bxy%7D%7D%20%3A%3D%20S_%7Bxy%7D%28t%29%20%3D%20P(T(xy)%3Et)%20%3D%20%7B_tp_x%7D%5Ccdot%7B_tp_y%7D.%0A"></p><p><strong>密度函数</strong>：</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Af_%7Bxy%7D%28t%29%20%26%3D%20-%5BP(T(xy)%20%3E%20t)%5D'%5C%5C%0A%26%3D%20f_x(t)%7B_tp_y%7D%20%2B%20%7B_tp_x%7Df_y(t)%5C%5C%0A%26%7B_tp_x%7D%7B_tp_y%7D(%5Cmu_%7Bx%2Bt%7D%20%2B%20%5Cmu_%7By%2Bt%7D).%0A%5Cend%7Baligned%7D%0A"></p><p><strong>死亡力</strong>：</p>
+<p style><img src="https://math.now.sh?from=%5Cmu_%7Bxy%7D%28t%29%20%3D%20%5Cfrac%7Bf_%7Bxy%7D(t)%7D%3C!--swig%EF%BF%BC2--%3E%7D%20%3D%20%5Cmu_%7Bx%2Bt%7D%20%2B%20%5Cmu_%7By%2Bt%7D.%0A"></p><h2 id="最后生存状态">最后生存状态</h2>
+<p><strong>定义</strong>：当集合中至少有一个成员存活，则该状态存活；否则该状态死亡。<br>
+<strong>余寿</strong>：</p>
+<p style><img src="https://math.now.sh?from=T%5Coverline%7B%28x_1%2Cx_2%2C%5Ccdots%20x_n%29%7D%20%3D%20%5Cmax%5C%7BT(x_1)%2C%5Ccdots%2CT(x_n)%5C%7D.%0A"></p><p><strong>余寿的分布</strong>：</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AF_%7B%5Coverline%7Bxy%7D%7D%28t%29%20%26%3D%20P(T(%5Coverline%7Bxy%7D)%3Ct)%5C%5C%0A%26%3D%20P(T(x)%5Cleq%20t%2CT(y)%5Cleq%20t)%20%3D%20%7B_tq_x%7D%5Ccdot%7B_tq_y%7D%5C%5C%0A%26%3D%20P(T(x)%5Cleq%20t)%20%2B%20P(T(y)%5Cleq%20t)%20-P(T(x)%5Cleq%20t%2CT(y)%5Cleq%20t)%5C%5C%0A%26%7B_tq_x%7D%20%2B%7B_tq_y%7D%20-%7B_tq_%7Bxy%7D%7D%0A%5Cend%7Baligned%7D%0A"></p><p>从而</p>
+<p style><img src="https://math.now.sh?from=F_%5Coverline%7Bxy%7D%28t%29%20%2B%20F_%7Bxy%7D(t)%20%3D%20F_x(t)%20%2B%20F_y(t).%0A"></p><h3 id="平均余寿">平均余寿</h3>
+<ul>
+<li>完全平均余寿
+<ul>
+<li><img src="https://math.now.sh?inline=%5Cdot%7Be%7D_%7Bxy%7D%20%3D%20E%28T(xy%29)%20%3D%20%5Cint%5E%5Cinfty_0%7B_tp_%7Bxy%7D%7Ddt." style="display:inline-block;margin: 0;"></li>
+<li><img src="https://math.now.sh?inline=%5Cdot%7Be%7D_%5Coverline%7Bxy%7D%20%3D%20E%28T(%5Coverline%7Bxy%7D%29)%20%3D%20%5Cint%5E%5Cinfty_0%7B_tp_%5Coverline%7Bxy%7D%7Ddt." style="display:inline-block;margin: 0;"></li>
+</ul>
+</li>
+<li>取整平均余寿
+<ul>
+<li><img src="https://math.now.sh?inline=e_%7Bxy%7D%20%3D%20E%28K(xy%29)%20%3D%20%5Csum%5E%5Cinfty_%7Bk%3D1%7D%7B_kp_%7Bxy%7D%7D." style="display:inline-block;margin: 0;"></li>
+<li><img src="https://math.now.sh?inline=e_%5Coverline%7Bxy%7D%20%3D%20E%28K(%5Coverline%7Bxy%7D%29)%20%3D%20%5Csum%5E%5Cinfty_%7Bk%3D1%7D%7B_kp_%7B%5Coverline%7Bxy%7D%7D%7D." style="display:inline-block;margin: 0;"></li>
+</ul>
+</li>
+</ul>
+<h3 id="多生命状态下的精算">多生命状态下的精算</h3>
+<p>以连续支付的终身寿险为例</p>
+<ul>
+<li>终身寿险：死亡时立即支付1单位保额，保额的现值为<img src="https://math.now.sh?inline=Z%3D%20v%5E%7BT%28u%29%7D" style="display:inline-block;margin: 0;">，其中<img src="https://math.now.sh?inline=u%3Dxy" style="display:inline-block;margin: 0;">活<img src="https://math.now.sh?inline=%5Coverline%7Bxy%7D" style="display:inline-block;margin: 0;">。
+<ul>
+<li>连生状态<img src="https://math.now.sh?inline=%28u%3Dxy%29" style="display:inline-block;margin: 0;">：</li>
+</ul>
+<p style><img src="https://math.now.sh?from=EZ%20%3D%20Ev%5E%7BT%28xy%29%7D%20%3D%20%5Cint%5E%5Cinfty_0v%5Etf_%7Bxy%7D(t)dt.%0A"></p><ul>
+<li>最后生存状态 <img src="https://math.now.sh?inline=%28u%20%3D%20%5Coverline%7Bxy%7D%29" style="display:inline-block;margin: 0;">：</li>
+</ul>
+<p style><img src="https://math.now.sh?from=EZ%20%3D%20%5Cint%5E%5Cinfty_0v%5Etf_%5Coverline%7Bxy%7D%28t%29dt.%0A"></p></li>
+</ul>
+<h3 id="简单多声明函数">简单多声明函数</h3>
+<ol>
+<li>顺位概率
+<ul>
+<li><img src="https://math.now.sh?inline=%7B_nq_%7Bxy%7D%5E1%7D" style="display:inline-block;margin: 0;">：表示<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">在<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年内先于<img src="https://math.now.sh?inline=y" style="display:inline-block;margin: 0;">死亡的概率。</li>
+</ul>
+</li>
+</ol>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_nq_%7Bxy%7D%5E1%7D%20%26%3D%20P%5C%7BT%28x%29%3CT(y)%2CT(x)%5Cleq%20n%5C%7D%5C%5C%0A%26%3D%20%5Cint%5En_0%5Cint%5E%5Cinfty_sf_x(s)f_y(t)dtds%5C%5C%0A%26%3D%20%5Cint%5En_0%20f_x(s)%7B_sp_y%7Dds%5C%5C%0A%26%3D%20%5Cint%5En_0%20%7B_sp_%7Bxy%7D%7D%5Cmu_x(s)ds.%0A%5Cend%7Baligned%7D%0A"></p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- $&#123;_nq_&#123;xy&#125;^&#123;\ 2&#125;&#125;$：表示$y$在$n$年内先于$x$死亡的概率。</span><br></pre></td></tr></table></figure>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_nq_%7Bxy%7D%5E%7B%5C%202%7D%7D%20%26%3D%20%5Cint%5En_0%5Cint%5Et_0f_x%28s%29f_y(t)dsdt%5C%5C%0A%26%3D%20%5Cint%5En_0%20%7B_tq_x%7Df_y(t)dt.%0A%5Cend%7Baligned%7D%0A"></p><ol start="2">
+<li>顺位保险
+<ul>
+<li><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">死亡后<img src="https://math.now.sh?inline=y" style="display:inline-block;margin: 0;">仍生存，在<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">死亡时立即支付1单位保额。保额的精算现值为</li>
+</ul>
+</li>
+</ol>
+<p style><img src="https://math.now.sh?from=%5Cbar%20A_%7Bxy%7D%5E1%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%20%5Ccdot%7B_tp_%7Bxy%7D%7D%5Ccdot%5Cmu_x%28t%29dt%0A"></p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- $y$后于$x$死亡，在$y$死亡时立即支付1单位保额。保额的精算现值为</span><br></pre></td></tr></table></figure>
+<p style><img src="https://math.now.sh?from=%5Cbar%20A_%7Bxy%7D%5E2%20%3D%20%5Cint%5E%5Cinfty_0%20v%5Et%20%5Ccdot%20f_y%28t%29%5Ccdot%7B_tq_x%7Ddt%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%20%5Ccdot%20f_y(t)%5Ccdot(1-%7B_tp_x%7D)dt.%0A"></p>]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>大纲</category>
+      </categories>
+      <tags>
+        <tag>math</tag>
+        <tag>finance</tag>
+        <tag>review</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>时间序列分析</title>
     <url>/2021/12/30/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1>时间序列</h1>
@@ -38,7 +404,7 @@
 <p style><img src="https://math.now.sh?from=U_%7Bj%2Cl%7Dt%5Elz_j%5E%7B-t%7D%20%3D%20V_%7Bj%2Cl%7Dt%5El%5Crho_j%5E%7B-t%7De%5E%7Bi%28%5Ctheta_%7Bj%2Cl%7D%20-%20%5Clambda_jt%29%7D%0A"></p><p>其实部为</p>
 <p style><img src="https://math.now.sh?from=V_%7Bj%2Cl%7Dt%5El%5Crho%5E%7B-t%7D_j%5Ccos%28%5Clambda_jt%20-%20%5Ctheta_%7Bj%2Cl%7D%29%0A"></p><blockquote>
 <p>欧拉公式：</p>
-<p style><img src="https://math.now.sh?from=%0Ae%5E%7Bix%7D%20%3D%20%5Ccos%28x%29%20%2B%20i%5Csin(x)%2C%5Cforall%20x%5Cin%5Cmathbb%20R%0A%0A"></p></blockquote>
+<p style><img src="https://math.now.sh?from=%5C%3E%20e%5E%7Bix%7D%20%3D%20%5Ccos%28x%29%20%2B%20i%5Csin(x)%2C%5Cforall%20x%5Cin%5Cmathbb%20R%0A%5C%3E%20"></p></blockquote>
 <p>对于非齐次差分方程，其解为特解+通解的形式。</p>
 <h2 id="自回归模型及其平稳性">自回归模型及其平稳性</h2>
 <h3 id="text-AR-p-模型"><img src="https://math.now.sh?inline=%5Ctext%7BAR%7D%28p%29" style="display:inline-block;margin: 0;">模型</h3>
@@ -250,8 +616,8 @@
 且<img src="https://math.now.sh?inline=E%28Y%20-%20%5Chat%20Y%29%5E2%5Cleqslant%20E(Y%20-%20%5Ctilde%20Y)%5E2" style="display:inline-block;margin: 0;"></p>
 ]]></content>
       <categories>
-        <category>技术笔记</category>
-        <category>Mathematics</category>
+        <category>学习笔记</category>
+        <category>大纲</category>
       </categories>
       <tags>
         <tag>math</tag>
@@ -345,7 +711,7 @@
       </categories>
       <tags>
         <tag>notes</tag>
-        <tag>machine learning</tag>
+        <tag>math</tag>
       </tags>
   </entry>
   <entry>

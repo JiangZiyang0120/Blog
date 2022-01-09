@@ -23,12 +23,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="时间序列分析复习笔记">
+<meta name="description" content="时间序列分析复习笔记，参考北京大学出版社《应用时间序列分析》">
 <meta property="og:type" content="article">
 <meta property="og:title" content="时间序列分析">
 <meta property="og:url" content="http://example.com/2021/12/30/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="江子扬的鱼塘">
-<meta property="og:description" content="时间序列分析复习笔记">
+<meta property="og:description" content="时间序列分析复习笔记，参考北京大学出版社《应用时间序列分析》">
 <meta property="og:locale">
 <meta property="og:image" content="https://math.now.sh?inline=%5C%7BX%5C%7D">
 <meta property="og:image" content="https://math.now.sh?inline=%5C%7B%5Cgamma_k%5C%7D">
@@ -86,7 +86,7 @@
 <meta property="og:image" content="https://math.now.sh?from=U_%7Bj%2Cl%7D%20%3D%20V_%7Bj%2Cl%7De%5E%7Bi%5Ctheta_%7Bj%2Cl%7D%7D%2C%5C%20z_j%20%3D%20%5Crho_je%5E%7Bi%5Clambda_j%7D%0A">
 <meta property="og:image" content="https://math.now.sh?from=U_%7Bj%2Cl%7Dt%5Elz_j%5E%7B-t%7D%20%3D%20V_%7Bj%2Cl%7Dt%5El%5Crho_j%5E%7B-t%7De%5E%7Bi%28%5Ctheta_%7Bj%2Cl%7D%20-%20%5Clambda_jt%29%7D%0A">
 <meta property="og:image" content="https://math.now.sh?from=V_%7Bj%2Cl%7Dt%5El%5Crho%5E%7B-t%7D_j%5Ccos%28%5Clambda_jt%20-%20%5Ctheta_%7Bj%2Cl%7D%29%0A">
-<meta property="og:image" content="https://math.now.sh?from=%0Ae%5E%7Bix%7D%20%3D%20%5Ccos%28x%29%20%2B%20i%5Csin(x)%2C%5Cforall%20x%5Cin%5Cmathbb%20R%0A%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5C%3E%20e%5E%7Bix%7D%20%3D%20%5Ccos%28x%29%20%2B%20i%5Csin(x)%2C%5Cforall%20x%5Cin%5Cmathbb%20R%0A%5C%3E%20">
 <meta property="og:image" content="https://math.now.sh?inline=%5Ctext%7BAR%7D%28p%29">
 <meta property="og:image" content="https://math.now.sh?inline=%5C%7B%5Cvarepsilon_t%5C%7D">
 <meta property="og:image" content="https://math.now.sh?inline=%5Ctext%7BWN%7D%280%2C%5Csigma%5E2%29">
@@ -447,7 +447,7 @@
 <meta property="og:image" content="https://math.now.sh?inline=L%28%5Chat%20Y%7CX_1%2C%5Ccdots%2CX_%7Bn-1%7D%29%20%3D%20%5Ctilde%20Y">
 <meta property="og:image" content="https://math.now.sh?inline=E%28Y%20-%20%5Chat%20Y%29%5E2%5Cleqslant%20E(Y%20-%20%5Ctilde%20Y)%5E2">
 <meta property="article:published_time" content="2021-12-30T16:12:00.000Z">
-<meta property="article:modified_time" content="2022-01-03T15:55:00.000Z">
+<meta property="article:modified_time" content="2022-01-06T13:36:00.000Z">
 <meta property="article:author" content="江子扬-Jasper Young">
 <meta property="article:tag" content="math">
 <meta property="article:tag" content="review">
@@ -616,18 +616,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -712,7 +712,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-01-03 23:55" itemprop="dateModified" datetime="2022-01-03T23:55:00+08:00">2022-01-03</time>
+        <time title="Modified: 2022-01-06 21:36" itemprop="dateModified" datetime="2022-01-06T21:36:00+08:00">2022-01-06</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -720,11 +720,11 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">技术笔记</span></a>
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Mathematics/" itemprop="url" rel="index"><span itemprop="name">Mathematics</span></a>
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%A7%E7%BA%B2/" itemprop="url" rel="index"><span itemprop="name">大纲</span></a>
         </span>
     </span>
 
@@ -754,7 +754,7 @@
   
 </div>
 
-            <div class="post-description">时间序列分析复习笔记</div>
+            <div class="post-description">时间序列分析复习笔记，参考北京大学出版社《应用时间序列分析》</div>
         </div>
       </header>
 
@@ -797,7 +797,7 @@
 <p style><img src="https://math.now.sh?from=U_%7Bj%2Cl%7Dt%5Elz_j%5E%7B-t%7D%20%3D%20V_%7Bj%2Cl%7Dt%5El%5Crho_j%5E%7B-t%7De%5E%7Bi%28%5Ctheta_%7Bj%2Cl%7D%20-%20%5Clambda_jt%29%7D%0A"></p><p>其实部为</p>
 <p style><img src="https://math.now.sh?from=V_%7Bj%2Cl%7Dt%5El%5Crho%5E%7B-t%7D_j%5Ccos%28%5Clambda_jt%20-%20%5Ctheta_%7Bj%2Cl%7D%29%0A"></p><blockquote>
 <p>欧拉公式：</p>
-<p style><img src="https://math.now.sh?from=%0Ae%5E%7Bix%7D%20%3D%20%5Ccos%28x%29%20%2B%20i%5Csin(x)%2C%5Cforall%20x%5Cin%5Cmathbb%20R%0A%0A"></p></blockquote>
+<p style><img src="https://math.now.sh?from=%5C%3E%20e%5E%7Bix%7D%20%3D%20%5Ccos%28x%29%20%2B%20i%5Csin(x)%2C%5Cforall%20x%5Cin%5Cmathbb%20R%0A%5C%3E%20"></p></blockquote>
 <p>对于非齐次差分方程，其解为特解+通解的形式。</p>
 <h2 id="自回归模型及其平稳性">自回归模型及其平稳性</h2>
 <h3 id="text-AR-p-模型"><img src="https://math.now.sh?inline=%5Ctext%7BAR%7D%28p%29" style="display:inline-block;margin: 0;">模型</h3>
@@ -1046,6 +1046,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2022/01/06/%E5%AF%BF%E9%99%A9%E7%B2%BE%E7%AE%97%E5%9F%BA%E7%A1%80/" rel="next" title="寿险精算基础">
+                  寿险精算基础 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>

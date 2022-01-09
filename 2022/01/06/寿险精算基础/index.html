@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<!--pjax：防止跳转页面音乐暂停-->
+ <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/galoxy.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/galoxy.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/galoxy.png">
+  <link rel="mask-icon" href="/images/galoxy.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="人寿保险学复习笔记，参考北京大学出版社《寿险精算基础》">
+<meta property="og:type" content="article">
+<meta property="og:title" content="寿险精算基础">
+<meta property="og:url" content="http://example.com/2022/01/06/%E5%AF%BF%E9%99%A9%E7%B2%BE%E7%AE%97%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="江子扬的鱼塘">
+<meta property="og:description" content="人寿保险学复习笔记，参考北京大学出版社《寿险精算基础》">
+<meta property="og:locale">
+<meta property="og:image" content="https://math.now.sh?from=i%28t%29%20%3D%20%5Cfrac%7BA(t)%20-%20A(t-1)%7D%7BA(t-1)%7D%20%3D%20%5Cfrac%7BI(t)%7D%7BA(t-1)%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=d%28t%29%20%3D%20%5Cfrac%7BI(t)%7D%7BA(t)%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=i">
+<meta property="og:image" content="https://math.now.sh?inline=h">
+<meta property="og:image" content="https://math.now.sh?from=i%28h%29%3D%20hi%0A">
+<meta property="og:image" content="https://math.now.sh?inline=i">
+<meta property="og:image" content="https://math.now.sh?inline=h">
+<meta property="og:image" content="https://math.now.sh?from=i%28h%29%3D%20(1%2Bi)%5E%7Bh%7D-%201%0A">
+<meta property="og:image" content="https://math.now.sh?from=d%20%3D%20%5Cfrac%7Bi%7D%7B1%2Bi%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cdelta%28t%29%20%3D%20%5Clim_%7Bh%5Crightarrow0%7D%5Cfrac%7Ba(t%2Bh)-a(t)%7D%7Bha(t)%7D%20%3D%20%5Cfrac%7BA">
+<meta property="og:image" content="https://math.now.sh?from=a%28t%29%20%3D%20%5Cexp(%5Cint%5E%7Bt%7D_%7B0%7D%5Cdelta(s)ds)%0A">
+<meta property="og:image" content="https://math.now.sh?inline=V">
+<meta property="og:image" content="https://math.now.sh?inline=V_%7Bnow%7D%20%3D%20Vv%28t%29.">
+<meta property="og:image" content="https://math.now.sh?from=v%28t%29%20%3D%20%5Cexp(-%5Cint%5E%7Bt%7D_%7B0%7D%5Cdelta(s)ds)%0A">
+<meta property="og:image" content="https://math.now.sh?inline=n">
+<meta property="og:image" content="https://math.now.sh?inline=i">
+<meta property="og:image" content="https://math.now.sh?inline=a_%7B%5Cbar%7Bn%7D%7Ci%7D%2CS_%7B%5Cbar%7Bn%7D%7Ci%7D">
+<meta property="og:image" content="https://math.now.sh?inline=i">
+<meta property="og:image" content="https://math.now.sh?inline=i">
+<meta property="og:image" content="https://math.now.sh?inline=a_%7B%5Cbar%20n%7C%7D%2CS_%7B%5Cbar%20n%7C%7D">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Aa_%7B%5Cbar%20n%7C%7D%20%26%3D%20%5Csum%5Climits%5E%7Bn%7D_%7Bj%3D1%7Dv%5E%7Bj%7D%3D%20%5Cfrac%7Bv%281-v%5E%7Bn%7D%29%7D%7B1-v%7D%3D%20%5Cfrac%7B1-v%5En%7D%7Bi%7D%5C%5C%0AS_%7B%5Cbar%20n%7C%7D%20%26%3D%20%5Csum%5Climits%5E%7Bn%7D_%7Bj%3D1%7D(1%2Bi)%5E%7Bj-1%7D%20%3D%20%5Cfrac%7B(1%2Bi)%5E%7Bn%7D-%201%7D%7Bi%7D%20%3D%20a_%7B%5Cbar%20n%7D(1%2Bi)%5En%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=n">
+<meta property="og:image" content="https://math.now.sh?inline=i">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cddot%20a_%7B%5Cbar%7Bn%7D%7Ci%7D%2C%5Cddot%20S_%7B%5Cbar%7Bn%7D%7Ci%7D">
+<meta property="og:image" content="https://math.now.sh?inline=i">
+<meta property="og:image" content="https://math.now.sh?inline=i">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cddot%20a_%7B%5Cbar%20n%7C%7D%2C%5Cddot%20S_%7B%5Cbar%20n%7C%7D">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cddot%20a_%7B%5Cbar%20n%7C%7D%20%26%3D%20%5Csum%5Climits%5E%7Bn-1%7D_%7Bj%3D0%7Dv%5E%7Bj%7D%3D%20%5Cfrac%7B1-v%5E%7Bn%7D%7D%7B1-v%7D%20%3D%20%5Cfrac%7B1-v%5En%7D%7Bd%7D%2C%5C%5C%0A%5Cddot%20S_%7B%5Cbar%20n%7C%7D%20%26%3D%20%5Csum%5Climits%5E%7Bn%7D_%7Bj%3D1%7D%281%2Bi%29%5Ej%20%3D%20%5Cfrac%7B(1%2Bi)%5B(1%2Bi)%5En%20-%201%5D%7D%7Bi%7D%20%3D%20%5Cfrac%7B(1%2Bi)%5En%20-%201%7D%7Bd%7D%5C%5C%0A%26%3D%20%5Cddot%20a_%7B%5Cbar%20n%7C%7D(1%2Bi)%5En.%20%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=%7B_%7Bm%7C%7Da_%7B%5Cbar%20n%7C%7D%7D%2C%7B_%7Bm%7C%7DS_%7B%5Cbar%20n%7C%7D%7D">
+<meta property="og:image" content="https://math.now.sh?inline=m">
+<meta property="og:image" content="https://math.now.sh?inline=n">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_%7Bm%7C%7Da_%7B%5Cbar%20n%7C%7D%7D%20%26%3D%20%5Csum%5E%7Bn%7D_%7Bj%3D1%7Dv%5E%7Bm%2Bj%7D%20%3D%20%5Cfrac%7Bv%5E%7Bm%2B1%7D%281-v%5En%29%7D%7B1-v%7D%5C%5C%0A%7B_%7Bm%7C%7DS_%7B%5Cbar%20n%7C%7D%7D%26%3D%20%5Csum%5Climits%5E%7Bn%7D_%7Bj%3D1%7D(1%2Bi)%5E%7Bj-1%7D%20%3D%20S_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=%7B_%7Bm%7C%7D%5Cddot%20a_%7B%5Cbar%20n%7C%7D%7D%2C%7B_%7Bm%7C%7D%5Cddot%20S_%7B%5Cbar%20n%7C%7D%7D">
+<meta property="og:image" content="https://math.now.sh?inline=m">
+<meta property="og:image" content="https://math.now.sh?inline=n">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_%7Bm%7C%7D%5Cddot%20a_%7B%5Cbar%20n%7C%7D%7D%20%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bj%3D0%7Dv%5E%7Bm%2Bj%7D%20%3D%20v%5Em%20a_%7B%5Cbar%20n%7C%7D%5C%5C%0A%7B_%7Bm%7C%7D%5Cddot%20S_%7B%5Cbar%20n%7C%7D%7D%26%3D%20%5Csum%5E%7Bn%7D_%7Bj%3D1%7D%281%2Bi%29%5E%7Bj%7D%20%3D%20%5Cddot%20S_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Aa_%7B%5Cbar%20n%7C%7D%5E%7B%28%5Cdot%20p%29%7D%20%26%3D%20%5Csum%5E%7Bn%7D_%7Bj%3D0%7D%5Csum%5E%7Bp%7D_%7Bk%3D1%7D%5Cfrac%7B1%7D%7Bp(1%2Bi%5E%7B(p)%7D%2Fp)%5E%7Bjp%2Bk%7D%7D%3D%20%5Cfrac%7B1-v%5En%7D%7Bp%5B(1%2Bi)%5E%7B1%2Fp%7D-1%5D%7D%20%3D%20%5Cfrac%7B1-v%5En%7D%7Bi%5E%7B(p)%7D%7D%5C%5C%0AS_%7B%5Cbar%20n%7C%7D%5E%7B(p)%7D%26%3Da_%7B%5Cbar%20n%7C%7D%5E%7B(p)%7D(1%2Bi)%5En%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cddot%20a_%7B%5Cbar%20n%7C%7D%5E%7B%28p%29%7D%20%26%3D%20%5Cfrac1p%5Cleft(1%20%2B%20%5Cfrac%7B1%7D%7B(1%2Bi)%5E%7B1%2Fp%7D%7D%20%2B%20%5Ccdots%20%2B%20%5Cfrac%7B1%7D%7B(1%2Bi)%5E%7B(np-1)%2Fp%7D%7D%5Cright)%5C%5C%0A%26%3D%20%5Cfrac%7B1-v%5En%7D%7Bp(1-v%5E%7B1%2Fp%7D)%7D%5C%5C%0A%26%3D%20%5Cfrac%7B(1%2Bi)%5Ep(1-v%5En)%7D%7Bp((1%2Bi)%5Ep-1)%7D%20%3D%20%5Cfrac%7B1-v%5En%7D%7Bd%5E%7B(p)%7D%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%28Ia%29_%7B%5Cbar%20n%7C%7D%2C%20%26%26(IS)_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cddot%7B%28Ia%29%7D_%7B%5Cbar%20n%7C%7D%2C%20%26%26%5Cddot%7B(IS)%7D_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%28Da%29_%7B%5Cbar%20n%7C%7D%2C%20%26%26(DS)_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=t">
+<meta property="og:image" content="https://math.now.sh?inline=%5Crho%28t%29">
+<meta property="og:image" content="https://math.now.sh?inline=%5Crho%28t%29%20%3D%201%2C%20%5Cbar%20a_%7B%5Cbar%20n%7C%7D%20%3D%20%5Cint%5E%7Bn%7D_%7B0%7Dv%5Etdt%20%3D%20(1-v%5En)%2F%5Cdelta">
+<meta property="og:image" content="https://math.now.sh?inline=%5Crho%28t%29%20%3D%20%5Bt%5D%20%2B%201%2C%5Cbar%20a_%7B%5Cbar%20n%7C%7D%20%3D%20%5Cint%5E%7B1%7D_%7B0%7Dv%5Etdt%20%2B%20%5Cint%5E%7B2%7D_%7B1%7D2v%5Etdt%2B%5Ccdots">
+<meta property="og:image" content="https://math.now.sh?inline=X_t%20%3D%20I_t%20%2B%20%5CDelta%20B_t">
+<meta property="og:image" content="https://math.now.sh?inline=t">
+<meta property="og:image" content="https://math.now.sh?inline=n">
+<meta property="og:image" content="https://math.now.sh?inline=B_t">
+<meta property="og:image" content="https://math.now.sh?inline=t">
+<meta property="og:image" content="https://math.now.sh?inline=X_t">
+<meta property="og:image" content="https://math.now.sh?inline=B_0%20%3D%20L">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AB_t%20%26%3D%20L%281%2Bi%29%5Et%20-%20%5Csum%5E%7Bt%7D_%7Bk%3D1%7DX_k(1%2Bi)%5E%7Bt-k%7D%5C%5C%0A%26%3D(1%2Bi)%5Et%5BB_0%20-%20X_1v%20-%20X_2v%5E2%20-%20%5Ccdots%20-%20X_tv%5Et%5D%5C%5C%0A%26%3D%20(i%2Bi)%5Et%5Cleft%5B%5Csum%5E%7Bn%7D_%7Bk%3D1%7DX_kv%5Ek%20-%20X_1v%20-%20X_2v%5E2%20-%20%5Ccdots%20-%20X_tv%5Et%5Cright%5D%5C%5C%0A%26%3D%5Csum%5E%7Bn%7D_%7Bk%3Dt%2B1%7DX_kv%5E%7Bk-t%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=T%280%29">
+<meta property="og:image" content="https://math.now.sh?inline=F_0%28t%29%20%3D%20P(T(0)%5Cleqslant%20t)">
+<meta property="og:image" content="https://math.now.sh?inline=T%280%29">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AS_0%28t%29%20%26%3D%20P(T(0)%20%3E%20t)%20%3D%201%20-%20F_0(t).%20%26t%20%5Cin%20%5B0%2C%2B%5Cinfty)%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=s_0%28t%29">
+<meta property="og:image" content="https://math.now.sh?inline=t">
+<meta property="og:image" content="https://math.now.sh?inline=S_0%280%29%20%3D%201">
+<meta property="og:image" content="https://math.now.sh?inline=S_0%28t%29">
+<meta property="og:image" content="https://math.now.sh?inline=S_o%28t%29">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=y">
+<meta property="og:image" content="https://math.now.sh?from=P%28x%3CT(0%29%3Cy)%20%3D%20S_0(x)%20-%20S_0(y).%0A">
+<meta property="og:image" content="https://math.now.sh?inline=T%28x%29">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=f_x%28t%29%20%3D%20dF_x(t)%2Fdt">
+<meta property="og:image" content="https://math.now.sh?inline=F_x%28t%29%20%3D%20P(T(x)%5Cleqslant%20t)">
+<meta property="og:image" content="https://math.now.sh?inline=T%28x%29">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AS%28t%29%20%26%3D%20P(X%20%3E%20t)%2C%20%5C%5C%0A%26P(T(0)%3Ex%2Bt%7CT(0)%3Ex)%5C%5C%0A%26%3D%20%5Cfrac%7BP(T(0)%3Ex%2Bt)%7D%7BP(T(0)%20%3E%20x)%7D%20%3D%20%5Cfrac%7BS_0(x%2Bt)%7D%7BS_0(x)%7D.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=x%2Bt">
+<meta property="og:image" content="https://math.now.sh?inline=S_x%28t%2B%5Cmu%29%20%3D%20S_x(t)S_%7Bx%2Bt%7D(%5Cmu).">
+<meta property="og:image" content="https://math.now.sh?inline=_tp_x">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=t">
+<meta property="og:image" content="https://math.now.sh?inline=_tq_x">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=t">
+<meta property="og:image" content="https://math.now.sh?inline=_%7Bu%7Ct%7Dq_x">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=%5Bx%2Bu%2Cx%2Bu%2Bt%5D">
+<meta property="og:image" content="https://math.now.sh?inline=t%3D1">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Ap_%7Bx%7D%3D%20%7B_1p_%7Bx%2C%7D%7D%26%26q_%7Bx%7D%3D%20%7B_1q_x%7D%2C%26%26%7B_%7Bu%7C%7Dq_%7Bx%7D%7D%20%3D%20%7B_%7Bu%7C1%7Dq_x%7D.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=%7B_tp_%7Bx%7D%7D%3D%20S_x%28t%29%2C%7B_tq_%7Bx%7D%7D%3D%20F_x(t)">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cmu_x%20%26%3D%20%5Clim_%7B%5CDelta%20x%5Crightarrow%200%7D%5Cfrac%7BP%28T(x%29%5Cleqslant%20%5CDelta%20x)%7D%7B%5CDelta%20x%7D%5C%5C%0A%26%3D%20%5Clim_%7B%5CDelta%20x%5Crightarrow%200%7D%5Cfrac%7BP(T(0)%5Cleqslant%20x%20%2B%20%5CDelta%20x%7CT(0)%3Ex)%7D%7B%5CDelta%20x%7D%5C%5C%0A%26%3D%5Clim_%7B%5CDelta%20x%5Crightarrow%200%7D%5Cfrac%7BS_0(x)%20-%20S_0(x%2B%5CDelta%20x)%7D%7B%5CDelta%20x%7D%5C%5C%0A%26%3D%20-%5Cfrac%7BS_0">
+<meta property="og:image" content="https://math.now.sh?inline=t">
+<meta property="og:image" content="https://math.now.sh?from=%7B_t%5Cmu_x%7D%20%3D%20%5Cexp%5Cleft%28-%5Cint%5E%7Bx%2Bt%7D_%7Bx%7D%5Cmu_ydy%5Cright%29%20%3D%20%5Cexp%5Cleft(-%5Cint%5E%7Bt%7D_%7B0%7D%5Cmu_%7Bx%2By%7Ddy%5Cright)%0A">
+<meta property="og:image" content="https://math.now.sh?inline=s%28t%29">
+<meta property="og:image" content="https://math.now.sh?inline=f_X%28t%29">
+<meta property="og:image" content="https://math.now.sh?from=%5Cmu_x%20%3D%20-%5Cfrac%7BS_0">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Af_x%28t%29%20%26%3D%20%5Cfrac%7BdF_x(t)%7D%7Bdt%7D%20%3D%20-%5Cfrac%7BdS_x(t)%7D%7Bdt%7D%5C%5C%0A%26%3D%20-%5Cfrac%7Bd%5Cexp%5C%7B-%5Cint%5E%7Bt%7D_%7B0%7D%5Cmu_%7Bx%2By%7Ddy%5C%7D%7D%7Bdt%7D%5C%5C%0A%26%3D%20S_x(t)%5Cmu_%7Bx%2Bt%7D%20%3D%20%7B_tp_x%7D%5Cmu_%7Bx%2Bt%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%7B_tq_x%7D%20%3D%20%5Cint%5E%7Bt%7D_%7B0%7D%7B_sp_t%7D%5Cmu_%7Bx%2Bs%7Dds.%0A">
+<meta property="og:image" content="https://math.now.sh?inline=%5Coverset%7B%5Ccirc%7D%7Be%7D_0">
+<meta property="og:image" content="https://math.now.sh?inline=e_0">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Coverset%7B%5Ccirc%7D%7Be%7D_%7B0%7D%20%26%3D%20E%28X%29%20%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B0%7Ds(t)dt%2C%20%5C%5C%5C%5C%0Ae_%7B0%7D%20%26%3D%20E(K(0))%20%3D%20%5Csum%5Climits_%7Bs%5Cgeqslant1%7Ds(n).%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=K%280%29">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AE%28X%5E%7B2%29%7D%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B0%7D2ts(t)dt%2C%20%26%26E(K(0)%5E%7B2)%7D%3D%20%5Csum%5Climits_%7Bn%5Cgeqslant1%7D(2n-1)s(n)%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cmu%28x%29">
+<meta property="og:image" content="https://math.now.sh?inline=s%28x%29">
+<meta property="og:image" content="https://math.now.sh?inline=%28w-x%29%5E%7B-1%7D">
+<meta property="og:image" content="https://math.now.sh?inline=1%3D%5Cfrac%7Bx%7D%7Bw%7D%2C0%3Cx%3Cw">
+<meta property="og:image" content="https://math.now.sh?inline=w%3E0">
+<meta property="og:image" content="https://math.now.sh?inline=BC%5Ex">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cexp%5B-m%28X%5Ex-1%29%5D%2Cx%5Cgeqslant0">
+<meta property="og:image" content="https://math.now.sh?inline=B%3E0%2CC%5Cgeqslant1">
+<meta property="og:image" content="https://math.now.sh?inline=A%2BBC%5Ex">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cexp%5B-Ax-%20m%28C%5Ex-1%29%5D%2Cx%5Cgeqslant0">
+<meta property="og:image" content="https://math.now.sh?inline=B%3E0%2CA%5Cgeqslant-B%2CC%3E1">
+<meta property="og:image" content="https://math.now.sh?inline=kx%5En">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cexp%28-ux%5E%7Bn%2B1%7D%29%2Cx%5Cgeqslant0">
+<meta property="og:image" content="https://math.now.sh?inline=k%3E0%2Cn%3E0">
+<meta property="og:image" content="https://math.now.sh?inline=m%20%3D%20%5Cfrac%7BB%7D%7B%5Clog%28C%29%7D%2Cu%3D%5Cfrac%7Bk%7D%7Bn%2B1%7D">
+<meta property="og:image" content="https://math.now.sh?from=%20%20%20%5Cbegin%7Baligned%7D%0A%20%20%20%20%7B_tp_%7Bx%7D%7D%3D%20%5Cfrac%7Bs%28t%2Bx%29%7D%7Bs(x)%7D.%0A%20%20%20%20%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=t%3E0%2Cu%3E0">
+<meta property="og:image" content="https://math.now.sh?from=%20%20%20%5Cbegin%7Baligned%7D%0A%20%20%20%7B_tq_%7Bx%7D%7D%3D%201-%7B_tp_%7Bx%7D%2C%7D%26%26%20%7B_%7Bu%7Ct%7Dq_%7Bx%7D%7D%3D%20%7B_up_%7Bx%7D%7D%5C%20%7B_tq_%7Bx%2Bu%7D%7D%2C%20%26%26%7B_%7Bu%7Ct%7Dq_%7Bx%7D%3D%20%7B_up_%7Bx%7D%7D-%20%7B_%7Bu%2Bt%7Dp_x%7D%7D.%0A%20%20%20%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=0%3Ch%3Ct">
+<meta property="og:image" content="https://math.now.sh?from=%7B_tp_%7Bx%7D%7D%3D%20%7B_hp_%7Bx%7D%7D%5C%20%7B_%7Bt-h%7Dp_%7Bx%2Bh%7D%7D%3B%0A">
+<meta property="og:image" content="https://math.now.sh?inline=f_x%28t%29%20%3D%20%7B_tp_x%7D%5Ccdot%5Cmu_%7Bx%2Bt%7D%2C%5C%20%5Cfrac%7Bd%7D%7Bdt%7D(%7B_tp_%7Bx%7D%7D)%3D%20-%7B_tp_x%7D%5Cmu_%7Bx%2Bt%7D">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=x%2Bn">
+<meta property="og:image" content="https://math.now.sh?inline=Z">
+<meta property="og:image" content="https://math.now.sh?inline=A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%20%5C%201%7D">
+<meta property="og:image" content="https://math.now.sh?inline=%7B_nE_x%7D">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5EnI%28K%5Cgeqslant%20n%29%2C%5C%5C%0AA_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%20%5C%201%7D%26%3D%20EZ%20%3D%20v%5En%5Ccdot%20%7B_np_x%7D.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=x%2Bn">
+<meta property="og:image" content="https://math.now.sh?inline=Z">
+<meta property="og:image" content="https://math.now.sh?inline=A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B1%7D">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5E%7BK%2B1%7DI%28K%3Cn%29%5C%5C%0AA_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B1%7D%26%3D%20EZ%20%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7DP(K%3Dk)%5C%5C%0A%26%3D%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7D%7B_%7Bk%7C%7Dq_x%7D%5C%5C%0A%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7D%7B_kp_x%7D%5Ccdot%7Bq_%7Bx%2Bk%7D%7D.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5E%7BK%2B1%7D%2C%5C%5C%0AA_x%20%26%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7DP%28K%3Dk%29%5C%5C%0A%26%3D%20%5Csum%5E%5Cinfty_0v%5E%7Bk%2B1%7D%7B_kp_x%7D%5Ccdot%20q_%7Bx%2Bk%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=%7B%5E2A_x%7D">
+<meta property="og:image" content="https://math.now.sh?inline=EZ%5E2">
+<meta property="og:image" content="https://math.now.sh?inline=%7B%5E2A_x%7D%20%3D%20EZ%5E2%20%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%3D0%7Dv%5E%7B2%28k%2B1%29%7D%7B_kp_x%7D%5Ccdot%20q_%7Bx%2Bk%7D">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=x%2Bn">
+<meta property="og:image" content="https://math.now.sh?inline=x%2Bn">
+<meta property="og:image" content="https://math.now.sh?inline=x%2Bn">
+<meta property="og:image" content="https://math.now.sh?inline=Z">
+<meta property="og:image" content="https://math.now.sh?inline=A_%7Bx%3A%5Cbar%20n%7C%7D">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5E%7BK%2B1%7DI%28k%3Cn%29%20%2B%20v%5EnI(K%5Cgeqslant%20n)%2C%5C%5C%0AA_%7Bx%3A%5Cbar%20n%7C%7D%26%3D%20%5Csum%5E%7Bn%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7D%7B_kp_x%7D%5Ccdot%20q_%7Bx%2Bk%7D%20%2B%20v%5En%7B_np_x%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=%5Bx%2Bm%2Cx%2Bm%2Bn%5D">
+<meta property="og:image" content="https://math.now.sh?inline=Z">
+<meta property="og:image" content="https://math.now.sh?inline=%7B_%7Bm%7Cn%7DA_x%7D">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5E%7BK%2B1%7DI%28m%5Cleq%20K%20%3C%20m%2Bn%29%5C%5C%0A%7B_%7Bm%7Cn%7DA_x%7D%26%3D%20EZ%20%3D%20%5Csum%5E%7Bm%2Bn%2B1%7D_%7Bk%3Dm%7Dv%5E%7Bk%2B1%7DP(K%3Dk)%5C%5C%0A%26%3D%20%5Csum%5E%7Bm%2Bn%2B1%7D_%7Bk%3Dm%7Dv%5E%7Bk%2B1%7D%7B_%7Bk%7C%7Dq_x%7D%5C%5C%0A%26%3D%5Csum%5E%7Bm%2Bn%2B1%7D_%7Bk%3Dn%7Dv%5E%7Bk%2B1%7D%7B_kp_%7Bx%7D%7D%5Ccdot%20q_%7Bx%2Bk%7D.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%7B_%7Bm%7C%7DA_x%7D%20%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%3Dm%7Dv%5E%7Bk%2B1%7D%7B_kp_x%7D%5Ccdot%20q_%7Bx%2Bk%7D.%0A">
+<meta property="og:image" content="https://math.now.sh?inline=%28IA%29_x%2C(IA)%5E1_%7Bx%3A%5Cbar%20n%7C%7D%2C(IA)_%7Bx%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%201%7D%2C%7B_%7Bm%7C%7D(IA)_x%7D">
+<meta property="og:image" content="https://math.now.sh?inline=%28DA%29_x%2C(DA)%5E1_%7Bx%3A%5Cbar%20n%7C%7D">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cbar%20A">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cbar%20A_%7Bx%3A%5Cbar%20n%7C%7D">
+<meta property="og:image" content="https://math.now.sh?inline=T%28x%29">
+<meta property="og:image" content="https://math.now.sh?from=A_%7Bx%3A%5Cbar%20n%7C%7D%20%3D%20E%5C%7Bv%5E%7BT%28x%29%7DI(T(x)%5Cleq%20n)%5C%7D%20%3D%20%5Cint%5En_0v%5Etf_x(t)dt%20%3D%20%5Cint%5En_0v%5Et%5Cmu_x(t)%5Ccdot%7B_tp_x%7Ddt%0A">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cbar%20A_x%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%5Cmu_x%28t%29%5Ccdot%20%7B_tp_x%7Ddt.">
+<meta property="og:image" content="https://math.now.sh?inline=%7B_%7Bm%7C%7D%5Cbar%20A_x%7D%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%5Cmu_x%28t%29%5Ccdot%7B_tp_x%7Ddt.">
+<meta property="og:image" content="https://math.now.sh?inline=%28I%5Cbar%20A%29_x%2C(%5Cbar%20I%5Cbar%20A)_x">
+<meta property="og:image" content="https://math.now.sh?inline=I_t">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cforall%20x%5Cin%20%5Cmathbb%20N">
+<meta property="og:image" content="https://math.now.sh?inline=0%20%5Cleq%20s%20%3C%201">
+<meta property="og:image" content="https://math.now.sh?from=%7B_sq_x%7D%20%5Coverset%7BUUD%7D%7B%3D%7D%20sq_x%2C0%5Cleq%20s%3C1%0A">
+<meta property="og:image" content="https://math.now.sh?from=s_%7Bx%2Bt%7D%20%5Coverset%7BUUD%7D%7B%3D%7D%20%281-s%29s_%7Bx%7D%20%2B%20s_%7Bx%2B1%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%7B_sp_x%7D%5Cmu_%7Bx%2Bs%7D%20%5Coverset%7BUUD%7D%7B%3D%7D%20q_x%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cbar%20A_x%20%26%3D%20Ev%5E%7BT%28x%29%7D%20%3D%20Ev%5E%7BK(x)%2BS(x)%7D%20%3D%20Ev%5E%7BK(x)%2B1%2BS(x)-1%7D%5C%5C%0A%26%3D%20A_xEv%5E%7BS(x)-1%7D%20%3D%20%5Cfrac%7BAi%7D%7B%5Cdelta%7D.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=A_x%20%3D%20vq_x%20%2B%20vp_x%5Ccdot%20A_%7Bx%2B1%7D.">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AA_x%20%26%3D%20Ev%5E%7BK%2B1%7D%5C%5C%0A%26%3D%20E%28v%5E%7BK%2B1%7D%7CK%3D0%29P(K%3D0)%20%2B%20E(v%5E%7BK%2B1%7D%7CK%5Cgeq1)P(K%5Cgeq1)%5C%5C%0A%26%3Dvq_x%20%2B%20vp_xE%5Bv%5E%7B(K-1)%7D%7CK%5Cgeq1%5D%5C%5C%0A%26%3Dvq_x%20%2B%20vp_xA_%7Bx%2B1%7D.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=A_x%20%3D%20vq_x%20%2B%20vp_x%5Ccdot%20A_%7Bx%2B1%7D%20%3D%20A_%7Bx%2B1%7D%20%2B%20vq_x%281-A_%7Bx%2B1%7D%29.">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=%281-A_%7Bx%2B1%7D%29">
+<meta property="og:image" content="https://math.now.sh?inline=%281%2Bi%29A_x%20%3D%20q_x%20%2B%20(1-q_x)%5Ccdot%20A_%7Bx%2B1%7D">
+<meta property="og:image" content="https://math.now.sh?inline=iA_x%20%3D%20%28A_%7Bx%2B1%7D-A_x%29%2Bq_x(1-A_%7Bx%2B1%7D)">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=x%2B1">
+<meta property="og:image" content="https://math.now.sh?inline=n">
+<meta property="og:image" content="https://math.now.sh?inline=n">
+<meta property="og:image" content="https://math.now.sh?inline=n">
+<meta property="og:image" content="https://math.now.sh?inline=nE_x%20%3D%20A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%201%7D.">
+<meta property="og:image" content="https://math.now.sh?inline=Z">
+<meta property="og:image" content="https://math.now.sh?inline=a_x">
+<meta property="og:image" content="https://math.now.sh?inline=Z%20%3D%20a_K%28x%29">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Aa_x%20%3D%20Ea_%7B%5Coverline%7BK%28x%29%7D%7C%7D%20%26%3D%20%5Csum%5E%5Cinfty_%7Bk%3D0%7Da_%7B%5Cbar%20k%7C%7DP(K(x)%20%3D%20k)%5C%5C%0A%26%3D%5Csum%5E%5Cinfty_%7Bk%3D0%7Da_%7B%5Cbar%20n%7C%7D(%7B_kp_x%7D%20-%20%7B_%7Bk%2B1%7Dp_x%7D)%5C%5C%0A%26%3D%20%5Csum%5E%5Cinfty_%7Bk%3D1%7Dv%5Ek%7B_kp_x%7D.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20a_%7B%5Coverline%7BK%28x%29%7D%7C%7DI(K(x)%3Cn)%5C%5C%0Aa_%7Bx%3A%5Cbar%20n%7C%7D%26%3DEZ%20%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Da_%7B%5Cbar%20k%7C%7DP(K(x)%20%3D%20k)%20%3D%20%5Csum%5En_%7Bk%3D1%7Dv%5Ek%7B_kp_x%7D.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%7B_%7Bm%7C%7Da_x%7D%20%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%20%3D%20m%2B1%7Dv%5Ek%7B_kp_x%7D.%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%0A0%2C%20%26%20if%5C%200%5Cleq%20K%28x%29%20%3C%20m%2C%20%5C%5C%0Aa_%7B%5Coverline%7BK(x)%7D%7C%7D%20-%20a_%7B%5Cbar%20m%7C%7D%2C%20%26if%5C%20m%5Cleq%20K(x)%20%3C%20m%2Bn-1%2C%20%5C%5C%20%0Aa_%7B%5Coverline%7Bm%2Bn%7D%7C%7D%20-%20a_%7B%5Cbar%20m%7C%7D%2C%20%26if%5C%20K(x)%5Cgeq%20m%2Bn.%0A%5Cend%7Bmatrix%7D%5Cright.%5C%5C%0A%7B_%7Bm%7Cn%7Da_x%7D%20%26%3D%20EZ%20%3D%20%5Csum%5E%7Bm%2Bn%7D_%7Bk%3Dm%2B1%7Dv%5Ek%7B_kp_x%7D.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20%5Cddot%7Ba%7D_%7B%5Coverline%7BK%28x%29%2B1%7D%7C%7D%2C%5C%5C%0A%5Cddot%7Ba%7D_x%20%26%3D%20EZ%20%3D%20%5Csum%5E%5Cinfty_%7Bk%3D0%7D%5Cddot%7Ba%7D_%7B%5Coverline%7BK(x)%2B1%7D%7C%7DP(K(x)%20%3D%20k)%20%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%3D0%7Dv%5Ek%20%5Ccdot%20%7B_kp_x%7D%20%3D%201%2Ba_x.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cddot%7Ba%7D_%7Bx%3A%5Cbar%20n%7C%7D%20%26%3D%20EZ%20%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7D%5Cddot%7Ba%7D_%7B%5Coverline%7BK%2B1%7D%7C%7DP%28K%3Dk%29%2B%5Cddot%7Ba%7D_%7B%5Cbar%20n%7C%7DP(K(x)%5Cgeq%20n)%5C%5C%0A%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Dv%5Ek%20%5Ccdot%20%7B_kp_x%7D%20%3D%201%2Ba_%7Bx%3A%5Cbar%20n%7C%7D%20-%20%7B_nE_x%7D.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%7B_%7Bm%7C%7D%5Cddot%7Ba%7D_x%7D%20%3D%20%5Csum%5E%5Cinfty_%7Bk%3Dm%7Dv%5Ek%20%5Ccdot%20%7B_kp_x%7D.%0A">
+<meta property="og:image" content="https://math.now.sh?from=%7B_%7Bm%7Cn%7D%5Cddot%7Ba%7D_x%7D%20%3D%20%5Csum%5E%7Bn%2Bm-1%7D_%7Bk%3Dm%7Dv%5E%7Bk%2Bm%7D%5Ccdot%20%7B_kp_x%7D.%0A">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=t">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cbar%20a_x">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cbar%20a_x%20%26%3D%20%5Cint%5E%5Cinfty_0%5Cbar%20a_%7B%5Cbar%20t%7C%7Df_x%28t%29dt%5C%5C%0A%26%3D%20-%5Cint%5E%5Cinfty_0%5Cbar%20a_%7B%5Cbar%20t%7C%7Dd(%7B_tp_x%7D)%5C%5C%0A%26%3D%20-%5Cint%5E%5Cinfty_0%5Cfrac%7B1-v%5Et%7D%7B%5Cdelta%7Dd(%7B_tp_x%7D)%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%20%5Ccdot%7B_yp_x%7Ddt.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cbar%20a_%7Bx%3A%5Cbar%20n%7C%7D%20%26%3D%20%5Cint%5En_t%5Cbar%20a_t%20%5Ccdot%20f_x%28t%29dt%20%2B%20%5Cbar%20a_%7B%5Cbar%20n%7C%7D%5Ccdot%7B_np_x%7D%5C%5C%0A%26%3D%20-%5Cint%5En_0%5Cbar%20a_%7B%5Cbar%20t%7C%7Dd(%7B_tp_x%7D)%20%2B%20%5Cbar%20a_%7B%5Cbar%20n%7C%7D%5Ccdot%7B_np_x%7D%5C%5C%0A%26%3D%20%5Cint%5En_0%20v%5Et%20%5Ccdot%7B_tp_x%7Ddt.%20%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_%7Bm%7Cn%7D%5Cbar%20a_x%7D%20%26%3D%20v%5Em%20%5Ccdot%7B_mp_x%7D%5Ccdot%5Cbar%20a_%7Bx%2Bm%3A%5Cbar%20n%7C%7D%5C%5C%0A%26%3D%20%5Cint%5E%7Bm%2Bn%7D_m%20v%5Et%20%5Ccdot%7B_tp_x%7Ddt%5C%5C%0A%26%3D%20%5Cbar%20a_%7Bx%3A%5Coverline%7Bm%2Bn%7D%7C%7D%20-%20%5Cbar%20a_%7Bx%3A%5Cbar%20m%7C%7D.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=n%5Crightarrow%5Cinfty">
+<meta property="og:image" content="https://math.now.sh?from=%7B_%7Bm%7C%7D%5Cbar%20a_x%7D%20%3D%20%5Cbar%20a_x%20-%20%5Cbar%20a_%7Bx%3A%5Cbar%20m%7C%7D%20%3D%20%5Cint%5E%5Cinfty_m%20v%5Et%20%5Ccdot%7B_tp_x%7Ddt.%0A">
+<meta property="og:image" content="https://math.now.sh?inline=L">
+<meta property="og:image" content="https://math.now.sh?inline=EL%3D0">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=n">
+<meta property="og:image" content="https://math.now.sh?inline=P">
+<meta property="og:image" content="https://math.now.sh?inline=APV%20%3D%20d_xv%20%2B%20d_%7Bx%2B1%7Dv%5E2%20%2B%20%5Ccdot%20%2B%20d_%7Bx%2Bn-1%7Dv%5En">
+<meta property="og:image" content="https://math.now.sh?inline=APV%20%3D%20l_xP">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AP%20%3D%20A_%7Bx%3A%5Cbar%20n%7C%7D%5E1%20%26%3D%20%5Cfrac%7Bd_xv%20%2B%20d_%7Bx%2B1%7Dv%5E2%20%2B%20%5Ccdot%20%2B%20d_%7Bx%2Bn-1%7Dv%5En%7D%7Bl_x%7D%5C%5C%0A%26%3D%5Cfrac%7B%28d_xv%20%2B%20d_%7Bx%2B1%7Dv%5E2%20%2B%20%5Ccdot%20%2B%20d_%7Bx%2Bn-1%7Dv%5En%29v%5Ex%7D%7Bl_xv%5Ex%7D%5C%5C%0A%26%3D%3A%20%5Cfrac%7BC_x%20%2B%20%5Ccdot%20%2B%20C_%7Bx%2Bn%2B1%7D%7D%7BD_x%7D%20%3D%20%5Cfrac%7BM_x%20-%20X_%7Bx%2Bn%7D%7D%7BD_x%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=C_x%20%3D%20d_xv%5E%7Bx%2B1%7D%2CM_x%20%3D%20%5Csum%5E%5Cinfty_%7Bi%3D0%7DC_%7Bx%2Bi%7D.">
+<meta property="og:image" content="https://math.now.sh?from=P%20%3D%20A_x%20%3D%20%5Cfrac%7Bd_xv%20%2B%20d_%7Bx%2B1%7Dv%5E2%20%2B%20%5Ccdot%7D%7Bl_x%7D%20%3D%20%5Cfrac%7BM_x%7D%7BD_x%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbar%20P%20%3D%20%5Cbar%20A_x%20%3D%20%5Cfrac%7B%5Cbar%20M_x%7D%7BD_x%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%201%7D%20%3D%20%5Cfrac%7Bl_%7Bx%2Bn%7Dv%5En%7D%7Bl_x%7D%20%3D%20%5Cfrac%7BD_%7Bx%2Bn%7D%7D%7BD_x%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=A_%7Bx%3A%5Cbar%20n%7C%7D%20%3D%20A%5E1_%7Bx%3A%5Cbar%20n%7C%7D%20%2B%20A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%201%7D%20%3D%20%5Cfrac%7BM_x%20-%20M_%7Bx%2Bn%7D%20%2B%20D_%7Bx%2Bn%7D%7D%7BD_x%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cbar%20a_x%20%26%3D%20%5Cint%5E%5Cinfty_0v%5Et%20%5Ccdot%7B_tp_x%7Ddt%5C%5C%0A%26%3D%20%5Cfrac%7B%5Csum%5E%5Cinfty_%7Bi%3D0%7D%5Cint%5E%7Bi%2B1%7D_iv%5E%7Bx%2Bt%7Dl_%7Bx%2Bt%7Ddt%7D%7Bl_xv%5Ex%7D%20%3D%20%5Cfrac%7B%5Csum%5E%5Cinfty_%7Bi%3D0%7D%5Cbar%20D_%7Bx%2Bi%7D%7D%7BD_x%7D%20%3D%20%5Cfrac%7B%5Cbar%20N_x%7D%7BD_x%7D%2C%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbar%20a_%7Bx%3A%5Cbar%20n%7C%7D%20%3D%20%5Cfrac%7B%5Cbar%20N_x%20-%20%5Cbar%20N_%7Bx%2Bn%7D%7D%7BD_x%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AIA_%7Bx%3A%5Cbar%20n%7C%7D%5E1%20%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7D%28k%2B1%29v%5E%7Bk%2B1%7D%5Ccdot%7B_kp_x%7D%5Ccdot%7Bq_%7Bx%2Bk%7D%7D%5C%5C%0A%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7D(k%2B1)%5Cfrac%7Bl_%7Bx%2Bk%7D%7D%7Bl_x%7D%5Cfrac%7Bd_%7Bx%2Bk%7D%7D%7Bl_%7Bx%2Bk%7D%7Dv%5E%7Bk%2B1%7D%20%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7D(k%2B1)%5Cfrac%7Bd_%7Bx%2Bk%7Dv%5E%7Bx%2Bk%2B1%7D%7D%7BD_x%7D%5C%5C%0A%26%5Cfrac%7B%5Csum%5E%7Bn-1%7D_%7Bi%3D0%7DM_%7Bx%2Bi%7D%20-%20nM_%7Bx%2Bn%7D%7D%7BD_x%7D%20%3D%3A%5Cfrac%7BR_x%20-%20R_%7Bx%2Bn%7D%20-%20nM_%7Bx%2Bn%7D%7D%7BD_x%7D.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=I%5Cddot%7Ba%7D_%7Bx%3A%5Cbar%20n%7C%7D%20%3D%20%5Cfrac%7BN_x%20%2B%20N_%7Bx%2B1%7D%20%2B%20%5Ccdots%7D%7BD_x%7D%20%3D%3A%20%5Cfrac%7BS_x%7D%7BD_x%7D.%0A">
+<meta property="og:image" content="https://math.now.sh?inline=t">
+<meta property="og:image" content="https://math.now.sh?inline=%28%7B_tV%7D%29">
+<meta property="og:image" content="https://math.now.sh?inline=t">
+<meta property="og:image" content="https://math.now.sh?inline=%28%7B_tL%7D%29">
+<meta property="og:image" content="https://math.now.sh?inline=h">
+<meta property="og:image" content="https://math.now.sh?inline=h">
+<meta property="og:image" content="https://math.now.sh?inline=%28%7B_t%5EhV(%5Cbar%20A_x%29%7D)">
+<meta property="og:image" content="https://math.now.sh?from=%28%7B_t%5EhV(%5Cbar%20A_x%29%7D)%20%3D%20%5Cleft%5C%7B%5Cbegin%7Baligned%7D%0A%26%5Cbar%20A_%7Bx%2Bt%7D%20-%20%5Cbar%20a_%7Bx%2Bt%3A%5Coverline%7Bh-t%7D%7C%7D%5Ccdot%7B_h%5Cbar%20P(%5Cbar%20A_x)%7D%2C%20%26if%5C%20t%3Ch.%20%5C%5C%0A%26%5Cbar%20A_%7Bx%2Bt%7D%2C%20%26if%5C%20t%5Cgeq%20h.%20%0A%5Cend%7Baligned%7D%5Cright.%0A">
+<meta property="og:image" content="https://math.now.sh?inline=h">
+<meta property="og:image" content="https://math.now.sh?inline=n">
+<meta property="og:image" content="https://math.now.sh?from=%7B_t%5Eh%5Cbar%20V%28%5Cbar%20A_%7Bx%3A%5Cbar%20n%7C%7D%29%7D%20%3D%5Cleft%5C%7B%5Cbegin%7Baligned%7D%0A%26%5Cbar%20A_%7Bx%2Bt%3A%5Coverline%7Bn-t%7D%7C%7D%20-%20%5Cbar%20a_%7Bx%2Bt%3A%5Coverline%7Bh-t%7D%7C%7D%5Ccdot%7B_h%5Cbar%20P(%5Cbar%20A_%7Bx%3A%5Cbar%20n%7C%7D)%7D%2C%20%26%26if%5C%20t%3Ch%2C%20%5C%5C%20%0A%26%5Cbar%20A_%7Bx%2Bt%3A%5Coverline%7Bn-t%7D%7C%7D%2C%20%26%26if%5C%20h%5Cleq%20t%3Cn%2C%20%5C%5C%20%0A%261%2C%20%26%26if%5C%20t%3Dn.%0A%5Cend%7Baligned%7D%5Cright.%0A">
+<meta property="og:image" content="https://math.now.sh?inline=h">
+<meta property="og:image" content="https://math.now.sh?inline=n">
+<meta property="og:image" content="https://math.now.sh?from=%7B_t%5EhV_%7Bx%3A%5Cbar%20n%7C%7D%5E1%7D%20%3D%20%5Cleft%5C%7B%5Cbegin%7Baligned%7D%0A%26A_%7Bx%2Bt%3A%5Coverline%7Bn-t%7D%7C%7D%5E1-%5Cddot%7Ba%7D_%7Bx%2Bt%3A%5Coverline%7Bh-t%7D%7C%7D%5Ccdot%7B_hP_%7Bx%3A%5Cbar%20n%7C%7D%5E1%7D%2C%20%26%26if%5C%20t%3Ch%2C%5C%5C%0A%26A_%7Bx%2Bt%3A%5Coverline%7Bn-t%7D%7C%7D%5E1%2C%20%26%26if%5C%20h%5Cleq%20t%3Cn%2C%5C%5C%0A%260%2C%20%26%26if%5C%20h%5Cgeq%20n.%0A%5Cend%7Baligned%7D%5Cright.%0A">
+<meta property="og:image" content="https://math.now.sh?inline=h">
+<meta property="og:image" content="https://math.now.sh?from=%7B_t%5EhV_x%7D%20%3D%20%5Cleft%5C%7B%5Cbegin%7Baligned%7D%0A%26A_%7Bx%2Bt%7D%20-%20%5Cddot%7Ba%7D_%7Bx%2Bt%3A%5Coverline%7Bh-t%7D%7C%7D%5Ccdot%7B_hP_x%7D%2C%20%26%26if%5C%20t%3Ch%2C%5C%5C%0A%26A_%7Bx%2Bt%7D%2C%20%26%26if%20t%5Cgeq%20h.%0A%5Cend%7Baligned%7D%5Cright.%0A">
+<meta property="og:image" content="https://math.now.sh?inline=t">
+<meta property="og:image" content="https://math.now.sh?from=%7B_tV%7D%20%3D%20P.S%20-%20A%2FE%2C%0A">
+<meta property="og:image" content="https://math.now.sh?inline=S">
+<meta property="og:image" content="https://math.now.sh?inline=t">
+<meta property="og:image" content="https://math.now.sh?inline=A">
+<meta property="og:image" content="https://math.now.sh?inline=E">
+<meta property="og:image" content="https://math.now.sh?inline=t">
+<meta property="og:image" content="https://math.now.sh?inline=%7B_kV_x%7D%20%3D%20A_%7Bx%2Bk%7D-P_x%20%5Ccdot%20%5Cddot%7Ba%7D_%7Bx%2Bk%7D">
+<meta property="og:image" content="https://math.now.sh?from=%7B_kV_x%7D%20%2B%20%7BP_x%7D%20%3D%20A_%7Bx%2Bk%7D%20-%20P_x%20%5Ccdot%20%5Cddot%7Ba%7D_%7Bx%2Bk%7D%20%2B%20P_x%20%3D%20A_%7Bx%2Bk%7D%20-%20P_x%20%5Ccdot%20a_%7Bx%2Bk%7D.%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AA_x%20%26%3D%20vA_%7Bx%2B1%7D%20%2B%20vq_x%28q-A_%7Bx%2B1%7D%29%20%3D%20vq_x%20%2B%20vp_xA_%7Bx%2B1%7D%5C%5C%0Aa_x%20%26%3D%20%5Csum%5E%5Cinfty_%7Bk%3D1%7Dv%5Ek%20%5Ccdot%7B_kp_x%7D%20%3D%20vp_x%5Csum%5E%5Cinfty_%7Bt%3D0%7Dv%5Et%20%5Ccdot%7B_lp_%7Bx%2B1%7D%7D%20%3D%20vp_x%20%5Cddot%7Ba%7D_%7Bx%2B1%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_kV_x%7D%20%2B%20%7BP_x%7D%20%26%3D%20vq_%7Bx%2Bk%7D%20%2B%20vp_%7Bx%2Bk%7DA_%7Bx%2Bk%2B1%7D%20-%20P_x%20%5Ccdot%20vp_%7Bx%2Bk%20%5Cddot%7Ba%7D_%7Bx%2Bk%2B1%7D%7D%5C%5C%0A%26%3D%20vq_%7Bx%2Bk%7D%20%2B%20vp_%7Bx%2Bk%7D%28%7B_%7Bk%2B1%7DV_x%7D%29%5C%5C%0A%26%3D%20v(%7B_%7Bk%2B1%7DV_x%7D)%20%2B%20vq_%7Bx%2Bk%7D(1-%7B_%7Bk%2B1%7DV_x%7D).%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=k">
+<meta property="og:image" content="https://math.now.sh?inline=k">
+<meta property="og:image" content="https://math.now.sh?inline=P_x">
+<meta property="og:image" content="https://math.now.sh?inline=%7B_%7Bk%2B1%7DV_x%7D">
+<meta property="og:image" content="https://math.now.sh?inline=%281%2Bi%29l_%7Bx%2Bk%7D">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%28%7B_kV_x%7D%2BP_x%29(1%2Bi)l_%7Bx%2Bk%7D%20%26%3D%20v(1%2Bi)d_%7Bx%2Bk%7D%20-%20v(1%2Bi)l_%7Bx%2Bk%2B1%7D(%7B_%7Bk%2B1%7DV_x%7D)%5C%5C%0A%26%3Dd_%7Bx%2Bk%7D%20%2B%20l_%7Bx%2Bk%2B1%7D(%7B_%7Bk%2B1%7DV_x%7D)%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=k">
+<meta property="og:image" content="https://math.now.sh?inline=P_xl_%7Bx%2Bk%7D">
+<meta property="og:image" content="https://math.now.sh?inline=%7B_%7Bk%2B1%7DV_x%7D">
+<meta property="og:image" content="https://math.now.sh?inline=%281-%7B_%7Bk%2B1%7DV_x%7D%29">
+<meta property="og:image" content="https://math.now.sh?inline=k%2B1">
+<meta property="og:image" content="https://math.now.sh?inline=q_%7Bx%2Bk%7D%281-%7B_%7Bk%2B1%7DV_x%7D%29">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cpi_k%5Er%20%3D%20q_%7Bx%2Bk%7D%281-%7B_%7Bk%2B1%7DV_x%7D%29">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cpi%5Es_k%20%3D%20%28v%20%5Ccdot%7B_%7Bk%2B1%7DV_x%7D%20-%20%7B_kV_x%7D%29">
+<meta property="og:image" content="https://math.now.sh?from=P_x%20%3D%20vq_%7Bx%2Bk%7D%281-%7B_k%2B1%7DV_x%29%20%2B%20v(%7B_%7Bk%2B1%7DV_x%7D)%20-%20%7B_kV_x%7D%20%3D%20%5Cpi%5Er_k%20%2B%20%5Cpi%5Es_k.%0A">
+<meta property="og:image" content="https://math.now.sh?from=T%28x_1%2Cx_2%2C%5Ccdots%2Cx_n%29%20%3D%20%5Cmin%5C%7BT(x_1)%2CT(x_2)%2C%5Ccdots%2CT(x_n)%5C%7D.%0A">
+<meta property="og:image" content="https://math.now.sh?inline=T%28x%29%2CT(y)">
+<meta property="og:image" content="https://math.now.sh?inline=x%2Cy">
+<meta property="og:image" content="https://math.now.sh?inline=T%28xy%29">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AF_%7Bxy%7D%28t%29%20%26%3D%20P(T(xy)%3Ct)%5C%5C%0A%26%3D%201-P(T(xy)%3Et)%5C%5C%0A%26%3D%201-P(T(x)%3Et%2CT(y)%3Et)%5C%5C%0A%26%3D%201-%7B_tp_x%7D%5Ccdot%7B_tp_y%7D.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%7B_tp_%7Bxy%7D%7D%20%3A%3D%20S_%7Bxy%7D%28t%29%20%3D%20P(T(xy)%3Et)%20%3D%20%7B_tp_x%7D%5Ccdot%7B_tp_y%7D.%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Af_%7Bxy%7D%28t%29%20%26%3D%20-%5BP(T(xy)%20%3E%20t)%5D">
+<meta property="og:image" content="https://math.now.sh?from=%5Cmu_%7Bxy%7D%28t%29%20%3D%20%5Cfrac%7Bf_%7Bxy%7D(t)%7D%3C!--swig%EF%BF%BC2--%3E%7D%20%3D%20%5Cmu_%7Bx%2Bt%7D%20%2B%20%5Cmu_%7By%2Bt%7D.%0A">
+<meta property="og:image" content="https://math.now.sh?from=T%5Coverline%7B%28x_1%2Cx_2%2C%5Ccdots%20x_n%29%7D%20%3D%20%5Cmax%5C%7BT(x_1)%2C%5Ccdots%2CT(x_n)%5C%7D.%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AF_%7B%5Coverline%7Bxy%7D%7D%28t%29%20%26%3D%20P(T(%5Coverline%7Bxy%7D)%3Ct)%5C%5C%0A%26%3D%20P(T(x)%5Cleq%20t%2CT(y)%5Cleq%20t)%20%3D%20%7B_tq_x%7D%5Ccdot%7B_tq_y%7D%5C%5C%0A%26%3D%20P(T(x)%5Cleq%20t)%20%2B%20P(T(y)%5Cleq%20t)%20-P(T(x)%5Cleq%20t%2CT(y)%5Cleq%20t)%5C%5C%0A%26%7B_tq_x%7D%20%2B%7B_tq_y%7D%20-%7B_tq_%7Bxy%7D%7D%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=F_%5Coverline%7Bxy%7D%28t%29%20%2B%20F_%7Bxy%7D(t)%20%3D%20F_x(t)%20%2B%20F_y(t).%0A">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cdot%7Be%7D_%7Bxy%7D%20%3D%20E%28T(xy%29)%20%3D%20%5Cint%5E%5Cinfty_0%7B_tp_%7Bxy%7D%7Ddt.">
+<meta property="og:image" content="https://math.now.sh?inline=%5Cdot%7Be%7D_%5Coverline%7Bxy%7D%20%3D%20E%28T(%5Coverline%7Bxy%7D%29)%20%3D%20%5Cint%5E%5Cinfty_0%7B_tp_%5Coverline%7Bxy%7D%7Ddt.">
+<meta property="og:image" content="https://math.now.sh?inline=e_%7Bxy%7D%20%3D%20E%28K(xy%29)%20%3D%20%5Csum%5E%5Cinfty_%7Bk%3D1%7D%7B_kp_%7Bxy%7D%7D.">
+<meta property="og:image" content="https://math.now.sh?inline=e_%5Coverline%7Bxy%7D%20%3D%20E%28K(%5Coverline%7Bxy%7D%29)%20%3D%20%5Csum%5E%5Cinfty_%7Bk%3D1%7D%7B_kp_%7B%5Coverline%7Bxy%7D%7D%7D.">
+<meta property="og:image" content="https://math.now.sh?inline=Z%3D%20v%5E%7BT%28u%29%7D">
+<meta property="og:image" content="https://math.now.sh?inline=u%3Dxy">
+<meta property="og:image" content="https://math.now.sh?inline=%5Coverline%7Bxy%7D">
+<meta property="og:image" content="https://math.now.sh?inline=%28u%3Dxy%29">
+<meta property="og:image" content="https://math.now.sh?from=EZ%20%3D%20Ev%5E%7BT%28xy%29%7D%20%3D%20%5Cint%5E%5Cinfty_0v%5Etf_%7Bxy%7D(t)dt.%0A">
+<meta property="og:image" content="https://math.now.sh?inline=%28u%20%3D%20%5Coverline%7Bxy%7D%29">
+<meta property="og:image" content="https://math.now.sh?from=EZ%20%3D%20%5Cint%5E%5Cinfty_0v%5Etf_%5Coverline%7Bxy%7D%28t%29dt.%0A">
+<meta property="og:image" content="https://math.now.sh?inline=%7B_nq_%7Bxy%7D%5E1%7D">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=n">
+<meta property="og:image" content="https://math.now.sh?inline=y">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_nq_%7Bxy%7D%5E1%7D%20%26%3D%20P%5C%7BT%28x%29%3CT(y)%2CT(x)%5Cleq%20n%5C%7D%5C%5C%0A%26%3D%20%5Cint%5En_0%5Cint%5E%5Cinfty_sf_x(s)f_y(t)dtds%5C%5C%0A%26%3D%20%5Cint%5En_0%20f_x(s)%7B_sp_y%7Dds%5C%5C%0A%26%3D%20%5Cint%5En_0%20%7B_sp_%7Bxy%7D%7D%5Cmu_x(s)ds.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_nq_%7Bxy%7D%5E%7B%5C%202%7D%7D%20%26%3D%20%5Cint%5En_0%5Cint%5Et_0f_x%28s%29f_y(t)dsdt%5C%5C%0A%26%3D%20%5Cint%5En_0%20%7B_tq_x%7Df_y(t)dt.%0A%5Cend%7Baligned%7D%0A">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?inline=y">
+<meta property="og:image" content="https://math.now.sh?inline=x">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbar%20A_%7Bxy%7D%5E1%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%20%5Ccdot%7B_tp_%7Bxy%7D%7D%5Ccdot%5Cmu_x%28t%29dt%0A">
+<meta property="og:image" content="https://math.now.sh?from=%5Cbar%20A_%7Bxy%7D%5E2%20%3D%20%5Cint%5E%5Cinfty_0%20v%5Et%20%5Ccdot%20f_y%28t%29%5Ccdot%7B_tq_x%7Ddt%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%20%5Ccdot%20f_y(t)%5Ccdot(1-%7B_tp_x%7D)dt.%0A">
+<meta property="article:published_time" content="2022-01-06T08:45:00.000Z">
+<meta property="article:modified_time" content="2022-01-09T03:17:00.000Z">
+<meta property="article:author" content="江子扬-Jasper Young">
+<meta property="article:tag" content="math">
+<meta property="article:tag" content="finance">
+<meta property="article:tag" content="review">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://math.now.sh?from=i%28t%29%20%3D%20%5Cfrac%7BA(t)%20-%20A(t-1)%7D%7BA(t-1)%7D%20%3D%20%5Cfrac%7BI(t)%7D%7BA(t-1)%7D%0A">
+
+
+<link rel="canonical" href="http://example.com/2022/01/06/%E5%AF%BF%E9%99%A9%E7%B2%BE%E7%AE%97%E5%9F%BA%E7%A1%80/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh","comments":true,"permalink":"http://example.com/2022/01/06/%E5%AF%BF%E9%99%A9%E7%B2%BE%E7%AE%97%E5%9F%BA%E7%A1%80/","path":"2022/01/06/寿险精算基础/","title":"寿险精算基础"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>寿险精算基础 | 江子扬的鱼塘</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">江子扬的鱼塘</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">天空一无所有，为何给我安慰</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-主页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a></li>
+        <li class="menu-item menu-item-所有文章"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>所有文章</a></li>
+        <li class="menu-item menu-item-技术笔记"><a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" rel="section"><i class="fa fa-atom fa-fw"></i>技术笔记</a></li>
+        <li class="menu-item menu-item-随笔"><a href="/categories/%E9%9A%8F%E7%AC%94/" rel="section"><i class="fa fa-book-open fa-fw"></i>随笔</a></li>
+        <li class="menu-item menu-item-标签"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-目录"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>目录</a></li>
+        <li class="menu-item menu-item-关于我"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <!-- require APlayer -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+
+<!-- require MetingJS-->
+
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+
+<!--网易云playlist外链地址-->   
+<meting-js
+    server="netease"
+    type="playlist" 
+    id="6951475229"
+    mini="false"
+    fixed="false"
+    list-folded="true"
+    autoplay="false"
+    volume="0.4"
+    theme="#FADFA3"
+    order="list"
+    loop="all"
+    preload="auto"
+    mutex="true">
+</meting-js>
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">利息的度量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E6%81%AF%E7%9A%84%E6%94%AF%E4%BB%98"><span class="nav-number">1.1.</span> <span class="nav-text">利息的支付</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E6%81%AF%E7%9A%84%E5%BA%A6%E9%87%8F"><span class="nav-number">1.2.</span> <span class="nav-text">利息的度量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E6%81%AF%E5%8A%9B"><span class="nav-number">1.2.1.</span> <span class="nav-text">利息力</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">年金</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AE%E5%AE%9A%E5%B9%B4%E9%87%91"><span class="nav-number">2.1.</span> <span class="nav-text">确定年金</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%9F%E6%9C%AB%E6%94%AF%E4%BB%98%E5%AE%9A%E6%9C%9F%EF%BC%88%E5%8D%B3%E6%9C%9F%EF%BC%89%E5%B9%B4%E9%87%91"><span class="nav-number">2.1.1.</span> <span class="nav-text">期末支付定期（即期）年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%9F%E5%88%9D%E6%94%AF%E4%BB%98%E5%AE%9A%E6%9C%9F%E5%B9%B4%E9%87%91"><span class="nav-number">2.1.2.</span> <span class="nav-text">期初支付定期年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%9F%E6%9C%AB%E6%94%AF%E4%BB%98%E5%AE%9A%E6%9C%9F%E5%BB%B6%E6%9C%9F%E5%B9%B4%E9%87%91"><span class="nav-number">2.1.3.</span> <span class="nav-text">期末支付定期延期年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%9F%E5%88%9D%E6%94%AF%E4%BB%98%E5%AE%9A%E6%9C%9F%E5%BB%B6%E6%9C%9F%E5%B9%B4%E9%87%91"><span class="nav-number">2.1.4.</span> <span class="nav-text">期初支付定期延期年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%8F%E5%B9%B4%E6%9C%9F%E6%9C%AB%E6%94%AF%E4%BB%98p%E6%AC%A1%E7%9A%84%E5%B9%B4%E9%87%91"><span class="nav-number">2.1.5.</span> <span class="nav-text">每年期末支付p次的年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%8F%E5%B9%B4%E6%9C%9F%E5%88%9D%E6%94%AF%E4%BB%98p%E6%AC%A1%E7%9A%84%E5%B9%B4%E9%87%91"><span class="nav-number">2.1.6.</span> <span class="nav-text">每年期初支付p次的年金</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E5%8A%A8%E5%B9%B4%E9%87%91"><span class="nav-number">2.2.</span> <span class="nav-text">变动年金</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E9%80%90%E5%B9%B4%E9%80%92%E5%A2%9E%E5%B9%B4%E9%87%91"><span class="nav-number">2.2.1.</span> <span class="nav-text">标准逐年递增年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E9%80%90%E5%B9%B4%E9%80%92%E9%99%8D%E5%B9%B4%E9%87%91"><span class="nav-number">2.2.2.</span> <span class="nav-text">标准逐年递降年金</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E5%B9%B4%E9%87%91"><span class="nav-number">2.3.</span> <span class="nav-text">连续年金</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%80%BA%E5%8A%A1%E7%9A%84%E5%81%BF%E8%BF%98"><span class="nav-number">2.4.</span> <span class="nav-text">债务的偿还</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">单生命生存模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E5%AD%98%E5%88%86%E5%B8%83"><span class="nav-number">3.1.</span> <span class="nav-text">生存分布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E7%B2%BE%E7%AE%97%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="nav-number">3.1.1.</span> <span class="nav-text">一些精算表示法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%BB%E4%BA%A1%E5%8A%9B"><span class="nav-number">3.2.</span> <span class="nav-text">死亡力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">3.3.</span> <span class="nav-text">结论</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">死亡保险的精算值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A6%BB%E6%95%A3%E6%AD%BB%E4%BA%A1%E4%BF%9D%E9%99%A9"><span class="nav-number">4.1.</span> <span class="nav-text">离散死亡保险</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#n%E5%B9%B4%E6%9C%9F%E7%BA%AF%E7%B2%B9%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91"><span class="nav-number">4.1.1.</span> <span class="nav-text">n年期纯粹生存年金</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#n%E5%B9%B4%E6%9C%9F%E6%AD%BB%E4%BA%A1%E4%BF%9D%E9%99%A9"><span class="nav-number">4.2.</span> <span class="nav-text">n年期死亡保险</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%88%E7%94%9F%E6%AD%BB%E4%BA%A1%E4%BF%9D%E9%99%A9"><span class="nav-number">4.2.1.</span> <span class="nav-text">终生死亡保险</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E5%85%A8%E4%BF%9D%E9%99%A9"><span class="nav-number">4.2.2.</span> <span class="nav-text">两全保险</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%B6%E4%BB%98m%E5%B9%B4%E7%9A%84n%E5%B9%B4%E6%9C%9F%E6%AD%BB%E4%BA%A1%E4%BF%9D%E9%99%A9"><span class="nav-number">4.2.3.</span> <span class="nav-text">延付m年的n年期死亡保险</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%B6%E4%BB%98m%E5%B9%B4%E7%9A%84%E7%BB%88%E8%BA%AB%E6%AD%BB%E4%BA%A1%E4%BF%9D%E9%99%A9"><span class="nav-number">4.2.4.</span> <span class="nav-text">延付m年的终身死亡保险</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E5%8A%A8%E4%BF%9D%E9%A2%9D%E6%AD%BB%E4%BA%A1%E4%BF%9D%E9%99%A9"><span class="nav-number">4.2.5.</span> <span class="nav-text">变动保额死亡保险</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E6%AD%BB%E4%BA%A1%E4%BF%9D%E9%99%A9"><span class="nav-number">4.3.</span> <span class="nav-text">连续死亡保险</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E6%94%AF%E4%BB%98%E6%AD%BB%E4%BA%A1%E4%BF%9D%E9%99%A9"><span class="nav-number">4.3.1.</span> <span class="nav-text">连续支付死亡保险</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UUD%E4%B8%8B%EF%BC%8C%E8%BF%9E%E7%BB%AD%E4%B8%8E%E7%A6%BB%E6%95%A3%E5%AF%BF%E9%99%A9%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">4.3.2.</span> <span class="nav-text">UUD下，连续与离散寿险的关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E6%96%B9%E7%A8%8B"><span class="nav-number">4.4.</span> <span class="nav-text">循环方程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">生存年金的精算现值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%B4%E6%96%AD%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91"><span class="nav-number">5.1.</span> <span class="nav-text">间断生存年金</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%80%E6%94%AF%E4%BB%98%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91"><span class="nav-number">5.1.1.</span> <span class="nav-text">单一支付生存年金</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%9F%E6%9C%AB%E6%94%AF%E4%BB%98%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91"><span class="nav-number">5.2.</span> <span class="nav-text">期末支付生存年金</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%88%E8%BA%AB%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91"><span class="nav-number">5.2.1.</span> <span class="nav-text">终身生存年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#n%E5%B9%B4%E6%9C%9F%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91"><span class="nav-number">5.2.2.</span> <span class="nav-text">n年期生存年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%B6%E4%BB%98m%E5%B9%B4%E7%9A%84%E7%BB%88%E8%BA%AB%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91"><span class="nav-number">5.2.3.</span> <span class="nav-text">延付m年的终身生存年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%B6%E4%BB%98m%E5%B9%B4%E7%9A%84n%E5%B9%B4%E6%9C%9F%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91"><span class="nav-number">5.2.4.</span> <span class="nav-text">延付m年的n年期生存年金</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%9F%E5%88%9D%E6%94%AF%E4%BB%98%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91"><span class="nav-number">5.3.</span> <span class="nav-text">期初支付生存年金</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%88%E8%BA%AB%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91-2"><span class="nav-number">5.3.1.</span> <span class="nav-text">终身生存年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#n%E5%B9%B4%E6%9C%9F%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91-2"><span class="nav-number">5.3.2.</span> <span class="nav-text">n年期生存年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%B6%E4%BB%98m%E5%B9%B4%E7%9A%84%E7%BB%88%E8%BA%AB%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91-2"><span class="nav-number">5.3.3.</span> <span class="nav-text">延付m年的终身生存年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%B6%E4%BB%98m%E5%B9%B4%E7%9A%84n%E5%B9%B4%E6%9C%9F%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91-2"><span class="nav-number">5.3.4.</span> <span class="nav-text">延付m年的n年期生存年金</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E6%94%AF%E4%BB%98%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91"><span class="nav-number">5.4.</span> <span class="nav-text">连续支付生存年金</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%88%E8%BA%AB%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91-3"><span class="nav-number">5.4.1.</span> <span class="nav-text">终身生存年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#n%E5%B9%B4%E6%9C%9F%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91-3"><span class="nav-number">5.4.2.</span> <span class="nav-text">n年期生存年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%B6%E4%BB%98m%E5%B9%B4%E7%9A%84n%E5%B9%B4%E6%9C%9F%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91-3"><span class="nav-number">5.4.3.</span> <span class="nav-text">延付m年的n年期生存年金</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">保费的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B6%B8%E7%BC%B4%E7%BA%AF%E4%BF%9D%E8%B4%B9"><span class="nav-number">6.1.</span> <span class="nav-text">趸缴纯保费</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E6%9C%9F%E6%AD%BB%E4%BA%A1%E4%BF%9D%E9%99%A9"><span class="nav-number">6.1.1.</span> <span class="nav-text">定期死亡保险</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%88%E8%BA%AB%E5%AF%BF%E9%99%A9"><span class="nav-number">6.1.2.</span> <span class="nav-text">终身寿险</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%9F%E6%9C%AB%E6%94%AF%E4%BB%98"><span class="nav-number">6.1.2.1.</span> <span class="nav-text">期末支付</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%BB%E4%BA%A1%E6%97%B6%E6%94%AF%E4%BB%98"><span class="nav-number">6.1.2.2.</span> <span class="nav-text">死亡时支付</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E6%9C%9F%E7%BA%AF%E7%B2%B9%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91"><span class="nav-number">6.1.3.</span> <span class="nav-text">定期纯粹生存年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#n%E5%B9%B4%E6%9C%9F%E4%B8%A4%E5%85%A8%E4%BF%9D%E9%99%A9"><span class="nav-number">6.1.4.</span> <span class="nav-text">n年期两全保险</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%9F%E5%88%9D%E6%94%AF%E4%BB%98%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91-2"><span class="nav-number">6.1.5.</span> <span class="nav-text">期初支付生存年金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E6%94%AF%E4%BB%98%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91-2"><span class="nav-number">6.1.6.</span> <span class="nav-text">连续支付生存年金</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%88%E8%BA%AB%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91-4"><span class="nav-number">6.1.6.1.</span> <span class="nav-text">终身生存年金</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#n%E5%B9%B4%E6%9C%9F%E7%94%9F%E5%AD%98%E5%B9%B4%E9%87%91-4"><span class="nav-number">6.1.6.2.</span> <span class="nav-text">n年期生存年金</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E5%8A%A8%E4%BF%9D%E9%A2%9D%E7%9A%84%E4%BF%9D%E9%99%A9"><span class="nav-number">6.1.7.</span> <span class="nav-text">变动保额的保险</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E5%A2%9E%E5%AF%BF%E9%99%A9"><span class="nav-number">6.1.7.1.</span> <span class="nav-text">单增寿险</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E5%A2%9E%E5%B9%B4%E9%87%91"><span class="nav-number">6.1.7.2.</span> <span class="nav-text">单增年金</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">理论（责任）准备金</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%A3%E4%BB%BB%E5%87%86%E5%A4%87%E9%87%91%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="nav-number">7.1.</span> <span class="nav-text">责任准备金的计算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AA%E6%9D%A5%E6%B3%95"><span class="nav-number">7.1.1.</span> <span class="nav-text">未来法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%8C%E5%85%A8%E8%BF%9E%E7%BB%AD%E6%83%85%E5%86%B5"><span class="nav-number">7.1.1.1.</span> <span class="nav-text">完全连续情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%8C%E5%85%A8%E9%97%B4%E6%96%AD%E6%83%85%E5%86%B5"><span class="nav-number">7.1.1.2.</span> <span class="nav-text">完全间断情况</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%9D%E8%B4%B9%E5%B7%AE%E5%85%AC%E5%BC%8F"><span class="nav-number">7.1.2.</span> <span class="nav-text">保费差公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%87%E5%8E%BB%E6%B3%95"><span class="nav-number">7.1.3.</span> <span class="nav-text">过去法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E9%82%BB%E5%B9%B4%E5%BA%A6%E6%9C%9F%E6%9C%AB%E5%87%86%E5%A4%87%E9%87%91%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">7.2.</span> <span class="nav-text">相邻年度期末准备金之间的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%BD%8D%E4%BF%9D%E9%A2%9D%E7%BB%88%E8%BA%AB%E5%AF%BF%E9%99%A9%E7%9A%84%E5%87%86%E5%A4%87%E9%87%91"><span class="nav-number">7.2.1.</span> <span class="nav-text">单位保额终身寿险的准备金</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">7.2.2.</span> <span class="nav-text">定义</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">多生命函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%81%94%E5%90%88%E7%94%9F%E5%91%BD%E7%8A%B6%E6%80%81"><span class="nav-number">8.1.</span> <span class="nav-text">联合生命状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%90%8E%E7%94%9F%E5%AD%98%E7%8A%B6%E6%80%81"><span class="nav-number">8.2.</span> <span class="nav-text">最后生存状态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E4%BD%99%E5%AF%BF"><span class="nav-number">8.2.1.</span> <span class="nav-text">平均余寿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E7%94%9F%E5%91%BD%E7%8A%B6%E6%80%81%E4%B8%8B%E7%9A%84%E7%B2%BE%E7%AE%97"><span class="nav-number">8.2.2.</span> <span class="nav-text">多生命状态下的精算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E5%A4%9A%E5%A3%B0%E6%98%8E%E5%87%BD%E6%95%B0"><span class="nav-number">8.2.3.</span> <span class="nav-text">简单多声明函数</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="江子扬-Jasper Young"
+      src="/images/QQ%E5%9B%BE%E7%89%8720210901210637.jpg">
+  <p class="site-author-name" itemprop="name">江子扬-Jasper Young</p>
+  <div class="site-description" itemprop="description">Stay Hungry. Stay Foolish</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/JiangZiyang0120" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;JiangZiyang0120" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yangzejia0120@gmail.com" title="E-Mail → mailto:yangzejia0120@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/YangZejia0120" title="csdn → https:&#x2F;&#x2F;blog.csdn.net&#x2F;YangZejia0120" rel="noopener" target="_blank"><i class="fa fa-blog fa-fw"></i>csdn</a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/06/%E5%AF%BF%E9%99%A9%E7%B2%BE%E7%AE%97%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/QQ%E5%9B%BE%E7%89%8720210901210637.jpg">
+      <meta itemprop="name" content="江子扬-Jasper Young">
+      <meta itemprop="description" content="Stay Hungry. Stay Foolish">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="江子扬的鱼塘">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          寿险精算基础
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-01-06 16:45" itemprop="dateCreated datePublished" datetime="2022-01-06T16:45:00+08:00">2022-01-06</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-01-09 11:17" itemprop="dateModified" datetime="2022-01-09T11:17:00+08:00">2022-01-09</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%A7%E7%BA%B2/" itemprop="url" rel="index"><span itemprop="name">大纲</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan: </span>
+    
+    
+      <a title="changyan" href="/2022/01/06/%E5%AF%BF%E9%99%A9%E7%B2%BE%E7%AE%97%E5%9F%BA%E7%A1%80/#SOHUCS" itemprop="discussionUrl">
+        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2022/01/06/寿险精算基础/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+</div>
+
+            <div class="post-description">人寿保险学复习笔记，参考北京大学出版社《寿险精算基础》</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>本笔记作为大纲的梳理写得较详细，可用作复习/补天使用。对于借这份笔记复习的同学，更建议通过这份笔记了解各部分费用的计算方法和表达符号。而具体的表达式完全可以通过简单的数学知识和理解推导。不建议强行记忆。</p>
+<h1>利息的度量</h1>
+<h2 id="利息的支付">利息的支付</h2>
+<p>期末支付（滞后利息）：</p>
+<p style><img src="https://math.now.sh?from=i%28t%29%20%3D%20%5Cfrac%7BA(t)%20-%20A(t-1)%7D%7BA(t-1)%7D%20%3D%20%5Cfrac%7BI(t)%7D%7BA(t-1)%7D%0A"></p><p>期初支付（贴现）：</p>
+<p style><img src="https://math.now.sh?from=d%28t%29%20%3D%20%5Cfrac%7BI(t)%7D%7BA(t)%7D%0A"></p><h2 id="利息的度量">利息的度量</h2>
+<p>名义利率:<br>
+设单位时间利率为<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">，则<img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;">时间内名义利率为</p>
+<p style><img src="https://math.now.sh?from=i%28h%29%3D%20hi%0A"></p><p>有效利率:<br>
+设单位时间利率为<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">，则<img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;">时间内有效利率为</p>
+<p style><img src="https://math.now.sh?from=i%28h%29%3D%20(1%2Bi)%5E%7Bh%7D-%201%0A"></p><p>贴现率:</p>
+<p style><img src="https://math.now.sh?from=d%20%3D%20%5Cfrac%7Bi%7D%7B1%2Bi%7D%0A"></p><h3 id="利息力">利息力</h3>
+<p>利息力即瞬间获息的大小</p>
+<p style><img src="https://math.now.sh?from=%5Cdelta%28t%29%20%3D%20%5Clim_%7Bh%5Crightarrow0%7D%5Cfrac%7Ba(t%2Bh)-a(t)%7D%7Bha(t)%7D%20%3D%20%5Cfrac%7BA'(t)%7D%7BA(t)%7D%0A"></p><p>积累因子</p>
+<p style><img src="https://math.now.sh?from=a%28t%29%20%3D%20%5Cexp(%5Cint%5E%7Bt%7D_%7B0%7D%5Cdelta(s)ds)%0A"></p><p>贴现因子(假设利率不变，n年后价值<img src="https://math.now.sh?inline=V" style="display:inline-block;margin: 0;">的某金融产品的现值<img src="https://math.now.sh?inline=V_%7Bnow%7D%20%3D%20Vv%28t%29." style="display:inline-block;margin: 0;">）</p>
+<p style><img src="https://math.now.sh?from=v%28t%29%20%3D%20%5Cexp(-%5Cint%5E%7Bt%7D_%7B0%7D%5Cdelta(s)ds)%0A"></p><h1>年金</h1>
+<ol>
+<li><strong>年金</strong>： 在相等时间间隔内的一系列支付。</li>
+<li><strong>分类</strong>：
+<ul>
+<li>风险年金（不确定，如生产保险）</li>
+<li>确定年金（如购买债券定期获利）</li>
+</ul>
+</li>
+</ol>
+<h2 id="确定年金">确定年金</h2>
+<h3 id="期末支付定期（即期）年金">期末支付定期（即期）年金</h3>
+<p>设年金额为1，每年年末支付，共支付<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年，年有效利率为<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">。称此年金为期末支付定期年金。记<img src="https://math.now.sh?inline=a_%7B%5Cbar%7Bn%7D%7Ci%7D%2CS_%7B%5Cbar%7Bn%7D%7Ci%7D" style="display:inline-block;margin: 0;">分别为表示在利率<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">下的年金现值和终值，也可省略<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">写作<img src="https://math.now.sh?inline=a_%7B%5Cbar%20n%7C%7D%2CS_%7B%5Cbar%20n%7C%7D" style="display:inline-block;margin: 0;">。</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Aa_%7B%5Cbar%20n%7C%7D%20%26%3D%20%5Csum%5Climits%5E%7Bn%7D_%7Bj%3D1%7Dv%5E%7Bj%7D%3D%20%5Cfrac%7Bv%281-v%5E%7Bn%7D%29%7D%7B1-v%7D%3D%20%5Cfrac%7B1-v%5En%7D%7Bi%7D%5C%5C%0AS_%7B%5Cbar%20n%7C%7D%20%26%3D%20%5Csum%5Climits%5E%7Bn%7D_%7Bj%3D1%7D(1%2Bi)%5E%7Bj-1%7D%20%3D%20%5Cfrac%7B(1%2Bi)%5E%7Bn%7D-%201%7D%7Bi%7D%20%3D%20a_%7B%5Cbar%20n%7D(1%2Bi)%5En%0A%5Cend%7Baligned%7D%0A"></p><h3 id="期初支付定期年金">期初支付定期年金</h3>
+<p>设年金额为1，每年年初支付，共支付<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年，年有效利率为<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">。称此年金为期初支付定期年金。记<img src="https://math.now.sh?inline=%5Cddot%20a_%7B%5Cbar%7Bn%7D%7Ci%7D%2C%5Cddot%20S_%7B%5Cbar%7Bn%7D%7Ci%7D" style="display:inline-block;margin: 0;">分别为表示在利率<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">下的年金现值和终值，也可省略<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">写作<img src="https://math.now.sh?inline=%5Cddot%20a_%7B%5Cbar%20n%7C%7D%2C%5Cddot%20S_%7B%5Cbar%20n%7C%7D" style="display:inline-block;margin: 0;">。</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cddot%20a_%7B%5Cbar%20n%7C%7D%20%26%3D%20%5Csum%5Climits%5E%7Bn-1%7D_%7Bj%3D0%7Dv%5E%7Bj%7D%3D%20%5Cfrac%7B1-v%5E%7Bn%7D%7D%7B1-v%7D%20%3D%20%5Cfrac%7B1-v%5En%7D%7Bd%7D%2C%5C%5C%0A%5Cddot%20S_%7B%5Cbar%20n%7C%7D%20%26%3D%20%5Csum%5Climits%5E%7Bn%7D_%7Bj%3D1%7D%281%2Bi%29%5Ej%20%3D%20%5Cfrac%7B(1%2Bi)%5B(1%2Bi)%5En%20-%201%5D%7D%7Bi%7D%20%3D%20%5Cfrac%7B(1%2Bi)%5En%20-%201%7D%7Bd%7D%5C%5C%0A%26%3D%20%5Cddot%20a_%7B%5Cbar%20n%7C%7D(1%2Bi)%5En.%20%0A%5Cend%7Baligned%7D%0A"></p><h3 id="期末支付定期延期年金">期末支付定期延期年金</h3>
+<p>以<img src="https://math.now.sh?inline=%7B_%7Bm%7C%7Da_%7B%5Cbar%20n%7C%7D%7D%2C%7B_%7Bm%7C%7DS_%7B%5Cbar%20n%7C%7D%7D" style="display:inline-block;margin: 0;">分别为表示延期<img src="https://math.now.sh?inline=m" style="display:inline-block;margin: 0;">年支付的<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年年金的现值和终值</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_%7Bm%7C%7Da_%7B%5Cbar%20n%7C%7D%7D%20%26%3D%20%5Csum%5E%7Bn%7D_%7Bj%3D1%7Dv%5E%7Bm%2Bj%7D%20%3D%20%5Cfrac%7Bv%5E%7Bm%2B1%7D%281-v%5En%29%7D%7B1-v%7D%5C%5C%0A%7B_%7Bm%7C%7DS_%7B%5Cbar%20n%7C%7D%7D%26%3D%20%5Csum%5Climits%5E%7Bn%7D_%7Bj%3D1%7D(1%2Bi)%5E%7Bj-1%7D%20%3D%20S_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A"></p><h3 id="期初支付定期延期年金">期初支付定期延期年金</h3>
+<p>以<img src="https://math.now.sh?inline=%7B_%7Bm%7C%7D%5Cddot%20a_%7B%5Cbar%20n%7C%7D%7D%2C%7B_%7Bm%7C%7D%5Cddot%20S_%7B%5Cbar%20n%7C%7D%7D" style="display:inline-block;margin: 0;">分别为表示延期<img src="https://math.now.sh?inline=m" style="display:inline-block;margin: 0;">年支付的<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年年金的现值和终值</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_%7Bm%7C%7D%5Cddot%20a_%7B%5Cbar%20n%7C%7D%7D%20%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bj%3D0%7Dv%5E%7Bm%2Bj%7D%20%3D%20v%5Em%20a_%7B%5Cbar%20n%7C%7D%5C%5C%0A%7B_%7Bm%7C%7D%5Cddot%20S_%7B%5Cbar%20n%7C%7D%7D%26%3D%20%5Csum%5E%7Bn%7D_%7Bj%3D1%7D%281%2Bi%29%5E%7Bj%7D%20%3D%20%5Cddot%20S_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A"></p><h3 id="每年期末支付p次的年金">每年期末支付p次的年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Aa_%7B%5Cbar%20n%7C%7D%5E%7B%28%5Cdot%20p%29%7D%20%26%3D%20%5Csum%5E%7Bn%7D_%7Bj%3D0%7D%5Csum%5E%7Bp%7D_%7Bk%3D1%7D%5Cfrac%7B1%7D%7Bp(1%2Bi%5E%7B(p)%7D%2Fp)%5E%7Bjp%2Bk%7D%7D%3D%20%5Cfrac%7B1-v%5En%7D%7Bp%5B(1%2Bi)%5E%7B1%2Fp%7D-1%5D%7D%20%3D%20%5Cfrac%7B1-v%5En%7D%7Bi%5E%7B(p)%7D%7D%5C%5C%0AS_%7B%5Cbar%20n%7C%7D%5E%7B(p)%7D%26%3Da_%7B%5Cbar%20n%7C%7D%5E%7B(p)%7D(1%2Bi)%5En%0A%5Cend%7Baligned%7D%0A"></p><h3 id="每年期初支付p次的年金">每年期初支付p次的年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cddot%20a_%7B%5Cbar%20n%7C%7D%5E%7B%28p%29%7D%20%26%3D%20%5Cfrac1p%5Cleft(1%20%2B%20%5Cfrac%7B1%7D%7B(1%2Bi)%5E%7B1%2Fp%7D%7D%20%2B%20%5Ccdots%20%2B%20%5Cfrac%7B1%7D%7B(1%2Bi)%5E%7B(np-1)%2Fp%7D%7D%5Cright)%5C%5C%0A%26%3D%20%5Cfrac%7B1-v%5En%7D%7Bp(1-v%5E%7B1%2Fp%7D)%7D%5C%5C%0A%26%3D%20%5Cfrac%7B(1%2Bi)%5Ep(1-v%5En)%7D%7Bp((1%2Bi)%5Ep-1)%7D%20%3D%20%5Cfrac%7B1-v%5En%7D%7Bd%5E%7B(p)%7D%7D%0A%5Cend%7Baligned%7D%0A"></p><h2 id="变动年金">变动年金</h2>
+<h3 id="标准逐年递增年金">标准逐年递增年金</h3>
+<p>（简记法类同确定年金）<br>
+期末支付：</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%28Ia%29_%7B%5Cbar%20n%7C%7D%2C%20%26%26(IS)_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A"></p><p>期初支付：</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cddot%7B%28Ia%29%7D_%7B%5Cbar%20n%7C%7D%2C%20%26%26%5Cddot%7B(IS)%7D_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A"></p><h3 id="标准逐年递降年金">标准逐年递降年金</h3>
+<p>期末支付：</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%28Da%29_%7B%5Cbar%20n%7C%7D%2C%20%26%26(DS)_%7B%5Cbar%20n%7C%7D%0A%5Cend%7Baligned%7D%0A"></p><h2 id="连续年金">连续年金</h2>
+<p>设连续支付年金在时刻<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">的支付率为<img src="https://math.now.sh?inline=%5Crho%28t%29" style="display:inline-block;margin: 0;">，则该年金的现值</p>
+<ul>
+<li>若<img src="https://math.now.sh?inline=%5Crho%28t%29%20%3D%201%2C%20%5Cbar%20a_%7B%5Cbar%20n%7C%7D%20%3D%20%5Cint%5E%7Bn%7D_%7B0%7Dv%5Etdt%20%3D%20(1-v%5En)%2F%5Cdelta" style="display:inline-block;margin: 0;">。</li>
+<li>若<img src="https://math.now.sh?inline=%5Crho%28t%29%20%3D%20%5Bt%5D%20%2B%201%2C%5Cbar%20a_%7B%5Cbar%20n%7C%7D%20%3D%20%5Cint%5E%7B1%7D_%7B0%7Dv%5Etdt%20%2B%20%5Cint%5E%7B2%7D_%7B1%7D2v%5Etdt%2B%5Ccdots" style="display:inline-block;margin: 0;">。</li>
+</ul>
+<h2 id="债务的偿还">债务的偿还</h2>
+<p>记<img src="https://math.now.sh?inline=X_t%20%3D%20I_t%20%2B%20%5CDelta%20B_t" style="display:inline-block;margin: 0;">为<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">时刻偿还的利息和本金，。共分<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">期还完。<img src="https://math.now.sh?inline=B_t" style="display:inline-block;margin: 0;">为<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">时刻未偿还本金（恰好在<img src="https://math.now.sh?inline=X_t" style="display:inline-block;margin: 0;">支付之后）<img src="https://math.now.sh?inline=B_0%20%3D%20L" style="display:inline-block;margin: 0;">为初始时刻借入的本金。则</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AB_t%20%26%3D%20L%281%2Bi%29%5Et%20-%20%5Csum%5E%7Bt%7D_%7Bk%3D1%7DX_k(1%2Bi)%5E%7Bt-k%7D%5C%5C%0A%26%3D(1%2Bi)%5Et%5BB_0%20-%20X_1v%20-%20X_2v%5E2%20-%20%5Ccdots%20-%20X_tv%5Et%5D%5C%5C%0A%26%3D%20(i%2Bi)%5Et%5Cleft%5B%5Csum%5E%7Bn%7D_%7Bk%3D1%7DX_kv%5Ek%20-%20X_1v%20-%20X_2v%5E2%20-%20%5Ccdots%20-%20X_tv%5Et%5Cright%5D%5C%5C%0A%26%3D%5Csum%5E%7Bn%7D_%7Bk%3Dt%2B1%7DX_kv%5E%7Bk-t%7D%0A%5Cend%7Baligned%7D%0A"></p><h1>单生命生存模型</h1>
+<h2 id="生存分布">生存分布</h2>
+<p>记<img src="https://math.now.sh?inline=T%280%29" style="display:inline-block;margin: 0;">为新生婴儿（0岁个体）未来存活的时间（余寿）。则<img src="https://math.now.sh?inline=F_0%28t%29%20%3D%20P(T(0)%5Cleqslant%20t)" style="display:inline-block;margin: 0;">为<img src="https://math.now.sh?inline=T%280%29" style="display:inline-block;margin: 0;">的分布函数。记</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AS_0%28t%29%20%26%3D%20P(T(0)%20%3E%20t)%20%3D%201%20-%20F_0(t).%20%26t%20%5Cin%20%5B0%2C%2B%5Cinfty)%0A%5Cend%7Baligned%7D%0A"></p><p>则称<img src="https://math.now.sh?inline=s_0%28t%29" style="display:inline-block;margin: 0;">为新生婴儿的生存函数，表示新生婴儿至少活过<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">岁的概率。<br>
+生存函数有以下几个性质：</p>
+<ol>
+<li><img src="https://math.now.sh?inline=S_0%280%29%20%3D%201" style="display:inline-block;margin: 0;">；</li>
+<li><img src="https://math.now.sh?inline=S_0%28t%29" style="display:inline-block;margin: 0;">单调下降；</li>
+<li><img src="https://math.now.sh?inline=S_o%28t%29" style="display:inline-block;margin: 0;">为右连续函数。</li>
+</ol>
+<p>新生儿在<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">到<img src="https://math.now.sh?inline=y" style="display:inline-block;margin: 0;">岁间死亡的概率为：</p>
+<p style><img src="https://math.now.sh?from=P%28x%3CT(0%29%3Cy)%20%3D%20S_0(x)%20-%20S_0(y).%0A"></p><p>记<img src="https://math.now.sh?inline=T%28x%29" style="display:inline-block;margin: 0;">为（<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁个体）未来存活的时间（余寿），其密度函数为<img src="https://math.now.sh?inline=f_x%28t%29%20%3D%20dF_x(t)%2Fdt" style="display:inline-block;margin: 0;">，则<img src="https://math.now.sh?inline=F_x%28t%29%20%3D%20P(T(x)%5Cleqslant%20t)" style="display:inline-block;margin: 0;">为<img src="https://math.now.sh?inline=T%28x%29" style="display:inline-block;margin: 0;">的分布函数。寿命<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">的个体的生存函数为</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AS%28t%29%20%26%3D%20P(X%20%3E%20t)%2C%20%5C%5C%0A%26P(T(0)%3Ex%2Bt%7CT(0)%3Ex)%5C%5C%0A%26%3D%20%5Cfrac%7BP(T(0)%3Ex%2Bt)%7D%7BP(T(0)%20%3E%20x)%7D%20%3D%20%5Cfrac%7BS_0(x%2Bt)%7D%7BS_0(x)%7D.%0A%5Cend%7Baligned%7D%0A"></p><p>表示个体活过<img src="https://math.now.sh?inline=x%2Bt" style="display:inline-block;margin: 0;">岁的概率。<br>
+更一般得，<img src="https://math.now.sh?inline=S_x%28t%2B%5Cmu%29%20%3D%20S_x(t)S_%7Bx%2Bt%7D(%5Cmu)." style="display:inline-block;margin: 0;"></p>
+<h3 id="一些精算表示法">一些精算表示法</h3>
+<p><img src="https://math.now.sh?inline=_tp_x" style="display:inline-block;margin: 0;">：<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁个体至少再活<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">年的概率。<br>
+<img src="https://math.now.sh?inline=_tq_x" style="display:inline-block;margin: 0;">：<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁个体在未来<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">年死亡的概率。<br>
+<img src="https://math.now.sh?inline=_%7Bu%7Ct%7Dq_x" style="display:inline-block;margin: 0;">：<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁个体在<img src="https://math.now.sh?inline=%5Bx%2Bu%2Cx%2Bu%2Bt%5D" style="display:inline-block;margin: 0;">岁间死亡的概率。<br>
+<img src="https://math.now.sh?inline=t%3D1" style="display:inline-block;margin: 0;">时采用如下的化简方法：</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Ap_%7Bx%7D%3D%20%7B_1p_%7Bx%2C%7D%7D%26%26q_%7Bx%7D%3D%20%7B_1q_x%7D%2C%26%26%7B_%7Bu%7C%7Dq_%7Bx%7D%7D%20%3D%20%7B_%7Bu%7C1%7Dq_x%7D.%0A%5Cend%7Baligned%7D%0A"></p><p>从上面的表示法可以看出<img src="https://math.now.sh?inline=%7B_tp_%7Bx%7D%7D%3D%20S_x%28t%29%2C%7B_tq_%7Bx%7D%7D%3D%20F_x(t)" style="display:inline-block;margin: 0;">.</p>
+<h2 id="死亡力">死亡力</h2>
+<p>寿命<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">个体的死亡力定义为</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cmu_x%20%26%3D%20%5Clim_%7B%5CDelta%20x%5Crightarrow%200%7D%5Cfrac%7BP%28T(x%29%5Cleqslant%20%5CDelta%20x)%7D%7B%5CDelta%20x%7D%5C%5C%0A%26%3D%20%5Clim_%7B%5CDelta%20x%5Crightarrow%200%7D%5Cfrac%7BP(T(0)%5Cleqslant%20x%20%2B%20%5CDelta%20x%7CT(0)%3Ex)%7D%7B%5CDelta%20x%7D%5C%5C%0A%26%3D%5Clim_%7B%5CDelta%20x%5Crightarrow%200%7D%5Cfrac%7BS_0(x)%20-%20S_0(x%2B%5CDelta%20x)%7D%7B%5CDelta%20x%7D%5C%5C%0A%26%3D%20-%5Cfrac%7BS_0'(x)%7D%7BS_0(x)%7D%20%3D%20-(%5Cln%20S_0(x))'.%0A%5Cend%7Baligned%7D%0A"></p><p>死亡力可理解为一个活了<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">岁的个体恰在该年死亡的概率。<br>
+由上式可得</p>
+<p style><img src="https://math.now.sh?from=%7B_t%5Cmu_x%7D%20%3D%20%5Cexp%5Cleft%28-%5Cint%5E%7Bx%2Bt%7D_%7Bx%7D%5Cmu_ydy%5Cright%29%20%3D%20%5Cexp%5Cleft(-%5Cint%5E%7Bt%7D_%7B0%7D%5Cmu_%7Bx%2By%7Ddy%5Cright)%0A"></p><p>故生存函数<img src="https://math.now.sh?inline=s%28t%29" style="display:inline-block;margin: 0;">和密度函数<img src="https://math.now.sh?inline=f_X%28t%29" style="display:inline-block;margin: 0;">可以由死亡力表示</p>
+<p style><img src="https://math.now.sh?from=%5Cmu_x%20%3D%20-%5Cfrac%7BS_0'%28x%29%7D%7BS_0(x)%7D%20%3D%20%5Cfrac%7Bf_0(x)%7D%7BS_0(x)%7D%5CRightarrow%20f_0(x)%20%3D%20%5Cmu_xS_0(x).%0A"></p><p>更一般地</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Af_x%28t%29%20%26%3D%20%5Cfrac%7BdF_x(t)%7D%7Bdt%7D%20%3D%20-%5Cfrac%7BdS_x(t)%7D%7Bdt%7D%5C%5C%0A%26%3D%20-%5Cfrac%7Bd%5Cexp%5C%7B-%5Cint%5E%7Bt%7D_%7B0%7D%5Cmu_%7Bx%2By%7Ddy%5C%7D%7D%7Bdt%7D%5C%5C%0A%26%3D%20S_x(t)%5Cmu_%7Bx%2Bt%7D%20%3D%20%7B_tp_x%7D%5Cmu_%7Bx%2Bt%7D%0A%5Cend%7Baligned%7D%0A"></p><p>从而</p>
+<p style><img src="https://math.now.sh?from=%7B_tq_x%7D%20%3D%20%5Cint%5E%7Bt%7D_%7B0%7D%7B_sp_t%7D%5Cmu_%7Bx%2Bs%7Dds.%0A"></p><p>寿命的期望<img src="https://math.now.sh?inline=%5Coverset%7B%5Ccirc%7D%7Be%7D_0" style="display:inline-block;margin: 0;">和生存整年数的期望<img src="https://math.now.sh?inline=e_0" style="display:inline-block;margin: 0;">分别定义如下</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Coverset%7B%5Ccirc%7D%7Be%7D_%7B0%7D%20%26%3D%20E%28X%29%20%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B0%7Ds(t)dt%2C%20%5C%5C%5C%5C%0Ae_%7B0%7D%20%26%3D%20E(K(0))%20%3D%20%5Csum%5Climits_%7Bs%5Cgeqslant1%7Ds(n).%0A%5Cend%7Baligned%7D%0A"></p><p>(上面的<img src="https://math.now.sh?inline=K%280%29" style="display:inline-block;margin: 0;">是生存整年数）<br>
+它们的二阶矩定义如下</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AE%28X%5E%7B2%29%7D%3D%20%5Cint%5E%7B%5Cinfty%7D_%7B0%7D2ts(t)dt%2C%20%26%26E(K(0)%5E%7B2)%7D%3D%20%5Csum%5Climits_%7Bn%5Cgeqslant1%7D(2n-1)s(n)%0A%5Cend%7Baligned%7D%0A"></p><p>几种常见的死亡力公式（仅作了解）</p>
+<table>
+<thead>
+<tr>
+<th>提出者</th>
+<th><img src="https://math.now.sh?inline=%5Cmu%28x%29" style="display:inline-block;margin: 0;"></th>
+<th><img src="https://math.now.sh?inline=s%28x%29" style="display:inline-block;margin: 0;"></th>
+<th>参数的要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>de Moivre (1729))</td>
+<td><img src="https://math.now.sh?inline=%28w-x%29%5E%7B-1%7D" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=1%3D%5Cfrac%7Bx%7D%7Bw%7D%2C0%3Cx%3Cw" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=w%3E0" style="display:inline-block;margin: 0;"></td>
+</tr>
+<tr>
+<td>Gompertz (1825)</td>
+<td><img src="https://math.now.sh?inline=BC%5Ex" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=%5Cexp%5B-m%28X%5Ex-1%29%5D%2Cx%5Cgeqslant0" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=B%3E0%2CC%5Cgeqslant1" style="display:inline-block;margin: 0;"></td>
+</tr>
+<tr>
+<td>Makeham (1860)</td>
+<td><img src="https://math.now.sh?inline=A%2BBC%5Ex" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=%5Cexp%5B-Ax-%20m%28C%5Ex-1%29%5D%2Cx%5Cgeqslant0" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=B%3E0%2CA%5Cgeqslant-B%2CC%3E1" style="display:inline-block;margin: 0;"></td>
+</tr>
+<tr>
+<td>Weibull (1939)</td>
+<td><img src="https://math.now.sh?inline=kx%5En" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=%5Cexp%28-ux%5E%7Bn%2B1%7D%29%2Cx%5Cgeqslant0" style="display:inline-block;margin: 0;"></td>
+<td><img src="https://math.now.sh?inline=k%3E0%2Cn%3E0" style="display:inline-block;margin: 0;"></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>其中<img src="https://math.now.sh?inline=m%20%3D%20%5Cfrac%7BB%7D%7B%5Clog%28C%29%7D%2Cu%3D%5Cfrac%7Bk%7D%7Bn%2B1%7D" style="display:inline-block;margin: 0;"></p>
+</blockquote>
+<h2 id="结论">结论</h2>
+<ol>
+<li>生存概率</li>
+</ol>
+<p style><img src="https://math.now.sh?from=%20%20%20%5Cbegin%7Baligned%7D%0A%20%20%20%20%7B_tp_%7Bx%7D%7D%3D%20%5Cfrac%7Bs%28t%2Bx%29%7D%7Bs(x)%7D.%0A%20%20%20%20%5Cend%7Baligned%7D%0A"></p><ol start="2">
+<li>对<img src="https://math.now.sh?inline=t%3E0%2Cu%3E0" style="display:inline-block;margin: 0;">，生存概率和死亡概率有如下关系：</li>
+</ol>
+<p style><img src="https://math.now.sh?from=%20%20%20%5Cbegin%7Baligned%7D%0A%20%20%20%7B_tq_%7Bx%7D%7D%3D%201-%7B_tp_%7Bx%7D%2C%7D%26%26%20%7B_%7Bu%7Ct%7Dq_%7Bx%7D%7D%3D%20%7B_up_%7Bx%7D%7D%5C%20%7B_tq_%7Bx%2Bu%7D%7D%2C%20%26%26%7B_%7Bu%7Ct%7Dq_%7Bx%7D%3D%20%7B_up_%7Bx%7D%7D-%20%7B_%7Bu%2Bt%7Dp_x%7D%7D.%0A%20%20%20%5Cend%7Baligned%7D%0A"></p><ol start="3">
+<li>对<img src="https://math.now.sh?inline=0%3Ch%3Ct" style="display:inline-block;margin: 0;">，有</li>
+</ol>
+<p style><img src="https://math.now.sh?from=%7B_tp_%7Bx%7D%7D%3D%20%7B_hp_%7Bx%7D%7D%5C%20%7B_%7Bt-h%7Dp_%7Bx%2Bh%7D%7D%3B%0A"></p><ol start="4">
+<li><img src="https://math.now.sh?inline=f_x%28t%29%20%3D%20%7B_tp_x%7D%5Ccdot%5Cmu_%7Bx%2Bt%7D%2C%5C%20%5Cfrac%7Bd%7D%7Bdt%7D(%7B_tp_%7Bx%7D%7D)%3D%20-%7B_tp_x%7D%5Cmu_%7Bx%2Bt%7D" style="display:inline-block;margin: 0;"></li>
+</ol>
+<h1>死亡保险的精算值</h1>
+<p>以人的死亡为给付条件的险种。若投保人在保险期内死亡，则给付保险金，否则不给付。<br>
+<strong>分类</strong>：定期寿险、终生寿险、延付寿险、生死合险（两全保险）。<br>
+<strong>保额</strong>：保费的总额<br>
+<strong>保额的精算现值</strong>：保额现值的期望值，记为趸缴纯保费。</p>
+<h2 id="离散死亡保险">离散死亡保险</h2>
+<h3 id="n年期纯粹生存年金">n年期纯粹生存年金</h3>
+<p><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁投保，若活过<img src="https://math.now.sh?inline=x%2Bn" style="display:inline-block;margin: 0;">岁，则保险公司支付1单位的保额。记<img src="https://math.now.sh?inline=Z" style="display:inline-block;margin: 0;">为该险种的现值，<img src="https://math.now.sh?inline=A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%20%5C%201%7D" style="display:inline-block;margin: 0;">（或<img src="https://math.now.sh?inline=%7B_nE_x%7D" style="display:inline-block;margin: 0;">）为该年金的精算现值，则</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5EnI%28K%5Cgeqslant%20n%29%2C%5C%5C%0AA_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%20%5C%201%7D%26%3D%20EZ%20%3D%20v%5En%5Ccdot%20%7B_np_x%7D.%0A%5Cend%7Baligned%7D%0A"></p><h2 id="n年期死亡保险">n年期死亡保险</h2>
+<p><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁投保，若在<img src="https://math.now.sh?inline=x%2Bn" style="display:inline-block;margin: 0;">岁前死亡，则保险公司支付1单位的保额。记<img src="https://math.now.sh?inline=Z" style="display:inline-block;margin: 0;">为该险种的现值，<img src="https://math.now.sh?inline=A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B1%7D" style="display:inline-block;margin: 0;">为该年金的精算现值，则</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5E%7BK%2B1%7DI%28K%3Cn%29%5C%5C%0AA_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B1%7D%26%3D%20EZ%20%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7DP(K%3Dk)%5C%5C%0A%26%3D%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7D%7B_%7Bk%7C%7Dq_x%7D%5C%5C%0A%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7D%7B_kp_x%7D%5Ccdot%7Bq_%7Bx%2Bk%7D%7D.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="终生死亡保险">终生死亡保险</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5E%7BK%2B1%7D%2C%5C%5C%0AA_x%20%26%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7DP%28K%3Dk%29%5C%5C%0A%26%3D%20%5Csum%5E%5Cinfty_0v%5E%7Bk%2B1%7D%7B_kp_x%7D%5Ccdot%20q_%7Bx%2Bk%7D%0A%5Cend%7Baligned%7D%0A"></p><p>定义<img src="https://math.now.sh?inline=%7B%5E2A_x%7D" style="display:inline-block;margin: 0;">为<img src="https://math.now.sh?inline=EZ%5E2" style="display:inline-block;margin: 0;">，则<img src="https://math.now.sh?inline=%7B%5E2A_x%7D%20%3D%20EZ%5E2%20%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%3D0%7Dv%5E%7B2%28k%2B1%29%7D%7B_kp_x%7D%5Ccdot%20q_%7Bx%2Bk%7D" style="display:inline-block;margin: 0;">。</p>
+<h3 id="两全保险">两全保险</h3>
+<p><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁个体，若在<img src="https://math.now.sh?inline=x%2Bn" style="display:inline-block;margin: 0;">岁前死亡，则保险公司在死亡当年年末支付1单位保额，若活过<img src="https://math.now.sh?inline=x%2Bn" style="display:inline-block;margin: 0;">岁，保险公司在<img src="https://math.now.sh?inline=x%2Bn" style="display:inline-block;margin: 0;">岁时支付1单位保额。该险种被称为两全保险，也被称为生死合险。记<img src="https://math.now.sh?inline=Z" style="display:inline-block;margin: 0;">为该险种的现值，<img src="https://math.now.sh?inline=A_%7Bx%3A%5Cbar%20n%7C%7D" style="display:inline-block;margin: 0;">为该险种的精算现值，则</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5E%7BK%2B1%7DI%28k%3Cn%29%20%2B%20v%5EnI(K%5Cgeqslant%20n)%2C%5C%5C%0AA_%7Bx%3A%5Cbar%20n%7C%7D%26%3D%20%5Csum%5E%7Bn%7D_%7Bk%3D0%7Dv%5E%7Bk%2B1%7D%7B_kp_x%7D%5Ccdot%20q_%7Bx%2Bk%7D%20%2B%20v%5En%7B_np_x%7D%0A%5Cend%7Baligned%7D%0A"></p><h3 id="延付m年的n年期死亡保险">延付m年的n年期死亡保险</h3>
+<p><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁投保，若在<img src="https://math.now.sh?inline=%5Bx%2Bm%2Cx%2Bm%2Bn%5D" style="display:inline-block;margin: 0;">岁之间死亡，则保险公司死亡当年年末支付1单位保额。否则分文不付。记<img src="https://math.now.sh?inline=Z" style="display:inline-block;margin: 0;">为该险种的现值，<img src="https://math.now.sh?inline=%7B_%7Bm%7Cn%7DA_x%7D" style="display:inline-block;margin: 0;">为该险种的精算现值，则</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20v%5E%7BK%2B1%7DI%28m%5Cleq%20K%20%3C%20m%2Bn%29%5C%5C%0A%7B_%7Bm%7Cn%7DA_x%7D%26%3D%20EZ%20%3D%20%5Csum%5E%7Bm%2Bn%2B1%7D_%7Bk%3Dm%7Dv%5E%7Bk%2B1%7DP(K%3Dk)%5C%5C%0A%26%3D%20%5Csum%5E%7Bm%2Bn%2B1%7D_%7Bk%3Dm%7Dv%5E%7Bk%2B1%7D%7B_%7Bk%7C%7Dq_x%7D%5C%5C%0A%26%3D%5Csum%5E%7Bm%2Bn%2B1%7D_%7Bk%3Dn%7Dv%5E%7Bk%2B1%7D%7B_kp_%7Bx%7D%7D%5Ccdot%20q_%7Bx%2Bk%7D.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="延付m年的终身死亡保险">延付m年的终身死亡保险</h3>
+<p style><img src="https://math.now.sh?from=%7B_%7Bm%7C%7DA_x%7D%20%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%3Dm%7Dv%5E%7Bk%2B1%7D%7B_kp_x%7D%5Ccdot%20q_%7Bx%2Bk%7D.%0A"></p><h3 id="变动保额死亡保险">变动保额死亡保险</h3>
+<ul>
+<li>单调递增的死亡保险：<img src="https://math.now.sh?inline=%28IA%29_x%2C(IA)%5E1_%7Bx%3A%5Cbar%20n%7C%7D%2C(IA)_%7Bx%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%201%7D%2C%7B_%7Bm%7C%7D(IA)_x%7D" style="display:inline-block;margin: 0;">；</li>
+<li>单调递减的死亡保险：<img src="https://math.now.sh?inline=%28DA%29_x%2C(DA)%5E1_%7Bx%3A%5Cbar%20n%7C%7D" style="display:inline-block;margin: 0;"></li>
+</ul>
+<h2 id="连续死亡保险">连续死亡保险</h2>
+<h3 id="连续支付死亡保险">连续支付死亡保险</h3>
+<p>保额在死亡时立即支付的寿险，用<img src="https://math.now.sh?inline=%5Cbar%20A" style="display:inline-block;margin: 0;">表示。</p>
+<ol>
+<li>n年期死亡保险<img src="https://math.now.sh?inline=%5Cbar%20A_%7Bx%3A%5Cbar%20n%7C%7D" style="display:inline-block;margin: 0;">：记<img src="https://math.now.sh?inline=T%28x%29" style="display:inline-block;margin: 0;">为投保人的余寿，则</li>
+</ol>
+<p style><img src="https://math.now.sh?from=A_%7Bx%3A%5Cbar%20n%7C%7D%20%3D%20E%5C%7Bv%5E%7BT%28x%29%7DI(T(x)%5Cleq%20n)%5C%7D%20%3D%20%5Cint%5En_0v%5Etf_x(t)dt%20%3D%20%5Cint%5En_0v%5Et%5Cmu_x(t)%5Ccdot%7B_tp_x%7Ddt%0A"></p><ol start="2">
+<li>终身死亡保险：<img src="https://math.now.sh?inline=%5Cbar%20A_x%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%5Cmu_x%28t%29%5Ccdot%20%7B_tp_x%7Ddt." style="display:inline-block;margin: 0;"></li>
+<li>延付m年的终身寿险：<img src="https://math.now.sh?inline=%7B_%7Bm%7C%7D%5Cbar%20A_x%7D%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%5Cmu_x%28t%29%5Ccdot%7B_tp_x%7Ddt." style="display:inline-block;margin: 0;"></li>
+<li>单调递增寿险<img src="https://math.now.sh?inline=%28I%5Cbar%20A%29_x%2C(%5Cbar%20I%5Cbar%20A)_x" style="display:inline-block;margin: 0;">：前者每一年的支付率相等且逐年增长，后者在t时刻支付率为<img src="https://math.now.sh?inline=I_t" style="display:inline-block;margin: 0;">。</li>
+</ol>
+<h3 id="UUD下，连续与离散寿险的关系">UUD下，连续与离散寿险的关系</h3>
+<blockquote>
+<p>UUD (Uniform Distribution of Deaths) 均匀死亡假设<br>
+在 UUD 假设下，<img src="https://math.now.sh?inline=%5Cforall%20x%5Cin%20%5Cmathbb%20N" style="display:inline-block;margin: 0;"> 及 <img src="https://math.now.sh?inline=0%20%5Cleq%20s%20%3C%201" style="display:inline-block;margin: 0;">，存在</p>
+<p style><img src="https://math.now.sh?from=%7B_sq_x%7D%20%5Coverset%7BUUD%7D%7B%3D%7D%20sq_x%2C0%5Cleq%20s%3C1%0A"></p><p>即假设某一年龄的人在接下来一年每一天死亡的概率都相同。<br>
+因此我们可以定义生存函数</p>
+<p style><img src="https://math.now.sh?from=s_%7Bx%2Bt%7D%20%5Coverset%7BUUD%7D%7B%3D%7D%20%281-s%29s_%7Bx%7D%20%2B%20s_%7Bx%2B1%7D%0A"></p><p>同时我们亦可以得出</p>
+<p style><img src="https://math.now.sh?from=%7B_sp_x%7D%5Cmu_%7Bx%2Bs%7D%20%5Coverset%7BUUD%7D%7B%3D%7D%20q_x%0A"></p></blockquote>
+<p>此时</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cbar%20A_x%20%26%3D%20Ev%5E%7BT%28x%29%7D%20%3D%20Ev%5E%7BK(x)%2BS(x)%7D%20%3D%20Ev%5E%7BK(x)%2B1%2BS(x)-1%7D%5C%5C%0A%26%3D%20A_xEv%5E%7BS(x)-1%7D%20%3D%20%5Cfrac%7BAi%7D%7B%5Cdelta%7D.%0A%5Cend%7Baligned%7D%0A"></p><h2 id="循环方程">循环方程</h2>
+<ol>
+<li><img src="https://math.now.sh?inline=A_x%20%3D%20vq_x%20%2B%20vp_x%5Ccdot%20A_%7Bx%2B1%7D." style="display:inline-block;margin: 0;"></li>
+</ol>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AA_x%20%26%3D%20Ev%5E%7BK%2B1%7D%5C%5C%0A%26%3D%20E%28v%5E%7BK%2B1%7D%7CK%3D0%29P(K%3D0)%20%2B%20E(v%5E%7BK%2B1%7D%7CK%5Cgeq1)P(K%5Cgeq1)%5C%5C%0A%26%3Dvq_x%20%2B%20vp_xE%5Bv%5E%7B(K-1)%7D%7CK%5Cgeq1%5D%5C%5C%0A%26%3Dvq_x%20%2B%20vp_xA_%7Bx%2B1%7D.%0A%5Cend%7Baligned%7D%0A"></p><p><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">	岁个体投保终身保险所需的趸缴纯保费=该个体在投保当年死亡的成本+活过一年后终身寿险的趸缴纯保费。<br>
+2. <img src="https://math.now.sh?inline=A_x%20%3D%20vq_x%20%2B%20vp_x%5Ccdot%20A_%7Bx%2B1%7D%20%3D%20A_%7Bx%2B1%7D%20%2B%20vq_x%281-A_%7Bx%2B1%7D%29." style="display:inline-block;margin: 0;"><br>
+<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁个体投保终身寿险所需的趸缴纯保费=下一年度终身寿险的现值+保额为<img src="https://math.now.sh?inline=%281-A_%7Bx%2B1%7D%29" style="display:inline-block;margin: 0;">的一年定期死亡保险的纯保费。<br>
+3. <img src="https://math.now.sh?inline=%281%2Bi%29A_x%20%3D%20q_x%20%2B%20(1-q_x)%5Ccdot%20A_%7Bx%2B1%7D" style="display:inline-block;margin: 0;">，即<img src="https://math.now.sh?inline=iA_x%20%3D%20%28A_%7Bx%2B1%7D-A_x%29%2Bq_x(1-A_%7Bx%2B1%7D)" style="display:inline-block;margin: 0;"><br>
+一年中趸缴纯保费的利息=由年龄<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">到<img src="https://math.now.sh?inline=x%2B1" style="display:inline-block;margin: 0;">增加的趸缴纯保费+1年定期保险的成本。</p>
+<h1>生存年金的精算现值</h1>
+<ul>
+<li><strong>确定年金</strong>：在合同期限内，相等间隔时间内的一系列给付。</li>
+<li><strong>生存年金</strong>：在合同期内，被保人在活着的时间内每年定期从保险人获得的一系列的年金。</li>
+<li><strong>年金分类</strong>：定期生存、终身生存年金和延付生存年金。</li>
+<li><strong>支付方式</strong>：离散（期初、期末），连续支付。</li>
+</ul>
+<h2 id="间断生存年金">间断生存年金</h2>
+<h3 id="单一支付生存年金">单一支付生存年金</h3>
+<p>若被保人在保单生效后若活过<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年，则在第<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年年末一次性给付1单位保额，称该保单为<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年期生存保险（纯粹生存年金），其精算现值为<img src="https://math.now.sh?inline=nE_x%20%3D%20A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%201%7D." style="display:inline-block;margin: 0;"><br>
+![[寿险精算基础#n年期纯粹生存年金]]</p>
+<h2 id="期末支付生存年金">期末支付生存年金</h2>
+<h3 id="终身生存年金">终身生存年金</h3>
+<p>被保人在活着的每一年年末获得1单位的年金。记<img src="https://math.now.sh?inline=Z" style="display:inline-block;margin: 0;">和<img src="https://math.now.sh?inline=a_x" style="display:inline-block;margin: 0;">为现值和精算现值，则<img src="https://math.now.sh?inline=Z%20%3D%20a_K%28x%29" style="display:inline-block;margin: 0;">,</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Aa_x%20%3D%20Ea_%7B%5Coverline%7BK%28x%29%7D%7C%7D%20%26%3D%20%5Csum%5E%5Cinfty_%7Bk%3D0%7Da_%7B%5Cbar%20k%7C%7DP(K(x)%20%3D%20k)%5C%5C%0A%26%3D%5Csum%5E%5Cinfty_%7Bk%3D0%7Da_%7B%5Cbar%20n%7C%7D(%7B_kp_x%7D%20-%20%7B_%7Bk%2B1%7Dp_x%7D)%5C%5C%0A%26%3D%20%5Csum%5E%5Cinfty_%7Bk%3D1%7Dv%5Ek%7B_kp_x%7D.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="n年期生存年金">n年期生存年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20a_%7B%5Coverline%7BK%28x%29%7D%7C%7DI(K(x)%3Cn)%5C%5C%0Aa_%7Bx%3A%5Cbar%20n%7C%7D%26%3DEZ%20%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Da_%7B%5Cbar%20k%7C%7DP(K(x)%20%3D%20k)%20%3D%20%5Csum%5En_%7Bk%3D1%7Dv%5Ek%7B_kp_x%7D.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="延付m年的终身生存年金">延付m年的终身生存年金</h3>
+<p style><img src="https://math.now.sh?from=%7B_%7Bm%7C%7Da_x%7D%20%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%20%3D%20m%2B1%7Dv%5Ek%7B_kp_x%7D.%0A"></p><h3 id="延付m年的n年期生存年金">延付m年的n年期生存年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%0A0%2C%20%26%20if%5C%200%5Cleq%20K%28x%29%20%3C%20m%2C%20%5C%5C%0Aa_%7B%5Coverline%7BK(x)%7D%7C%7D%20-%20a_%7B%5Cbar%20m%7C%7D%2C%20%26if%5C%20m%5Cleq%20K(x)%20%3C%20m%2Bn-1%2C%20%5C%5C%20%0Aa_%7B%5Coverline%7Bm%2Bn%7D%7C%7D%20-%20a_%7B%5Cbar%20m%7C%7D%2C%20%26if%5C%20K(x)%5Cgeq%20m%2Bn.%0A%5Cend%7Bmatrix%7D%5Cright.%5C%5C%0A%7B_%7Bm%7Cn%7Da_x%7D%20%26%3D%20EZ%20%3D%20%5Csum%5E%7Bm%2Bn%7D_%7Bk%3Dm%2B1%7Dv%5Ek%7B_kp_x%7D.%0A%5Cend%7Baligned%7D%0A"></p><h2 id="期初支付生存年金">期初支付生存年金</h2>
+<h3 id="终身生存年金-2">终身生存年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AZ%20%26%3D%20%5Cddot%7Ba%7D_%7B%5Coverline%7BK%28x%29%2B1%7D%7C%7D%2C%5C%5C%0A%5Cddot%7Ba%7D_x%20%26%3D%20EZ%20%3D%20%5Csum%5E%5Cinfty_%7Bk%3D0%7D%5Cddot%7Ba%7D_%7B%5Coverline%7BK(x)%2B1%7D%7C%7DP(K(x)%20%3D%20k)%20%3D%20%5Csum%5E%7B%5Cinfty%7D_%7Bk%3D0%7Dv%5Ek%20%5Ccdot%20%7B_kp_x%7D%20%3D%201%2Ba_x.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="n年期生存年金-2">n年期生存年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cddot%7Ba%7D_%7Bx%3A%5Cbar%20n%7C%7D%20%26%3D%20EZ%20%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7D%5Cddot%7Ba%7D_%7B%5Coverline%7BK%2B1%7D%7C%7DP%28K%3Dk%29%2B%5Cddot%7Ba%7D_%7B%5Cbar%20n%7C%7DP(K(x)%5Cgeq%20n)%5C%5C%0A%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7Dv%5Ek%20%5Ccdot%20%7B_kp_x%7D%20%3D%201%2Ba_%7Bx%3A%5Cbar%20n%7C%7D%20-%20%7B_nE_x%7D.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="延付m年的终身生存年金-2">延付m年的终身生存年金</h3>
+<p style><img src="https://math.now.sh?from=%7B_%7Bm%7C%7D%5Cddot%7Ba%7D_x%7D%20%3D%20%5Csum%5E%5Cinfty_%7Bk%3Dm%7Dv%5Ek%20%5Ccdot%20%7B_kp_x%7D.%0A"></p><h3 id="延付m年的n年期生存年金-2">延付m年的n年期生存年金</h3>
+<p style><img src="https://math.now.sh?from=%7B_%7Bm%7Cn%7D%5Cddot%7Ba%7D_x%7D%20%3D%20%5Csum%5E%7Bn%2Bm-1%7D_%7Bk%3Dm%7Dv%5E%7Bk%2Bm%7D%5Ccdot%20%7B_kp_x%7D.%0A"></p><h2 id="连续支付生存年金">连续支付生存年金</h2>
+<h3 id="终身生存年金-3">终身生存年金</h3>
+<p><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁投保，只要活着，保险公司在任意<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">时刻支付率都为1.记<img src="https://math.now.sh?inline=%5Cbar%20a_x" style="display:inline-block;margin: 0;">为其精算现值</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cbar%20a_x%20%26%3D%20%5Cint%5E%5Cinfty_0%5Cbar%20a_%7B%5Cbar%20t%7C%7Df_x%28t%29dt%5C%5C%0A%26%3D%20-%5Cint%5E%5Cinfty_0%5Cbar%20a_%7B%5Cbar%20t%7C%7Dd(%7B_tp_x%7D)%5C%5C%0A%26%3D%20-%5Cint%5E%5Cinfty_0%5Cfrac%7B1-v%5Et%7D%7B%5Cdelta%7Dd(%7B_tp_x%7D)%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%20%5Ccdot%7B_yp_x%7Ddt.%0A%5Cend%7Baligned%7D%0A"></p><h3 id="n年期生存年金-3">n年期生存年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cbar%20a_%7Bx%3A%5Cbar%20n%7C%7D%20%26%3D%20%5Cint%5En_t%5Cbar%20a_t%20%5Ccdot%20f_x%28t%29dt%20%2B%20%5Cbar%20a_%7B%5Cbar%20n%7C%7D%5Ccdot%7B_np_x%7D%5C%5C%0A%26%3D%20-%5Cint%5En_0%5Cbar%20a_%7B%5Cbar%20t%7C%7Dd(%7B_tp_x%7D)%20%2B%20%5Cbar%20a_%7B%5Cbar%20n%7C%7D%5Ccdot%7B_np_x%7D%5C%5C%0A%26%3D%20%5Cint%5En_0%20v%5Et%20%5Ccdot%7B_tp_x%7Ddt.%20%0A%5Cend%7Baligned%7D%0A"></p><h3 id="延付m年的n年期生存年金-3">延付m年的n年期生存年金</h3>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_%7Bm%7Cn%7D%5Cbar%20a_x%7D%20%26%3D%20v%5Em%20%5Ccdot%7B_mp_x%7D%5Ccdot%5Cbar%20a_%7Bx%2Bm%3A%5Cbar%20n%7C%7D%5C%5C%0A%26%3D%20%5Cint%5E%7Bm%2Bn%7D_m%20v%5Et%20%5Ccdot%7B_tp_x%7Ddt%5C%5C%0A%26%3D%20%5Cbar%20a_%7Bx%3A%5Coverline%7Bm%2Bn%7D%7C%7D%20-%20%5Cbar%20a_%7Bx%3A%5Cbar%20m%7C%7D.%0A%5Cend%7Baligned%7D%0A"></p><p>让<img src="https://math.now.sh?inline=n%5Crightarrow%5Cinfty" style="display:inline-block;margin: 0;">，则有延付m年的终身生存年金：</p>
+<p style><img src="https://math.now.sh?from=%7B_%7Bm%7C%7D%5Cbar%20a_x%7D%20%3D%20%5Cbar%20a_x%20-%20%5Cbar%20a_%7Bx%3A%5Cbar%20m%7C%7D%20%3D%20%5Cint%5E%5Cinfty_m%20v%5Et%20%5Ccdot%7B_tp_x%7Ddt.%0A"></p><h1>保费的计算</h1>
+<p><strong>保费</strong>：为履行保险责任向投保人收取的实际金额<br>
+<strong>分类</strong>：(a). 净（纯）保费；(b). 费用负荷保费（用于保额及费用支付）； ©. 毛保费。<br>
+<strong>支付方式</strong>：(a). 趸交保费（一次性缴清）； (b). 定期定额缴纳（均衡）保费； ©. 定期缴纳非均衡（变额）保费。<br>
+<strong>保费的计算特点和原则</strong>：</p>
+<ul>
+<li>特点：根据过去的经验数据计算</li>
+<li>原则：(a). 充分性； (b). 公平性：应根据不同的死亡率制定不同的保费； ©. 适量性：应考虑到投保人的利益。</li>
+</ul>
+<p>保费的收取应根据期望收支平衡原则，遵循以下等值方程：</p>
+<ol>
+<li>纯保费的精算现值=保额的精算现值（APV）；</li>
+<li>费用负荷毛保费的APV=保额APV+费用APV+风险、林润等加成的APV；</li>
+<li>设<img src="https://math.now.sh?inline=L" style="display:inline-block;margin: 0;">为保险人的签单损失量，则<img src="https://math.now.sh?inline=EL%3D0" style="display:inline-block;margin: 0;">；</li>
+</ol>
+<h2 id="趸缴纯保费">趸缴纯保费</h2>
+<h3 id="定期死亡保险">定期死亡保险</h3>
+<p>考虑某生存群中，<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">岁个体投保<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年期死亡保险，每个个体所缴的保费为<img src="https://math.now.sh?inline=P" style="display:inline-block;margin: 0;">，则保额的<img src="https://math.now.sh?inline=APV%20%3D%20d_xv%20%2B%20d_%7Bx%2B1%7Dv%5E2%20%2B%20%5Ccdot%20%2B%20d_%7Bx%2Bn-1%7Dv%5En" style="display:inline-block;margin: 0;">，保额的<img src="https://math.now.sh?inline=APV%20%3D%20l_xP" style="display:inline-block;margin: 0;">。从而</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AP%20%3D%20A_%7Bx%3A%5Cbar%20n%7C%7D%5E1%20%26%3D%20%5Cfrac%7Bd_xv%20%2B%20d_%7Bx%2B1%7Dv%5E2%20%2B%20%5Ccdot%20%2B%20d_%7Bx%2Bn-1%7Dv%5En%7D%7Bl_x%7D%5C%5C%0A%26%3D%5Cfrac%7B%28d_xv%20%2B%20d_%7Bx%2B1%7Dv%5E2%20%2B%20%5Ccdot%20%2B%20d_%7Bx%2Bn-1%7Dv%5En%29v%5Ex%7D%7Bl_xv%5Ex%7D%5C%5C%0A%26%3D%3A%20%5Cfrac%7BC_x%20%2B%20%5Ccdot%20%2B%20C_%7Bx%2Bn%2B1%7D%7D%7BD_x%7D%20%3D%20%5Cfrac%7BM_x%20-%20X_%7Bx%2Bn%7D%7D%7BD_x%7D%0A%5Cend%7Baligned%7D%0A"></p><p>其中<img src="https://math.now.sh?inline=C_x%20%3D%20d_xv%5E%7Bx%2B1%7D%2CM_x%20%3D%20%5Csum%5E%5Cinfty_%7Bi%3D0%7DC_%7Bx%2Bi%7D." style="display:inline-block;margin: 0;"></p>
+<h3 id="终身寿险">终身寿险</h3>
+<h4 id="期末支付">期末支付</h4>
+<p style><img src="https://math.now.sh?from=P%20%3D%20A_x%20%3D%20%5Cfrac%7Bd_xv%20%2B%20d_%7Bx%2B1%7Dv%5E2%20%2B%20%5Ccdot%7D%7Bl_x%7D%20%3D%20%5Cfrac%7BM_x%7D%7BD_x%7D%0A"></p><h4 id="死亡时支付">死亡时支付</h4>
+<p style><img src="https://math.now.sh?from=%5Cbar%20P%20%3D%20%5Cbar%20A_x%20%3D%20%5Cfrac%7B%5Cbar%20M_x%7D%7BD_x%7D%0A"></p><h3 id="定期纯粹生存年金">定期纯粹生存年金</h3>
+<p style><img src="https://math.now.sh?from=A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%201%7D%20%3D%20%5Cfrac%7Bl_%7Bx%2Bn%7Dv%5En%7D%7Bl_x%7D%20%3D%20%5Cfrac%7BD_%7Bx%2Bn%7D%7D%7BD_x%7D%0A"></p><h3 id="n年期两全保险">n年期两全保险</h3>
+<p style><img src="https://math.now.sh?from=A_%7Bx%3A%5Cbar%20n%7C%7D%20%3D%20A%5E1_%7Bx%3A%5Cbar%20n%7C%7D%20%2B%20A_%7Bx%3A%5Cbar%20n%7C%7D%5E%7B%5C%20%5C%20%5C%20%5C%201%7D%20%3D%20%5Cfrac%7BM_x%20-%20M_%7Bx%2Bn%7D%20%2B%20D_%7Bx%2Bn%7D%7D%7BD_x%7D%0A"></p><h3 id="期初支付生存年金-2">期初支付生存年金</h3>
+<p>仅需考虑贴现率的变动。</p>
+<h3 id="连续支付生存年金-2">连续支付生存年金</h3>
+<h4 id="终身生存年金-4">终身生存年金</h4>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cbar%20a_x%20%26%3D%20%5Cint%5E%5Cinfty_0v%5Et%20%5Ccdot%7B_tp_x%7Ddt%5C%5C%0A%26%3D%20%5Cfrac%7B%5Csum%5E%5Cinfty_%7Bi%3D0%7D%5Cint%5E%7Bi%2B1%7D_iv%5E%7Bx%2Bt%7Dl_%7Bx%2Bt%7Ddt%7D%7Bl_xv%5Ex%7D%20%3D%20%5Cfrac%7B%5Csum%5E%5Cinfty_%7Bi%3D0%7D%5Cbar%20D_%7Bx%2Bi%7D%7D%7BD_x%7D%20%3D%20%5Cfrac%7B%5Cbar%20N_x%7D%7BD_x%7D%2C%0A%5Cend%7Baligned%7D%0A"></p><h4 id="n年期生存年金-4">n年期生存年金</h4>
+<p style><img src="https://math.now.sh?from=%5Cbar%20a_%7Bx%3A%5Cbar%20n%7C%7D%20%3D%20%5Cfrac%7B%5Cbar%20N_x%20-%20%5Cbar%20N_%7Bx%2Bn%7D%7D%7BD_x%7D%0A"></p><h3 id="变动保额的保险">变动保额的保险</h3>
+<h4 id="单增寿险">单增寿险</h4>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AIA_%7Bx%3A%5Cbar%20n%7C%7D%5E1%20%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7D%28k%2B1%29v%5E%7Bk%2B1%7D%5Ccdot%7B_kp_x%7D%5Ccdot%7Bq_%7Bx%2Bk%7D%7D%5C%5C%0A%26%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7D(k%2B1)%5Cfrac%7Bl_%7Bx%2Bk%7D%7D%7Bl_x%7D%5Cfrac%7Bd_%7Bx%2Bk%7D%7D%7Bl_%7Bx%2Bk%7D%7Dv%5E%7Bk%2B1%7D%20%3D%20%5Csum%5E%7Bn-1%7D_%7Bk%3D0%7D(k%2B1)%5Cfrac%7Bd_%7Bx%2Bk%7Dv%5E%7Bx%2Bk%2B1%7D%7D%7BD_x%7D%5C%5C%0A%26%5Cfrac%7B%5Csum%5E%7Bn-1%7D_%7Bi%3D0%7DM_%7Bx%2Bi%7D%20-%20nM_%7Bx%2Bn%7D%7D%7BD_x%7D%20%3D%3A%5Cfrac%7BR_x%20-%20R_%7Bx%2Bn%7D%20-%20nM_%7Bx%2Bn%7D%7D%7BD_x%7D.%0A%5Cend%7Baligned%7D%0A"></p><h4 id="单增年金">单增年金</h4>
+<p style><img src="https://math.now.sh?from=I%5Cddot%7Ba%7D_%7Bx%3A%5Cbar%20n%7C%7D%20%3D%20%5Cfrac%7BN_x%20%2B%20N_%7Bx%2B1%7D%20%2B%20%5Ccdots%7D%7BD_x%7D%20%3D%3A%20%5Cfrac%7BS_x%7D%7BD_x%7D.%0A"></p><h1>理论（责任）准备金</h1>
+<h2 id="责任准备金的计算">责任准备金的计算</h2>
+<h3 id="未来法">未来法</h3>
+<p>前瞻亏损的期望，即某一时刻<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">的准备金<img src="https://math.now.sh?inline=%28%7B_tV%7D%29" style="display:inline-block;margin: 0;">保险公司未尽的责任金的精算现值=保险人未来所有支出在<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">时刻的现值和未来所有收入在该时刻的现值之差<img src="https://math.now.sh?inline=%28%7B_tL%7D%29" style="display:inline-block;margin: 0;">的期望。</p>
+<p>以完全连续（保费和保额都是连续支付）和完全间断的<img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;">年缴费的保单说明如何计算</p>
+<h4 id="完全连续情况">完全连续情况</h4>
+<ul>
+<li><img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;">年付费的终身寿险<img src="https://math.now.sh?inline=%28%7B_t%5EhV(%5Cbar%20A_x%29%7D)" style="display:inline-block;margin: 0;"></li>
+</ul>
+<p style><img src="https://math.now.sh?from=%28%7B_t%5EhV(%5Cbar%20A_x%29%7D)%20%3D%20%5Cleft%5C%7B%5Cbegin%7Baligned%7D%0A%26%5Cbar%20A_%7Bx%2Bt%7D%20-%20%5Cbar%20a_%7Bx%2Bt%3A%5Coverline%7Bh-t%7D%7C%7D%5Ccdot%7B_h%5Cbar%20P(%5Cbar%20A_x)%7D%2C%20%26if%5C%20t%3Ch.%20%5C%5C%0A%26%5Cbar%20A_%7Bx%2Bt%7D%2C%20%26if%5C%20t%5Cgeq%20h.%20%0A%5Cend%7Baligned%7D%5Cright.%0A"></p><ul>
+<li><img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;">年付费的<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年期两全保险</li>
+</ul>
+<p style><img src="https://math.now.sh?from=%7B_t%5Eh%5Cbar%20V%28%5Cbar%20A_%7Bx%3A%5Cbar%20n%7C%7D%29%7D%20%3D%5Cleft%5C%7B%5Cbegin%7Baligned%7D%0A%26%5Cbar%20A_%7Bx%2Bt%3A%5Coverline%7Bn-t%7D%7C%7D%20-%20%5Cbar%20a_%7Bx%2Bt%3A%5Coverline%7Bh-t%7D%7C%7D%5Ccdot%7B_h%5Cbar%20P(%5Cbar%20A_%7Bx%3A%5Cbar%20n%7C%7D)%7D%2C%20%26%26if%5C%20t%3Ch%2C%20%5C%5C%20%0A%26%5Cbar%20A_%7Bx%2Bt%3A%5Coverline%7Bn-t%7D%7C%7D%2C%20%26%26if%5C%20h%5Cleq%20t%3Cn%2C%20%5C%5C%20%0A%261%2C%20%26%26if%5C%20t%3Dn.%0A%5Cend%7Baligned%7D%5Cright.%0A"></p><h4 id="完全间断情况">完全间断情况</h4>
+<ul>
+<li><img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;">年付费的<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年死亡保险</li>
+</ul>
+<p style><img src="https://math.now.sh?from=%7B_t%5EhV_%7Bx%3A%5Cbar%20n%7C%7D%5E1%7D%20%3D%20%5Cleft%5C%7B%5Cbegin%7Baligned%7D%0A%26A_%7Bx%2Bt%3A%5Coverline%7Bn-t%7D%7C%7D%5E1-%5Cddot%7Ba%7D_%7Bx%2Bt%3A%5Coverline%7Bh-t%7D%7C%7D%5Ccdot%7B_hP_%7Bx%3A%5Cbar%20n%7C%7D%5E1%7D%2C%20%26%26if%5C%20t%3Ch%2C%5C%5C%0A%26A_%7Bx%2Bt%3A%5Coverline%7Bn-t%7D%7C%7D%5E1%2C%20%26%26if%5C%20h%5Cleq%20t%3Cn%2C%5C%5C%0A%260%2C%20%26%26if%5C%20h%5Cgeq%20n.%0A%5Cend%7Baligned%7D%5Cright.%0A"></p><ul>
+<li><img src="https://math.now.sh?inline=h" style="display:inline-block;margin: 0;">年付费的终身寿险</li>
+</ul>
+<p style><img src="https://math.now.sh?from=%7B_t%5EhV_x%7D%20%3D%20%5Cleft%5C%7B%5Cbegin%7Baligned%7D%0A%26A_%7Bx%2Bt%7D%20-%20%5Cddot%7Ba%7D_%7Bx%2Bt%3A%5Coverline%7Bh-t%7D%7C%7D%5Ccdot%7B_hP_x%7D%2C%20%26%26if%5C%20t%3Ch%2C%5C%5C%0A%26A_%7Bx%2Bt%7D%2C%20%26%26if%20t%5Cgeq%20h.%0A%5Cend%7Baligned%7D%5Cright.%0A"></p><h3 id="保费差公式">保费差公式</h3>
+<p>责任准备金 = 剩余缴纳保费差的精算现值。</p>
+<h3 id="过去法">过去法</h3>
+<p>责任准备金 = 已付保费在<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">时刻的累计值与保险成本累计值之差，即</p>
+<p style><img src="https://math.now.sh?from=%7B_tV%7D%20%3D%20P.S%20-%20A%2FE%2C%0A"></p><p>其中，<img src="https://math.now.sh?inline=S" style="display:inline-block;margin: 0;">为已缴纳的单位保费在<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">时刻的精算终值，<img src="https://math.now.sh?inline=A" style="display:inline-block;margin: 0;">为已付保额的精算现值，<img src="https://math.now.sh?inline=E" style="display:inline-block;margin: 0;">为<img src="https://math.now.sh?inline=t" style="display:inline-block;margin: 0;">年期纯粹生存年金。</p>
+<h2 id="相邻年度期末准备金之间的关系">相邻年度期末准备金之间的关系</h2>
+<h3 id="单位保额终身寿险的准备金">单位保额终身寿险的准备金</h3>
+<p>由<img src="https://math.now.sh?inline=%7B_kV_x%7D%20%3D%20A_%7Bx%2Bk%7D-P_x%20%5Ccdot%20%5Cddot%7Ba%7D_%7Bx%2Bk%7D" style="display:inline-block;margin: 0;">，可得</p>
+<p style><img src="https://math.now.sh?from=%7B_kV_x%7D%20%2B%20%7BP_x%7D%20%3D%20A_%7Bx%2Bk%7D%20-%20P_x%20%5Ccdot%20%5Cddot%7Ba%7D_%7Bx%2Bk%7D%20%2B%20P_x%20%3D%20A_%7Bx%2Bk%7D%20-%20P_x%20%5Ccdot%20a_%7Bx%2Bk%7D.%0A"></p><p>另一方面，由于</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AA_x%20%26%3D%20vA_%7Bx%2B1%7D%20%2B%20vq_x%28q-A_%7Bx%2B1%7D%29%20%3D%20vq_x%20%2B%20vp_xA_%7Bx%2B1%7D%5C%5C%0Aa_x%20%26%3D%20%5Csum%5E%5Cinfty_%7Bk%3D1%7Dv%5Ek%20%5Ccdot%7B_kp_x%7D%20%3D%20vp_x%5Csum%5E%5Cinfty_%7Bt%3D0%7Dv%5Et%20%5Ccdot%7B_lp_%7Bx%2B1%7D%7D%20%3D%20vp_x%20%5Cddot%7Ba%7D_%7Bx%2B1%7D%0A%5Cend%7Baligned%7D%0A"></p><p>从而</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_kV_x%7D%20%2B%20%7BP_x%7D%20%26%3D%20vq_%7Bx%2Bk%7D%20%2B%20vp_%7Bx%2Bk%7DA_%7Bx%2Bk%2B1%7D%20-%20P_x%20%5Ccdot%20vp_%7Bx%2Bk%20%5Cddot%7Ba%7D_%7Bx%2Bk%2B1%7D%7D%5C%5C%0A%26%3D%20vq_%7Bx%2Bk%7D%20%2B%20vp_%7Bx%2Bk%7D%28%7B_%7Bk%2B1%7DV_x%7D%29%5C%5C%0A%26%3D%20v(%7B_%7Bk%2B1%7DV_x%7D)%20%2B%20vq_%7Bx%2Bk%7D(1-%7B_%7Bk%2B1%7DV_x%7D).%0A%5Cend%7Baligned%7D%0A"></p><p>解释：</p>
+<ol>
+<li>第<img src="https://math.now.sh?inline=k" style="display:inline-block;margin: 0;">年年末的准备金与第<img src="https://math.now.sh?inline=k" style="display:inline-block;margin: 0;">年年初所收到的保费<img src="https://math.now.sh?inline=P_x" style="display:inline-block;margin: 0;">之和，恰能提供次年保额为1的一年期死亡保险的给付和次年保额为<img src="https://math.now.sh?inline=%7B_%7Bk%2B1%7DV_x%7D" style="display:inline-block;margin: 0;">的一年期纯粹生存年金的给付。</li>
+<li>将上式两边同乘以<img src="https://math.now.sh?inline=%281%2Bi%29l_%7Bx%2Bk%7D" style="display:inline-block;margin: 0;">，则</li>
+</ol>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%28%7B_kV_x%7D%2BP_x%29(1%2Bi)l_%7Bx%2Bk%7D%20%26%3D%20v(1%2Bi)d_%7Bx%2Bk%7D%20-%20v(1%2Bi)l_%7Bx%2Bk%2B1%7D(%7B_%7Bk%2B1%7DV_x%7D)%5C%5C%0A%26%3Dd_%7Bx%2Bk%7D%20%2B%20l_%7Bx%2Bk%2B1%7D(%7B_%7Bk%2B1%7DV_x%7D)%0A%5Cend%7Baligned%7D%0A"></p><p>第<img src="https://math.now.sh?inline=k" style="display:inline-block;margin: 0;">年年末保险人总储备金与年初所受纯保费<img src="https://math.now.sh?inline=P_xl_%7Bx%2Bk%7D" style="display:inline-block;margin: 0;">，累计一年的终值恰好等于当年所有死亡者每人1单位保额的支付和存活者每人<img src="https://math.now.sh?inline=%7B_%7Bk%2B1%7DV_x%7D" style="display:inline-block;margin: 0;">单位的储备金。</p>
+<h3 id="定义">定义</h3>
+<ul>
+<li>称<img src="https://math.now.sh?inline=%281-%7B_%7Bk%2B1%7DV_x%7D%29" style="display:inline-block;margin: 0;">为第<img src="https://math.now.sh?inline=k%2B1" style="display:inline-block;margin: 0;">年的风险净额；</li>
+<li><img src="https://math.now.sh?inline=q_%7Bx%2Bk%7D%281-%7B_%7Bk%2B1%7DV_x%7D%29" style="display:inline-block;margin: 0;">为保险成本；</li>
+<li><img src="https://math.now.sh?inline=%5Cpi_k%5Er%20%3D%20q_%7Bx%2Bk%7D%281-%7B_%7Bk%2B1%7DV_x%7D%29" style="display:inline-block;margin: 0;">为风险纯保费；</li>
+<li><img src="https://math.now.sh?inline=%5Cpi%5Es_k%20%3D%20%28v%20%5Ccdot%7B_%7Bk%2B1%7DV_x%7D%20-%20%7B_kV_x%7D%29" style="display:inline-block;margin: 0;">为储蓄纯保费。</li>
+</ul>
+<p>可得</p>
+<p style><img src="https://math.now.sh?from=P_x%20%3D%20vq_%7Bx%2Bk%7D%281-%7B_k%2B1%7DV_x%29%20%2B%20v(%7B_%7Bk%2B1%7DV_x%7D)%20-%20%7B_kV_x%7D%20%3D%20%5Cpi%5Er_k%20%2B%20%5Cpi%5Es_k.%0A"></p><h1>多生命函数</h1>
+<p><strong>定义</strong>：设计多个生命剩余余寿的函数。<br>
+<strong>作用</strong>：</p>
+<ul>
+<li>养老金场合的给付</li>
+<li>合伙联保场合</li>
+<li>遗产税计算场合</li>
+</ul>
+<h2 id="联合生命状态">联合生命状态</h2>
+<p><strong>定义</strong>：当集合中所有成员都存活，则该状态存活；否则该状态死亡。<br>
+<strong>余寿</strong>：</p>
+<p style><img src="https://math.now.sh?from=T%28x_1%2Cx_2%2C%5Ccdots%2Cx_n%29%20%3D%20%5Cmin%5C%7BT(x_1)%2CT(x_2)%2C%5Ccdots%2CT(x_n)%5C%7D.%0A"></p><p><strong>余寿的分布</strong>：设<img src="https://math.now.sh?inline=T%28x%29%2CT(y)" style="display:inline-block;margin: 0;">分别为<img src="https://math.now.sh?inline=x%2Cy" style="display:inline-block;margin: 0;">的余寿，则它们的联合生命状态的余寿<img src="https://math.now.sh?inline=T%28xy%29" style="display:inline-block;margin: 0;">的分布为：</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AF_%7Bxy%7D%28t%29%20%26%3D%20P(T(xy)%3Ct)%5C%5C%0A%26%3D%201-P(T(xy)%3Et)%5C%5C%0A%26%3D%201-P(T(x)%3Et%2CT(y)%3Et)%5C%5C%0A%26%3D%201-%7B_tp_x%7D%5Ccdot%7B_tp_y%7D.%0A%5Cend%7Baligned%7D%0A"></p><p><strong>生存函数</strong>：</p>
+<p style><img src="https://math.now.sh?from=%7B_tp_%7Bxy%7D%7D%20%3A%3D%20S_%7Bxy%7D%28t%29%20%3D%20P(T(xy)%3Et)%20%3D%20%7B_tp_x%7D%5Ccdot%7B_tp_y%7D.%0A"></p><p><strong>密度函数</strong>：</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0Af_%7Bxy%7D%28t%29%20%26%3D%20-%5BP(T(xy)%20%3E%20t)%5D'%5C%5C%0A%26%3D%20f_x(t)%7B_tp_y%7D%20%2B%20%7B_tp_x%7Df_y(t)%5C%5C%0A%26%7B_tp_x%7D%7B_tp_y%7D(%5Cmu_%7Bx%2Bt%7D%20%2B%20%5Cmu_%7By%2Bt%7D).%0A%5Cend%7Baligned%7D%0A"></p><p><strong>死亡力</strong>：</p>
+<p style><img src="https://math.now.sh?from=%5Cmu_%7Bxy%7D%28t%29%20%3D%20%5Cfrac%7Bf_%7Bxy%7D(t)%7D%3C!--swig%EF%BF%BC2--%3E%7D%20%3D%20%5Cmu_%7Bx%2Bt%7D%20%2B%20%5Cmu_%7By%2Bt%7D.%0A"></p><h2 id="最后生存状态">最后生存状态</h2>
+<p><strong>定义</strong>：当集合中至少有一个成员存活，则该状态存活；否则该状态死亡。<br>
+<strong>余寿</strong>：</p>
+<p style><img src="https://math.now.sh?from=T%5Coverline%7B%28x_1%2Cx_2%2C%5Ccdots%20x_n%29%7D%20%3D%20%5Cmax%5C%7BT(x_1)%2C%5Ccdots%2CT(x_n)%5C%7D.%0A"></p><p><strong>余寿的分布</strong>：</p>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0AF_%7B%5Coverline%7Bxy%7D%7D%28t%29%20%26%3D%20P(T(%5Coverline%7Bxy%7D)%3Ct)%5C%5C%0A%26%3D%20P(T(x)%5Cleq%20t%2CT(y)%5Cleq%20t)%20%3D%20%7B_tq_x%7D%5Ccdot%7B_tq_y%7D%5C%5C%0A%26%3D%20P(T(x)%5Cleq%20t)%20%2B%20P(T(y)%5Cleq%20t)%20-P(T(x)%5Cleq%20t%2CT(y)%5Cleq%20t)%5C%5C%0A%26%7B_tq_x%7D%20%2B%7B_tq_y%7D%20-%7B_tq_%7Bxy%7D%7D%0A%5Cend%7Baligned%7D%0A"></p><p>从而</p>
+<p style><img src="https://math.now.sh?from=F_%5Coverline%7Bxy%7D%28t%29%20%2B%20F_%7Bxy%7D(t)%20%3D%20F_x(t)%20%2B%20F_y(t).%0A"></p><h3 id="平均余寿">平均余寿</h3>
+<ul>
+<li>完全平均余寿
+<ul>
+<li><img src="https://math.now.sh?inline=%5Cdot%7Be%7D_%7Bxy%7D%20%3D%20E%28T(xy%29)%20%3D%20%5Cint%5E%5Cinfty_0%7B_tp_%7Bxy%7D%7Ddt." style="display:inline-block;margin: 0;"></li>
+<li><img src="https://math.now.sh?inline=%5Cdot%7Be%7D_%5Coverline%7Bxy%7D%20%3D%20E%28T(%5Coverline%7Bxy%7D%29)%20%3D%20%5Cint%5E%5Cinfty_0%7B_tp_%5Coverline%7Bxy%7D%7Ddt." style="display:inline-block;margin: 0;"></li>
+</ul>
+</li>
+<li>取整平均余寿
+<ul>
+<li><img src="https://math.now.sh?inline=e_%7Bxy%7D%20%3D%20E%28K(xy%29)%20%3D%20%5Csum%5E%5Cinfty_%7Bk%3D1%7D%7B_kp_%7Bxy%7D%7D." style="display:inline-block;margin: 0;"></li>
+<li><img src="https://math.now.sh?inline=e_%5Coverline%7Bxy%7D%20%3D%20E%28K(%5Coverline%7Bxy%7D%29)%20%3D%20%5Csum%5E%5Cinfty_%7Bk%3D1%7D%7B_kp_%7B%5Coverline%7Bxy%7D%7D%7D." style="display:inline-block;margin: 0;"></li>
+</ul>
+</li>
+</ul>
+<h3 id="多生命状态下的精算">多生命状态下的精算</h3>
+<p>以连续支付的终身寿险为例</p>
+<ul>
+<li>终身寿险：死亡时立即支付1单位保额，保额的现值为<img src="https://math.now.sh?inline=Z%3D%20v%5E%7BT%28u%29%7D" style="display:inline-block;margin: 0;">，其中<img src="https://math.now.sh?inline=u%3Dxy" style="display:inline-block;margin: 0;">活<img src="https://math.now.sh?inline=%5Coverline%7Bxy%7D" style="display:inline-block;margin: 0;">。
+<ul>
+<li>连生状态<img src="https://math.now.sh?inline=%28u%3Dxy%29" style="display:inline-block;margin: 0;">：</li>
+</ul>
+<p style><img src="https://math.now.sh?from=EZ%20%3D%20Ev%5E%7BT%28xy%29%7D%20%3D%20%5Cint%5E%5Cinfty_0v%5Etf_%7Bxy%7D(t)dt.%0A"></p><ul>
+<li>最后生存状态 <img src="https://math.now.sh?inline=%28u%20%3D%20%5Coverline%7Bxy%7D%29" style="display:inline-block;margin: 0;">：</li>
+</ul>
+<p style><img src="https://math.now.sh?from=EZ%20%3D%20%5Cint%5E%5Cinfty_0v%5Etf_%5Coverline%7Bxy%7D%28t%29dt.%0A"></p></li>
+</ul>
+<h3 id="简单多声明函数">简单多声明函数</h3>
+<ol>
+<li>顺位概率
+<ul>
+<li><img src="https://math.now.sh?inline=%7B_nq_%7Bxy%7D%5E1%7D" style="display:inline-block;margin: 0;">：表示<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">在<img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;">年内先于<img src="https://math.now.sh?inline=y" style="display:inline-block;margin: 0;">死亡的概率。</li>
+</ul>
+</li>
+</ol>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_nq_%7Bxy%7D%5E1%7D%20%26%3D%20P%5C%7BT%28x%29%3CT(y)%2CT(x)%5Cleq%20n%5C%7D%5C%5C%0A%26%3D%20%5Cint%5En_0%5Cint%5E%5Cinfty_sf_x(s)f_y(t)dtds%5C%5C%0A%26%3D%20%5Cint%5En_0%20f_x(s)%7B_sp_y%7Dds%5C%5C%0A%26%3D%20%5Cint%5En_0%20%7B_sp_%7Bxy%7D%7D%5Cmu_x(s)ds.%0A%5Cend%7Baligned%7D%0A"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- $&#123;_nq_&#123;xy&#125;^&#123;\ 2&#125;&#125;$：表示$y$在$n$年内先于$x$死亡的概率。</span><br></pre></td></tr></table></figure>
+<p style><img src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%7B_nq_%7Bxy%7D%5E%7B%5C%202%7D%7D%20%26%3D%20%5Cint%5En_0%5Cint%5Et_0f_x%28s%29f_y(t)dsdt%5C%5C%0A%26%3D%20%5Cint%5En_0%20%7B_tq_x%7Df_y(t)dt.%0A%5Cend%7Baligned%7D%0A"></p><ol start="2">
+<li>顺位保险
+<ul>
+<li><img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">死亡后<img src="https://math.now.sh?inline=y" style="display:inline-block;margin: 0;">仍生存，在<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">死亡时立即支付1单位保额。保额的精算现值为</li>
+</ul>
+</li>
+</ol>
+<p style><img src="https://math.now.sh?from=%5Cbar%20A_%7Bxy%7D%5E1%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%20%5Ccdot%7B_tp_%7Bxy%7D%7D%5Ccdot%5Cmu_x%28t%29dt%0A"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- $y$后于$x$死亡，在$y$死亡时立即支付1单位保额。保额的精算现值为</span><br></pre></td></tr></table></figure>
+<p style><img src="https://math.now.sh?from=%5Cbar%20A_%7Bxy%7D%5E2%20%3D%20%5Cint%5E%5Cinfty_0%20v%5Et%20%5Ccdot%20f_y%28t%29%5Ccdot%7B_tq_x%7Ddt%20%3D%20%5Cint%5E%5Cinfty_0v%5Et%20%5Ccdot%20f_y(t)%5Ccdot(1-%7B_tp_x%7D)dt.%0A"></p>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>江子扬-Jasper Young
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="http://example.com/2022/01/06/%E5%AF%BF%E9%99%A9%E7%B2%BE%E7%AE%97%E5%9F%BA%E7%A1%80/" title="寿险精算基础">http://example.com/2022/01/06/寿险精算基础/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/math/" rel="tag"><i class="fa fa-tag"></i><i class="fa fa-tag"></i> math</a>
+              <a href="/tags/finance/" rel="tag"><i class="fa fa-tag"></i><i class="fa fa-tag"></i> finance</a>
+              <a href="/tags/review/" rel="tag"><i class="fa fa-tag"></i><i class="fa fa-tag"></i> review</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/12/30/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90/" rel="prev" title="时间序列分析">
+                  <i class="fa fa-chevron-left"></i> 时间序列分析
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="SOHUCS"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">江子扬-Jasper Young</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!--
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+-->
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"per_page":true,"cdn":"https://cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    // window.MathJax = {
+    //   loader: {
+    //
+    //     source: {
+    //       '[tex]/amsCd': '[tex]/amscd',
+    //       '[tex]/AMScd': '[tex]/amscd'
+    //     }
+    //   },
+    //   tex: {
+    //     inlineMath: {'[+]': [['$', '$']]},
+    //
+    //     tags: 'ams'
+    //   },
+    //   options: {
+    //     renderActions: {
+    //       findScript: [10, doc => {
+    //         document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+    //           const display = !!node.type.match(/; *mode=display/);
+    //           const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+    //           const text = document.createTextNode('');
+    //           node.parentNode.replaceChild(text, node);
+    //           math.start = {node: text, delim: '', n: 0};
+    //           math.end = {node: text, delim: '', n: 0};
+    //           doc.math.push(math);
+    //         });
+    //       }, '', false],
+    //       insertedScript: [200, () => {
+    //         document.querySelectorAll('mjx-container').forEach(node => {
+    //           let target = node.parentNode;
+    //           if (target.nodeName.toLowerCase() === 'li') {
+    //             target.parentNode.classList.add('has-jax');
+    //           }
+    //         });
+    //       }, '', false]
+    //     }
+    //   }
+    // };
+    window.MathJax = {
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '[object Object]';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyvDBNEmH","appkey":"yzjzwthpy"}</script>
+<script src="/js/third-party/comments/changyan.js"></script>
+
+</body>
+</html>
