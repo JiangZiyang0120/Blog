@@ -1,6 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>LeetCode 1687. Delivering Boxes from Storage to Ports</title>
+    <url>/2022/09/01/1687.%20Delivering%20Boxes%20from%20Storage%20to%20Ports/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="Problem-Discription">Problem Discription</h2>
+<p>You have the task of delivering some boxes from storage to their ports using only one ship. However, this ship has a <strong>limit</strong> on the <strong>number of boxes</strong> and the <strong>total weight</strong> that it can carry.</p>
+<p>You are given an array <code>boxes</code>, where <code>boxes[i] = [ports​​i​, weighti]</code>, and three integers <code>portsCount</code>, <code>maxBoxes</code>, and <code>maxWeight</code>.</p>
+<ul>
+<li><code>ports​​i</code> is the port where you need to deliver the <code>ith</code> box and <code>weightsi</code> is the weight of the <code>ith</code> box.</li>
+<li><code>portsCount</code> is the number of ports.</li>
+<li><code>maxBoxes</code> and <code>maxWeight</code> are the respective box and weight limits of the ship.</li>
+</ul>
+<p>The boxes need to be delivered <strong>in the order they are given</strong>. The ship will follow these steps:</p>
+<ul>
+<li>The ship will take some number of boxes from the <code>boxes</code> queue, not violating the <code>maxBoxes</code> and <code>maxWeight</code> constraints.</li>
+<li>For each loaded box <strong>in order</strong>, the ship will make a <strong>trip</strong> to the port the box needs to be delivered to and deliver it. If the ship is already at the correct port, no <strong>trip</strong> is needed, and the box can immediately be delivered.</li>
+<li>The ship then makes a return <strong>trip</strong> to storage to take more boxes from the queue.</li>
+</ul>
+<p>The ship must end at storage after all the boxes have been delivered.</p>
+<p>Return <em>the <strong>minimum</strong> number of <strong>trips</strong> the ship needs to make to deliver all boxes to their respective ports.</em></p>
+<p><strong>Example 1:</strong></p>
+<p><strong>Input:</strong> boxes = [[1,1],[2,1],[1,1]], portsCount = 2, maxBoxes = 3, maxWeight = 3<br>
+<strong>Output:</strong> 4<br>
+<strong>Explanation:</strong> The optimal strategy is as follows:</p>
+<ul>
+<li>The ship takes all the boxes in the queue, goes to port 1, then port 2, then port 1 again, then returns to storage. 4 trips.</li>
+</ul>
+<p>So the total number of trips is 4.<br>
+Note that the first and third boxes cannot be delivered together because the boxes need to be delivered in order (i.e. the second box needs to be delivered at port 2 before the third box).</p>
+<p><strong>Example 2:</strong></p>
+<p><strong>Input:</strong> boxes = [[1,2],[3,3],[3,1],[3,1],[2,4]], portsCount = 3, maxBoxes = 3, maxWeight = 6<br>
+<strong>Output:</strong> 6<br>
+<strong>Explanation:</strong> The optimal strategy is as follows:</p>
+<ul>
+<li>The ship takes the first box, goes to port 1, then returns to storage. 2 trips.</li>
+<li>The ship takes the second, third and fourth boxes, goes to port 3, then returns to storage. 2 trips.</li>
+<li>The ship takes the fifth box, goes to port 3, then returns to storage. 2 trips.</li>
+</ul>
+<p>So the total number of trips is 2 + 2 + 2 = 6.</p>
+<p><strong>Example 3:</strong></p>
+<p><strong>Input:</strong> boxes = [[1,4],[1,2],[2,1],[2,1],[3,2],[3,4]], portsCount = 3, maxBoxes = 6, maxWeight = 7<br>
+<strong>Output:</strong> 6<br>
+<strong>Explanation:</strong> The optimal strategy is as follows:</p>
+<ul>
+<li>The ship takes the first and second boxes, goes to port 1, then returns to storage. 2 trips.</li>
+<li>The ship takes the third and fourth boxes, goes to port 2, then returns to storage. 2 trips.</li>
+<li>The ship takes the fifth and sixth boxes, goes to port 3, then returns to storage. 2 trips.</li>
+</ul>
+<p>So the total number of trips is 2 + 2 + 2 = 6.</p>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li><code>1 &lt;= boxes.length &lt;= 105</code></li>
+<li><code>1 &lt;= portsCount, maxBoxes, maxWeight &lt;= 105</code></li>
+<li><code>1 &lt;= ports​​i &lt;= portsCount</code></li>
+<li><code>1 &lt;= weightsi &lt;= maxWeight</code></li>
+</ul>
+<h2 id="Analyse">Analyse</h2>
+<p>As the dynamic programming soluution’s max time complexity is <img src="https://math.now.sh?inline=%5Ctext%20O%28n%5E2%29" style="display:inline-block;margin: 0;">. We could simply get the first solution:<br>
+This Code comes from <a href="https://leetcode.com/linshan007/">linshan077</a>. And it’s very straightly that this is the almost best implement of DP. Where the trip assist to decline the cost of repeatedly judging <code>boxes[j][0] == boxes[j-1][0]</code> and <code>dp</code> is the common implement of dynamic programming.</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution1</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">boxDelivering</span><span class="params">(vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt;&amp; boxes, <span class="keyword">int</span> portsCount, <span class="keyword">int</span> maxBoxes, <span class="keyword">int</span> maxWeight)</span> </span>&#123;</span><br><span class="line">        <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">trips</span><span class="params">(boxes.size())</span></span>;</span><br><span class="line">        trips[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; boxes.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (boxes[i][<span class="number">0</span>] == boxes[i<span class="number">-1</span>][<span class="number">0</span>]) &#123;</span><br><span class="line">                trips[i] = trips[i<span class="number">-1</span>];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                trips[i] = trips[i<span class="number">-1</span>]+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// dp[i+1] is minimum trips assuming i is the last box to deliver and will return to port afterwards. </span></span><br><span class="line">        <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">dp</span><span class="params">(boxes.size()+<span class="number">1</span>)</span></span>;</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; boxes.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">            dp[i+<span class="number">1</span>] = INT_MAX;</span><br><span class="line">            <span class="keyword">int</span> sum_weights = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j&gt;=<span class="number">0</span> &amp;&amp; i-j+<span class="number">1</span> &lt;= maxBoxes; --j) &#123;</span><br><span class="line">                sum_weights += boxes[j][<span class="number">1</span>];</span><br><span class="line">                <span class="keyword">if</span> (sum_weights &gt; maxWeight) <span class="keyword">break</span>;</span><br><span class="line">                dp[i+<span class="number">1</span>] = std::<span class="built_in">min</span>(dp[i+<span class="number">1</span>], dp[j]+<span class="number">2</span>+trips[i]-trips[j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp.<span class="built_in">back</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>And it got a TLE. And we translate<code>min(dp[j]+2+trips[i]-trips[j])</code> into <code>2+trips[i]+min(dp[j]-trips[j])</code>. It turns to a question: find the minimum in a Slide window(Which we can easily solve by a deque with total time complexity <img src="https://math.now.sh?inline=%5Ctext%20O%28n%29" style="display:inline-block;margin: 0;">).</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution2</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">boxDelivering</span><span class="params">(vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt;&amp; boxes, <span class="keyword">int</span> portsCount, <span class="keyword">int</span> maxBoxes, <span class="keyword">int</span> maxWeight)</span> </span>&#123;</span><br><span class="line">        <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">trips</span><span class="params">(boxes.size())</span></span>;</span><br><span class="line">        trips[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; boxes.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (boxes[i][<span class="number">0</span>] == boxes[i<span class="number">-1</span>][<span class="number">0</span>]) &#123;</span><br><span class="line">                trips[i] = trips[i<span class="number">-1</span>];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                trips[i] = trips[i<span class="number">-1</span>]+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function">vector&lt;<span class="keyword">long</span> <span class="keyword">int</span>&gt; <span class="title">weights</span><span class="params">(boxes.size()+<span class="number">1</span>)</span></span>;</span><br><span class="line">        weights[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; boxes.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">            weights[i+<span class="number">1</span>] = weights[i]+boxes[i][<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">dp</span><span class="params">(boxes.size()+<span class="number">1</span>)</span></span>;</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="function">vector&lt;<span class="keyword">long</span>&gt; <span class="title">weight</span><span class="params">(boxes.size()+<span class="number">1</span>)</span></span>;</span><br><span class="line">        weight[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i != boxes.<span class="built_in">size</span>()+<span class="number">1</span>; ++i)</span><br><span class="line">            weight[i] = weight[i<span class="number">-1</span>] + boxes[i<span class="number">-1</span>][<span class="number">1</span>];</span><br><span class="line">        deque&lt;pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;&gt; dq;</span><br><span class="line">        <span class="keyword">int</span> temp, totalWeight, totalBoxes;</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">        dq.<span class="built_in">push_back</span>(&#123;<span class="number">0</span>,dp[<span class="number">0</span>] - trips[<span class="number">0</span>]&#125;);</span><br><span class="line">        dp[<span class="number">1</span>] = <span class="number">2</span> + trips[<span class="number">0</span>] + dq.<span class="built_in">front</span>().second;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; boxes.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">            temp = dp[i] - trips[i];</span><br><span class="line">            <span class="keyword">while</span> (!dq.<span class="built_in">empty</span>() &amp;&amp; dq.<span class="built_in">back</span>().second &gt; temp)</span><br><span class="line">                dq.<span class="built_in">pop_back</span>();</span><br><span class="line">            dq.<span class="built_in">push_back</span>(&#123;i,temp&#125;);</span><br><span class="line">            totalWeight = weight[i+<span class="number">1</span>] - weight[j];</span><br><span class="line">            totalBoxes = i - j + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span> (totalWeight &gt; maxWeight || totalBoxes &gt; maxBoxes)&#123;</span><br><span class="line">                dq.<span class="built_in">pop_front</span>();</span><br><span class="line">                j = dq.<span class="built_in">front</span>().first;</span><br><span class="line">                totalWeight = weight[i+<span class="number">1</span>] - weight[j];</span><br><span class="line">                totalBoxes = i - j + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            dp[i+<span class="number">1</span>] = <span class="number">2</span> + trips[i] + dq.<span class="built_in">front</span>().second;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp.<span class="built_in">back</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>The above code deducts the cost of  repetitive calculation of <code>dp[i+1] = std::min(dp[i+1], dp[j]+2+trips[i]-trips[j])</code> And turns <img src="https://math.now.sh?inline=%5Ctext%20O%28mn%29" style="display:inline-block;margin: 0;">(where m is the maxBoxes) into <img src="https://math.now.sh?inline=%5Ctext%20O%28n%29%20%2B%20%5Ctext%20O(n)%20%3D%20%5Ctext%20O(n)" style="display:inline-block;margin: 0;">.</p>
+<h2 id="Reference">Reference</h2>
+<ol>
+<li><a href="https://leetcode.com/problems/delivering-boxes-from-storage-to-ports/discuss/1369248/C%2B%2B-DP-solution-with-thinking-process%3A-brute-force-greater-priority-queue-greater-mono-queue">C++ DP solution with thinking process: brute force -&gt; priority queue -&gt; mono queue</a></li>
+<li><a href="https://leetcode.com/problems/delivering-boxes-from-storage-to-ports/discuss/2330389/Java-or-From-O(N2)-to-O(N)-or-MonoQueue-w-DP">Java | From O(N^2) to O(N) | MonoQueue w/ DP</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术笔记</category>
+        <category>LeetCode笔记</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++的 0/3/5 规则</title>
     <url>/2022/08/30/C++_0_3_5_rule/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote>
@@ -91,7 +168,8 @@ C++为我们提供了强大的智能指针，用来管理资源的生命周期�
         <category>Computer Networking</category>
       </categories>
       <tags>
-        <tag>-Webs -tutorial</tag>
+        <tag>Webs</tag>
+        <tag>tutorial</tag>
       </tags>
   </entry>
   <entry>

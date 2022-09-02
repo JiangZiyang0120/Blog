@@ -23,32 +23,25 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"jiangziyang0120.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="这是《计算机网络——自顶向下方法》里的一个小实验，对理解smtp的交流和电子邮件的报头都很有帮助。是个很值得尝试的实验。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="linux如何通过SMTP服务器发送QQ邮件">
-<meta property="og:url" content="https://jiangziyang0120.github.io/2022/06/28/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6/index.html">
+<meta name="description" content="Stay Hungry. Stay Foolish  But endless learning. But everlasting pursuing">
+<meta property="og:type" content="website">
+<meta property="og:title" content="江子扬的星球">
+<meta property="og:url" content="https://jiangziyang0120.github.io/archives/2022/09/index.html">
 <meta property="og:site_name" content="江子扬的星球">
-<meta property="og:description" content="这是《计算机网络——自顶向下方法》里的一个小实验，对理解smtp的交流和电子邮件的报头都很有帮助。是个很值得尝试的实验。">
+<meta property="og:description" content="Stay Hungry. Stay Foolish  But endless learning. But everlasting pursuing">
 <meta property="og:locale">
-<meta property="og:image" content="https://res.cloudinary.com/dwy9slegd/image/upload/v1657184045/Pasted_image_20220627002748_uocva7.png">
-<meta property="og:image" content="https://res.cloudinary.com/dwy9slegd/image/upload/v1657184045/Pasted_image_20220627004011_n06trm.png">
-<meta property="article:published_time" content="2022-06-28T10:23:00.000Z">
-<meta property="article:modified_time" content="2022-09-02T16:29:37.201Z">
 <meta property="article:author" content="江子扬-Jasper Young">
-<meta property="article:tag" content="Webs">
-<meta property="article:tag" content="tutorial">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://res.cloudinary.com/dwy9slegd/image/upload/v1657184045/Pasted_image_20220627002748_uocva7.png">
 
 
-<link rel="canonical" href="https://jiangziyang0120.github.io/2022/06/28/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6/">
+<link rel="canonical" href="https://jiangziyang0120.github.io/archives/2022/09/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh","comments":true,"permalink":"https://jiangziyang0120.github.io/2022/06/28/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6/","path":"2022/06/28/linux如何通过SMTP服务器发送QQ邮件/","title":"linux如何通过SMTP服务器发送QQ邮件"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh","comments":"","permalink":"","path":"archives/2022/09/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>linux如何通过SMTP服务器发送QQ邮件 | 江子扬的星球</title>
+<title>Archive | 江子扬的星球</title>
   
 
 
@@ -262,186 +255,50 @@
 </noscript>
 
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner archive posts-collapse">
 
 
   
-
-
-<div class="post-block">
   
   
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <span class="collection-header">Um..! 9 posts in total. Keep on posting.</span>
+      </div>
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh">
-    <link itemprop="mainEntityOfPage" href="https://jiangziyang0120.github.io/2022/06/28/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/image/%E7%BE%BD%E6%AF%9B%E7%AC%94.jpeg">
-      <meta itemprop="name" content="江子扬-Jasper Young">
-      <meta itemprop="description" content="Stay Hungry. Stay Foolish <br> But endless learning. <br>But everlasting pursuing">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="江子扬的星球">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          linux如何通过SMTP服务器发送QQ邮件
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-06-28 18:23" itemprop="dateCreated datePublished" datetime="2022-06-28T18:23:00+08:00">2022-06-28</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-09-03 00:29" itemprop="dateModified" datetime="2022-09-03T00:29:37+08:00">2022-09-03</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">技术笔记</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/" itemprop="url" rel="index"><span itemprop="name">Computer Networking</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">Views: </span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan: </span>
-    
-    
-      <a title="changyan" href="/2022/06/28/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6/#SOHUCS" itemprop="discussionUrl">
-        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2022/06/28/linux如何通过SMTP服务器发送QQ邮件/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-</div>
-
-            <div class="post-description">这是《计算机网络——自顶向下方法》里的一个小实验，对理解smtp的交流和电子邮件的报头都很有帮助。是个很值得尝试的实验。</div>
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <p>这是《计算机网络——自顶向下方法》里的一个小实验，对理解smtp的交流和电子邮件的报头都很有帮助。是个很值得尝试的实验。</p>
-<p>首先，我们需要下载 telnet</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install telnetd -y</span><br></pre></td></tr></table></figure>
-<p>其次，按照这个文档所示的方式开启QQ邮箱的SMTP服务<br>
-<a target="_blank" rel="noopener" href="https://www.ujcms.com/documentation/351.html"># 使用QQ邮箱发送邮件，QQ邮箱的smtp设置</a><br>
-并记住自己的身份认证密码。</p>
-<p>接下来，打开linus系统的<strong>xshell</strong>（快捷键 ctrl+alt+T），输入以下命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet smtp.qq.com 25</span><br></pre></td></tr></table></figure>
-<p>会看到如下返回：<br>
-<img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1657184045/Pasted_image_20220627002748_uocva7.png" alt="terminal"></p>
-<p>依次输入以下命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">auth login  //输入命令验证身份</span><br><span class="line">334 VXNlcm5hbWU6  //服务器返回Username:的base64编码符</span><br><span class="line">******** //输入自己邮箱号，例123456789@qq.com的base64编码值</span><br><span class="line">334 UGFzc3dvcmQ6  //服务器返回Password:的base64编码符</span><br><span class="line">******** //输入自己身份认证密码的base64编码值</span><br><span class="line">235 Authentication successful  //连接成功</span><br></pre></td></tr></table></figure>
-<p>base64编码可以上网随便找转换工具，保险起见邮箱号和身份认证密码分别用两个不同的网站编码。或自己写一个也行。</p>
-<p>连接成功后就可以按照书上的步骤：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Helo ****  //主机名，可填邮箱号</span><br><span class="line">250-newxmesmtplogicsvrsza9.qq.com-9.21.152.27-66638923</span><br><span class="line">250-SIZE 73400320</span><br><span class="line">250 OK</span><br><span class="line">mail from: &lt;123456789@qq.com&gt; //填你的邮箱号</span><br><span class="line">250 OK</span><br><span class="line">rcpt to: &lt;123456789@gmail.com&gt;  //填你想发送的邮箱号</span><br><span class="line">250 OK</span><br><span class="line">data</span><br><span class="line">354 End data with &lt;CR&gt;&lt;LF&gt;.&lt;CR&gt;&lt;LF&gt;.</span><br><span class="line">//报头必不可少，否则可能被当成垃圾邮件退回</span><br><span class="line">From: 123456789@qq.com</span><br><span class="line">To: 123456789@gmail.com</span><br><span class="line">Subject: It may be a huge joke!</span><br><span class="line"></span><br><span class="line">Just a test</span><br><span class="line">Could you reach this message?</span><br><span class="line">.</span><br><span class="line">250 OK: queued as.</span><br></pre></td></tr></table></figure>
-<p>随后，就能成功收到这份邮件了！<br>
-<img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1657184045/Pasted_image_20220627004011_n06trm.png" alt="接收邮件"></p>
-
+      
+    <div class="collection-year">
+      <span class="collection-header">2022</span>
     </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-          
-
-<div class="post-copyright">
-<ul>
-  <li class="post-copyright-author">
-      <strong>Post author:  </strong>江子扬-Jasper Young
-  </li>
-  <li class="post-copyright-link">
-      <strong>Post link: </strong>
-      <a href="https://jiangziyang0120.github.io/2022/06/28/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6/" title="linux如何通过SMTP服务器发送QQ邮件">https://jiangziyang0120.github.io/2022/06/28/linux如何通过SMTP服务器发送QQ邮件/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
-  </li>
-</ul>
-</div>
-
-          <div class="followme">
-  <span>Welcome to my other publishing channels</span>
-
-  <div class="social-list">
-
-      <div class="social-item">
-        <a target="_blank" class="social-link" href="/atom.xml">
-          <span class="icon">
-            <i class="fa fa-rss"></i>
-          </span>
-
-          <span class="label">RSS</span>
-        </a>
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2022-09-02T10:31:00+08:00"
+              content="2022-09-02">
+          09-02
+        </time>
       </div>
-  </div>
-</div>
 
-          <div class="post-tags">
-              <a href="/tags/Webs/" rel="tag"><i class="fa fa-tag"></i><i class="fa fa-tag"></i> Webs</a>
-              <a href="/tags/tutorial/" rel="tag"><i class="fa fa-tag"></i><i class="fa fa-tag"></i> tutorial</a>
-          </div>
+      <div class="post-title">
+          <a class="post-title-link" href="/2022/09/01/1687.%20Delivering%20Boxes%20from%20Storage%20to%20Ports/" itemprop="url">
+            <span itemprop="name">LeetCode 1687. Delivering Boxes from Storage to Ports</span>
+          </a>
+      </div>
 
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2021/10/07/Mathematical-Statistics/" rel="prev" title="Mathematical Statistics">
-                  <i class="fa fa-chevron-left"></i> Mathematical Statistics
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2022/08/30/C++_0_3_5_rule/" rel="next" title="C++的 0/3/5 规则">
-                  C++的 0/3/5 规则 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
+      
+    </header>
   </article>
-</div>
 
 
+    </div>
+  </div>
+  
+  
+  
 
-
-
-
-    <div class="comments" id="SOHUCS"></div>
 </div>
   </main>
 
