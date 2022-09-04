@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jiangziyang0120.github.io/about/index.html</loc>
+    
+    <lastmod>2022-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jiangziyang0120.github.io/2022/06/28/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6/</loc>
     
     <lastmod>2022-09-04</lastmod>
@@ -68,15 +77,6 @@
     <loc>https://jiangziyang0120.github.io/technical/index.html</loc>
     
     <lastmod>2021-09-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiangziyang0120.github.io/about/index.html</loc>
-    
-    <lastmod>2021-09-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

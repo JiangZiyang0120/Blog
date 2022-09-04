@@ -1,3 +1,4 @@
+https://jiangziyang0120.github.io/about/index.html
 https://jiangziyang0120.github.io/2022/06/28/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6/
 https://jiangziyang0120.github.io/2021/07/08/%E9%93%BE%E6%8E%A5%E5%99%A8%E6%9F%A5%E6%89%BE%E8%8C%83%E5%9B%B4/
 https://jiangziyang0120.github.io/2022/09/04/2022-W35/
@@ -6,7 +7,6 @@ https://jiangziyang0120.github.io/2021/09/07/%E9%BB%8E%E6%98%8E%E9%9D%99%E6%82%8
 https://jiangziyang0120.github.io/2022/08/30/C++_0_3_5_rule/
 https://jiangziyang0120.github.io/2021/05/24/C++%20learning%20notes/
 https://jiangziyang0120.github.io/technical/index.html
-https://jiangziyang0120.github.io/about/index.html
 https://jiangziyang0120.github.io/categories/index.html
 https://jiangziyang0120.github.io/tags/index.html
 https://jiangziyang0120.github.io/playlist/index.html
