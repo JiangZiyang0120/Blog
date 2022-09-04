@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://tridiamond.tech/about/index.html</loc>
+    <loc>https://jiangziyang0120.github.io/about/index.html</loc>
     
     <lastmod>2022-09-04</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/post/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6.html</loc>
+    <loc>https://jiangziyang0120.github.io/post/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6.html</loc>
     
     <lastmod>2022-09-04</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/post/%E9%93%BE%E6%8E%A5%E5%99%A8%E6%9F%A5%E6%89%BE%E8%8C%83%E5%9B%B4.html</loc>
+    <loc>https://jiangziyang0120.github.io/post/%E9%93%BE%E6%8E%A5%E5%99%A8%E6%9F%A5%E6%89%BE%E8%8C%83%E5%9B%B4.html</loc>
     
     <lastmod>2022-09-04</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/post/2022-W35.html</loc>
+    <loc>https://jiangziyang0120.github.io/post/2022-W35.html</loc>
     
     <lastmod>2022-09-04</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/post/1687.%20Delivering%20Boxes%20from%20Storage%20to%20Ports.html</loc>
+    <loc>https://jiangziyang0120.github.io/post/1687.%20Delivering%20Boxes%20from%20Storage%20to%20Ports.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/post/%E9%BB%8E%E6%98%8E%E9%9D%99%E6%82%84%E6%82%84.html</loc>
+    <loc>https://jiangziyang0120.github.io/post/%E9%BB%8E%E6%98%8E%E9%9D%99%E6%82%84%E6%82%84.html</loc>
     
     <lastmod>2022-09-02</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/post/C++_0_3_5_rule.html</loc>
+    <loc>https://jiangziyang0120.github.io/post/C++_0_3_5_rule.html</loc>
     
     <lastmod>2022-08-30</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/post/C++%20learning%20notes.html</loc>
+    <loc>https://jiangziyang0120.github.io/post/C++%20learning%20notes.html</loc>
     
     <lastmod>2022-01-17</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/technical/index.html</loc>
+    <loc>https://jiangziyang0120.github.io/technical/index.html</loc>
     
     <lastmod>2021-09-05</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/categories/index.html</loc>
+    <loc>https://jiangziyang0120.github.io/categories/index.html</loc>
     
     <lastmod>2021-09-02</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/tags/index.html</loc>
+    <loc>https://jiangziyang0120.github.io/tags/index.html</loc>
     
     <lastmod>2021-09-02</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/playlist/index.html</loc>
+    <loc>https://jiangziyang0120.github.io/playlist/index.html</loc>
     
     <lastmod>2021-09-02</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html</loc>
+    <loc>https://jiangziyang0120.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html</loc>
     
     <lastmod>2021-07-09</lastmod>
     
@@ -120,7 +120,7 @@
   
 
   <url>
-    <loc>https://tridiamond.tech/</loc>
+    <loc>https://jiangziyang0120.github.io/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -128,70 +128,70 @@
 
   
   <url>
-    <loc>https://tridiamond.tech/tags/LeetCode/</loc>
+    <loc>https://jiangziyang0120.github.io/tags/LeetCode/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/tags/Algorithms/</loc>
+    <loc>https://jiangziyang0120.github.io/tags/Algorithms/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/tags/weekly-journal/</loc>
+    <loc>https://jiangziyang0120.github.io/tags/weekly-journal/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/tags/C/</loc>
+    <loc>https://jiangziyang0120.github.io/tags/C/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/tags/notes/</loc>
+    <loc>https://jiangziyang0120.github.io/tags/notes/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/tags/debug/</loc>
+    <loc>https://jiangziyang0120.github.io/tags/debug/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/tags/Web/</loc>
+    <loc>https://jiangziyang0120.github.io/tags/Web/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/tags/tutorial/</loc>
+    <loc>https://jiangziyang0120.github.io/tags/tutorial/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/tags/machine-learning/</loc>
+    <loc>https://jiangziyang0120.github.io/tags/machine-learning/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/tags/informal-essay/</loc>
+    <loc>https://jiangziyang0120.github.io/tags/informal-essay/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -200,56 +200,56 @@
 
   
   <url>
-    <loc>https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <loc>https://jiangziyang0120.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</loc>
+    <loc>https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/</loc>
+    <loc>https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/</loc>
+    <loc>https://jiangziyang0120.github.io/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/</loc>
+    <loc>https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/</loc>
     <lastmod>2022-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

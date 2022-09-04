@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>江子扬的星球</title>
-  <icon>https://tridiamond.tech/images/planet.png</icon>
+  <icon>https://jiangziyang0120.github.io/images/planet.png</icon>
   <subtitle>我的肩上是风，&lt;br&gt;风上是闪烁的星群</subtitle>
-  <link href="https://tridiamond.tech/atom.xml" rel="self"/>
+  <link href="https://jiangziyang0120.github.io/atom.xml" rel="self"/>
   
-  <link href="https://tridiamond.tech/"/>
+  <link href="https://jiangziyang0120.github.io/"/>
   <updated>2022-09-04T17:20:00.000Z</updated>
-  <id>https://tridiamond.tech/</id>
+  <id>https://jiangziyang0120.github.io/</id>
   
   <author>
     <name>江子扬-Jasper Young</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>历周记(2022-08-29 - 2022-09-04)</title>
-    <link href="https://tridiamond.tech/post/2022-W35.html"/>
-    <id>https://tridiamond.tech/post/2022-W35.html</id>
+    <link href="https://jiangziyang0120.github.io/post/2022-W35.html"/>
+    <id>https://jiangziyang0120.github.io/post/2022-W35.html</id>
     <published>2022-09-04T16:26:00.000Z</published>
     <updated>2022-09-04T17:20:00.000Z</updated>
     
@@ -29,19 +29,19 @@
     
     
     
-    <category term="随笔" scheme="https://tridiamond.tech/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://jiangziyang0120.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
-    <category term="周记" scheme="https://tridiamond.tech/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/"/>
+    <category term="周记" scheme="https://jiangziyang0120.github.io/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/"/>
     
     
-    <category term="weekly journal" scheme="https://tridiamond.tech/tags/weekly-journal/"/>
+    <category term="weekly journal" scheme="https://jiangziyang0120.github.io/tags/weekly-journal/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode 1687. Delivering Boxes from Storage to Ports</title>
-    <link href="https://tridiamond.tech/post/1687.%20Delivering%20Boxes%20from%20Storage%20to%20Ports.html"/>
-    <id>https://tridiamond.tech/post/1687.%20Delivering%20Boxes%20from%20Storage%20to%20Ports.html</id>
+    <link href="https://jiangziyang0120.github.io/post/1687.%20Delivering%20Boxes%20from%20Storage%20to%20Ports.html"/>
+    <id>https://jiangziyang0120.github.io/post/1687.%20Delivering%20Boxes%20from%20Storage%20to%20Ports.html</id>
     <published>2022-09-02T02:31:00.000Z</published>
     <updated>2022-09-02T14:22:00.000Z</updated>
     
@@ -50,21 +50,21 @@
     
     
     
-    <category term="技术笔记" scheme="https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="LeetCode笔记" scheme="https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/"/>
+    <category term="LeetCode笔记" scheme="https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="LeetCode" scheme="https://tridiamond.tech/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="https://jiangziyang0120.github.io/tags/LeetCode/"/>
     
-    <category term="Algorithms" scheme="https://tridiamond.tech/tags/Algorithms/"/>
+    <category term="Algorithms" scheme="https://jiangziyang0120.github.io/tags/Algorithms/"/>
     
   </entry>
   
   <entry>
     <title>C++的 0/3/5 规则</title>
-    <link href="https://tridiamond.tech/post/C++_0_3_5_rule.html"/>
-    <id>https://tridiamond.tech/post/C++_0_3_5_rule.html</id>
+    <link href="https://jiangziyang0120.github.io/post/C++_0_3_5_rule.html"/>
+    <id>https://jiangziyang0120.github.io/post/C++_0_3_5_rule.html</id>
     <published>2022-08-30T10:23:00.000Z</published>
     <updated>2022-08-30T11:26:00.000Z</updated>
     
@@ -73,21 +73,21 @@
     
     
     
-    <category term="技术笔记" scheme="https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="coding过程中踩过的坑" scheme="https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
+    <category term="coding过程中踩过的坑" scheme="https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
     
     
-    <category term="C++" scheme="https://tridiamond.tech/tags/C/"/>
+    <category term="C++" scheme="https://jiangziyang0120.github.io/tags/C/"/>
     
-    <category term="debug" scheme="https://tridiamond.tech/tags/debug/"/>
+    <category term="debug" scheme="https://jiangziyang0120.github.io/tags/debug/"/>
     
   </entry>
   
   <entry>
     <title>linux如何通过SMTP服务器发送QQ邮件</title>
-    <link href="https://tridiamond.tech/post/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6.html"/>
-    <id>https://tridiamond.tech/post/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6.html</id>
+    <link href="https://jiangziyang0120.github.io/post/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6.html"/>
+    <id>https://jiangziyang0120.github.io/post/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6.html</id>
     <published>2022-06-28T10:23:00.000Z</published>
     <updated>2022-09-04T17:24:36.618Z</updated>
     
@@ -96,21 +96,21 @@
     
     
     
-    <category term="技术笔记" scheme="https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Computer Networking" scheme="https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/"/>
+    <category term="Computer Networking" scheme="https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/"/>
     
     
-    <category term="Web" scheme="https://tridiamond.tech/tags/Web/"/>
+    <category term="Web" scheme="https://jiangziyang0120.github.io/tags/Web/"/>
     
-    <category term="tutorial" scheme="https://tridiamond.tech/tags/tutorial/"/>
+    <category term="tutorial" scheme="https://jiangziyang0120.github.io/tags/tutorial/"/>
     
   </entry>
   
   <entry>
     <title>黎明静悄悄</title>
-    <link href="https://tridiamond.tech/post/%E9%BB%8E%E6%98%8E%E9%9D%99%E6%82%84%E6%82%84.html"/>
-    <id>https://tridiamond.tech/post/%E9%BB%8E%E6%98%8E%E9%9D%99%E6%82%84%E6%82%84.html</id>
+    <link href="https://jiangziyang0120.github.io/post/%E9%BB%8E%E6%98%8E%E9%9D%99%E6%82%84%E6%82%84.html"/>
+    <id>https://jiangziyang0120.github.io/post/%E9%BB%8E%E6%98%8E%E9%9D%99%E6%82%84%E6%82%84.html</id>
     <published>2021-09-07T19:35:00.000Z</published>
     <updated>2022-09-02T03:03:53.668Z</updated>
     
@@ -119,17 +119,17 @@
     
     
     
-    <category term="随笔" scheme="https://tridiamond.tech/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://jiangziyang0120.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="informal essay" scheme="https://tridiamond.tech/tags/informal-essay/"/>
+    <category term="informal essay" scheme="https://jiangziyang0120.github.io/tags/informal-essay/"/>
     
   </entry>
   
   <entry>
     <title>链接器查找范围</title>
-    <link href="https://tridiamond.tech/post/%E9%93%BE%E6%8E%A5%E5%99%A8%E6%9F%A5%E6%89%BE%E8%8C%83%E5%9B%B4.html"/>
-    <id>https://tridiamond.tech/post/%E9%93%BE%E6%8E%A5%E5%99%A8%E6%9F%A5%E6%89%BE%E8%8C%83%E5%9B%B4.html</id>
+    <link href="https://jiangziyang0120.github.io/post/%E9%93%BE%E6%8E%A5%E5%99%A8%E6%9F%A5%E6%89%BE%E8%8C%83%E5%9B%B4.html"/>
+    <id>https://jiangziyang0120.github.io/post/%E9%93%BE%E6%8E%A5%E5%99%A8%E6%9F%A5%E6%89%BE%E8%8C%83%E5%9B%B4.html</id>
     <published>2021-07-08T20:00:00.000Z</published>
     <updated>2022-09-04T17:24:36.618Z</updated>
     
@@ -138,21 +138,21 @@
     
     
     
-    <category term="技术笔记" scheme="https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="coding过程中踩过的坑" scheme="https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
+    <category term="coding过程中踩过的坑" scheme="https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
     
     
-    <category term="C++" scheme="https://tridiamond.tech/tags/C/"/>
+    <category term="C++" scheme="https://jiangziyang0120.github.io/tags/C/"/>
     
-    <category term="debug" scheme="https://tridiamond.tech/tags/debug/"/>
+    <category term="debug" scheme="https://jiangziyang0120.github.io/tags/debug/"/>
     
   </entry>
   
   <entry>
     <title>C++ learning notes</title>
-    <link href="https://tridiamond.tech/post/C++%20learning%20notes.html"/>
-    <id>https://tridiamond.tech/post/C++%20learning%20notes.html</id>
+    <link href="https://jiangziyang0120.github.io/post/C++%20learning%20notes.html"/>
+    <id>https://jiangziyang0120.github.io/post/C++%20learning%20notes.html</id>
     <published>2021-05-25T06:00:00.000Z</published>
     <updated>2022-01-17T08:54:00.000Z</updated>
     
@@ -161,21 +161,21 @@
     
     
     
-    <category term="技术笔记" scheme="https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Computer Science" scheme="https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/"/>
+    <category term="Computer Science" scheme="https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/"/>
     
     
-    <category term="C++" scheme="https://tridiamond.tech/tags/C/"/>
+    <category term="C++" scheme="https://jiangziyang0120.github.io/tags/C/"/>
     
-    <category term="notes" scheme="https://tridiamond.tech/tags/notes/"/>
+    <category term="notes" scheme="https://jiangziyang0120.github.io/tags/notes/"/>
     
   </entry>
   
   <entry>
     <title>机器学习</title>
-    <link href="https://tridiamond.tech/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"/>
-    <id>https://tridiamond.tech/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html</id>
+    <link href="https://jiangziyang0120.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html"/>
+    <id>https://jiangziyang0120.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html</id>
     <published>2021-03-04T11:20:00.000Z</published>
     <updated>2021-07-09T08:55:00.000Z</updated>
     
@@ -184,14 +184,14 @@
     
     
     
-    <category term="技术笔记" scheme="https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="机器学习" scheme="https://tridiamond.tech/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    <category term="机器学习" scheme="https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="notes" scheme="https://tridiamond.tech/tags/notes/"/>
+    <category term="notes" scheme="https://jiangziyang0120.github.io/tags/notes/"/>
     
-    <category term="machine learning" scheme="https://tridiamond.tech/tags/machine-learning/"/>
+    <category term="machine learning" scheme="https://jiangziyang0120.github.io/tags/machine-learning/"/>
     
   </entry>
   
