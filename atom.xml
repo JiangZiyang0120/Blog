@@ -125,9 +125,9 @@
     <category term="Computer Science" scheme="https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/"/>
     
     
-    <category term="notes" scheme="https://jiangziyang0120.github.io/tags/notes/"/>
-    
     <category term="computer system" scheme="https://jiangziyang0120.github.io/tags/computer-system/"/>
+    
+    <category term="notes" scheme="https://jiangziyang0120.github.io/tags/notes/"/>
     
   </entry>
   
@@ -190,9 +190,9 @@
     <category term="Computer Science" scheme="https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/"/>
     
     
-    <category term="C++" scheme="https://jiangziyang0120.github.io/tags/C/"/>
-    
     <category term="notes" scheme="https://jiangziyang0120.github.io/tags/notes/"/>
+    
+    <category term="C++" scheme="https://jiangziyang0120.github.io/tags/C/"/>
     
   </entry>
   
