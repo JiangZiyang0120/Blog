@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>历周记(2022-08-29 - 2022-09-04)</title>
-    <url>//post/2022-W35.html</url>
+    <url>//post/2022-W35</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>这是我在博客上写的第一篇周记，希望能用周记的形式来记录自己的生活和一些感悟。也能用输出倒逼输入的方式让自己去更多地涉猎一些内容。我始终觉得文理科并不是人生必须二选一的选项，一个程序工程师同样需要人文情怀和人文素养，才能更好地开发出吸引和满足他人诉求的产品。<br>我在上一周，乃至过去的一个月每天晚上都习惯性地开始写代码，一直熬到深夜解决问题才上床。然后被蓝光辐射地毫无困意，打开社交媒体刷刷刷，一直刷到昏昏沉沉地睡去。第二天被闹铃叫醒，也才堪堪睡够六个小时。时间一长，生物钟就彻底乱掉了，我开始间歇性嗜睡、感冒流涕不止，每日跑步也感觉跑不动了。这让我开始思考一个WLB(Work&amp;Life Balance) 的问题。这也是本次周记的话题。</p>
 <h2 id="如何看待-WLB"><a href="#如何看待-WLB" class="headerlink" title="如何看待 WLB"></a>如何看待 WLB</h2><p>对许多大学学生而言，我们对 WLB 其实缺乏清晰的认知。一方面，学生，尤其是大学生，并没有严格的工作与时间的界限。出于个人规划与目标的不同，日日刷图书馆者有之，爆肝做项目者有之，每天摸鱼直到考试周熬夜补天者亦有之。  另一方面，学生的工作时间往往不怎么受到重视（因为大学生是极好的廉价劳动力），时常是召之即来挥之即去，这也导致学生的工作&#x2F;学习时间极不固定。<br>这种大学生活虽给了我们极大的自由，让我们可以根据自己需求来分配时间，但我认为在某种程度上这并不是一种好事。一方面，我们需要养成对“工作”的概念，找到自己认可的，能够实现自我价值的事业，然后不断精进——注意，这里需要的是一种自发而自觉的工作；另一方面，我们也需要掌握调剂工作与生活的艺术，找到适合自己的工作节奏和享受生活的态度。从这种意义上来说，八小时工作制是一种很值得借鉴的生活方式——每日给工作留足一定的时间，剩下的时间用于享受生活（当然，也可以用于发展兴趣、探索不同于日常工作的，可以提升自己的那一部分），总之，与工作保留出足够的距离。以免过快地消耗自己的激情和发展潜力。<br>在两天前，我终于堪堪调整好了自己的生物钟，也进一步规划好了自己的学习时间表。主要任务就是把自己的编程和学习计算机知识的活动调到下午，以免自己沉迷学习无法自拔，再次陷入熬夜的不良循环中去。但是终极目标仍然是坚持自己的时间表，不要为任务所困。到点后，记录完自己的状态和todo-list，然后迅速回归生活。不要陷入周期性的<a href="https://asana.com/zh-tw/resources/parkinsons-law">帕金森</a>危机中去。</p>
 <h2 id="时间冗余的最大杀手"><a href="#时间冗余的最大杀手" class="headerlink" title="时间冗余的最大杀手"></a>时间冗余的最大杀手</h2><p>该条引自<a href="https://twitter.com/Svwang1">硅谷王川</a>的推特：</p>
@@ -37,7 +37,7 @@
   </entry>
   <entry>
     <title>LeetCode 1687. Delivering Boxes from Storage to Ports</title>
-    <url>//post/1687.%20Delivering%20Boxes%20from%20Storage%20to%20Ports.html</url>
+    <url>//post/1687.%20Delivering%20Boxes%20from%20Storage%20to%20Ports</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="Problem-Discription"><a href="#Problem-Discription" class="headerlink" title="Problem Discription"></a>Problem Discription</h2><pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">You have the task of delivering some boxes from storage to their ports using only one ship. However, this ship has a <span class="token bold"><span class="token punctuation">**</span><span class="token content">limit</span><span class="token punctuation">**</span></span> on the <span class="token bold"><span class="token punctuation">**</span><span class="token content">number of boxes</span><span class="token punctuation">**</span></span> and the <span class="token bold"><span class="token punctuation">**</span><span class="token content">total weight</span><span class="token punctuation">**</span></span> that it can carry.
 
 You are given an array <span class="token code-snippet code keyword">`boxes`</span>, where <span class="token code-snippet code keyword">`boxes[i] = [ports​​i​, weighti]`</span>, and three integers <span class="token code-snippet code keyword">`portsCount`</span>, <span class="token code-snippet code keyword">`maxBoxes`</span>, and <span class="token code-snippet code keyword">`maxWeight`</span>.
@@ -191,7 +191,7 @@ public:
   </entry>
   <entry>
     <title>C++的 0/3/5 规则</title>
-    <url>//post/C++_0_3_5_rule.html</url>
+    <url>//post/C++_0_3_5_rule</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
 <path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
 <path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
@@ -321,7 +321,7 @@ public:
   </entry>
   <entry>
     <title>linux如何通过SMTP服务器发送QQ邮件</title>
-    <url>//post/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6.html</url>
+    <url>//post/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>这是《计算机网络——自顶向下方法》里的一个小实验，对理解smtp的交流和电子邮件的报头都很有帮助。是个很值得尝试的实验。</p>
 <p>首先，我们需要下载 telnet</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudo apt install telnetd -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -374,7 +374,7 @@ Could you reach this message?
   </entry>
   <entry>
     <title>黎明静悄悄</title>
-    <url>//post/%E9%BB%8E%E6%98%8E%E9%9D%99%E6%82%84%E6%82%84.html</url>
+    <url>//post/%E9%BB%8E%E6%98%8E%E9%9D%99%E6%82%84%E6%82%84</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="黎明静悄悄"><a href="#黎明静悄悄" class="headerlink" title="黎明静悄悄"></a>黎明静悄悄</h1><h2 id="子夜"><a href="#子夜" class="headerlink" title="子夜"></a>子夜</h2><blockquote><span class="custom-blockquote-svg"><svg width="24" height="24" viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
 <path fill="" d="M22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.8 22 15.5 21.5 17 20.6L22 22L20.7 17C21.5 15.5 22 13.8 22 12Z" undefined="1"></path>
 <path fill="" d="M15.97 11.5H16.04C17.12 11.5 18 12.38 18 13.47V13.53C18 14.62 17.12 15.5 16.03 15.5H15.96C14.88 15.5 14 14.62 14 13.53V13.46C14 12.38 14.88 11.5 15.97 11.5Z" undefined="1"></path>
@@ -467,7 +467,7 @@ Could you reach this message?
   </entry>
   <entry>
     <title>链接器查找范围</title>
-    <url>//post/%E9%93%BE%E6%8E%A5%E5%99%A8%E6%9F%A5%E6%89%BE%E8%8C%83%E5%9B%B4.html</url>
+    <url>//post/%E9%93%BE%E6%8E%A5%E5%99%A8%E6%9F%A5%E6%89%BE%E8%8C%83%E5%9B%B4</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="解决Visual-Studio的-LNK2019-和-LNK1120-错误"><a href="#解决Visual-Studio的-LNK2019-和-LNK1120-错误" class="headerlink" title="解决Visual Studio的 LNK2019 和 LNK1120 错误"></a>解决Visual Studio的 LNK2019 和 LNK1120 错误</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>写了一个 text searching 的代码。该代码设计了数个类，并有一个 interface class 通过指向 base class 的 shared_ptr 通过 dynamic binding 来运行。然而结构设计的不是特别好，这也就导致我遇到了下面的问题：</p>
 <span id="more"></span>
 
@@ -575,7 +575,7 @@ Could you reach this message?
   </entry>
   <entry>
     <title>C++ learning notes</title>
-    <url>//post/C++%20learning%20notes.html</url>
+    <url>//post/C++%20learning%20notes</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="C-learning-notes"><a href="#C-learning-notes" class="headerlink" title="C++ learning notes"></a>C++ learning notes</h1><h2 id="Generic-algorithm"><a href="#Generic-algorithm" class="headerlink" title="Generic algorithm"></a>Generic algorithm</h2><h3 id="lambda"><a href="#lambda" class="headerlink" title="lambda"></a>lambda</h3><p>[capture list] (parameter list) -&gt; return type {function body}</p>
 <p>we can ignore the <em>parameter list</em> and <em>return type</em>, but the <em>capture list</em> and the <em>function body</em> must be reserved</p>
 <p>eg:</p>
@@ -1454,7 +1454,7 @@ ostream <span class="token operator">&amp;</span><span class="token function">pr
   </entry>
   <entry>
     <title>机器学习</title>
-    <url>//post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html</url>
+    <url>//post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="欠拟合与过拟合"><a href="#欠拟合与过拟合" class="headerlink" title="欠拟合与过拟合"></a>欠拟合与过拟合</h1><p>在机器学习过程中，我们将学习器的实际输出$f(x;D)$ ($D$为训练集）与样本的真实输出 $y_{D}$之间的差异称为“误差”。<br>我们称学习器在训练集上的误差称之为“训练误差”(training error)或“经验误差”(empirical error)，在新样本上的误差称为“泛化误差”(generalization error)。<br>大部分情况下，我们可以获得一个在训练集上表现很好，经验误差非常小的学习器。然而，当一个学习器对训练集拟合程度非常好时，往往意味着它学习了训练集中那些并不普遍的规律。因而在面对新样本时产生了错判，导致学习器的泛化能力下降。这种现象在机器学习中被成为“过拟合”(overfitting)现象。与之相对的是“欠拟合”(underfitting)现象，即学习器未能很好地学习样本的普遍规律。<br><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1632911339/watermark_scdyry.jpg" alt="过拟合与欠拟合现象"><br>我们训练学习器的目的是为了获取泛化能力较好的模型。然而，我们无法直接获得泛化误差，而对训练集的误差评估又存在过拟合等问题。因此，我们需要讨论针对模型的评估方法，以获取表现较好的模型。</p>
 <h1 id="评估方法"><a href="#评估方法" class="headerlink" title="评估方法"></a>评估方法</h1><p>为了评估模型的泛化能力，我们将数据集$D$进行适当的处理，分为训练集$S$(training set)和测试集$T$(testing set)。接下来讨论几种常见的划分数据集的方法。</p>
 <h2 id="留出法"><a href="#留出法" class="headerlink" title="留出法"></a>留出法</h2><p>“留出法”(hold-out)将数据集$D$划分为两个互斥的集合。其中一个作为训练集$S$，另一个作为测试集$T$。即$S\cup T &#x3D; D$且$S \cap T &#x3D;  \varnothing$。<br>需要注意的是，在划分数据集时需要尽可能保持数据分布的一致性，避免在数据划分过程中引入额外的偏差。一般采用“分层采样”(stratified sampling)的方式划分数据集。<br>为了避免单次留出法估计结果的偶然误差，一般采用若干次随机划分、重复进行实验评估后取平均值作为最终结果。<br>在划分数据集时，我们希望训练集$S$足够大以更接近$D$的普遍规律；也希望测试集$T$足够大以避免偶然误差。一般采取2&#x2F;3 ~ 4&#x2F;5的样本用于训练集，剩余的用于测试集。</p>
