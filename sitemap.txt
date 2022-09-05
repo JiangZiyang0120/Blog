@@ -1,3 +1,4 @@
+https://jiangziyang0120.github.io/atom/index.html
 https://jiangziyang0120.github.io/about/index.html
 https://jiangziyang0120.github.io/post/linux%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87SMTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%91%E9%80%81QQ%E9%82%AE%E4%BB%B6.html
 https://jiangziyang0120.github.io/post/%E9%93%BE%E6%8E%A5%E5%99%A8%E6%9F%A5%E6%89%BE%E8%8C%83%E5%9B%B4.html
@@ -20,13 +21,13 @@ https://jiangziyang0120.github.io/tags/notes/
 https://jiangziyang0120.github.io/tags/debug/
 https://jiangziyang0120.github.io/tags/Web/
 https://jiangziyang0120.github.io/tags/tutorial/
-https://jiangziyang0120.github.io/tags/machine-learning/
 https://jiangziyang0120.github.io/tags/informal-essay/
+https://jiangziyang0120.github.io/tags/machine-learning/
 https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/
 https://jiangziyang0120.github.io/categories/%E9%9A%8F%E7%AC%94/
 https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/
 https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/
-https://jiangziyang0120.github.io/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/
-https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/
 https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/
+https://jiangziyang0120.github.io/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/
 https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/
+https://jiangziyang0120.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/
