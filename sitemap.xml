@@ -181,6 +181,13 @@
   </url>
   
   <url>
+    <loc>https://jzy-planet.com/tags/debug/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jzy-planet.com/tags/Web/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -189,13 +196,6 @@
   
   <url>
     <loc>https://jzy-planet.com/tags/tutorial/</loc>
-    <lastmod>2022-09-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jzy-planet.com/tags/debug/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -225,6 +225,13 @@
   </url>
   
   <url>
+    <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -232,14 +239,7 @@
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/</loc>
-    <lastmod>2022-09-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/</loc>
+    <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -253,7 +253,7 @@
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</loc>
+    <loc>https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
