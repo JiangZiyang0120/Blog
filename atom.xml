@@ -6,7 +6,7 @@
   <link href="https://jzy-planet.com/atom.xml" rel="self"/>
   
   <link href="https://jzy-planet.com/"/>
-  <updated>2022-09-04T17:20:00.000Z</updated>
+  <updated>2022-09-10T07:42:00.000Z</updated>
   <id>https://jzy-planet.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LeetCode 188. Best Time to Buy and Sell Stock IV</title>
+    <link href="https://jzy-planet.com/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/"/>
+    <id>https://jzy-planet.com/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/</id>
+    <published>2022-09-10T07:14:00.000Z</published>
+    <updated>2022-09-10T07:42:00.000Z</updated>
+    
+    
+    <summary type="html">LeetCode第[188]题的笔记</summary>
+    
+    
+    
+    <category term="技术笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="LeetCode笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="LeetCode" scheme="https://jzy-planet.com/tags/LeetCode/"/>
+    
+    <category term="Algorithms" scheme="https://jzy-planet.com/tags/Algorithms/"/>
+    
+  </entry>
+  
+  <entry>
     <title>历周记(2022-08-29 - 2022-09-04)</title>
     <link href="https://jzy-planet.com/2022/09/04/2022-w35/"/>
     <id>https://jzy-planet.com/2022/09/04/2022-w35/</id>
     <published>2022-09-04T16:26:00.000Z</published>
-    <updated>2022-09-04T17:20:00.000Z</updated>
+    <updated>2022-09-06T07:31:00.000Z</updated>
     
     
     <summary type="html">这是我在博客上写的第一篇周记，希望能用周记的形式来记录自己的生活和一些感悟。也能用输出倒逼输入的方式让自己去更多地涉猎一些内容。我始终觉得文理科并不是人生必须二选一的选项，一个程序工程师同样需要人文情怀和人文素养，才能更好地开发出吸引和满足他人诉求的产品。
@@ -169,29 +192,6 @@
     <category term="C++" scheme="https://jzy-planet.com/tags/C/"/>
     
     <category term="notes" scheme="https://jzy-planet.com/tags/notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习</title>
-    <link href="https://jzy-planet.com/2021/03/04/ji-qi-xue-xi/"/>
-    <id>https://jzy-planet.com/2021/03/04/ji-qi-xue-xi/</id>
-    <published>2021-03-04T11:20:00.000Z</published>
-    <updated>2021-07-09T08:55:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;strong&gt;自用笔记&lt;/strong&gt;：仅供参考&lt;br&gt; 周志华《机器学习》笔记</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="机器学习" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="notes" scheme="https://jzy-planet.com/tags/notes/"/>
-    
-    <category term="machine learning" scheme="https://jzy-planet.com/tags/machine-learning/"/>
     
   </entry>
   

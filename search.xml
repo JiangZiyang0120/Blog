@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>LeetCode 188. Best Time to Buy and Sell Stock IV</title>
+    <url>/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="Analyse"><a href="#Analyse" class="headerlink" title="Analyse"></a>Analyse</h2><p>This is another dynamic programming problem similar to <a href="https://jzy-planet.com/2022/09/01/1687.delivering-boxes-from-storage-to-ports/">1687. Delivering Boxes from Storage to Ports</a>. And however, with a limitation of purchase times. We can just use two iteration on this question. One is the iteration of vector prices(conspicuously), and another is the iteration of purchase times k.<br>What’s more, we need to purchase a good before selling it. Thus we need to record the purchases. And the code is as below</p>
+<pre class=" language-C++"><code class="language-C++">class Solution &#123;
+public:
+    int maxProfit(int k, vector<int>& price) &#123;
+        vector<int> profit(2*k+1, INT_MIN);
+        //if we do nothing, the profit is 0 without doubt
+        profit[0] = 0;
+
+        //the iteration of prices vector
+        for(int j = 0; j < price.size(); j++) &#123;
+            //the iteration of transaction times
+            /*for each i, profit[i+1] is the profit with a good in stock,
+             *and profit[i+2] is the profit after selling goods.
+             */
+            for(int i = 0; i+2 <= 2*k; i += 2)&#123;
+                profit[i+1] = max(profit[i+1], profit[i]-price[j]);
+                profit[i+2] = max(profit[i+2], profit[i+1]+price[j]);
+            &#125;
+        &#125;
+        return *max_element(profit.begin(), profit.end());
+    &#125;
+&#125;;
+</code></pre>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://jzy-planet.com/2022/09/01/1687.delivering-boxes-from-storage-to-ports/">1687. Delivering Boxes from Storage to Ports</a><br><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/discuss/2555708/Easy-solution-Explained-oror-Beginner-Friendly-oror-Best-Method">✅Easy solution Explained || Beginner Friendly 🔥||✔️ Best Method</a></p>
+]]></content>
+      <categories>
+        <category>技术笔记</category>
+        <category>LeetCode笔记</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>历周记(2022-08-29 - 2022-09-04)</title>
     <url>/2022/09/04/2022-w35/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>这是我在博客上写的第一篇周记，希望能用周记的形式来记录自己的生活和一些感悟。也能用输出倒逼输入的方式让自己去更多地涉猎一些内容。我始终觉得文理科并不是人生必须二选一的选项，一个程序工程师同样需要人文情怀和人文素养，才能更好地开发出吸引和满足他人诉求的产品。<br>我在上一周，乃至过去的一个月每天晚上都习惯性地开始写代码，一直熬到深夜解决问题才上床。然后被蓝光辐射地毫无困意，打开社交媒体刷刷刷，一直刷到昏昏沉沉地睡去。第二天被闹铃叫醒，也才堪堪睡够六个小时。时间一长，生物钟就彻底乱掉了，我开始间歇性嗜睡、感冒流涕不止，每日跑步也感觉跑不动了。这让我开始思考一个WLB(Work&amp;Life Balance) 的问题。这也是本次周记的话题。</p>
@@ -31,67 +68,7 @@
   <entry>
     <title>LeetCode 1687. Delivering Boxes from Storage to Ports</title>
     <url>/2022/09/01/1687.delivering-boxes-from-storage-to-ports/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="Problem-Discription"><a href="#Problem-Discription" class="headerlink" title="Problem Discription"></a>Problem Discription</h2><pre class=" language-markdown"><code class="language-markdown">You have the task of delivering some boxes from storage to their ports using only one ship. However, this ship has a <span class="token bold"><span class="token punctuation">**</span>limit<span class="token punctuation">**</span></span> on the <span class="token bold"><span class="token punctuation">**</span>number of boxes<span class="token punctuation">**</span></span> and the <span class="token bold"><span class="token punctuation">**</span>total weight<span class="token punctuation">**</span></span> that it can carry.
-
-You are given an array <span class="token code keyword">`boxes`</span>, where <span class="token code keyword">`boxes[i] = [ports​​i​, weighti]`</span>, and three integers <span class="token code keyword">`portsCount`</span>, <span class="token code keyword">`maxBoxes`</span>, and <span class="token code keyword">`maxWeight`</span>.
-
-- <span class="token code keyword">`ports​​i`</span> is the port where you need to deliver the <span class="token code keyword">`ith`</span> box and <span class="token code keyword">`weightsi`</span> is the weight of the <span class="token code keyword">`ith`</span> box.
-- <span class="token code keyword">`portsCount`</span> is the number of ports.
-- <span class="token code keyword">`maxBoxes`</span> and <span class="token code keyword">`maxWeight`</span> are the respective box and weight limits of the ship.
-
-The boxes need to be delivered <span class="token bold"><span class="token punctuation">**</span>in the order they are given<span class="token punctuation">**</span></span>. The ship will follow these steps:
-
-<span class="token list punctuation">-</span> The ship will take some number of boxes from the <span class="token code keyword">`boxes`</span> queue, not violating the <span class="token code keyword">`maxBoxes`</span> and <span class="token code keyword">`maxWeight`</span> constraints.
-<span class="token list punctuation">-</span> For each loaded box <span class="token bold"><span class="token punctuation">**</span>in order<span class="token punctuation">**</span></span>, the ship will make a <span class="token bold"><span class="token punctuation">**</span>trip<span class="token punctuation">**</span></span> to the port the box needs to be delivered to and deliver it. If the ship is already at the correct port, no <span class="token bold"><span class="token punctuation">**</span>trip<span class="token punctuation">**</span></span> is needed, and the box can immediately be delivered.
-<span class="token list punctuation">-</span> The ship then makes a return <span class="token bold"><span class="token punctuation">**</span>trip<span class="token punctuation">**</span></span> to storage to take more boxes from the queue.
-
-The ship must end at storage after all the boxes have been delivered.
-
-Return *the <span class="token bold"><span class="token punctuation">**</span>minimum<span class="token punctuation">**</span></span> number of <span class="token bold"><span class="token punctuation">**</span>trips<span class="token punctuation">**</span></span> the ship needs to make to deliver all boxes to their respective ports.*
-
-<span class="token bold"><span class="token punctuation">**</span>Example 1:<span class="token punctuation">**</span></span>
-
-<span class="token bold"><span class="token punctuation">**</span>Input:<span class="token punctuation">**</span></span> boxes = [[1,1],[2,1],[1,1]], portsCount = 2, maxBoxes = 3, maxWeight = 3
-<span class="token bold"><span class="token punctuation">**</span>Output:<span class="token punctuation">**</span></span> 4
-<span class="token bold"><span class="token punctuation">**</span>Explanation:<span class="token punctuation">**</span></span> The optimal strategy is as follows:
-
-<span class="token list punctuation">-</span> The ship takes all the boxes in the queue, goes to port 1, then port 2, then port 1 again, then returns to storage. 4 trips.
-
-So the total number of trips is 4.
-Note that the first and third boxes cannot be delivered together because the boxes need to be delivered in order (i.e. the second box needs to be delivered at port 2 before the third box).
-
-<span class="token bold"><span class="token punctuation">**</span>Example 2:<span class="token punctuation">**</span></span>
-
-<span class="token bold"><span class="token punctuation">**</span>Input:<span class="token punctuation">**</span></span> boxes = [[1,2],[3,3],[3,1],[3,1],[2,4]], portsCount = 3, maxBoxes = 3, maxWeight = 6
-<span class="token bold"><span class="token punctuation">**</span>Output:<span class="token punctuation">**</span></span> 6
-<span class="token bold"><span class="token punctuation">**</span>Explanation:<span class="token punctuation">**</span></span> The optimal strategy is as follows:
-
-<span class="token list punctuation">-</span> The ship takes the first box, goes to port 1, then returns to storage. 2 trips.
-<span class="token list punctuation">-</span> The ship takes the second, third and fourth boxes, goes to port 3, then returns to storage. 2 trips.
-<span class="token list punctuation">-</span> The ship takes the fifth box, goes to port 3, then returns to storage. 2 trips.
-
-So the total number of trips is 2 + 2 + 2 = 6.
-
-<span class="token bold"><span class="token punctuation">**</span>Example 3:<span class="token punctuation">**</span></span>
-
-<span class="token bold"><span class="token punctuation">**</span>Input:<span class="token punctuation">**</span></span> boxes = [[1,4],[1,2],[2,1],[2,1],[3,2],[3,4]], portsCount = 3, maxBoxes = 6, maxWeight = 7
-<span class="token bold"><span class="token punctuation">**</span>Output:<span class="token punctuation">**</span></span> 6
-<span class="token bold"><span class="token punctuation">**</span>Explanation:<span class="token punctuation">**</span></span> The optimal strategy is as follows:
-
-<span class="token list punctuation">-</span> The ship takes the first and second boxes, goes to port 1, then returns to storage. 2 trips.
-<span class="token list punctuation">-</span> The ship takes the third and fourth boxes, goes to port 2, then returns to storage. 2 trips.
-<span class="token list punctuation">-</span> The ship takes the fifth and sixth boxes, goes to port 3, then returns to storage. 2 trips.
-
-So the total number of trips is 2 + 2 + 2 = 6.
-
-<span class="token bold"><span class="token punctuation">**</span>Constraints:<span class="token punctuation">**</span></span>
-
-- <span class="token code keyword">`1 &lt;= boxes.length &lt;= 105`</span>
-- <span class="token code keyword">`1 &lt;= portsCount, maxBoxes, maxWeight &lt;= 105`</span>
-- <span class="token code keyword">`1 &lt;= ports​​i &lt;= portsCount`</span>
-- <span class="token code keyword">`1 &lt;= weightsi &lt;= maxWeight`</span>
-</code></pre>
-<h2 id="Analyse"><a href="#Analyse" class="headerlink" title="Analyse"></a>Analyse</h2><p>As the dynamic programming solution’s max time complexity is $\text O(n^2)$. We could simply get the first solution:<br>This Code comes from <a href="https://leetcode.com/linshan007/">linshan077</a>. And it is almost the best implement of DP. Where the trip assist to decline the cost of repeatedly judging <code>boxes[j][0] == boxes[j-1][0]</code> and <code>dp</code> is the common implement of dynamic programming.</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="Analyse"><a href="#Analyse" class="headerlink" title="Analyse"></a>Analyse</h2><p>As the dynamic programming solution’s max time complexity is $\text O(n^2)$. We could simply get the first solution:<br>This Code comes from <a href="https://leetcode.com/linshan007/">linshan077</a>. And it is almost the best implement of DP. Where the trip assist to decline the cost of repeatedly judging <code>boxes[j][0] == boxes[j-1][0]</code> and <code>dp</code> is the common implement of dynamic programming.</p>
 <pre class=" language-C++"><code class="language-C++">class Solution1 &#123;
 public:
     int boxDelivering(vector<vector<int>>& boxes, int portsCount, int maxBoxes, int maxWeight) &#123;
@@ -1318,273 +1295,6 @@ ostream <span class="token operator">&amp;</span><span class="token function">pr
       <tags>
         <tag>C++</tag>
         <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习</title>
-    <url>/2021/03/04/ji-qi-xue-xi/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="欠拟合与过拟合"><a href="#欠拟合与过拟合" class="headerlink" title="欠拟合与过拟合"></a>欠拟合与过拟合</h1><p>在机器学习过程中，我们将学习器的实际输出$f(x;D)$ ($D$为训练集）与样本的真实输出 $y_{D}$之间的差异称为“误差”。<br>我们称学习器在训练集上的误差称之为“训练误差”(training error)或“经验误差”(empirical error)，在新样本上的误差称为“泛化误差”(generalization error)。<br>大部分情况下，我们可以获得一个在训练集上表现很好，经验误差非常小的学习器。然而，当一个学习器对训练集拟合程度非常好时，往往意味着它学习了训练集中那些并不普遍的规律。因而在面对新样本时产生了错判，导致学习器的泛化能力下降。这种现象在机器学习中被成为“过拟合”(overfitting)现象。与之相对的是“欠拟合”(underfitting)现象，即学习器未能很好地学习样本的普遍规律。<br><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1632911339/watermark_scdyry.jpg" alt="过拟合与欠拟合现象"><br>我们训练学习器的目的是为了获取泛化能力较好的模型。然而，我们无法直接获得泛化误差，而对训练集的误差评估又存在过拟合等问题。因此，我们需要讨论针对模型的评估方法，以获取表现较好的模型。</p>
-<h1 id="评估方法"><a href="#评估方法" class="headerlink" title="评估方法"></a>评估方法</h1><p>为了评估模型的泛化能力，我们将数据集$D$进行适当的处理，分为训练集$S$(training set)和测试集$T$(testing set)。接下来讨论几种常见的划分数据集的方法。</p>
-<h2 id="留出法"><a href="#留出法" class="headerlink" title="留出法"></a>留出法</h2><p>“留出法”(hold-out)将数据集$D$划分为两个互斥的集合。其中一个作为训练集$S$，另一个作为测试集$T$。即$S\cup T &#x3D; D$且$S \cap T &#x3D;  \varnothing$。<br>需要注意的是，在划分数据集时需要尽可能保持数据分布的一致性，避免在数据划分过程中引入额外的偏差。一般采用“分层采样”(stratified sampling)的方式划分数据集。<br>为了避免单次留出法估计结果的偶然误差，一般采用若干次随机划分、重复进行实验评估后取平均值作为最终结果。<br>在划分数据集时，我们希望训练集$S$足够大以更接近$D$的普遍规律；也希望测试集$T$足够大以避免偶然误差。一般采取2&#x2F;3 ~ 4&#x2F;5的样本用于训练集，剩余的用于测试集。</p>
-<h2 id="交叉验证法"><a href="#交叉验证法" class="headerlink" title="交叉验证法"></a>交叉验证法</h2><p>“交叉验证法”(cross validation)将数据集划分为$k$个大小相近的互斥子集 $D_{1},D_{2},…,D_{k}$ 。有$D &#x3D; D_{1} \cup  D_{2} \cup …\cup D_{k}, D_{i} \cap D_{j} &#x3D; \varnothing (i \neq j)$。每次取$k-1$个子集用于训练集，余下的子集用于测试集。最终返回这$k$个测试结果的平均值。<br>交叉验证法评估结果的稳定性和保真性很大程度上取决于$k$的取值，所以也称交叉验证法为“$k$折交叉验证”(k-fold cross validation)。$k$最常用的取值为10；也经常取值为5、20等。<br>当每次评估只取一个样本作为测试集时，则得到交叉验证法的一个特例：留一法(Leave-One-Out， 简称LOO)。由于留一法的测试集与数据集$D$只差一个样本，所以留一法的评估结果往往被认为比较准确。然而，当数据集比较大时，训练模型的计算开销可能难以承受。</p>
-<h2 id="自助法"><a href="#自助法" class="headerlink" title="自助法"></a>自助法</h2><p>当我们难以对数据集进行有效划分且无法承担留一法的巨大计算开销时，可以采用“自助法”(bootstrapping)。对于给定数据集 $D$ ，对其进行$m$次有放回的抽样，获得包含$m$个（可能出现重复样本的）数据集 $D’$ 。<br>可以计算某样本在m次抽样中始终不被抽到的概率为$(1 - \frac{1}{m})^{m}$。取极限得<br>$\lim_{x\rightarrow \infty }(1 - \frac{1}{m})^{m}.$<br>而实际中 $D\setminus D’$ 的样本数期望为$m(1 - \frac{1}{m})^{m}$。取 $D’$ 为训练集，$D\setminus D’$ 为测试集。这样，实际评估的模型与期望评估的模型都使用 $m$ 个训练样本，而我们仍然有占样本总数约1&#x2F;3的未出现在训练集中的样本用于测试。这种测试结果，亦称“包外估计”(out-of-bag estimate)。<br>自助法在数据集较小、难以有效划分训练集&#x2F;测试集时很有用。此外，自助法可以产生多个不同的训练集，这对集成学习等方法有很大的好处。然而，自助法改变了数据集的分布，会引入估计偏差。因此，当初始数据量足够时，留出法和交叉验证法更常用一些。</p>
-<h2 id="调参与最终模型"><a href="#调参与最终模型" class="headerlink" title="调参与最终模型"></a>调参与最终模型</h2><p>大多数学习算法都有参数。这些参数的设置对于模型的效果有着非常显著的影响。因此，除了对适用的学习算法进行选择外，还需要对算法参数进行设定。一般对于实数范围内取值的参数，常常采用选定范围和变化步长的方式来进行调参。<br>在建立模型过程中，我们将数据集 $D$ 划分为训练集与测试集，即每次只采用了一部分数据训练模型。在模型选择完成后，学习算法与参数配置已经选定。此时应该用数据集 $D$ 重新训练模型并提交给用户。<br>在之前的评估方法介绍中，我们将数据集划分为训练数据与测试集。并用测试数据来估计模型在实际使用时的泛化能力。因此，我们需要将训练数据划分为训练集与验证集(validation set)，基于验证集上的性能来进行模型选择和调参。（可以根据划分训练数据&#x2F;测试数据的方法来划分训练集&#x2F;验证集）。</p>
-<table>
-    <tr>
-        <td colspan="3">数据集</td> 
-   </tr>
-    <tr>
-           <td colspan="2">训练数据</td> 
-           <td>测试数据</td>   
-    </tr>
-    <tr>
-        <td>训练集</td>
-         <td>验证集</td>
-         <td>测试集</td>    
-    </tr>
-</table>
-
-<h1 id="性能度量"><a href="#性能度量" class="headerlink" title="性能度量"></a>性能度量</h1><p>为了评估学习器的泛化性能，除了有效可行的实验估计方法，还需要衡量模型泛化能力的评价标准，即性能度量(performance measure)。<br>在预测任务中，给定样例集$D &#x3D; \left { (x_{1},y_{1}),(x_{2},y_{2}),…,(x_{m},y_{m}) \right }$,学习器的预测结果为$f(x)$。在回归模型中，最常用的性能度量为“均方误差”(mean squared error)</p>
-<p>$$<br>E(f;D) &#x3D; \frac{1}{m}\sum_{i&#x3D;1}^{m}(f(x_{i}) - y_{i})^{2}.<br>$$</p>
-<p>对于数据分布$\mathfrak{D}$和概率密度函数$p(.)$，均方误差可描述为</p>
-<p>$$<br>E(f;\mathfrak{D}) &#x3D; \int_{x\sim \mathfrak{D}}(f(x) - y)^{2}p(x)dx.<br>$$</p>
-<p>接下来将介绍分类任务中常用的性能度量</p>
-<h2 id="错误率与精度"><a href="#错误率与精度" class="headerlink" title="错误率与精度"></a>错误率与精度</h2><p>对于样例集$D$，分类错误率定义为</p>
-<p>$$<br>E(f;D) &#x3D; \frac{1}{m}\sum_{i&#x3D;1}^{m}\mathbb{I}(f(x_{i} \neq y_{i}).<br>$$</p>
-<p>精度定义为</p>
-<p>$$<br>\begin{aligned}<br>acc(f;D) &amp;&#x3D; \frac{1}{m}\sum_{i&#x3D;1}^{m}\mathbb{I}(f(x_{i} &#x3D; y_{i}) \<br>&amp;&#x3D; 1 - E(f;D)<br>\end{aligned}<br>$$</p>
-<p>更一般地，对于数据分布$\mathfrak{D}$和概率密度函数$p(.)$，错误率和精度为</p>
-<p>$$<br>\begin{aligned}<br>E(f;\mathfrak{D}) &amp;&#x3D; \int_{x\sim \mathfrak{D}}\mathbb{I}(f(x)\neq y)p(x)dx,\<br>acc(f;\mathfrak{D}) &amp;&#x3D; \int_{x\sim \mathfrak{D}}\mathbb{I}(f(x) &#x3D;  y)p(x)dx.<br>\end{aligned}<br>$$</p>
-<h2 id="查准率与查全率"><a href="#查准率与查全率" class="headerlink" title="查准率与查全率"></a>查准率与查全率</h2><p>查准率(precision)用于衡量“检索出的信息中用户感兴趣的比例”<br>查全率(recall)用于衡量“用户感兴趣的信息被检索出来的比例”<br>考虑一个二分类的问题。假设用户感兴趣的信息为正例。因此，我们的学习器应当检索并向用户推荐正例。对于学习器而言，其预测结果可分为以下四类：</p>
-<center><font face="楷体">分类结果的混淆矩阵</font></center>
-<table>
-    <tr>
-        <td rowspan="2">真实情况</td>
-        <td colspan="2">预测结果</td> 
-   </tr>
-    <tr>
-           <td>正例</td> 
-           <td>反例</td>   
-    </tr>
-    <tr>
-        <td>正例</td>
-         <td>TP(真正例)</td>
-         <td>FN(假反例)</td>    
-    </tr>
-    <tr>
-        <td>反例</td>
-         <td>FP(假正例)</td>
-         <td>TN(真反例)</td>    
-    </tr>    
-</table>
-
-<p>则查准率P与查全率R的定义为：</p>
-<p>$$<br>\begin{aligned}<br>P &amp;&#x3D; \frac{TP}{TP + FP},\<br>R &amp;&#x3D; \frac{TP}{TP + FN}.<br>\end{aligned}<br>$$</p>
-<p>查准率和查全率是一对矛盾的度量。当我们将所有的样本选中，则所有用户感兴趣的样本也都被选中了，但这样查准率就比较低。而若是只挑选那些非常有把握的样本，查准率会较高，然而选中的样本占用户感兴趣的样本总量的比例就会降低，查全率也低了。<br>通常，我们可以根据学习器的预测结果（比方说预测用户感兴趣的概率大小）按照由高到低的顺序进行排序。按此顺序逐个将样本作为正例进行预测。（比方说逐次将某个概率以上的样本预测为正例），并计算出当前的查全率、查准率。以查准率为纵轴，查全率为横轴作图，就得到查准率-查全率曲线，简称“P-R曲线”。并取查准率&#x3D;查重率的点为平衡点。<br><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1632911339/watermark_type_ZmFuZ3poZW5naGV_texxd5.png" alt="P-R曲线与平衡点示意图"></p>
-<h2 id="查准率、查全率的性能度量"><a href="#查准率、查全率的性能度量" class="headerlink" title="查准率、查全率的性能度量"></a>查准率、查全率的性能度量</h2><p>综合考率学习器查准率、查全率的性能度量有</p>
-<ul>
-<li>“平衡点”(break-Even Point， 简称BEP)。</li>
-</ul>
-<p>为查准率&#x3D;查全率时的取值。若学习器A的BEP高于学习器B的，则认可学习器A优于学习器B。</p>
-<ul>
-<li>$F_{1}$度量</li>
-</ul>
-<p>$F_{1}$度量基于查准率与查全率的调和平均(harmony mean)定义的。$F_{1}$的取值范围为[0,1]，它的大小衡量了模型的稳定性，数值越大，说明模型的稳定性越好。</p>
-<p>$$<br>\begin{aligned}<br>\frac{1}{F_{1}} &amp;&#x3D; \frac{1}{2} \cdot \left(\frac{1}{P} + \frac{1}{R} \right)\<br>    F_{1} &amp;&#x3D; \frac{2 \times P \times R}{P + R} &#x3D; \frac{2 \times TP}{样例总数 + TP - TN}<br>\end{aligned}<br>$$</p>
-<ul>
-<li>$F_{\beta}$度量<br>当我们对查全率和查准率的重视程度有所不同时，我们采用$F_{\beta}$表达对查全率&#x2F;查准率的偏好</li>
-</ul>
-<p>$$<br>\begin{aligned}<br>\frac{1}{F_{\beta}} &amp;&#x3D; \frac{1}{1 + \beta^{2}} \cdot \left(\frac{1}{P} + \frac{\beta^{2}}{R}\right)\<br>    F_{\beta} &amp;&#x3D; \frac{(1+\beta^{2}) \times P \times R}{(\beta^{2} \times P) + R}<br>\end{aligned}<br>$$</p>
-<blockquote>
-<p>其中$\beta &gt; 0$度量了查全率对查准率的相对重要性。 $\beta&gt;1$时查全率有更大影响，$\beta&lt;1$时查准率有更大影响。</p>
-</blockquote>
-<p>与算术平均$\left( \frac{P+R}{2}\right)$和几何平均$(\sqrt{P \times R})$相比，调和平均更重视较小值。</p>
-<p>当我们有多个二分类混淆矩阵时，可以有如下思路综合考察查准率与查重率</p>
-<ol>
-<li>先计算各混淆矩阵的查准率与查全率，再综合计算<br>计算各混淆矩阵的查准率和查全率$(P_{1},R_{1}),(P_{2}, R_{2}),…,(P_{n},R_{n})$，再计算平均值。得到“宏查准率”(macro-P)、“宏查全率”(macro-R)、“宏$F_{1}$”(macro-$F_{1}$):</li>
-</ol>
-<p>$$<br>\begin{aligned}<br>&amp;macro!-!!P &#x3D; \frac{1}{n}\sum_{i&#x3D;1}^{n}P_{i},\<br>&amp;macro!-!!R &#x3D; \frac{1}{n}\sum_{i&#x3D;1}^{n}R_{i},\<br>&amp;macro!-!!F_{1} &#x3D; \frac{2 \times macro!-!!P \times macro!-!!R}{macro!-!!P + macro!-!!R}.<br>\end{aligned}<br>$$</p>
-<ol start="2">
-<li>先对各混淆矩阵的对应元素进行平均，再基于平均值计算<br>计算出各元素的平均值$\overline{TP}、\overline{FP}、\overline{TN}、\overline{FN}$，再基于这些平均值计算出“微查准率”(micro-P)、“微查全率”(micro-R)和“微$F_{1}$”(micro-$F_{1}$)：</li>
-</ol>
-<p>$$<br>\begin{aligned}<br>&amp;micro!-!!P &#x3D; \frac{\overline{TP}}{\overline{TP} + \overline{FP}},\<br>&amp;micro!-!!R &#x3D; \frac{\overline{TP}}{\overline{TP} + \overline{FN}},\<br>&amp;micro!-!!F_{1} &#x3D; \frac{2 \times micro!-!!P \times mairo!-!!R}{micro!-!!P + micro!-!!R}.\<br>\end{aligned}<br>$$</p>
-<h2 id="ROC与AUC"><a href="#ROC与AUC" class="headerlink" title="ROC与AUC"></a>ROC与AUC</h2><p>通常，我们根据学习器的预测结果（比方说预测用户感兴趣的概率大小）按照由高到低的顺序进行排序。并在这个排序中选取一个“截断点”(cut point)将1样本分为两部分。前一部分判定为正例，后一部分判定为反例。<br>我们可以根据任务需求来采用不同截断点。若我们更重视“查准率”，则可以选择排序靠前的位置进行截断。反之则选择排序靠后的。因此，排序质量的好坏体现了学习器在“一般情况下”泛化性能的好坏。ROC(Receiver Operating Characteristic， “受试者工作特征”)曲线就是从排序质量的角度出发研究学习器泛化性能的工具。<br>ROC曲线根据学习器的预测结果进行排序，并逐个把样本作为正例进行预测。每次计算“真正利率”(True Positive Rate, TPR)与“假正例率”(False Positive Rate, FPR)</p>
-<p>$$<br>\begin{aligned}<br>&amp;T!P!R &#x3D; \frac{TP}{TP + FN}\<br>&amp;F!P!R &#x3D; \frac{FP}{TN + FP}<br>\end{aligned}<br>$$</p>
-<p>以TPR值为纵轴，FPR值为横轴，作出POC曲线<br><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1632911338/watermark1_gtltmk.png" alt="在这里插入图片描述"><br>显然，此图中对角线对应“随即猜测”模型，而点（0，1）对应于将所有正例排在所有反例之前的“理想模型”。<br>现实中我们使用有限个测试样例绘制POC图。若给定$m^{+}$个正例和$m^{-}$个反例，根据学习器预测值进行排序。先将分类阈值设为最大，此时TPR和FPR都为0（TP和FP为0），在坐标(0,0)处标记一个点。随后依次将分类阈值设为每个样例的预测值，使其判断为正例。设前一个标记点坐标为$(x,y)$，若当前为真正例，则对应标记点坐标为$(x,y+\frac{1}{m^{+}})$；反之为$(x + \frac{1}{m^{-}}, y)$。然后用线段连接相邻点。效果如下图<br><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1632911339/watermark_type_ZmFuZ3poZW5naGV_2_zk1dyx.png" alt="在这里插入图片描述"></p>
-<p>衡量学习器泛化能力的一个比较合理的判据是POC曲线下的面积，即AUC(Area Under POC Curve)。若设POC曲线由坐标为$\left{ (x_{1},y_{1}),(x_{2},y_{2}),…,(x_{n},y_{n}) \right}$的点按序连接而成，则有</p>
-<p>$$<br>AU!C &#x3D; \frac{1}{2}\sum_{i&#x3D;1}^{m-1}(x_{i+1}-x_{i})\cdot(y_{i} + y_{i+1})<br>$$</p>
-<p>由于AUC考虑的是样本预测的排序质量，因此与排序误差有较强的联系。给定$m^{+}$和$m^{-}$个正例和反例，令$D^{+}$和$D^{-}$表示正、反例集合，则排序“损失”(loss)定义为</p>
-<p>$$<br>\iota_{rank} &#x3D; \frac{1}{m^{+}m^{-}}\sum_{x^{+}\in D^{+}}\sum_{x^{-}\in D^{-}}\left(\mathbb{I}(f(x^{+}) &lt; f(x^{-})) + \frac{1}{2}\mathbb{I}(f(x^{+}) &#x3D; f(x^{-})) \right)<br>$$</p>
-<p>容易看出$AUC &#x3D; 1 - \iota_{rank}$</p>
-<h2 id="代价敏感错误率与代价曲线"><a href="#代价敏感错误率与代价曲线" class="headerlink" title="代价敏感错误率与代价曲线"></a>代价敏感错误率与代价曲线</h2><p>在现实任务中常会遇到这种情况：不同类型的错误造成的后果不同。如医院错将健康人误诊为病人，或将患者误诊为健康人。然而，这两种错误的代价并不一致。前者增加了进一步检查的麻烦，后者则可能造成患者错过治疗的最佳时期。为了权衡不同类型错误造成的损失，可以为错误赋予“非均等代价”(unequal cost)。<br>以二分类任务为例，可以根据任务设定一个代价矩阵。其中$cost_{ij}$表示将第i类样本预测为第j类样本的代价。一般来说$cost_{ii} &#x3D; 0$。错判的代价越大，则$cost_{ij}$也越大。通过代价的比值来衡量不同错判的损失程度相差。（一般情况下，重要的是比值而非绝对值。如$cost_{01}:cost_{10} &#x3D; 5:1$与$50:10$的效果相同）。</p>
-<center><font face="楷体">二分类的代价矩阵</font></center>
-<table>
-    <tr>
-        <td rowspan="2">真实类别</td>
-        <td colspan="2">预测类别</td> 
-   </tr>
-    <tr>
-           <td>第0类</td> 
-           <td>第1类</td>   
-    </tr>
-    <tr>
-        <td>第0类</td>
-         <td>0</td>
-         <td>cost<sub>01</sub></td>    
-    </tr>
-    <tr>
-        <td>第1类</td>
-         <td>cost<sub>10</sub></td>
-         <td>0</td>    
-    </tr>    
-</table>
-
-<p>在非均等条件下，我们希望最小化“总体代价”(total cost)。若将第0类作为正例，第1类作为反例。令$D^{+}$和$D^{-}$作为正例子集和反例子集，则“代价敏感”(cost-sensitive)错误率为</p>
-<p>$$<br>E(f;D;cost) &#x3D; \frac{1}{m}\left(\sum_{x_{i} \in D^{+}}\mathbb{I}(f(x_{i}) \neq y_{i}) \times cost_{01} + \sum_{x_{i} \in D^{-}} \mathbb{I}(f(x_{i}) \neq y_{i}) \times cost_{10} \right).<br>$$</p>
-<p>也可类似地定义多任务的代价敏感性能度量。<br>在非均等条件下，我们通过“代价曲线”(cost curve)反映学习器的期望总体代价。代价曲线图的横轴为取值为[0,1]的正例概率代价：</p>
-<p>$$<br>P(+)cost &#x3D; \frac{p \times cost_{01}}{p \times cost_{01} + (1 - p) \times cost_{10}}<br>$$</p>
-<p>其中$p$是样例为正例的概率，纵轴是取值为[0,1]的正例概率代价。则归一化代价为</p>
-<p>$$<br>cost_{norm} &#x3D; \frac{F!N!R \times p \times cost_{01} + F!P!R \times (1-p) \times cost_{10}}{p \times cost_{01} + (1-p) \times cost_{10}}<br>$$</p>
-<p>其中$F!P!R$为假正例率，$F!N!R&#x3D;1-F!P!R$为假反例率。$cost_{norm}$曲线下围成的面积即为学习器的期望总体代价。</p>
-<h1 id="比较检验"><a href="#比较检验" class="headerlink" title="比较检验"></a>比较检验</h1><p>对于学习器之间的比较而言，我们希望比较其泛化性能，然而通过实验评估的方法我们获得的是测试集上的性能。二者的比对结果可能未必相同。<br>这种情况下，统计假设检验(hypothesis test)为我们进行学习器性能比较提供了重要依据。为了便于讨论，采取错误率为性能度量，用$\epsilon$表示。</p>
-<h2 id="假设检验"><a href="#假设检验" class="headerlink" title="假设检验"></a>假设检验</h2><p>在现实任务中，我们无法直接获知学习器的泛化错误率，只能获知其测试错误率$\hat{\epsilon}$。对于一个学习器而言，泛化错误率表示学习器在一个样本上犯错的概率为$\epsilon$，测试错误率$\hat{\epsilon}$表示在$m$个样本中恰有$\hat{\epsilon} \times m$个被误分类。假定测试样本是从样本总体分布中独立采样而得，则泛化错误率为$\epsilon$的学习器将其中$m’$个样本误分类、其余样本全部分类正确的概率为$\binom{m}{m’}\epsilon^{m’}(1-\epsilon)^{m - m’}$。则该学习器恰将$\hat{\epsilon} \times m$个样本误分类的概率为</p>
-<p>$$<br>P(\hat{\epsilon};\epsilon)&#x3D;\binom{m}{\hat{\epsilon} \times m}\epsilon^{\hat{\epsilon} \times m}(1 - \epsilon)^{m - \hat{\epsilon} \times m}<br>$$</p>
-<p>对于给定$\hat{\epsilon}$，可解$\partial P(\hat{\epsilon};\epsilon)&#x2F;\partial \epsilon &#x3D; 0$可得$P(\hat{\epsilon};\epsilon)$在$\epsilon &#x3D; \hat{\epsilon}$处取得最大值，符合二项分布。那么对于泛化错误率，我们考虑假设$“\epsilon \leq \epsilon_{0}”$，则在$1 - \alpha$的概率内能观测到的最大错误率为</p>
-<p>$$<br>\bar{\epsilon} &#x3D; min ; \epsilon \quad s.t. \quad \sum_{i &#x3D; \epsilon_{0}\times m + 1}^{m} \binom{m}{i}\epsilon^{i}(1-\epsilon)^{m-i} &lt; \alpha<br>$$</p>
-<p>此处的$1-\alpha$反映了结论的“置信度”(confidence)。此时若测试错误率$\hat{\epsilon}$小于临界值$\bar{\epsilon}$，则根据二项检验可以得出结论：在$\alpha$的显著度下，假设$“\epsilon \leq \epsilon_{0}”$不能被拒绝，则能以$1-\alpha$的置信度认为，学习器泛化错误率不大于$\epsilon_{0}$；否则该假设可被拒绝，即在$\alpha$的显著度下认为学习器的泛化错误率大于$\epsilon_{0}$。<br>对于多次训练&#x2F;测试得到的多个错误率$\hat{\epsilon}<em>{1},\hat{\epsilon}</em>{2},…,\hat{\epsilon}_{n}$，可以使用”t检验“(t-test)。可以得到平均测试错误率$\mu$和方差$\sigma^{2}$为</p>
-<p>$$<br>\mu &#x3D; \frac{1}{n}\sum_{i&#x3D;1}^{n}\hat{\epsilon}<em>{i}, \<br>    \sigma^{2} &#x3D; \frac{1}{n-1}\sum</em>{i&#x3D;1}^{n}(\hat{\epsilon}_{i} - \mu)^{2}.<br>$$</p>
-<p>考虑到这$n$个测试错误率可以看作泛化错误率$\epsilon_{0}$的独立采样，则变量</p>
-<p>$$<br>\tau_{t} &#x3D; \frac{\sqrt{k}(\mu - \epsilon_{0})}{\sigma}<br>$$</p>
-<p><img src="https://res.cloudinary.com/dwy9slegd/image/upload/v1632911339/watermar_aemqpc.png" alt="在这里插入图片描述"><br>服从自由度为$k-1$的$t$分布。此时对于假设$“\mu &#x3D; \epsilon_{0}”$和显著度$\alpha$，考虑双边(two-tailed)假设，这里两边阴影各有$\alpha&#x2F;2$的面积；若令阴影部分分别为$(-\infty,t_{-\alpha&#x2F;2}],[t_{\alpha&#x2F;2},\infty)$，则$\tau_{t}$位于临界范围$[t_{-\alpha&#x2F;2},t_{\alpha&#x2F;2}]$内，则不能拒绝假设。下表为一些常用临界值。</p>
-<center><font face="楷体">双边t检验的常用临界值</font></center>
-<table>
-    <tr>
-        <td rowspan="2">&alpha;</td>
-        <td colspan="5">k</td> 
-   </tr>
-    <tr>
-           <td>2</td> 
-           <td>5</td>
-           <td>10</td> 
-           <td>20</td> 
-           <td>30</td>    
-    </tr>
-    <tr>
-        <td>0.05</td>
-        <td>12.706</td> 
-           <td>2.776</td>
-           <td>2.262</td> 
-           <td>2.093</td> 
-           <td>2.045</td>    
-    </tr>
-    <tr>
-        <td>0.10</td>
-        <td>6.314</td> 
-           <td>2.132</td>
-           <td>1.833</td> 
-           <td>1.729</td> 
-           <td>1.699</td>    
-    </tr>    
-</table>
-
-<h2 id="交叉验证t检验"><a href="#交叉验证t检验" class="headerlink" title="交叉验证t检验"></a>交叉验证t检验</h2><p>对两个学习器A和B，我们使用k折交叉验证法得到测试错误率分别为$\epsilon_{1}^{A},\epsilon_{2}^{A},…,\epsilon_{k}^{A}$和$\epsilon_{1}^{B},\epsilon_{2}^{B},…,\epsilon_{k}^{B}$。使用k折交叉验证“成对t检验”(paired t-tests)来进行比较检验。该检验的基本思想为若两个学习器相同，则它们使用相同的训练&#x2F;测试集得到的测试错误率也应相同，即$\epsilon_{i}^{A} &#x3D; \epsilon_{i}^{B}$。<br>计算方法为先对每队结果求差$\Delta_{i} &#x3D; \epsilon_{i}^{A} - \epsilon_{i}^{B}$。并计算出差值的均值$\mu$和方差$\sigma^{2}$，在显著度$\alpha$下，若变量</p>
-<p>$$<br>\tau_{t} &#x3D; \left| \frac{\sqrt{k}\mu}{\sigma} \right|<br>$$</p>
-<p>小于临界值$t_{\alpha&#x2F;2,k-1}$，则不拒绝假设，认为两个学习器没有显著差别。反之拒绝假设，认为平均错误率较小的学习器较优。这里的$t_{\alpha&#x2F;2,k-1}$是自由度为$k-1$的$t$分布上尾部积累分布为$\alpha&#x2F;2$的临界值。<br>为了进行有效的假设检验，需要测试错误率均为泛化错误率的独立采样。通常情况下由于样本量有限，在使用交叉验证等实验估计方法时，不同伦茨的训练集会有一定程度的重叠，使得错误率彼此不独立，会导致高估假设成立的概率。为了缓解这一问题，可以采用“$5\times 2$交叉验证法”。<br>$5\times 2$交叉验证法即做5次2折交叉验证，每次2折交叉验证前将随机将数据打乱，使得5次交叉验证中的数据划分不重复。对于学习器A和B，第$i$次2折交叉验证会产生两对测试错误率。对其分别求差得第1折和第2折的差值$\Delta_{i}^{1}，\Delta_{i}^{2}$。为了缓解测试错误率的非独立性，仅计算第1次2折交叉验证的结果的平均值$\mu &#x3D; 0.5(\Delta_{1}^{1} + \Delta_{1}^{2})$，但对每次2折实验结果都计算出方差</p>
-<p>$$<br>\sigma^{2} &#x3D; \left(\Delta_{i}^{1} - \frac{\Delta_{i}^{1} + \Delta_{i}^{2}}{2} \right)^{2} + \left(\Delta_{i}^{2} - \frac{\Delta_{i}^{1} + \Delta_{i}^{2}}{2} \right)^{2}<br>$$</p>
-<p>变量</p>
-<p>$$<br>\tau_{t} &#x3D; \frac{\mu}{\sqrt{0.2\sum_{i&#x3D;1}^{5}\sigma_{i}^{2}}}<br>$$</p>
-<p>服从自由度为4的t分布，其双边检验的临界值$t_{\alpha&#x2F;2,5}$当$\alpha$ &#x3D; 0.05时为2.776，$\alpha$ &#x3D; 0.1时为2.132。</p>
-<h2 id="McNemar检验"><a href="#McNemar检验" class="headerlink" title="McNemar检验"></a>McNemar检验</h2><p>对二分类问题，使用留出法可以列出两学习器分类结果的差别</p>
-<center><font face="楷体">两学习器分类差别列联表</font></center>
-<table>
-    <tr>
-        <td rowspan="2">算法B</td>
-        <td colspan="2">算法A</td> 
-   </tr>
-    <tr>
-           <td>正确</td> 
-           <td>错误</td>
-    </tr>
-    <tr>
-        <td>正确</td>
-        <td>e<sub>00</sub></td> 
-           <td>e<sub>01</sub></td>    
-    </tr>
-    <tr>
-        <td>错误</td>
-        <td>e<sub>10</sub></td> 
-           <td>e<sub>11</sub></td>    
-    </tr>    
-</table>
-
-<p>若假设两学习器性能相同，应有$e_{01} &#x3D; e_{10}$，则变量$|e_{01} - e_{10}|$应当服从正态分布。McNemar检验考虑变量</p>
-<p>$$<br>\tau_{\chi^{2}} &#x3D; \frac{(|e_{01}-e_{10}| - 1)^{2}}{e_{01} + e_{10}}<br>$$</p>
-<p>服从自由度为1的$\chi^{2}$分布，即标准正态分布变量的平方。对于给定显著度$\alpha$，当以上变量值小于临界值$\chi^{2}_{\alpha}$时，不能拒绝假设。否则拒绝假设，认为二者性能有显著差别，且平均错误率小的学习器性能较优。自由度为1的$\chi^{2}$检验的临界值当$\alpha$&#x3D;0.05时为3.8415，$\alpha$&#x3D;0.1时为2.7055。</p>
-<h2 id="Friedman检验与Nemenyi后续检验"><a href="#Friedman检验与Nemenyi后续检验" class="headerlink" title="Friedman检验与Nemenyi后续检验"></a>Friedman检验与Nemenyi后续检验</h2><p>当有多个算法参与比较时，我们采用基于算法排序的Friedman检验。先根据留出法或交叉验证法对每个数据集上的性能进行测试并依次排序（1、2、3…）。如果性能相同则取平均值。假定我们在$N$个数据集上比较$k$个算法，令$r_{i}$表示第$i$个算法的平均序值，则$r_{i}$的均值和方差分别为$(k+1)&#x2F;2$和$(k^{2}-1)&#x2F;12N$。变量</p>
-<p>$$<br>\begin{aligned}<br>\tau_{\chi^{2}} &amp;&#x3D; \frac{k-1}{k}\cdot\frac{12N}{k^{2}-1}\sum_{i&#x3D;1}^{k}\left(r_{i} - \frac{k+1}{2} \right)^{2} \<br>    &amp;&#x3D;\frac{12N}{k(k+1)}\left(\sum_{i&#x3D;1}^{k}r_{i}^{2}-\frac{k(k+1)^{2}}{4} \right)\<br>\tau_{F} &amp;&#x3D; \frac{(N-1)\tau_{\chi^{2}}}{N(k-1) - \tau_{\chi^{2}}}<br>\end{aligned}<br>$$</p>
-<p>$\tau_{F}$服从自由度为$k-1$和$(k-1)(N-1)$的$F$分布。<br>若“所有算法性能相同”的假设被拒绝，则说明算法性能显著不同。此次需要“后续检验”(post-hoc test)来进一步区分各算法。如Nemenyi后续检验，其平均序值差别的临界区域为</p>
-<p>$$<br>CD &#x3D; q_{\alpha}\sqrt{\frac{k(k+1)}{6N}}<br>$$</p>
-<p>若两算法的平均序值之差超过了临界值域$CD$，则拒绝“两算法性能相同”的假设。</p>
-<h1 id="偏差与方差"><a href="#偏差与方差" class="headerlink" title="偏差与方差"></a>偏差与方差</h1><p>对测试样本$x$，令$y_{D}$为$x$在数据集中的标记，$y$为$x$的真实标记，$f(x;D)$为训练集$D$上学得模型$f$在$x$上的预测输出。<br>以回归方程为例，学习算法的期望预测为</p>
-<p>$$<br>\bar{f}(x) &#x3D; \mathbb{E}_{D}[f(x;D)]<br>$$</p>
-<p>使用样本数相同的不同训练集产生的方差为</p>
-<p>$$<br>var(x) &#x3D; \mathbb{E}_{D}\left[\left(f(x;D)-\bar{f}(x) \right)^{2} \right]<br>$$</p>
-<p>噪声为</p>
-<p>$$<br>\varepsilon^{2} &#x3D; \mathbb{E}<em>{D}\left[(y</em>{D} - y)^{2} \right]<br>$$</p>
-<p>期望输出与真实标记的差别称为偏差(bias)，即</p>
-<p>$$<br>bias^{2}(x) &#x3D; \left(\bar{f}(x) - y \right)^{2}<br>$$</p>
-<p>为了便于讨论，假定噪声期望为零，即$\mathbb{E}<em>{D}[y</em>{D}-y]&#x3D;0$。通过·简单多项式展开合并，可以对算法的期望泛化误差进行分解：</p>
-<p>$$<br>\begin{aligned}<br>E(f;D) &amp;&#x3D; \mathbb{E}<em>{D}\left[\left(f(x;D) - y</em>{D} \right)^{2} \right] \<br>&amp; &#x3D;  \mathbb{E}<em>{D}\left[\left(f(x;D) - \bar{f}(x) + \bar{f}(x) - y</em>{D} \right)^{2} \right] \<br>&amp; &#x3D; \mathbb{E}<em>{D}\left[\left(f(x;D) - \bar{f}(x) \right)^{2} \right] + \mathbb{E}</em>{D}\left[\left(\bar{f}(x) - y_{D} \right)^{2} \right]\<br>&amp;\quad ;+ \mathbb{E}<em>{D}\left[2\left(f(x;D) - \bar{f}(x) \right)\left(\bar{f}(x) - y</em>{D} \right) \right] \<br>&amp;&#x3D; \mathbb{E}<em>{D}\left[\left(f(x;D) - \bar{f}(x) \right)^{2} \right]  + \mathbb{E}</em>{D}\left[\left(\bar{f}(x) - y_{D} \right)^{2} \right]\<br>&amp;&#x3D; \mathbb{E}<em>{D}\left[\left(f(x;D) - \bar{f}(x) \right)^{2} \right]  + \mathbb{E}</em>{D}\left[\left(\bar{f}(x) - y + y - y_{D} \right)^{2} \right]\<br>&amp;&#x3D;  \mathbb{E}<em>{D}\left[\left(f(x;D) - \bar{f}(x) \right)^{2} \right] +  \mathbb{E}</em>{D}\left[\left(\bar{f}(x) - y \right)^{2} \right] + \mathbb{E}<em>{D}\left[\left(\bar{f}(x) - y \right)^{2} \right]\<br>&amp;\quad ; + 2\mathbb{E}</em>{D}\left[\left(\bar{f}(x) - y \right)(y-y_{D}) \right]\<br>&amp;&#x3D; \mathbb{E}<em>{D}\left[\left(f(x;D) - \bar{f}(x) \right)^{2} \right] +  \mathbb{E}</em>{D}\left[\left(\bar{f}(x) - y \right)^{2} \right] + \mathbb{E}<em>{D}\left[\left(y</em>{D} - y \right)^{2} \right]<br>\end{aligned}<br>$$</p>
-<p>即</p>
-<p>$$<br>\mathbb{E}(f;D) &#x3D; bias^{2}(x) + var(x) + \varepsilon^{2}<br>$$</p>
-<p>即泛化误差可以分解为偏差、方差与噪声之和。其中偏差度量了学习算法的期望预测与真实结果的偏离程度，即刻画了学习算法本身的拟合能力。方差度量了同样大小的训练集的变动所导致的学习性能的变化，即刻画了数据扰动所造成的影响。噪声表达了在当前任务上任何学习算法所能达到的期望泛化误差的下界，即刻画了学习任务本身的难度。<br>一般来说，偏差和方差是有冲突的。这被称为偏差-方差窘境(bias-variance dilemma)。对于一个学习任务，在训练不足时，学习器的拟合能力不够强，训练数据的扰动不足以使学习器产生显著变化，此时偏差主导了泛化错误率。训练程度较深时，拟合能力加强，训练数据的扰动能被学习器学到，则方差开始主导了泛化错误率。若训练数据自身的、非全局的特性被学习器学到了，则会发生过拟合现象。</p>
-<h1 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h1><p>线性模型(linear model)试图学得一个线性函数</p>
-<p>$$<br>f(\boldsymbol{x})&#x3D;w_{1}x_{1} + w_{2}x_{2} +… +w_{d}x_{d} + b \tag{2,1} \<br>f(\boldsymbol{x}) &#x3D; \boldsymbol{w}^{T}\boldsymbol{x} + b<br>$$</p>
-<p>其中$\boldsymbol{w} &#x3D; (w_{1};w_{2};…;w_{d})$。<br>线性模型虽然简单，但蕴含着机器学习中一些重要思想。许多功能强大的非线性模型(nonlinear model)可以在线性模型的基础上通过引入层级结构或高维映射而得。此外，由于$\boldsymbol{w}$直观地表达了各属性在预测中的重要性，因此线性模型有很好的解释性(comprehensibility)<br>对给定数据集$D &#x3D; {(\boldsymbol{x}<em>{1},y</em>{1}),(\boldsymbol{x}<em>{2},y</em>{2}),…,(\boldsymbol{x}<em>{m},y</em>{m}) }$，其中$\boldsymbol{x}<em>{i} &#x3D; (x</em>{i1};x_{i2};…;x_{id}),y_{i} \in \mathbb{R}$。先假设建立一元线性回归模型，有</p>
-<p>$$<br>f(x_{i}) &#x3D; wx_{i} + b,s.t.f(x_{i})\simeq y_{i} \tag{2.2}<br>$$</p>
-<p>存在</p>
-<p>$$<br>\begin{aligned}<br>E_{(w,b)}&#x3D;(w^{<em>},b^{</em>})&amp;&#x3D;\underset{(w,b)}{arg ; min}\sum_{i&#x3D;1}^{m}\left(f(x_{i}) - y_{i} \right)^{2} \<br>&amp;&#x3D;\underset{(w,b)}{arg ; min}\sum_{i&#x3D;1}^{m}\left(y_{i} - wx_{i} - b \right)^{2}<br>\end{aligned}	\tag{2.3}<br>$$</p>
-<p>对$E_{(w,b)}$分别求偏导得</p>
-<p>$$<br>\begin{aligned}<br>&amp;\frac{\partial E_{(w,b)}}{\partial w} &#x3D; 2\left(w\sum^{m}<em>{i&#x3D;1}x</em>{i}^{2} - \sum^{m}<em>{i&#x3D;1}(y</em>{i}-b)x_{i} \right),\<br>&amp;	\frac{\partial E_{(w,b)}}{\partial b} &#x3D; 2\left(mb - \sum^{m}<em>{i&#x3D;1}(y</em>{i} - wx_{i}) \right)<br>\end{aligned}<br>\tag{2.4}<br>$$</p>
-<p>二式联立并使偏导为零可得</p>
-<p>$$<br>\begin{aligned}<br>&amp;w &#x3D; \frac{\sum^{m}<em>{i&#x3D;1}y</em>{i}(x_{i} - \bar{x})}{\sum^{m}<em>{i&#x3D;1}x</em>{i}^{2}-\frac{1}{m}\left(\sum^{m}<em>{i&#x3D;1}x</em>{i} \right)^{2}} \<br>&amp;b &#x3D; \frac{1}{m}\sum^{m}<em>{i&#x3D;1}(y</em>{i} - wx_{i})<br>\end{aligned}<br>\tag{2.5}<br>$$</p>
-<p>其中$\bar{x} &#x3D; \frac{1}{m}\sum^{m}<em>{i&#x3D;1}x</em>{i}$为$x$的均值。<br>对于多元线性回归，取</p>
-<p>$$<br>\begin{aligned}<br>&amp;\hat{\boldsymbol{w}}&#x3D;(\boldsymbol{w};b)\<br>&amp;\textbf{X}&#x3D;\begin{pmatrix}<br> x_{11}  &amp;x_{12}  &amp;… &amp;x_{1d} &amp;1\<br> x_{21}  &amp;x_{22}  &amp;… &amp;x_{2d} &amp;1 \<br> \vdots &amp;\vdots  &amp;\ddots  &amp;\vdots  &amp;\vdots \<br> x_{m1}  &amp;x_{m2}  &amp;… &amp;x_{md} &amp;1<br>\end{pmatrix} &#x3D; \begin{pmatrix}<br>\boldsymbol{x}<em>{1}^{T} &amp;1\<br>\boldsymbol{x}</em>{2}^{T} &amp;1\<br>\vdots &amp;\vdots \<br>\boldsymbol{x}<em>{m}^{T} &amp;1<br>\end{pmatrix}\<br>&amp;\boldsymbol{y} &#x3D; (y</em>{1};y_{2};…;y_{m})<br>\end{aligned}<br>$$</p>
-<p>类同一元线性回归有</p>
-<p>$$<br>E_{\hat{\boldsymbol{w}}} &#x3D; \hat{\boldsymbol{w}}^{*} &#x3D; \underset{\hat{w}}{arg; min}(\boldsymbol{y}-\textbf{X}\hat{\boldsymbol{w}})^{T}(\boldsymbol{y}-\textbf{X}\hat{\boldsymbol{w}})\tag{2.6}<br>$$</p>
-<p>对$\hat{\boldsymbol{w}}$求导得</p>
-<p>$$<br>\frac{\partial E_{\hat{\boldsymbol{w}}}}{\partial \hat{\boldsymbol{w}}} &#x3D; 2\textbf{X}^{T}(\textbf{X}\hat{\boldsymbol{w}}-\boldsymbol{y}) \tag{2.7}<br>$$</p>
-<p>若有$\textbf{X}^{T}\textbf{X}$为满秩矩阵(full-rank matrix)或正定矩阵(positive definite matrix)时，令偏导为零可得</p>
-<p>$$<br>\begin{aligned}<br>&amp;\hat{\boldsymbol{w}}^{*} &#x3D; (\textbf{X}^{T}\textbf{X})^{-1}\textbf{X}\boldsymbol{y}\<br>&amp;f(\hat{\boldsymbol{x}}<em>{i})&#x3D; \hat{\boldsymbol{x}}</em>{i}^{T} (\textbf{X}^{T}\textbf{X})^{-1}\textbf{X}\boldsymbol{y}<br>\end{aligned}<br>\tag{2.8}<br>$$</p>
-<p>此时有$\hat{\boldsymbol{w}}^{*} &#x3D; (\boldsymbol{w};b)$，则可将上式简写为$y &#x3D; \boldsymbol{w}^{T}\boldsymbol{x} + b$。<br>考虑单调可微函数$g(\cdot)$，令</p>
-<p>$$<br>y &#x3D; g^{-1}(\boldsymbol{w}^{T}\boldsymbol{x} + b)\tag{2.9}<br>$$</p>
-<p>得到一个“广义线性模型”(generalized linear model)，其中函数$g(\cdot)$称为“联系函数”(link function)。</p>
-<h1 id="对数回归几率"><a href="#对数回归几率" class="headerlink" title="对数回归几率"></a>对数回归几率</h1><p>考虑二分类任务，其输出标记为$y \in {0,1 }$，线性回归模型产生的预测值为$z &#x3D; \boldsymbol{w}^{T}\boldsymbol{x} + b$为实值。取对数几率函数(logistic function)</p>
-<p>$$<br>\begin{aligned}<br>y &amp;&#x3D; \frac{1}{1+e^{-z}}\<br>    &amp;&#x3D; \frac{1}{1+e^{(\boldsymbol{w}^{T}\boldsymbol{x} + b)}}<br>\end{aligned} \tag{2.10}<br>$$</p>
-<p>$$<br>ln \frac{y}{1-y} &#x3D; \boldsymbol{w}^{T}\boldsymbol{x} + b \tag{2.11}<br>$$</p>
-<p>若将$y$视为样本$\boldsymbol{x}$作为正例的可能性，则$1-y$是其反例的可能性。二者的比值$\frac{y}{1-y}$称为“几率”(odds)，反映了$\boldsymbol{x}$作为正例的相对可能性。对纪律取对数得到“对数几率”(log odds，亦称logit)为$ln\frac{y}{1-y}$。<br>可以看出对数回归几率实际上是在用线性回归模型的预测结果来逼近真实标记的对数几率。<br>下面讨论如何确定上式中的$\boldsymbol{w}$和$b$。若将(2.10)式中的$y$视为后验概率估计$p(y&#x3D;1|\boldsymbol{x})$，则(2.11)式可重写为</p>
-<p>$$<br>ln\frac{p(y&#x3D;1|\boldsymbol{x})}{p(y&#x3D;0|\boldsymbol{x})} &#x3D; \boldsymbol{w}^{T}\boldsymbol{x} + b. \tag{2.12}<br>$$</p>
-<p>显然有</p>
-<p>$$<br>p(y&#x3D;1|\boldsymbol{x}) &#x3D; \frac{e^{\boldsymbol{w}^{T}\boldsymbol{x}+b}}{1+e^{\boldsymbol{w}^{T}\boldsymbol{x}+b}} \tag{2.13}<br>$$</p>
-<p>$$<br>p(y&#x3D;0|\boldsymbol{x}) &#x3D; \frac{1}{1+e^{\boldsymbol{w}^{T}\boldsymbol{x}+b}} \tag{2.14}<br>$$</p>
-<p>通过“极大似然法”(maximum likelihood method)来估计$\boldsymbol{w}$和$b$。给定数据集${(\boldsymbol{x}<em>{i},y</em>{i}) }^{m}_{i&#x3D;1}$，对率回归模型最大化“对数似然”(log-likelihood)</p>
-<p>$$<br>\ell(\boldsymbol{w},b) &#x3D; \sum^{m}<em>{i&#x3D;1}ln\ p(y</em>{i}|\boldsymbol{x}_{i};\boldsymbol{w},b) \tag{2.15}<br>$$</p>
-<p>即令每个样本属于其真实标记的概率越大越好。为便于讨论，令 $\boldsymbol{\beta}&#x3D;(\boldsymbol{w};b),\hat{\boldsymbol{x}}&#x3D;(\boldsymbol{x};1)$，则$\boldsymbol{w}^{T}\boldsymbol{x}+b$可简写为$\boldsymbol{\beta}^{T}\hat{\boldsymbol{x}}$。再令$p_{1}(\hat{\boldsymbol{x}};\boldsymbol{\beta})&#x3D;p(y&#x3D;1|\hat{\boldsymbol{x}};\boldsymbol{\beta}),p_{0}(\hat{\boldsymbol{x}};\boldsymbol{\beta})&#x3D;p(y&#x3D;0|\hat{\boldsymbol{x}};\boldsymbol{\beta})&#x3D;1-p_{1}(\hat{\boldsymbol{x}};\boldsymbol{\beta})$，则式(2.15)中的似然项可重写为</p>
-<p>$$<br>p(y_{i}|\boldsymbol{x}<em>{i};\boldsymbol{w},b) &#x3D; y</em>{i}p_{1}(\hat{\boldsymbol{x}};\boldsymbol{\beta}) + (1-y_{i})p_{0}(\hat{\boldsymbol{x}};\boldsymbol{\beta}) \tag{2.16}<br>$$</p>
-<p>将(2.16)式代入(2.15)，并根据式(2.13)和(2.14)可知，最大化式(2.15)等价于最小化</p>
-<p>$$<br>\ell(\boldsymbol{\beta}) &#x3D; \sum^{m}<em>{i&#x3D;1}\left(-y</em>{i}\boldsymbol{\beta}^{T}\hat{\boldsymbol{x}}<em>{i} + ln\left( 1 + e^{\boldsymbol{\beta}^{T}\hat{\boldsymbol{x}}</em>{i}} \right) \right) \tag{2.17}<br>$$</p>
-<p>式(2.17)是关于$\boldsymbol{\beta}$的高阶可导连续凸函数，根据凸优化理论，经典的数值优化算法如梯度下降法(gradient descent method)、牛顿法(Newton method)等都可以求得其最优解$\boldsymbol{\beta}^{*} &#x3D; \underset{\boldsymbol{\beta}}{arg\ min}\ \ell(\boldsymbol{\beta})$<br>对于牛顿法，其第$t+1$轮迭代解的更新公式为</p>
-<p>$$<br>\boldsymbol{\beta}^{t+1} &#x3D; \boldsymbol{\beta}^{t} - \left(\frac{\partial^{2}\ell(\boldsymbol{\beta})}{\partial\boldsymbol{\beta}\partial\boldsymbol{\beta}^{T}} \right)^{-1}\frac{\partial\ell(\boldsymbol{\beta})}{\partial\boldsymbol{\beta}} \tag{2.18}<br>$$</p>
-<p>其中关于$\boldsymbol{\beta}$的一阶、二阶导数分别为</p>
-<p>$$<br>\begin{aligned}<br>\frac{\partial\ell(\boldsymbol{\beta})}{\partial\boldsymbol{\beta}} &amp;&#x3D; -\sum^{m}<em>{i&#x3D;1}\hat{\boldsymbol{x}}</em>{i}(y_{i}-p_{1}(\hat{\boldsymbol{x}};\boldsymbol{\beta})),\<br>\frac{\partial^{2}\ell(\boldsymbol{\beta})}{\partial\boldsymbol{\beta}\partial\boldsymbol{\beta}^{T}} &amp;&#x3D; \sum^{m}<em>{i&#x3D;1}\hat{\boldsymbol{x}}</em>{i}\hat{\boldsymbol{x}}^{T}<em>{i}p</em>{1}(\hat{\boldsymbol{x}};\boldsymbol{\beta})(1-p_{1}(\hat{\boldsymbol{x}};\boldsymbol{\beta})).<br>\end{aligned}<br>\tag{2.19}<br>$$</p>
-]]></content>
-      <categories>
-        <category>技术笔记</category>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>notes</tag>
-        <tag>machine learning</tag>
       </tags>
   </entry>
 </search>
