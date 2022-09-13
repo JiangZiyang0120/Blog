@@ -6,7 +6,7 @@
   <link href="https://jzy-planet.com/atom.xml" rel="self"/>
   
   <link href="https://jzy-planet.com/"/>
-  <updated>2022-09-10T07:42:00.000Z</updated>
+  <updated>2022-09-13T12:54:00.000Z</updated>
   <id>https://jzy-planet.com/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>历周记(2022-09-05 - 2022-09-11)</title>
+    <link href="https://jzy-planet.com/2022/09/10/2022-w36/"/>
+    <id>https://jzy-planet.com/2022/09/10/2022-w36/</id>
+    <published>2022-09-11T01:25:00.000Z</published>
+    <updated>2022-09-13T12:54:00.000Z</updated>
+    
+    
+    <summary type="html">又是一周结束的日子。这周经历了咽喉溃疡、返校、隔离、做核酸捅喉咙……只觉得浑浑噩噩了好几天；没想到这么快就又到了一周结束的日子了。普通人的生活，往往要拿着放大镜才能找到些许值得记录的片段的。想了想，过去一周好像没什么特别值得记录的。那就写点务虚的吧。
+
+诗心和远去的诗心
+在我很小的时候，曾一度非常喜欢诗词。虽然最早接触诗词的原因是为了和女孩子聊天有话题，但很快，我就被诗词迷住了。找话题时抱着厚厚的书籍，也颇有种醉翁之意不在酒的意味了。小时候品味不是很高，看多了汉赋和婉约词，只觉极尽华丽之辞藻，欲穷天工之文章。读这些文字就好像看到了一幅幅画卷，看到风起于青蘋之末，草色摇动；看到三秋桂子，十里荷花</summary>
+    
+    
+    
+    <category term="随笔" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="周记" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="weekly journal" scheme="https://jzy-planet.com/tags/weekly-journal/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LeetCode 188. Best Time to Buy and Sell Stock IV</title>
     <link href="https://jzy-planet.com/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/"/>
     <id>https://jzy-planet.com/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/</id>
     <published>2022-09-10T07:14:00.000Z</published>
-    <updated>2022-09-10T07:42:00.000Z</updated>
+    <updated>2022-09-10T07:44:00.000Z</updated>
     
     
     <summary type="html">LeetCode第[188]题的笔记</summary>
