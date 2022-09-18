@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="链接器查找范围, 江子扬的星球">
-    <meta name="description" content="解决Visual Studio的 LNK2019 和 LNK1120 错误问题描述写了一个 text searching 的代码。该代码设计了数个类，并有一个 interface class 通过指向 base class 的 shared">
+    <meta name="keywords" content="历周记(2022-09-12 - 2022-09-18), 江子扬的星球">
+    <meta name="description" content="对周记的一点思考我在这个博客发的第一篇周记中就说明了，我开这个周记主要是想逼迫自己输出倒逼输入。不过三周下来，我发现自己生活中值得记录的东西的确不多。考研人的生活往往朴实无华且枯燥。若是一板一眼地将我某某日做了什么题看了哪本书记录上来，那简">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>链接器查找范围 | 江子扬的星球</title>
+    <title>历周记(2022-09-12 - 2022-09-18) | 江子扬的星球</title>
     <link rel="icon" type="image/png" href="/medias/planet.png">
     
 
@@ -232,12 +232,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">链接器查找范围</h1>
+                    <h1 class="description center-align post-title">历周记(2022-09-12 - 2022-09-18)</h1>
                 </div>
             </div>
         </div>
@@ -261,12 +261,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
-                            </a>
-                        
-                            <a href="/tags/Debug/">
-                                <span class="chip bg-color">Debug</span>
+                            <a href="/tags/weekly-journal/">
+                                <span class="chip bg-color">weekly journal</span>
                             </a>
                         
                     </div>
@@ -277,12 +273,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="post-category">
-                                技术笔记
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                随笔
                             </a>
                         
-                            <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" class="post-category">
-                                coding过程中踩过的坑
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/" class="post-category">
+                                周记
                             </a>
                         
                     </div>
@@ -294,7 +290,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-09
+                    2022-09-18
                 </div>
                 
 
@@ -308,14 +304,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    7 分
                 </div>
                 
 
@@ -335,57 +331,18 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="解决Visual-Studio的-LNK2019-和-LNK1120-错误"><a href="#解决Visual-Studio的-LNK2019-和-LNK1120-错误" class="headerlink" title="解决Visual Studio的 LNK2019 和 LNK1120 错误"></a>解决Visual Studio的 LNK2019 和 LNK1120 错误</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>写了一个 text searching 的代码。该代码设计了数个类，并有一个 interface class 通过指向 base class 的 shared_ptr 通过 dynamic binding 来运行。然而结构设计的不是特别好，这也就导致我遇到了下面的问题：</p>
-<span id="more"></span>
-
-<blockquote>
-<p>interface class header file：</p>
-<pre class=" language-cpp"><code class="language-cpp">std<span class="token operator">::</span>ostream <span class="token operator">&amp;</span><span class="token keyword">operator</span><span class="token operator">&lt;&lt;</span><span class="token punctuation">(</span>std<span class="token operator">::</span>ostream <span class="token operator">&amp;</span><span class="token punctuation">,</span> <span class="token keyword">const</span> QueryResult <span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-</blockquote>
-<blockquote>
-<p>interface class source file</p>
-<pre class=" language-cpp"><code class="language-cpp">std<span class="token operator">::</span>ostream <span class="token operator">&amp;</span><span class="token keyword">operator</span><span class="token operator">&lt;&lt;</span><span class="token punctuation">(</span>std<span class="token operator">::</span>ostream <span class="token operator">&amp;</span>os<span class="token punctuation">,</span> <span class="token keyword">const</span> QueryResult <span class="token operator">&amp;</span>query<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// details</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-</blockquote>
-<blockquote>
-<p>base class header file, which is included by interface class header file</p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">QueryResult</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//下面的语句是错误来源</span>
-        <span class="token keyword">friend</span> <span class="token keyword">inline</span> std<span class="token operator">::</span>ostream <span class="token operator">&amp;</span><span class="token keyword">operator</span><span class="token operator">&lt;&lt;</span><span class="token punctuation">(</span>std<span class="token operator">::</span>ostream <span class="token operator">&amp;</span><span class="token punctuation">,</span> <span class="token keyword">const</span> QueryResult <span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//details</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-</blockquote>
-<p>接着在尝试运行时就发现了 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk2019?f1url=?appId=Dev16IDEF1&l=ZH-CN&k=k(LNK2019)&rd=true&view=msvc-160">LNK2019</a> 和 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk1120?f1url=?appId=Dev16IDEF1&l=ZH-CN&k=k(LNK1120)&rd=true&view=msvc-160">LNK1120</a> 错误。以下为错误描述：</p>
-<blockquote>
-<p>无法解析的外部符号 “class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp; __cdecl operator&lt;&lt;(class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp;,class QueryResult const &amp;)” (??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVQueryResult@@@Z)，函数 main 中引用了该符号</char></char></p>
-</blockquote>
-<h2 id="尝试分析"><a href="#尝试分析" class="headerlink" title="尝试分析"></a>尝试分析</h2><p>根据错误描述，可以锁定错误出自上面的第一行代码。Visual Studio给出的错误是无法解析，这样一个错误描述有些宽泛，放到 dev cpp 里就会好得多，它的错误提示长下面这样子：</p>
-<blockquote>
-<p>[警告] inline 函数 ‘std::ostream&amp; 运算符&lt;&lt;(std::ostream&amp;, const QueryResult&amp;)’ used but never defined</p>
-</blockquote>
-<p>然而我一开始并没有用 dev ，而是自己看 web 调了半天，还找了我的两个同学帮我看了一下。他们的解决方案是把 source file 给 include 进来（这也让我有点吃惊，为什么大二的计科同学会没有 package 的概念）。这样的方案我显然没办法满意，我无法理解，为什么编译器会找不到一个已经 declaration 并且 defining 的函数。出于这种疑惑，我友善地提醒了一下编译器——产生了我的第一个解决方案：</p>
-<blockquote>
-<p>interface class header file：</p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">extern</span> std<span class="token operator">::</span>ostream <span class="token operator">&amp;</span><span class="token keyword">operator</span><span class="token operator">&lt;&lt;</span><span class="token punctuation">(</span>std<span class="token operator">::</span>ostream <span class="token operator">&amp;</span><span class="token punctuation">,</span> <span class="token keyword">const</span> QueryResult <span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-</blockquote>
-<p>不得不说vs的 MSVC 编译器是真的强大，加个 extern 就能联想到同名的inline函数。如果我没有写这个blog的话，我也许会沾沾自喜于这个解决方案并且依然想破头皮都想不明白为什么会出现这种错误。直到我为了验证这个错误用 dev 上又跑了一遍。我的 dev 编译器是 g++ （版本我也不是很清楚，小白都是一键装环境的），没有这么智能，很实诚地提醒了我。由于 <code>operator&lt;&lt;</code> 函数需要调用 QueryResult object 的 members ，再加上这个函数最开始是在base_Query.h 里 declaration 的，且我的 Query.h has included the base_Query.h，所以编译器找到了 inline 版本的 declaration ，而很不幸，这个函数我没有定义。于是，我得到了第二个解决方案：</p>
-<blockquote>
-<p>base class header file, which is included by interface class header file</p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">QueryResult</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//该文件前面的 declaration 也要改</span>
-        <span class="token keyword">friend</span> std<span class="token operator">::</span>ostream <span class="token operator">&amp;</span><span class="token keyword">operator</span><span class="token operator">&lt;&lt;</span><span class="token punctuation">(</span>std<span class="token operator">::</span>ostream <span class="token operator">&amp;</span><span class="token punctuation">,</span> <span class="token keyword">const</span> QueryResult <span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//details</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-</blockquote>
-<p>顺便提一下我的下一个问题：为什么我会在 base_Query.h 里加上 inline 并且在后面的文件里忘记呢？</p>
-<p>此事说来话长。我的C++是从《C++ Primer》入门的。在这本书里， Lippman 很细致地讲述了 inline 的作用（也就是没啥作用），但他的示例代码里还是会习惯性地带上 inline ，这个习惯也影响到了我。事实上，我原来的 source file 里全部加了 inline declaration ，这使得我一开始遇到的错误比现在多得多——也同样因为这个原因，我只有将 interface class source file 也 include 进来才能工作。后来一个同学在 STFW （Searching The Fucking Web）后告诉我分离式编程不能使用 inline 。然后这个函数是唯一一个声明了两次的函数，所以被我忘记了（笑）。</p>
-<p>关于为什么分离式编程不能使用inline可以看<a target="_blank" rel="noopener" href="https://www.cnblogs.com/GodA/p/6554591.html">这里</a>，这个作者讲得非常细致。也希望我有一天能够变成这样的内容输出者。</p>
+                <h2 id="对周记的一点思考"><a href="#对周记的一点思考" class="headerlink" title="对周记的一点思考"></a>对周记的一点思考</h2><p>我在这个博客发的第一篇周记中就说明了，我开这个周记主要是想逼迫自己输出倒逼输入。不过三周下来，我发现自己生活中值得记录的东西的确不多。考研人的生活往往朴实无华且枯燥。若是一板一眼地将我某某日做了什么题看了哪本书记录上来，那简直像是写我自己的使用说明书。难免不出三天就看不下去愤而删之了。但周记写成随笔集似乎也不大合适——我的“随笔”目录中全是一篇篇“历周记”，里面藏着真正的随感。这至少不大利于检索内容。<br>总的来说我还是尽可能地在找周记和我一周中的生活的巧妙配比。<del>当然我只是随口一说，不到下笔写周记时我根本不会去想这种事情。</del>也许什么时候会考虑将我每天的速记小卡片整合到我的周记中去，像上周周记那样的千字长文不妨单独摘出来当成博文发送。<br>另外一个问题就是周记对我的技术笔记输出量的挤压。这终究是个技术博客，我不太希望这个博客变成我的小树洞。在接下来的日子里我会尽力增加我的技术博客输出量（同时尽量保证质量），如果发现自己实在没办法平衡二者之间的数量和质量，我会考虑将周记变为双周记或干脆删掉并停更大批随笔部分的内容。<br>那么接下来，这周周记，让我们聊一些更琐碎，但又更贴近我一周生活的话题。</p>
+<h2 id="Planing-Is-Nothing-Doing-Is-Everything"><a href="#Planing-Is-Nothing-Doing-Is-Everything" class="headerlink" title="Planing Is Nothing, Doing Is Everything"></a>Planing Is Nothing, Doing Is Everything</h2><p>其实上面说我不会在周记中记录我每天的学习状况，除了我不能忍受流水账外，还有一个原因——我的学习进度实际上根本不值得一记。这在考研只剩九十多天的日子里真的非常让人担心。我在状态非常好的时候，每天有效学习时间可以达到十个小时，但之后总会经历一两天的长时间摆烂。其他时候，我每天的有效学习时间实际上只有六个小时左右。当初看B站考研up主们一天10+小时的学习计划后也兴冲冲地自己制定了一份个人学习时间表——留足了充分的学习、午休和运动时间。但这份时间表似乎没给我带来什么好东西。<br>起初，它带给了我长达半个月的焦虑。这种焦虑我在<a href="https://jzy-planet.com/2022/09/04/2022-w35/">第一周周记</a>中描述过。我总会因为各种各样的事情耽误我满满当当的时间表，然后不得不熬夜、牺牲放松时间来弥补消失的学习进度。我学习的时间就越拖越晚。最后，我的作息时间直接颠倒了过来，晚上毫无困意，在床上颠来倒去一个多小时无果后，起床学到第二天早晨六点，吃完早点后困意马上到来。（这种恶劣作息让我一个假期胖了十公斤，现在正在艰难地减重。等减重成功当周，周记就水这个话题~）。再后来，它带给我“既然无法完成学习计划，那么明天一定”的习得性无助。我做了一个近乎完美的计划，为什么失败了呢？我想，也许很多时候，“做计划”是一种表演性行为，我们需要对“做计划”本身的重要性进行一个合理的评估。我想大概有如下几个考虑：</p>
+<ol>
+<li>做计划可能耗费巨大。一个对现实有指导意义的计划可能代价高昂，它需要对该计划的目标有足够的了解和调研，充分考虑现有资源才能完成。如果一个计划本身的代价高出我们所要完成的目的，就不值得了。比方说你不应该用两个小时来计划去哪里吃饭😂。</li>
+<li>一个无法执行的计划没有任何价值。我想在做一件事情，尤其是一件长期性的事情时，需要认真地区分一下目的和手段，而手段永远应当，且只应当为这个目的服务。一个无法执行的，漂亮的计划书本身；除了发到社交媒体中完成一次表演行为获得一点点赞可能还有点价值外，是没有任何意义的。</li>
+<li>不要忽视人月神话的魔力。一份计划的作用是减少执行过程中的无用步骤和选择代价，在加速项目本身方面并没有显著作用。所以在制定计划时不要对这份计划本身有过高期望。</li>
+<li>永远不要忘记系统外干扰。今天离考研还有96天，所以我们就拥有96天的复习时间吗？绝非如此，你一定会遇到各种各样的事情挤占你的时间。包括但不限于其他考试、摆烂行为、社交应酬、生病抱恙等等。这种无法控制的突发事件的多少有一定部分取决于你对生活的控制程度和你断舍离的程度，但永远有一个下限。我的学习时间有多少？我会给它乘以一个80%的系数。所以只剩不到77天了。<del>完蛋！</del></li>
+<li>提高执行力和执行效率永远是最关键的事情。不要把精力浪费在那些费而不惠的形式主义上了。</li>
+</ol>
+<h2 id="聊聊杨笠"><a href="#聊聊杨笠" class="headerlink" title="聊聊杨笠"></a>聊聊杨笠</h2><p>这是一个有些争议的话题。第一次听到杨笠是第三季脱口秀大会中，杨笠爆出了著名的“普通又自信”的梗。这个带有一些性别对立色彩，又上升全体男性的言论瞬间爆火，谩骂者和支持者皆众。随后又以“普信男”、“普信女”的meme存在于互联网中，成为网友们互相调侃和扣帽子的工具。不过黑粉也是粉，杨笠很是借这一波热度接了不少广告。<br>第四季脱口秀大会，杨笠或许有些路径依赖，又再一次爆了一波“性别对立”type的言论：“男人都是垃圾”。随后被一个人很巧妙地接了下去：“如果说男人是垃圾的话，那杨笠的最大愿望就是活在垃圾堆里。”从结构和技巧上来说，这个接法就比杨笠高级多了。<br>如果说第三季的“普通且自信”是对现实生活中的一些“爹味现象”的有力抨击，那第四季的这个段子就有些莫名其妙了。而从脱口秀的角度来说，这种单纯的谩骂——就跟骂一个人傻逼一样——其实没有任何幽默感可言；它并没有揭示自己想要讽刺的这部分群体内在的特性，也没有细挖这种矛盾性带来的幽默感，而只是单纯地将恶意当作笑点。只是一种大范围的“伦理梗”罢了。其实看到这里我是颇为失望的，脱口秀大会中其实输出了不少具有平权精神的段子，如这一季颜怡颜悦关于“女性衣服口袋”，和鸟鸟的“下厨房”段子，都非常不错；但爆火的如果竟是这种单纯的谩骂，不禁让人有些叹服于现在的性别对立程度。<br>当然，这一季的杨笠颇给了我一些惊喜。靠煽动男女对立获得了如此多流量的她，不再凭借这一手段吸引流量，而是很认真地说想要靠一些技术性的段子来参赛。希望她能够探索出更加优秀的风格。</p>
+<p>由于时间关系，暂且聊一点吧。以后或许会单独开一个随笔页，好好聊一聊我的观点。</p>
+<p>那就祝大家在下周快乐！</p>
 
                 
             </div>
@@ -412,7 +369,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jzy-planet.com/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/">https://jzy-planet.com/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/</a>
+                    <a href="https://jzy-planet.com/2022/09/18/2022-w37/">https://jzy-planet.com/2022/09/18/2022-w37/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -450,12 +407,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
-                                </a>
-                            
-                                <a href="/tags/Debug/">
-                                    <span class="chip bg-color">Debug</span>
+                                <a href="/tags/weekly-journal/">
+                                    <span class="chip bg-color">weekly journal</span>
                                 </a>
                             
                         </div>
@@ -801,31 +754,31 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/07/li-ming-jing-qiao-qiao/">
+                <a href="/2022/09/18/2022-w37/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="黎明静悄悄">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="历周记(2022-09-12 - 2022-09-18)">
                         
-                        <span class="card-title">黎明静悄悄</span>
+                        <span class="card-title">历周记(2022-09-12 - 2022-09-18)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            黎明静悄悄
-子夜
-She was still too young to know that life never gives anything for nothing, and that a price is always exacted 
+                            对周记的一点思考
+我在这个博客发的第一篇周记中就说明了，我开这个周记主要是想逼迫自己输出倒逼输入。不过三周下来，我发现自己生活中值得记录的东西的确不多。考研人的生活往往朴实无华且枯燥。若是一板一眼地将我某某日做了什么题看了哪本书记录上来，那
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -834,15 +787,20 @@ She was still too young to know that life never gives anything for nothing, and 
                                     随笔
                                 </a>
                             
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/" class="post-category">
+                                    周记
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Essay/">
-                        <span class="chip bg-color">Essay</span>
+                    <a href="/tags/weekly-journal/">
+                        <span class="chip bg-color">weekly journal</span>
                     </a>
                     
                 </div>
@@ -856,40 +814,35 @@ She was still too young to know that life never gives anything for nothing, and 
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/24/c-learning-notes/">
+                <a href="/2022/09/10/2022-w36/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="C++ learning notes">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="历周记(2022-09-05 - 2022-09-11)">
                         
-                        <span class="card-title">C++ learning notes</span>
+                        <span class="card-title">历周记(2022-09-05 - 2022-09-11)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++ learning notes
-Generic algorithm
-lambda
-[capture list] (parameter list) -> return type {function body}
-
-we can ignor
+                            又是一周结束的日子。这周经历了咽喉溃疡、返校、隔离、做核酸捅喉咙……只觉得浑浑噩噩了好几天；没想到这么快就又到了一周结束的日子了。普通人的生活，往往要拿着放大镜才能找到些许值得记录的片段的。想了想，过去一周好像没什么特别值得记录的。那就写点
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    技术笔记
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    随笔
                                 </a>
                             
-                            <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/" class="post-category">
-                                    Computer Science
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/" class="post-category">
+                                    周记
                                 </a>
                             
                             
@@ -899,12 +852,8 @@ we can ignor
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/Notes/">
-                        <span class="chip bg-color">Notes</span>
+                    <a href="/tags/weekly-journal/">
+                        <span class="chip bg-color">weekly journal</span>
                     </a>
                     
                 </div>

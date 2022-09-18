@@ -6,7 +6,7 @@
   <link href="https://jzy-planet.com/atom.xml" rel="self"/>
   
   <link href="https://jzy-planet.com/"/>
-  <updated>2022-09-13T12:54:00.000Z</updated>
+  <updated>2022-09-18T13:42:00.000Z</updated>
   <id>https://jzy-planet.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>历周记(2022-09-12 - 2022-09-18)</title>
+    <link href="https://jzy-planet.com/2022/09/18/2022-w37/"/>
+    <id>https://jzy-planet.com/2022/09/18/2022-w37/</id>
+    <published>2022-09-18T11:42:00.000Z</published>
+    <updated>2022-09-18T13:42:00.000Z</updated>
+    
+    
+    <summary type="html">对周记的一点思考
+我在这个博客发的第一篇周记中就说明了，我开这个周记主要是想逼迫自己输出倒逼输入。不过三周下来，我发现自己生活中值得记录的东西的确不多。考研人的生活往往朴实无华且枯燥。若是一板一眼地将我某某日做了什么题看了哪本书记录上来，那简直像是写我自己的使用说明书。难免不出三天就看不下去愤而删之了。但周记写成随笔集似乎也不大合适——我的“随笔”目录中全是一篇篇“历周记”，里面藏着真正的随感。这至少不大利于检索内容。
+总的来说我还是尽可能地在找周记和我一周中的生活的巧妙配比。当然我只是随口一说，不到下笔写周记时我根本不会去想这种事情。也许什么时候会考虑将我每天的速记小卡片整合到我的周记中去，</summary>
+    
+    
+    
+    <category term="随笔" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="周记" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="weekly journal" scheme="https://jzy-planet.com/tags/weekly-journal/"/>
+    
+  </entry>
   
   <entry>
     <title>历周记(2022-09-05 - 2022-09-11)</title>
@@ -127,7 +150,7 @@
     
     <category term="C++" scheme="https://jzy-planet.com/tags/C/"/>
     
-    <category term="debug" scheme="https://jzy-planet.com/tags/debug/"/>
+    <category term="Debug" scheme="https://jzy-planet.com/tags/Debug/"/>
     
   </entry>
   
@@ -136,7 +159,7 @@
     <link href="https://jzy-planet.com/2022/06/28/linux-ru-he-tong-guo-smtp-fu-wu-qi-fa-song-qq-you-jian/"/>
     <id>https://jzy-planet.com/2022/06/28/linux-ru-he-tong-guo-smtp-fu-wu-qi-fa-song-qq-you-jian/</id>
     <published>2022-06-28T10:23:00.000Z</published>
-    <updated>2022-09-04T17:24:36.618Z</updated>
+    <updated>2022-09-18T14:42:15.468Z</updated>
     
     
     <summary type="html">这是《计算机网络——自顶向下方法》里的一个小实验，对理解smtp的交流和电子邮件的报头都很有帮助。是个很值得尝试的实验。</summary>
@@ -150,7 +173,7 @@
     
     <category term="Web" scheme="https://jzy-planet.com/tags/Web/"/>
     
-    <category term="tutorial" scheme="https://jzy-planet.com/tags/tutorial/"/>
+    <category term="Tutorial" scheme="https://jzy-planet.com/tags/Tutorial/"/>
     
   </entry>
   
@@ -159,7 +182,7 @@
     <link href="https://jzy-planet.com/2021/09/07/li-ming-jing-qiao-qiao/"/>
     <id>https://jzy-planet.com/2021/09/07/li-ming-jing-qiao-qiao/</id>
     <published>2021-09-07T19:35:00.000Z</published>
-    <updated>2022-09-02T03:03:53.668Z</updated>
+    <updated>2022-09-18T14:42:15.468Z</updated>
     
     
     <summary type="html">记录一段爆肝的生活</summary>
@@ -169,7 +192,7 @@
     <category term="随笔" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="informal essay" scheme="https://jzy-planet.com/tags/informal-essay/"/>
+    <category term="Essay" scheme="https://jzy-planet.com/tags/Essay/"/>
     
   </entry>
   
@@ -178,7 +201,7 @@
     <link href="https://jzy-planet.com/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/"/>
     <id>https://jzy-planet.com/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/</id>
     <published>2021-07-08T20:00:00.000Z</published>
-    <updated>2022-09-04T17:24:36.618Z</updated>
+    <updated>2022-09-18T14:42:15.468Z</updated>
     
     
     <summary type="html">一段其实de了一天多但是很可笑的bug&lt;br&gt; 会做成专栏形式，算是总结和对自己的提醒叭</summary>
@@ -192,7 +215,7 @@
     
     <category term="C++" scheme="https://jzy-planet.com/tags/C/"/>
     
-    <category term="debug" scheme="https://jzy-planet.com/tags/debug/"/>
+    <category term="Debug" scheme="https://jzy-planet.com/tags/Debug/"/>
     
   </entry>
   
@@ -215,7 +238,7 @@
     
     <category term="C++" scheme="https://jzy-planet.com/tags/C/"/>
     
-    <category term="notes" scheme="https://jzy-planet.com/tags/notes/"/>
+    <category term="Notes" scheme="https://jzy-planet.com/tags/Notes/"/>
     
   </entry>
   
