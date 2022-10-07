@@ -1,1313 +1,218 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>江子扬的星球 - 我的肩上是风，风上是闪烁的星群</title><meta name="author" content="江子扬-Jasper Young"><meta name="copyright" content="江子扬-Jasper Young"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Stay Hungry. Stay Foolish. But endless learning. But everlasting pursuing">
+<meta property="og:type" content="website">
+<meta property="og:title" content="江子扬的星球">
+<meta property="og:url" content="https://jzy-planet.com/index.html">
+<meta property="og:site_name" content="江子扬的星球">
+<meta property="og:description" content="Stay Hungry. Stay Foolish. But endless learning. But everlasting pursuing">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://jzy-planet.com/image/%E7%BE%BD%E6%AF%9B%E7%AC%94.jpeg">
+<meta property="article:author" content="江子扬-Jasper Young">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jzy-planet.com/image/%E7%BE%BD%E6%AF%9B%E7%AC%94.jpeg"><link rel="shortcut icon" href="/image/planet.png"><link rel="canonical" href="https://jzy-planet.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 江子扬-Jasper Young","link":"链接: ","source":"来源: 江子扬的星球","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '江子扬的星球',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-10-08 00:36'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="江子扬的星球">
-    <meta name="description" content="Stay Hungry. Stay Foolish. But endless learning. &lt;br&gt;But everlasting pursuing">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-    <title>江子扬的星球</title>
-    <link rel="icon" type="image/png" href="/medias/planet.png">
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-
-
-    <!-- index cover -->
-    <!-- <link rel="stylesheet preload" type="text/css" href="/css/indexcover.css"> -->
-    <style>
-        .carousel-control {
-            width: 45px;
-            height: 45px;
-            line-height: 55px;
-            border-radius: 45px;
-            background: transparent;
-            cursor: pointer;
-            z-index: 100;
-        }
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-        #prev-cover {
-            position: absolute;
-            top: 48%;
-            left: 8px;
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
         }
-        
-        #next-cover {
-            position: absolute;
-            top: 48%;
-            right: 8px;;
-        }
-        
-        #prev-cover i {
-            margin-right: 3px;
-        }
-        
-        #next-cover i {
-            margin-left: 3px;
-        }
-        
-        .carousel-control:hover {
-            background-color: rgba(0, 0, 0, .4);
-        }
-        
-        .carousel-control i {
-            color: #fff;
-            font-size: 2.4rem;
-        }
-    </style>
-
-
-
-<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
-<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-<link rel="stylesheet" type="text/css" href="/css/matery.css">
-<link rel="stylesheet" type="text/css" href="/css/my.css">
-<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
-
-
-
-
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-    <link rel="stylesheet" href="/css/post.css">
-
-
-
-
-
-
-    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
-
-<!-- hexo injector head_end start -->
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
 <!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="江子扬的星球" type="application/atom+xml">
-<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
-
-
-<body>
-    <header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper container">
-            <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/planet.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">江子扬的星球</span>
-                </a>
-            </div>
-            
-
-<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
-<ul class="right nav-menu">
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/" class="waves-effect waves-light">
-      
-      <i class="fas fa-home" style="zoom: 0.6;"></i>
-      
-      <span>首页</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/categories" class="waves-effect waves-light">
-      
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
-      
-      <span>分类</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/archives" class="waves-effect waves-light">
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>归档</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/about" class="waves-effect waves-light">
-      
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
-      
-      <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li>
-    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
-    </a>
-  </li>
-  <li>
-    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
-      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
-    </a>
-  </li>
-</ul>
-
-
-<div id="mobile-nav" class="side-nav sidenav">
-
-    <div class="mobile-head bg-color">
-        
-        <img src="/medias/planet.png" class="logo-img circle responsive-img">
-        
-        <div class="logo-name">江子扬的星球</div>
-        <div class="logo-desc">
-            
-            Stay Hungry. Stay Foolish. But endless learning. &lt;br&gt;But everlasting pursuing
-            
-        </div>
-    </div>
-
-    <ul class="menu-list mobile-menu-list">
-        
-        <li class="m-nav-item">
-	  
-		<a href="/" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-home"></i>
-			
-			首页
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			分类
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			归档
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/about" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-user-circle"></i>
-			
-			关于
-		</a>
-          
-        </li>
-        
-        
-    </ul>
-</div>
-
-
-        </div>
-
-        
-    </nav>
-
-</header>
-
-    
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-
-    <div class="carousel-item  white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                我的肩上是风，风上是闪烁的星群
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-
-
-
-            <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-            </div>
-            <div class="cover-social-link">
-    <a href="https://github.com/JiangZiyang0120" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:yangzejia0120@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-</div>
-        </div>
-    </div>
-
-    
-</div>
-
-<script>
-    $(function () {
-        let coverSlider = $('.carousel');
-
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
-        }
-
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'true' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
-
-        let carouselIntervalId;
-        
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
-        
-
-        function restartPlay() {
-            
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
-        };
-
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
-        
-    });
-</script>
-
-
-
-<main class="content">
-
-    
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-
-                    
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-    
-
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/09/18/2022-w37/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="历周记(2022-09-12 - 2022-09-18)">
-                            
-                            <span class="card-title">历周记(2022-09-12 - 2022-09-18)</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                对周记的一点思考
-我在这个博客发的第一篇周记中就说明了，我开这个周记主要是想逼迫自己输出倒逼输入。不过三周下来，我发现自己生活中值得记录的东西的确不多。考研人的生活往往朴实无华且枯燥。若是一板一眼地将我某某日做了什么题看了哪本书记录上来，那
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-18
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
-                                </a>
-                                
-                                <a href="/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/" class="post-category">
-                                    周记
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/weekly-journal/">
-                            <span class="chip bg-color">weekly journal</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/09/10/2022-w36/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="历周记(2022-09-05 - 2022-09-11)">
-                            
-                            <span class="card-title">历周记(2022-09-05 - 2022-09-11)</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                又是一周结束的日子。这周经历了咽喉溃疡、返校、隔离、做核酸捅喉咙……只觉得浑浑噩噩了好几天；没想到这么快就又到了一周结束的日子了。普通人的生活，往往要拿着放大镜才能找到些许值得记录的片段的。想了想，过去一周好像没什么特别值得记录的。那就写点
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-11
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
-                                </a>
-                                
-                                <a href="/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/" class="post-category">
-                                    周记
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/weekly-journal/">
-                            <span class="chip bg-color">weekly journal</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="LeetCode 188. Best Time to Buy and Sell Stock IV">
-                            
-                            <span class="card-title">LeetCode 188. Best Time to Buy and Sell Stock IV</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Analyse
-This is another dynamic programming problem similar to 1687. Delivering Boxes from Storage to Ports. And however
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-10
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    技术笔记
-                                </a>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    LeetCode笔记
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/LeetCode/">
-                            <span class="chip bg-color">LeetCode</span>
-                        </a>
-                        
-                        <a href="/tags/Algorithms/">
-                            <span class="chip bg-color">Algorithms</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/09/04/2022-w35/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="历周记(2022-08-29 - 2022-09-04)">
-                            
-                            <span class="card-title">历周记(2022-08-29 - 2022-09-04)</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                这是我在博客上写的第一篇周记，希望能用周记的形式来记录自己的生活和一些感悟。也能用输出倒逼输入的方式让自己去更多地涉猎一些内容。我始终觉得文理科并不是人生必须二选一的选项，一个程序工程师同样需要人文情怀和人文素养，才能更好地开发出吸引和满足
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-05
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
-                                </a>
-                                
-                                <a href="/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/" class="post-category">
-                                    周记
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/weekly-journal/">
-                            <span class="chip bg-color">weekly journal</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/09/01/1687.delivering-boxes-from-storage-to-ports/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="LeetCode 1687. Delivering Boxes from Storage to Ports">
-                            
-                            <span class="card-title">LeetCode 1687. Delivering Boxes from Storage to Ports</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Analyse
-As the dynamic programming solution’s max time complexity is $\text O(n^2)$. We could simply get the first solut
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-02
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    技术笔记
-                                </a>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    LeetCode笔记
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/LeetCode/">
-                            <span class="chip bg-color">LeetCode</span>
-                        </a>
-                        
-                        <a href="/tags/Algorithms/">
-                            <span class="chip bg-color">Algorithms</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/08/30/c-0-3-5-rule/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="C++的 0/3/5 规则">
-                            
-                            <span class="card-title">C++的 0/3/5 规则</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                编程三大错觉：
-我比编译器聪明
-我超越了标准库
-我能管好内存
-
-问题描述
-由于最近在看《算导》，我就萌生了实现算导的想法。之前实现的线表List.h文件一直稳定运作，但在经历了单元测试并稳定运行数天后，当我将它应用到我的新代码部分时，出现了
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-30
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    技术笔记
-                                </a>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" class="post-category">
-                                    coding过程中踩过的坑
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="/tags/Debug/">
-                            <span class="chip bg-color">Debug</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/06/28/linux-ru-he-tong-guo-smtp-fu-wu-qi-fa-song-qq-you-jian/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="linux如何通过SMTP服务器发送QQ邮件">
-                            
-                            <span class="card-title">linux如何通过SMTP服务器发送QQ邮件</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                这是《计算机网络——自顶向下方法》里的一个小实验，对理解smtp的交流和电子邮件的报头都很有帮助。是个很值得尝试的实验。
-
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/image/%E7%BE%BD%E6%AF%9B%E7%AC%94.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/todo/"><i class="fa-fw fas fa-calendar"></i><span> 规划</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-image"></i><span> 画廊</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://images.alphacoders.com/598/598399.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">江子扬的星球</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 目录</span></a></div><div class="menus_item"><a class="site-page" href="/todo/"><i class="fa-fw fas fa-calendar"></i><span> 规划</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-image"></i><span> 画廊</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">江子扬的星球</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/JiangZiyang0120" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:yangzejia0120@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/09/18/2022-w37/" title="历周记(2022-09-12 - 2022-09-18)"><img class="post_bg" src="https://www.toopic.cn/public/uploads/small/164275104121164275104159.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="历周记(2022-09-12 - 2022-09-18)"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/18/2022-w37/" title="历周记(2022-09-12 - 2022-09-18)">历周记(2022-09-12 - 2022-09-18)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-18T11:42:00.000Z" title="发表于 2022-09-18 19:42">2022-09-18</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-18T13:42:00.000Z" title="更新于 2022-09-18 21:42">2022-09-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/">周记</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2022/09/18/2022-w37/#post-comment"><span class="valine-comment-count" data-xid="/2022/09/18/2022-w37/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">对周记的一点思考我在这个博客发的第一篇周记中就说明了，我开这个周记主要是想逼迫自己输出倒逼输入。不过三周下来，我发现自己生活中值得记录的东西的确不多。考研人的生活往往朴实无华且枯燥。若是一板一眼地将我某某日做了什么题看了哪本书记录上来，那简直像是写我自己的使用说明书。难免不出三天就看不下去愤而删之了。但周记写成随笔集似乎也不大合适——我的“随笔”目录中全是一篇篇“历周记”，里面藏着真正的随感。这至少不大利于检索内容。总的来说我还是尽可能地在找周记和我一周中的生活的巧妙配比。当然我只是随口一说，不到下笔写周记时我根本不会去想这种事情。也许什么时候会考虑将我每天的速记小卡片整合到我的周记中去，像上周周记那样的千字长文不妨单独摘出来当成博文发送。另外一个问题就是周记对我的技术笔记输出量的挤压。这终究是个技术博客，我不太希望这个博客变成我的小树洞。在接下来的日子里我会尽力增加我的技术博客输出量（同时尽量保证质量），如果发现自己实在没办法平衡二者之间的数量和质量，我会考虑将周记变为双周记或干脆删掉并停更大批随笔部分的内容。那么接下来，这周周记，让我们聊一些更琐碎，但又更贴近我一周生活的话题。
+P ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/09/10/2022-w36/" title="历周记(2022-09-05 - 2022-09-11)"><img class="post_bg" src="https://www.toopic.cn/public/uploads/small/1642751761343164275176130.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="历周记(2022-09-05 - 2022-09-11)"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/10/2022-w36/" title="历周记(2022-09-05 - 2022-09-11)">历周记(2022-09-05 - 2022-09-11)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-11T01:25:00.000Z" title="发表于 2022-09-11 09:25">2022-09-11</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-13T12:54:00.000Z" title="更新于 2022-09-13 20:54">2022-09-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/">周记</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2022/09/10/2022-w36/#post-comment"><span class="valine-comment-count" data-xid="/2022/09/10/2022-w36/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">又是一周结束的日子。这周经历了咽喉溃疡、返校、隔离、做核酸捅喉咙……只觉得浑浑噩噩了好几天；没想到这么快就又到了一周结束的日子了。普通人的生活，往往要拿着放大镜才能找到些许值得记录的片段的。想了想，过去一周好像没什么特别值得记录的。那就写点务虚的吧。
+诗心和远去的诗心在我很小的时候，曾一度非常喜欢诗词。虽然最早接触诗词的原因是为了和女孩子聊天有话题，但很快，我就被诗词迷住了。找话题时抱着厚厚的书籍，也颇有种醉翁之意不在酒的意味了。小时候品味不是很高，看多了汉赋和婉约词，只觉极尽华丽之辞藻，欲穷天工之文章。读这些文字就好像看到了一幅幅画卷，看到风起于青蘋之末，草色摇动；看到三秋桂子，十里荷花；看到小姑娘着袜欲走，却又装作嗅着青梅，倚门偷偷望着来客……我很幸运地没有学到这些文字的风格，不至于写出一堆拙略模仿，臭不可闻的生僻词叠叠乐。但这些文字确实让幼时的我感受到了文字的美。现在想来，那大概是我为数不多地，满怀好奇与激动探索一本书的时光；也是我绝无仅有的，为了和女孩子聊天那么认真的时光了。再后来，审美水平有所提高，我开始接触诗词的风格也渐渐流变。豪放派、浪漫派等等不一而足。除了对李太白的诗词 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/" title="LeetCode 188. Best Time to Buy and Sell Stock IV"><img class="post_bg" src="https://www.toopic.cn/public/uploads/image/20200413/20200413222954_34238.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode 188. Best Time to Buy and Sell Stock IV"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/" title="LeetCode 188. Best Time to Buy and Sell Stock IV">LeetCode 188. Best Time to Buy and Sell Stock IV</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-10T07:14:00.000Z" title="发表于 2022-09-10 15:14">2022-09-10</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-10T07:44:00.000Z" title="更新于 2022-09-10 15:44">2022-09-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/">LeetCode笔记</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/#post-comment"><span class="valine-comment-count" data-xid="/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">AnalyseThis is another dynamic programming problem similar to 1687. Delivering Boxes from Storage to Ports. And however, with a limitation of purchase times. We can just use two iteration on this question. One is the iteration of vector prices(obviously), and another is the iteration of purchase times k.What’s more, we need to purchase a good before selling it. Thus we need to record the purchases. And the code is as below
+123456789101112131415161718192021class Solution &#123;public:    int maxP ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/09/04/2022-w35/" title="历周记(2022-08-29 - 2022-09-04)"><img class="post_bg" src="https://www.toopic.cn/public/uploads/small/1642751263206164275126382.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="历周记(2022-08-29 - 2022-09-04)"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/04/2022-w35/" title="历周记(2022-08-29 - 2022-09-04)">历周记(2022-08-29 - 2022-09-04)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-04T16:26:00.000Z" title="发表于 2022-09-05 00:26">2022-09-05</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-06T07:31:00.000Z" title="更新于 2022-09-06 15:31">2022-09-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/">周记</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2022/09/04/2022-w35/#post-comment"><span class="valine-comment-count" data-xid="/2022/09/04/2022-w35/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">这是我在博客上写的第一篇周记，希望能用周记的形式来记录自己的生活和一些感悟。也能用输出倒逼输入的方式让自己去更多地涉猎一些内容。我始终觉得文理科并不是人生必须二选一的选项，一个程序工程师同样需要人文情怀和人文素养，才能更好地开发出吸引和满足他人诉求的产品。我在上一周，乃至过去的一个月每天晚上都习惯性地开始写代码，一直熬到深夜解决问题才上床。然后被蓝光辐射地毫无困意，打开社交媒体刷刷刷，一直刷到昏昏沉沉地睡去。第二天被闹铃叫醒，也才堪堪睡够六个小时。时间一长，生物钟就彻底乱掉了，我开始间歇性嗜睡、感冒流涕不止，每日跑步也感觉跑不动了。这让我开始思考一个WLB(Work&amp;Life Balance) 的问题。这也是本次周记的话题。
+如何看待 WLB对许多大学学生而言，我们对 WLB 其实缺乏清晰的认知。一方面，学生，尤其是大学生，并没有严格的工作与时间的界限。出于个人规划与目标的不同，日日刷图书馆者有之，爆肝做项目者有之，每天摸鱼直到考试周熬夜补天者亦有之。  另一方面，学生的工作时间往往不怎么受到重视（因为大学生是极好的廉价劳动力），时常是召之即来挥之即去，这也导致学生的工作&#x ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/09/01/1687.delivering-boxes-from-storage-to-ports/" title="LeetCode 1687. Delivering Boxes from Storage to Ports"><img class="post_bg" src="https://www.toopic.cn/public/uploads/small/1642751469772164275146913.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode 1687. Delivering Boxes from Storage to Ports"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/01/1687.delivering-boxes-from-storage-to-ports/" title="LeetCode 1687. Delivering Boxes from Storage to Ports">LeetCode 1687. Delivering Boxes from Storage to Ports</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-02T02:31:00.000Z" title="发表于 2022-09-02 10:31">2022-09-02</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-02T14:22:00.000Z" title="更新于 2022-09-02 22:22">2022-09-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/">LeetCode笔记</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2022/09/01/1687.delivering-boxes-from-storage-to-ports/#post-comment"><span class="valine-comment-count" data-xid="/2022/09/01/1687.delivering-boxes-from-storage-to-ports/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">AnalyseAs the dynamic programming solution’s max time complexity is $\text O(n^2)$. We could simply get the first solution:This Code comes from linshan077. And it is almost the best implement of DP. Where the trip assist to decline the cost of repeatedly judging boxes[j][0] == boxes[j-1][0] and dp is the common implement of dynamic programming.
+123456789101112131415161718192021222324252627class Solution1 &#123;public:    int boxDelivering(vector&lt;vector&lt;int&gt;&gt;&amp; boxes, int portsCoun ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/08/30/c-0-3-5-rule/" title="C++的 0/3/5 规则"><img class="post_bg" src="https://www.toopic.cn/public/uploads/small/1642751772306164275177233.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++的 0/3/5 规则"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/08/30/c-0-3-5-rule/" title="C++的 0/3/5 规则">C++的 0/3/5 规则</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-08-30T10:23:00.000Z" title="发表于 2022-08-30 18:23">2022-08-30</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-08-30T11:26:00.000Z" title="更新于 2022-08-30 19:26">2022-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/">coding过程中踩过的坑</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2022/08/30/c-0-3-5-rule/#post-comment"><span class="valine-comment-count" data-xid="/2022/08/30/c-0-3-5-rule/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+编程三大错觉：我比编译器聪明我超越了标准库我能管好内存
+
+问题描述由于最近在看《算导》，我就萌生了实现算导的想法。之前实现的线表List.h文件一直稳定运作，但在经历了单元测试并稳定运行数天后，当我将它应用到我的新代码部分时，出现了一个bug。我的代码文件如下：List.h
+123456789101112131415161718192021222324252627template&lt;typename T&gt;class List &#123;public:    List() : head(new class Node&lt;T&gt;), tail(new class Node&lt;T&gt;) &#123;        head-&gt;nextNode = tail;        tail-&gt;prevNode = head;    &#125;    List(T rs) : List() &#123;        insert(rs);    &#125;    ~List() &#123;        for (class Node&lt;T&gt;  ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/06/28/linux-ru-he-tong-guo-smtp-fu-wu-qi-fa-song-qq-you-jian/" title="linux如何通过SMTP服务器发送QQ邮件"><img class="post_bg" src="https://www.toopic.cn/public/uploads/small/1642751873949164275187345.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux如何通过SMTP服务器发送QQ邮件"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/06/28/linux-ru-he-tong-guo-smtp-fu-wu-qi-fa-song-qq-you-jian/" title="linux如何通过SMTP服务器发送QQ邮件">linux如何通过SMTP服务器发送QQ邮件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-28T10:23:00.000Z" title="发表于 2022-06-28 18:23">2022-06-28</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-18T14:42:15.468Z" title="更新于 2022-09-18 22:42">2022-09-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/">Computer Networking</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2022/06/28/linux-ru-he-tong-guo-smtp-fu-wu-qi-fa-song-qq-you-jian/#post-comment"><span class="valine-comment-count" data-xid="/2022/06/28/linux-ru-he-tong-guo-smtp-fu-wu-qi-fa-song-qq-you-jian/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">这是《计算机网络——自顶向下方法》里的一个小实验，对理解smtp的交流和电子邮件的报头都很有帮助。是个很值得尝试的实验。
 首先，我们需要下载 telnet
+1sudo apt install telnetd -y
 
-sudo apt install telnetd -y
+其次，按照这个文档所示的方式开启QQ邮箱的SMTP服务# 使用QQ邮箱发送邮件，QQ邮箱的smtp设置并记住自己的身份认证密码。
+接下来，打开linus系统的xshell（快捷键 ctrl+alt+T），输入以下命令：
+1telnet smtp.qq.com 25
+
+会看到如下返回：
+依次输入以下命令：
+123456auth login  //输入命令验证身份334 VXNlcm5hbWU6  //服务器返回Username:的base64编码符******** //输入自己邮箱号，例123456789@qq.com的base64编码值334 UGFzc3dvcmQ6  //服务器返回Password:的base64编码符******** //输入自己身份认证密码的base64编码值235 Authentication successful  //连接成功
+
+base64编 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/09/07/li-ming-jing-qiao-qiao/" title="黎明静悄悄"><img class="post_bg" src="https://www.toopic.cn/public/uploads/small/1642751473324164275147339.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黎明静悄悄"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/07/li-ming-jing-qiao-qiao/" title="黎明静悄悄">黎明静悄悄</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-09-07T19:35:00.000Z" title="发表于 2021-09-08 03:35">2021-09-08</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-18T14:42:15.468Z" title="更新于 2022-09-18 22:42">2022-09-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2021/09/07/li-ming-jing-qiao-qiao/#post-comment"><span class="valine-comment-count" data-xid="/2021/09/07/li-ming-jing-qiao-qiao/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">黎明静悄悄子夜
+She was still too young to know that life never gives anything for nothing, and that a price is always exacted for what fate bestows.
+Marie Antoinette: Bildnis eines mittleren
+
+在我年纪尚小时，平日总喜欢抱着一本书看，大概是为了消遣，也有些文青情怀还未退却。可惜我对文学的热爱并不如何浓郁——它远不能使我埋头案牍皓首穷经，顶多是让我读两本入门门槛不那么高，与他人闲聊时能引那么一两句的图书罢了。而且很明显我的筛选能力也并不强——每当有女孩子看见我在读书，凑过来问一句：“你在读什么书啊？”，不出意外她们总会被书名吓走。即使出了意外，她们也大概率被我接下来尝试概括书本内容的话吓走——这证明我对门槛的判断还是有点高了。
+本节开头引的这句话出自斯蒂芬·茨威格的《断头皇后》。很显然，作为一个文青，我应该是在某一期的《意林》或《读者》上看到了这句话然后记了下来；至于这本书，那是万万不可能读的。当然，有些书读完以后 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/" title="链接器查找范围"><img class="post_bg" src="https://www.toopic.cn/public/uploads/image/20200411/20200411125316_26616.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="链接器查找范围"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/" title="链接器查找范围">链接器查找范围</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-07-08T20:00:00.000Z" title="发表于 2021-07-09 04:00">2021-07-09</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-18T14:42:15.468Z" title="更新于 2022-09-18 22:42">2022-09-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/">coding过程中踩过的坑</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/#post-comment"><span class="valine-comment-count" data-xid="/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">解决Visual Studio的 LNK2019 和 LNK1120 错误问题描述写了一个 text searching 的代码。该代码设计了数个类，并有一个 interface class 通过指向 base class 的 shared_ptr 通过 dynamic binding 来运行。然而结构设计的不是特别好，这也就导致我遇到了下面的问题：
 
 
-其次，按照这个文档所
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-28
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    技术笔记
-                                </a>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/" class="post-category">
-                                    Computer Networking
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
 
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Web/">
-                            <span class="chip bg-color">Web</span>
-                        </a>
-                        
-                        <a href="/tags/Tutorial/">
-                            <span class="chip bg-color">Tutorial</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
+interface class header file：
+1std::ostream &amp;operator&lt;&lt;(std::ostream &amp;, const QueryResult &amp;);
+
+
+interface class source file
+123std::ostream &amp;operator&lt;&lt;(std::ostream &amp;os, const QueryResult &amp;query) &#123;	// details&#125;
+
+
+base class header file, which is included by interface class he ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/05/24/c-learning-notes/" title="C++ learning notes"><img class="post_bg" src="https://www.toopic.cn/public/uploads/small/1642751761343164275176130.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++ learning notes"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/05/24/c-learning-notes/" title="C++ learning notes">C++ learning notes</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-05-25T06:00:00.000Z" title="发表于 2021-05-25 14:00">2021-05-25</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-01-17T08:54:00.000Z" title="更新于 2022-01-17 16:54">2022-01-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/">Computer Science</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2021/05/24/c-learning-notes/#post-comment"><span class="valine-comment-count" data-xid="/2021/05/24/c-learning-notes/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">C++ learning notesGeneric algorithmlambda[capture list] (parameter list) -&gt; return type {function body}
+we can ignore the parameter list and return type, but the capture list and the function body must be reserved
+eg:
+12[](const string &amp;a, const string &amp;b)	&#123;return a.size() &lt; b.size();&#125;
+
+dynamic memoryshared_ptr&lt;&gt;use function make_shared&lt;&gt;()
+unique_ptr&lt;&gt;must be initialized once the pointer is created
+weak_ptr&lt;&gt;can be assigned
+allocator12345678910all ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/image/%E7%BE%BD%E6%AF%9B%E7%AC%94.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">江子扬-Jasper Young</div><div class="author-info__description">Stay Hungry. Stay Foolish. But endless learning. <br>But everlasting pursuing</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/JiangZiyang0120" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:yangzejia0120@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/09/18/2022-w37/" title="历周记(2022-09-12 - 2022-09-18)"><img src="https://www.toopic.cn/public/uploads/small/164275104121164275104159.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="历周记(2022-09-12 - 2022-09-18)"/></a><div class="content"><a class="title" href="/2022/09/18/2022-w37/" title="历周记(2022-09-12 - 2022-09-18)">历周记(2022-09-12 - 2022-09-18)</a><time datetime="2022-09-18T11:42:00.000Z" title="发表于 2022-09-18 19:42">2022-09-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/10/2022-w36/" title="历周记(2022-09-05 - 2022-09-11)"><img src="https://www.toopic.cn/public/uploads/small/1642751761343164275176130.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="历周记(2022-09-05 - 2022-09-11)"/></a><div class="content"><a class="title" href="/2022/09/10/2022-w36/" title="历周记(2022-09-05 - 2022-09-11)">历周记(2022-09-05 - 2022-09-11)</a><time datetime="2022-09-11T01:25:00.000Z" title="发表于 2022-09-11 09:25">2022-09-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/" title="LeetCode 188. Best Time to Buy and Sell Stock IV"><img src="https://www.toopic.cn/public/uploads/image/20200413/20200413222954_34238.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode 188. Best Time to Buy and Sell Stock IV"/></a><div class="content"><a class="title" href="/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/" title="LeetCode 188. Best Time to Buy and Sell Stock IV">LeetCode 188. Best Time to Buy and Sell Stock IV</a><time datetime="2022-09-10T07:14:00.000Z" title="发表于 2022-09-10 15:14">2022-09-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/04/2022-w35/" title="历周记(2022-08-29 - 2022-09-04)"><img src="https://www.toopic.cn/public/uploads/small/1642751263206164275126382.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="历周记(2022-08-29 - 2022-09-04)"/></a><div class="content"><a class="title" href="/2022/09/04/2022-w35/" title="历周记(2022-08-29 - 2022-09-04)">历周记(2022-08-29 - 2022-09-04)</a><time datetime="2022-09-04T16:26:00.000Z" title="发表于 2022-09-05 00:26">2022-09-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/01/1687.delivering-boxes-from-storage-to-ports/" title="LeetCode 1687. Delivering Boxes from Storage to Ports"><img src="https://www.toopic.cn/public/uploads/small/1642751469772164275146913.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode 1687. Delivering Boxes from Storage to Ports"/></a><div class="content"><a class="title" href="/2022/09/01/1687.delivering-boxes-from-storage-to-ports/" title="LeetCode 1687. Delivering Boxes from Storage to Ports">LeetCode 1687. Delivering Boxes from Storage to Ports</a><time datetime="2022-09-02T02:31:00.000Z" title="发表于 2022-09-02 10:31">2022-09-02</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
             </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/09/07/li-ming-jing-qiao-qiao/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="黎明静悄悄">
-                            
-                            <span class="card-title">黎明静悄悄</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                黎明静悄悄
-子夜
-She was still too young to know that life never gives anything for nothing, and that a price is always exacted 
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Essay/">
-                            <span class="chip bg-color">Essay</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="链接器查找范围">
-                            
-                            <span class="card-title">链接器查找范围</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                解决Visual Studio的 LNK2019 和 LNK1120 错误
-问题描述
-写了一个 text searching 的代码。该代码设计了数个类，并有一个 interface class 通过指向 base class 的 shar
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-09
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    技术笔记
-                                </a>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" class="post-category">
-                                    coding过程中踩过的坑
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="/tags/Debug/">
-                            <span class="chip bg-color">Debug</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/05/24/c-learning-notes/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="C++ learning notes">
-                            
-                            <span class="card-title">C++ learning notes</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                C++ learning notes
-Generic algorithm
-lambda
-[capture list] (parameter list) -> return type {function body}
-
-we can ignor
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    技术笔记
-                                </a>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/" class="post-category">
-                                    Computer Science
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="/tags/Notes/">
-                            <span class="chip bg-color">Notes</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-        </div>
-    </article>
-
-</main>
-
-
-
-
-    <footer class="page-footer bg-color">
-    
-
-    <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
-        <div class="col s12 m8 l8 copy-right">
-            Copyright&nbsp;&copy;
-            
-                <span id="year">2021-2022</span>
-            
-            <a href="/about" target="_blank">江子扬-Jasper Young</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
-            <br>
-            
-            
-            
-                
-            
-            
-                <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
-                    <span id="busuanzi_value_site_pv" class="white-color"></span>
-            </span>
-            
-            
-                <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
-                    <span id="busuanzi_value_site_uv" class="white-color"></span>
-            </span>
-            
-            <br>
-
-            <!-- 运行天数提醒. -->
-            
-            <br>
-            
-        </div>
-        <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/JiangZiyang0120" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:yangzejia0120@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-</div>
-    </div>
-</footer>
-
-<div class="progress-bar"></div>
-
-
-    <!-- 搜索遮罩框 -->
-<div id="searchModal" class="modal">
-    <div class="modal-content">
-        <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
-                   class="search-input">
-        </div>
-        <div id="searchResult"></div>
-    </div>
-</div>
-
-<script type="text/javascript">
-$(function () {
-    var searchFunc = function (path, search_id, content_id) {
-        'use strict';
-        $.ajax({
-            url: path,
-            dataType: "xml",
-            success: function (xmlResponse) {
-                // get the contents from search data
-                var datas = $("entry", xmlResponse).map(function () {
-                    return {
-                        title: $("title", this).text(),
-                        content: $("content", this).text(),
-                        url: $("url", this).text()
-                    };
-                }).get();
-                var $input = document.getElementById(search_id);
-                var $resultContent = document.getElementById(content_id);
-                $input.addEventListener('input', function () {
-                    var str = '<ul class=\"search-result-list\">';
-                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                    $resultContent.innerHTML = "";
-                    if (this.value.trim().length <= 0) {
-                        return;
-                    }
-                    // perform local searching
-                    datas.forEach(function (data) {
-                        var isMatch = true;
-                        var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                        var data_url = data.url;
-                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
-                        var index_title = -1;
-                        var index_content = -1;
-                        var first_occur = -1;
-                        // only match artiles with not empty titles and contents
-                        if (data_title !== '' && data_content !== '') {
-                            keywords.forEach(function (keyword, i) {
-                                index_title = data_title.indexOf(keyword);
-                                index_content = data_content.indexOf(keyword);
-                                if (index_title < 0 && index_content < 0) {
-                                    isMatch = false;
-                                } else {
-                                    if (index_content < 0) {
-                                        index_content = 0;
-                                    }
-                                    if (i === 0) {
-                                        first_occur = index_content;
-                                    }
-                                }
-                            });
-                        }
-                        // show search results
-                        if (isMatch) {
-                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
-                            var content = data.content.trim().replace(/<[^>]+>/g, "");
-                            if (first_occur >= 0) {
-                                // cut out 100 characters
-                                var start = first_occur - 20;
-                                var end = first_occur + 80;
-                                if (start < 0) {
-                                    start = 0;
-                                }
-                                if (start === 0) {
-                                    end = 100;
-                                }
-                                if (end > content.length) {
-                                    end = content.length;
-                                }
-                                var match_content = content.substr(start, end);
-                                // highlight all keywords
-                                keywords.forEach(function (keyword) {
-                                    var regS = new RegExp(keyword, "gi");
-                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
-                                });
-
-                                str += "<p class=\"search-result\">" + match_content + "...</p>"
-                            }
-                            str += "</li>";
-                        }
-                    });
-                    str += "</ul>";
-                    $resultContent.innerHTML = str;
-                });
-            }
-        });
-    };
-
-    searchFunc('/search.xml', 'searchInput', 'searchResult');
-});
-</script>
-
-    <!-- 白天和黑夜主题 -->
-<div class="stars-con">
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>  
-</div>
-
-<script>
-    function switchNightMode() {
-        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
-        setTimeout(function () {
-            $('body').hasClass('DarkMode') 
-            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
-            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
-            
-            setTimeout(function () {
-            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
-                $(this).remove()
-            })
-            }, 2e3)
-        })
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">技术笔记</span><span class="card-category-list-count">6</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/"><span class="card-category-list-name">Computer Networking</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/"><span class="card-category-list-name">Computer Science</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">LeetCode笔记</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"><span class="card-category-list-name">coding过程中踩过的坑</span><span class="card-category-list-count">2</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="card-category-list-name">随笔</span><span class="card-category-list-count">4</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/"><span class="card-category-list-name">周记</span><span class="card-category-list-count">3</span></a></li></ul></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/LeetCode/" style="font-size: 1.3em; color: rgb(186, 110, 46)">LeetCode</a><a href="/tags/Algorithms/" style="font-size: 1.3em; color: rgb(72, 48, 151)">Algorithms</a><a href="/tags/weekly-journal/" style="font-size: 1.45em; color: rgb(145, 128, 184)">weekly journal</a><a href="/tags/C/" style="font-size: 1.45em; color: rgb(168, 162, 171)">C++</a><a href="/tags/Notes/" style="font-size: 1.15em; color: rgb(179, 96, 114)">Notes</a><a href="/tags/Debug/" style="font-size: 1.3em; color: rgb(99, 35, 80)">Debug</a><a href="/tags/Web/" style="font-size: 1.15em; color: rgb(189, 122, 43)">Web</a><a href="/tags/Tutorial/" style="font-size: 1.15em; color: rgb(57, 47, 19)">Tutorial</a><a href="/tags/Essay/" style="font-size: 1.15em; color: rgb(85, 140, 15)">Essay</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/08/"><span class="card-archive-list-date">八月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">五月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">10</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-05-25T07:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">17.2k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-10-07T16:36:09.492Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2022 By 江子扬-Jasper Young</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  function loadValine () {
+    function initValine () {
+      let initData = {
+        el: '#vcomment',
+        appId: 'lKqkQZoD1qdivPDNgg96he6E-gzGzoHsz',
+        appKey: '2AtJjSQiax2wEASnwmXHXXwM',
+        serverURLs: 'https://lkqkqzod.lc-cn-n1-shared.com'
+      }
+      
+      const valine = new Valine(initData)
     }
-</script>
 
-    <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</div>
+    if (typeof Valine === 'function') initValine() 
+    else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+  }
 
-
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
-
-    
-
-    
-
-    <!-- 雪花特效 -->
-    
-
-    <!-- 鼠标星星特效 -->
-    
-
-     
-        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
-        <script src="/libs/others/TencentCaptcha.js"></script>
-        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
-    
-
-    <!-- Baidu Analytics -->
-
-    <!-- Baidu Push -->
-
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
-
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
-
-    
-
-    
-
-    <!--腾讯兔小巢-->
-    
-    
-
-    
-
-    
-
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
-
-</body>
-
-</html>
+  window.pjax ? loadValine() : window.addEventListener('load', loadValine)
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

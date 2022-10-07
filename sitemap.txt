@@ -1,3 +1,8 @@
+https://jzy-planet.com/todo/index.html
+https://jzy-planet.com/gallery/index.html
+https://jzy-planet.com/index.html
+https://jzy-planet.com/categories/index.html
+https://jzy-planet.com/tags/index.html
 https://jzy-planet.com/2022/06/28/linux-ru-he-tong-guo-smtp-fu-wu-qi-fa-song-qq-you-jian/
 https://jzy-planet.com/2021/09/07/li-ming-jing-qiao-qiao/
 https://jzy-planet.com/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/
@@ -7,8 +12,6 @@ https://jzy-planet.com/2022/09/10/2022-w36/
 https://jzy-planet.com/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/
 https://jzy-planet.com/2022/09/04/2022-w35/
 https://jzy-planet.com/contact/index.html
-https://jzy-planet.com/tags/index.html
-https://jzy-planet.com/categories/index.html
 https://jzy-planet.com/atom/index.html
 https://jzy-planet.com/2022/09/01/1687.delivering-boxes-from-storage-to-ports/
 https://jzy-planet.com/2022/08/30/c-0-3-5-rule/
