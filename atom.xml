@@ -6,7 +6,7 @@
   <link href="https://jzy-planet.com/atom.xml" rel="self"/>
   
   <link href="https://jzy-planet.com/"/>
-  <updated>2022-10-09T08:42:00.000Z</updated>
+  <updated>2022-10-11T09:04:00.000Z</updated>
   <id>https://jzy-planet.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>操作系统笔记</title>
+    <link href="https://jzy-planet.com/2022/10/11/cao-zuo-xi-tong-bi-ji/"/>
+    <id>https://jzy-planet.com/2022/10/11/cao-zuo-xi-tong-bi-ji/</id>
+    <published>2022-10-11T08:29:00.000Z</published>
+    <updated>2022-10-11T09:04:00.000Z</updated>
+    
+    
+    <summary type="html">912 OS笔记。based on 清华大学-向勇、陈渝-操作系统。</summary>
+    
+    
+    
+    <category term="技术笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="操作系统" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="OS" scheme="https://jzy-planet.com/tags/OS/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode 1932. Merge BSTs to Create Single BST</title>
@@ -61,6 +82,27 @@
     
     
     <category term="weekly journal" scheme="https://jzy-planet.com/tags/weekly-journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机组成笔记</title>
+    <link href="https://jzy-planet.com/2022/09/26/ji-suan-ji-zu-cheng-bi-ji/"/>
+    <id>https://jzy-planet.com/2022/09/26/ji-suan-ji-zu-cheng-bi-ji/</id>
+    <published>2022-09-26T07:03:00.000Z</published>
+    <updated>2022-10-11T07:29:00.000Z</updated>
+    
+    
+    <summary type="html">912 CO笔记。based on 清华大学-刘卫东-计算机组成原理。</summary>
+    
+    
+    
+    <category term="技术笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="Computer Organization" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Organization/"/>
+    
+    
+    <category term="CO" scheme="https://jzy-planet.com/tags/CO/"/>
     
   </entry>
   
