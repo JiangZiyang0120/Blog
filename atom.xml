@@ -6,7 +6,7 @@
   <link href="https://jzy-planet.com/atom.xml" rel="self"/>
   
   <link href="https://jzy-planet.com/"/>
-  <updated>2022-10-12T08:45:00.000Z</updated>
+  <updated>2022-10-16T11:05:00.000Z</updated>
   <id>https://jzy-planet.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>历周记(2022-10-10 - 2022-10-16)</title>
+    <link href="https://jzy-planet.com/2022/10/16/2022-w41/"/>
+    <id>https://jzy-planet.com/2022/10/16/2022-w41/</id>
+    <published>2022-10-16T11:01:00.000Z</published>
+    <updated>2022-10-16T11:05:00.000Z</updated>
+    
+    
+    <summary type="html">2022-10-10
+ * 近期开始拿LeetCode的hard题练手（听说也就是acm的签到题😨）。感觉这两天的题目不再是单纯的算法题了，而是更加贴近生产环境。除了要考虑算法实现，还要面临许多实际的细节。其实有点不太适应，作为一个不称职的数学学子，考虑问题时总会花很多时间在问题的解的完备性上下功夫。导致思想压力有点大。但究根结底还是自己的抽象能力不足，只能停留在在纷繁复杂的表面，看着一地线头不知所措。还是要练习透过事物看本质，快刀斩乱麻的能力和眼光啊。
+ * 瑞克与莫蒂 S06E06，感觉比这季的前五期相比有点相形见绌，看下来后很乱。它讨论了蛮多主题。虽然我并不是个康米（尤其不是威权马，但</summary>
+    
+    
+    
+    <category term="随笔" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="周记" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/"/>
+    
+    
+    <category term="weekly journal" scheme="https://jzy-planet.com/tags/weekly-journal/"/>
+    
+  </entry>
   
   <entry>
     <title>操作系统笔记</title>
@@ -92,7 +115,7 @@
     <link href="https://jzy-planet.com/2022/09/26/ji-suan-ji-zu-cheng-bi-ji/"/>
     <id>https://jzy-planet.com/2022/09/26/ji-suan-ji-zu-cheng-bi-ji/</id>
     <published>2022-09-26T07:03:00.000Z</published>
-    <updated>2022-10-15T09:27:00.000Z</updated>
+    <updated>2022-10-16T08:23:00.000Z</updated>
     
     
     <summary type="html">912 CO笔记。based on 清华大学-刘卫东-计算机组成原理。</summary>
@@ -253,7 +276,7 @@
     <link href="https://jzy-planet.com/2022/06/28/linux-ru-he-tong-guo-smtp-fu-wu-qi-fa-song-qq-you-jian/"/>
     <id>https://jzy-planet.com/2022/06/28/linux-ru-he-tong-guo-smtp-fu-wu-qi-fa-song-qq-you-jian/</id>
     <published>2022-06-28T10:23:00.000Z</published>
-    <updated>2022-10-15T13:43:30.029Z</updated>
+    <updated>2022-10-16T13:18:34.361Z</updated>
     
     
     <summary type="html">这是《计算机网络——自顶向下方法》里的一个小实验，对理解smtp的交流和电子邮件的报头都很有帮助。是个很值得尝试的实验。</summary>
@@ -276,7 +299,7 @@
     <link href="https://jzy-planet.com/2021/09/07/li-ming-jing-qiao-qiao/"/>
     <id>https://jzy-planet.com/2021/09/07/li-ming-jing-qiao-qiao/</id>
     <published>2021-09-07T19:35:00.000Z</published>
-    <updated>2022-10-15T13:43:30.029Z</updated>
+    <updated>2022-10-16T13:18:34.361Z</updated>
     
     
     <summary type="html">记录一段爆肝的生活</summary>
@@ -295,7 +318,7 @@
     <link href="https://jzy-planet.com/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/"/>
     <id>https://jzy-planet.com/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/</id>
     <published>2021-07-08T20:00:00.000Z</published>
-    <updated>2022-10-15T13:43:30.029Z</updated>
+    <updated>2022-10-16T13:18:34.361Z</updated>
     
     
     <summary type="html">一段其实de了一天多但是很可笑的bug&lt;br&gt; 会做成专栏形式，算是总结和对自己的提醒叭</summary>
