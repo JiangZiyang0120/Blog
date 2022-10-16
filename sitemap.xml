@@ -280,6 +280,13 @@
   </url>
   
   <url>
+    <loc>https://jzy-planet.com/tags/Notes/</loc>
+    <lastmod>2022-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jzy-planet.com/tags/Web/</loc>
     <lastmod>2022-10-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -294,13 +301,6 @@
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/tags/Notes/</loc>
-    <lastmod>2022-10-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jzy-planet.com/tags/OS/</loc>
     <lastmod>2022-10-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -308,14 +308,14 @@
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/tags/Essay/</loc>
+    <loc>https://jzy-planet.com/tags/CO/</loc>
     <lastmod>2022-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/tags/CO/</loc>
+    <loc>https://jzy-planet.com/tags/Essay/</loc>
     <lastmod>2022-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -352,14 +352,14 @@
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/</loc>
+    <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/</loc>
     <lastmod>2022-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/</loc>
+    <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/</loc>
     <lastmod>2022-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
