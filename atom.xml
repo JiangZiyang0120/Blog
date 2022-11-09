@@ -6,7 +6,7 @@
   <link href="https://jzy-planet.com/atom.xml" rel="self"/>
   
   <link href="https://jzy-planet.com/"/>
-  <updated>2022-10-16T11:05:00.000Z</updated>
+  <updated>2022-11-09T12:30:00.000Z</updated>
   <id>https://jzy-planet.com/</id>
   
   <author>
@@ -17,48 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>历周记(2022-10-10 - 2022-10-16)</title>
-    <link href="https://jzy-planet.com/2022/10/16/2022-w41/"/>
-    <id>https://jzy-planet.com/2022/10/16/2022-w41/</id>
-    <published>2022-10-16T11:01:00.000Z</published>
-    <updated>2022-10-16T11:05:00.000Z</updated>
+    <title>谓叹集（一）</title>
+    <link href="https://jzy-planet.com/2022/11/09/kui-tan-ji-yi/"/>
+    <id>https://jzy-planet.com/2022/11/09/kui-tan-ji-yi/</id>
+    <published>2022-11-09T12:19:00.000Z</published>
+    <updated>2022-11-09T12:30:00.000Z</updated>
     
     
-    <summary type="html">2022-10-10
- * 近期开始拿LeetCode的hard题练手（听说也就是acm的签到题😨）。感觉这两天的题目不再是单纯的算法题了，而是更加贴近生产环境。除了要考虑算法实现，还要面临许多实际的细节。其实有点不太适应，作为一个不称职的数学学子，考虑问题时总会花很多时间在问题的解的完备性上下功夫。导致思想压力有点大。但究根结底还是自己的抽象能力不足，只能停留在在纷繁复杂的表面，看着一地线头不知所措。还是要练习透过事物看本质，快刀斩乱麻的能力和眼光啊。
- * 瑞克与莫蒂 S06E06，感觉比这季的前五期相比有点相形见绌，看下来后很乱。它讨论了蛮多主题。虽然我并不是个康米（尤其不是威权马，但</summary>
+    <summary type="html">记录随想之事。努力不让它变成流水账，也不要半途而废。</summary>
     
     
     
     <category term="随笔" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
-    <category term="周记" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/"/>
     
-    
-    <category term="weekly journal" scheme="https://jzy-planet.com/tags/weekly-journal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>操作系统笔记</title>
-    <link href="https://jzy-planet.com/2022/10/11/cao-zuo-xi-tong-bi-ji/"/>
-    <id>https://jzy-planet.com/2022/10/11/cao-zuo-xi-tong-bi-ji/</id>
-    <published>2022-10-11T08:29:00.000Z</published>
-    <updated>2022-10-12T08:45:00.000Z</updated>
-    
-    
-    <summary type="html">912 OS笔记。based on 清华大学-向勇、陈渝-操作系统。</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="Operating System" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Operating-System/"/>
-    
-    
-    <category term="Notes" scheme="https://jzy-planet.com/tags/Notes/"/>
-    
-    <category term="OS" scheme="https://jzy-planet.com/tags/OS/"/>
+    <category term="Essay" scheme="https://jzy-planet.com/tags/Essay/"/>
     
   </entry>
   
@@ -67,7 +40,7 @@
     <link href="https://jzy-planet.com/2022/10/09/1932.merge-bsts-to-create-single-bst/"/>
     <id>https://jzy-planet.com/2022/10/09/1932.merge-bsts-to-create-single-bst/</id>
     <published>2022-10-09T08:17:00.000Z</published>
-    <updated>2022-10-09T08:42:00.000Z</updated>
+    <updated>2022-11-08T12:03:00.000Z</updated>
     
     
     <summary type="html">LeetCode第[1932]题的笔记</summary>
@@ -82,101 +55,6 @@
     <category term="LeetCode" scheme="https://jzy-planet.com/tags/LeetCode/"/>
     
     <category term="Algorithms" scheme="https://jzy-planet.com/tags/Algorithms/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>历周记(2022-10-03 - 2022-10-09)</title>
-    <link href="https://jzy-planet.com/2022/10/07/2022-w40/"/>
-    <id>https://jzy-planet.com/2022/10/07/2022-w40/</id>
-    <published>2022-10-07T11:09:00.000Z</published>
-    <updated>2022-10-09T09:40:00.000Z</updated>
-    
-    
-    <summary type="html">有两周没有发历周记了。一则是由于学业压力，暂且将历周记的时间间隔更改为两周一次。而第二周又是法定假日，于是满怀着罪恶感和摸鱼的心情又鸽了一周。名义上的理由如上，不过我现在感觉，这种每周找个时间来写作文的习惯有点没有意义。接下来，我想我会更倾向于将每日杂记整合进我的周记中。这或许会更青春废话文学，或许也会更贴近周记本身的意义。
-
-2022-10-07
-我缺失的成长呢？
-9月27日素来是考研人破大防的日子。许多人会在这天失去悄悄保研的研友，更惨的是失去去向不一致而不得不分道扬镳的对象。更多的人破防，我想是在这一天，照见了自己碌碌无为的三年时光。至少我是如此。不过我当时并没有很emotional，而</summary>
-    
-    
-    
-    <category term="随笔" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    <category term="周记" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="weekly journal" scheme="https://jzy-planet.com/tags/weekly-journal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机组成笔记</title>
-    <link href="https://jzy-planet.com/2022/09/26/ji-suan-ji-zu-cheng-bi-ji/"/>
-    <id>https://jzy-planet.com/2022/09/26/ji-suan-ji-zu-cheng-bi-ji/</id>
-    <published>2022-09-26T07:03:00.000Z</published>
-    <updated>2022-10-16T08:23:00.000Z</updated>
-    
-    
-    <summary type="html">912 CO笔记。based on 清华大学-刘卫东-计算机组成原理。</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="Computer Organization" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Organization/"/>
-    
-    
-    <category term="Notes" scheme="https://jzy-planet.com/tags/Notes/"/>
-    
-    <category term="CO" scheme="https://jzy-planet.com/tags/CO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>历周记(2022-09-12 - 2022-09-18)</title>
-    <link href="https://jzy-planet.com/2022/09/18/2022-w37/"/>
-    <id>https://jzy-planet.com/2022/09/18/2022-w37/</id>
-    <published>2022-09-18T11:42:00.000Z</published>
-    <updated>2022-09-18T13:42:00.000Z</updated>
-    
-    
-    <summary type="html">对周记的一点思考
-我在这个博客发的第一篇周记中就说明了，我开这个周记主要是想逼迫自己输出倒逼输入。不过三周下来，我发现自己生活中值得记录的东西的确不多。考研人的生活往往朴实无华且枯燥。若是一板一眼地将我某某日做了什么题看了哪本书记录上来，那简直像是写我自己的使用说明书。难免不出三天就看不下去愤而删之了。但周记写成随笔集似乎也不大合适——我的“随笔”目录中全是一篇篇“历周记”，里面藏着真正的随感。这至少不大利于检索内容。
-总的来说我还是尽可能地在找周记和我一周中的生活的巧妙配比。~~当然我只是随口一说，不到下笔写周记时我根本不会去想这种事情。~~也许什么时候会考虑将我每天的速记小卡片整合到我的周</summary>
-    
-    
-    
-    <category term="随笔" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    <category term="周记" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="weekly journal" scheme="https://jzy-planet.com/tags/weekly-journal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>历周记(2022-09-05 - 2022-09-11)</title>
-    <link href="https://jzy-planet.com/2022/09/10/2022-w36/"/>
-    <id>https://jzy-planet.com/2022/09/10/2022-w36/</id>
-    <published>2022-09-11T01:25:00.000Z</published>
-    <updated>2022-09-13T12:54:00.000Z</updated>
-    
-    
-    <summary type="html">又是一周结束的日子。这周经历了咽喉溃疡、返校、隔离、做核酸捅喉咙……只觉得浑浑噩噩了好几天；没想到这么快就又到了一周结束的日子了。普通人的生活，往往要拿着放大镜才能找到些许值得记录的片段的。想了想，过去一周好像没什么特别值得记录的。那就写点务虚的吧。
-
-诗心和远去的诗心
-在我很小的时候，曾一度非常喜欢诗词。虽然最早接触诗词的原因是为了和女孩子聊天有话题，但很快，我就被诗词迷住了。找话题时抱着厚厚的书籍，也颇有种醉翁之意不在酒的意味了。小时候品味不是很高，看多了汉赋和婉约词，只觉极尽华丽之辞藻，欲穷天工之文章。读这些文字就好像看到了一幅幅画卷，看到风起于青蘋之末，草色摇动；看到三秋桂子，十里荷花</summary>
-    
-    
-    
-    <category term="随笔" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    <category term="周记" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="weekly journal" scheme="https://jzy-planet.com/tags/weekly-journal/"/>
     
   </entry>
   
@@ -200,28 +78,6 @@
     <category term="LeetCode" scheme="https://jzy-planet.com/tags/LeetCode/"/>
     
     <category term="Algorithms" scheme="https://jzy-planet.com/tags/Algorithms/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>历周记(2022-08-29 - 2022-09-04)</title>
-    <link href="https://jzy-planet.com/2022/09/04/2022-w35/"/>
-    <id>https://jzy-planet.com/2022/09/04/2022-w35/</id>
-    <published>2022-09-04T16:26:00.000Z</published>
-    <updated>2022-09-06T07:31:00.000Z</updated>
-    
-    
-    <summary type="html">这是我在博客上写的第一篇周记，希望能用周记的形式来记录自己的生活和一些感悟。也能用输出倒逼输入的方式让自己去更多地涉猎一些内容。我始终觉得文理科并不是人生必须二选一的选项，一个程序工程师同样需要人文情怀和人文素养，才能更好地开发出吸引和满足他人诉求的产品。
-我在上一周，乃至过去的一个月每天晚上都习惯性地开始写代码，一直熬到深夜解决问题才上床。然后被蓝光辐射地毫无困意，打开社交媒体刷刷刷，一直刷到昏昏沉沉地睡去。第二天被闹铃叫醒，也才堪堪睡够六个小时。时间一长，生物钟就彻底乱掉了，我开始间歇性嗜睡、感冒流涕不止，每日跑步也感觉跑不动了。这让我开始思考一个WLB(Work&amp;Life Balance</summary>
-    
-    
-    
-    <category term="随笔" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    <category term="周记" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/%E5%91%A8%E8%AE%B0/"/>
-    
-    
-    <category term="weekly journal" scheme="https://jzy-planet.com/tags/weekly-journal/"/>
     
   </entry>
   
@@ -341,7 +197,7 @@
     <link href="https://jzy-planet.com/2021/05/24/c-learning-notes/"/>
     <id>https://jzy-planet.com/2021/05/24/c-learning-notes/</id>
     <published>2021-05-25T06:00:00.000Z</published>
-    <updated>2022-01-17T08:54:00.000Z</updated>
+    <updated>2022-11-08T14:12:00.000Z</updated>
     
     
     <summary type="html">&lt;strong&gt;自用笔记&lt;/strong&gt;：仅供参考&lt;br&gt; note of 《C++ Primer》, written in English</summary>
@@ -351,6 +207,8 @@
     <category term="技术笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
     <category term="Computer Science" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/"/>
+    
+    <category term="C++" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/C/"/>
     
     
     <category term="C++" scheme="https://jzy-planet.com/tags/C/"/>
