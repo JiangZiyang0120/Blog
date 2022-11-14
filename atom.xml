@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>江子扬的星球</title>
-  <icon>https://jzy-planet.com/images/planet.png</icon>
+  <icon>https://jzy-planet.com/Blog/images/planet.png</icon>
   <subtitle>我的肩上是风，风上是闪烁的星群</subtitle>
-  <link href="https://jzy-planet.com/atom.xml" rel="self"/>
+  <link href="https://jzy-planet.com/Blog/atom.xml" rel="self"/>
   
-  <link href="https://jzy-planet.com/"/>
+  <link href="https://jzy-planet.com/Blog/"/>
   <updated>2022-11-09T12:30:00.000Z</updated>
-  <id>https://jzy-planet.com/</id>
+  <id>https://jzy-planet.com/Blog/</id>
   
   <author>
     <name>江子扬-Jasper Young</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>谓叹集</title>
-    <link href="https://jzy-planet.com/2022/11/09/kui-tan-ji/"/>
-    <id>https://jzy-planet.com/2022/11/09/kui-tan-ji/</id>
+    <link href="https://jzy-planet.com/Blog/2022/11/09/kui-tan-ji/"/>
+    <id>https://jzy-planet.com/Blog/2022/11/09/kui-tan-ji/</id>
     <published>2022-11-09T12:19:00.000Z</published>
     <updated>2022-11-09T12:30:00.000Z</updated>
     
@@ -28,17 +28,17 @@
     
     
     
-    <category term="周记" scheme="https://jzy-planet.com/categories/%E5%91%A8%E8%AE%B0/"/>
+    <category term="周记" scheme="https://jzy-planet.com/Blog/categories/%E5%91%A8%E8%AE%B0/"/>
     
     
-    <category term="Ｗeeklyournal" scheme="https://jzy-planet.com/tags/Weeklyournal/"/>
+    <category term="Ｗeeklyournal" scheme="https://jzy-planet.com/Blog/tags/Weeklyournal/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode 1932. Merge BSTs to Create Single BST</title>
-    <link href="https://jzy-planet.com/2022/10/09/1932.merge-bsts-to-create-single-bst/"/>
-    <id>https://jzy-planet.com/2022/10/09/1932.merge-bsts-to-create-single-bst/</id>
+    <link href="https://jzy-planet.com/Blog/2022/10/09/1932.merge-bsts-to-create-single-bst/"/>
+    <id>https://jzy-planet.com/Blog/2022/10/09/1932.merge-bsts-to-create-single-bst/</id>
     <published>2022-10-09T08:17:00.000Z</published>
     <updated>2022-11-08T12:03:00.000Z</updated>
     
@@ -47,21 +47,21 @@
     
     
     
-    <category term="技术笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="LeetCode笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/"/>
+    <category term="LeetCode笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="LeetCode" scheme="https://jzy-planet.com/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="https://jzy-planet.com/Blog/tags/LeetCode/"/>
     
-    <category term="Algorithms" scheme="https://jzy-planet.com/tags/Algorithms/"/>
+    <category term="Algorithms" scheme="https://jzy-planet.com/Blog/tags/Algorithms/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode 188. Best Time to Buy and Sell Stock IV</title>
-    <link href="https://jzy-planet.com/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/"/>
-    <id>https://jzy-planet.com/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/</id>
+    <link href="https://jzy-planet.com/Blog/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/"/>
+    <id>https://jzy-planet.com/Blog/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/</id>
     <published>2022-09-10T07:14:00.000Z</published>
     <updated>2022-09-10T07:44:00.000Z</updated>
     
@@ -70,21 +70,21 @@
     
     
     
-    <category term="技术笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="LeetCode笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/"/>
+    <category term="LeetCode笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="LeetCode" scheme="https://jzy-planet.com/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="https://jzy-planet.com/Blog/tags/LeetCode/"/>
     
-    <category term="Algorithms" scheme="https://jzy-planet.com/tags/Algorithms/"/>
+    <category term="Algorithms" scheme="https://jzy-planet.com/Blog/tags/Algorithms/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode 1687. Delivering Boxes from Storage to Ports</title>
-    <link href="https://jzy-planet.com/2022/09/01/1687.delivering-boxes-from-storage-to-ports/"/>
-    <id>https://jzy-planet.com/2022/09/01/1687.delivering-boxes-from-storage-to-ports/</id>
+    <link href="https://jzy-planet.com/Blog/2022/09/01/1687.delivering-boxes-from-storage-to-ports/"/>
+    <id>https://jzy-planet.com/Blog/2022/09/01/1687.delivering-boxes-from-storage-to-ports/</id>
     <published>2022-09-02T02:31:00.000Z</published>
     <updated>2022-09-02T14:22:00.000Z</updated>
     
@@ -93,21 +93,21 @@
     
     
     
-    <category term="技术笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="LeetCode笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/"/>
+    <category term="LeetCode笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="LeetCode" scheme="https://jzy-planet.com/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="https://jzy-planet.com/Blog/tags/LeetCode/"/>
     
-    <category term="Algorithms" scheme="https://jzy-planet.com/tags/Algorithms/"/>
+    <category term="Algorithms" scheme="https://jzy-planet.com/Blog/tags/Algorithms/"/>
     
   </entry>
   
   <entry>
     <title>C++的 0/3/5 规则</title>
-    <link href="https://jzy-planet.com/2022/08/30/c-0-3-5-rule/"/>
-    <id>https://jzy-planet.com/2022/08/30/c-0-3-5-rule/</id>
+    <link href="https://jzy-planet.com/Blog/2022/08/30/c-0-3-5-rule/"/>
+    <id>https://jzy-planet.com/Blog/2022/08/30/c-0-3-5-rule/</id>
     <published>2022-08-30T10:23:00.000Z</published>
     <updated>2022-08-30T11:26:00.000Z</updated>
     
@@ -116,21 +116,21 @@
     
     
     
-    <category term="技术笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="coding过程中踩过的坑" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
+    <category term="coding过程中踩过的坑" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
     
     
-    <category term="C++" scheme="https://jzy-planet.com/tags/C/"/>
+    <category term="C++" scheme="https://jzy-planet.com/Blog/tags/C/"/>
     
-    <category term="Debug" scheme="https://jzy-planet.com/tags/Debug/"/>
+    <category term="Debug" scheme="https://jzy-planet.com/Blog/tags/Debug/"/>
     
   </entry>
   
   <entry>
     <title>linux如何通过SMTP服务器发送QQ邮件</title>
-    <link href="https://jzy-planet.com/2022/06/28/linux-ru-he-tong-guo-smtp-fu-wu-qi-fa-song-qq-you-jian/"/>
-    <id>https://jzy-planet.com/2022/06/28/linux-ru-he-tong-guo-smtp-fu-wu-qi-fa-song-qq-you-jian/</id>
+    <link href="https://jzy-planet.com/Blog/2022/06/28/linux-ru-he-tong-guo-smtp-fu-wu-qi-fa-song-qq-you-jian/"/>
+    <id>https://jzy-planet.com/Blog/2022/06/28/linux-ru-he-tong-guo-smtp-fu-wu-qi-fa-song-qq-you-jian/</id>
     <published>2022-06-28T10:23:00.000Z</published>
     <updated>2022-10-16T13:18:34.361Z</updated>
     
@@ -139,21 +139,21 @@
     
     
     
-    <category term="技术笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Computer Networking" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/"/>
+    <category term="Computer Networking" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/"/>
     
     
-    <category term="Web" scheme="https://jzy-planet.com/tags/Web/"/>
+    <category term="Web" scheme="https://jzy-planet.com/Blog/tags/Web/"/>
     
-    <category term="Tutorial" scheme="https://jzy-planet.com/tags/Tutorial/"/>
+    <category term="Tutorial" scheme="https://jzy-planet.com/Blog/tags/Tutorial/"/>
     
   </entry>
   
   <entry>
     <title>黎明静悄悄</title>
-    <link href="https://jzy-planet.com/2021/09/07/li-ming-jing-qiao-qiao/"/>
-    <id>https://jzy-planet.com/2021/09/07/li-ming-jing-qiao-qiao/</id>
+    <link href="https://jzy-planet.com/Blog/2021/09/07/li-ming-jing-qiao-qiao/"/>
+    <id>https://jzy-planet.com/Blog/2021/09/07/li-ming-jing-qiao-qiao/</id>
     <published>2021-09-07T19:35:00.000Z</published>
     <updated>2022-10-16T13:18:34.361Z</updated>
     
@@ -162,17 +162,17 @@
     
     
     
-    <category term="随笔" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://jzy-planet.com/Blog/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="Essay" scheme="https://jzy-planet.com/tags/Essay/"/>
+    <category term="Essay" scheme="https://jzy-planet.com/Blog/tags/Essay/"/>
     
   </entry>
   
   <entry>
     <title>链接器查找范围</title>
-    <link href="https://jzy-planet.com/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/"/>
-    <id>https://jzy-planet.com/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/</id>
+    <link href="https://jzy-planet.com/Blog/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/"/>
+    <id>https://jzy-planet.com/Blog/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/</id>
     <published>2021-07-08T20:00:00.000Z</published>
     <updated>2022-10-16T13:18:34.361Z</updated>
     
@@ -181,14 +181,14 @@
     
     
     
-    <category term="技术笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="coding过程中踩过的坑" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
+    <category term="coding过程中踩过的坑" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
     
     
-    <category term="C++" scheme="https://jzy-planet.com/tags/C/"/>
+    <category term="C++" scheme="https://jzy-planet.com/Blog/tags/C/"/>
     
-    <category term="Debug" scheme="https://jzy-planet.com/tags/Debug/"/>
+    <category term="Debug" scheme="https://jzy-planet.com/Blog/tags/Debug/"/>
     
   </entry>
   
