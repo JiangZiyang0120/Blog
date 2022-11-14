@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>江子扬的星球</title>
+  <title>江子扬的博客</title>
   <icon>https://jzy-planet.com/Blog/images/planet.png</icon>
   <subtitle>我的肩上是风，风上是闪烁的星群</subtitle>
   <link href="https://jzy-planet.com/Blog/atom.xml" rel="self"/>
