@@ -28,10 +28,10 @@
     
     
     
-    <category term="随笔" scheme="https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="周记" scheme="https://jzy-planet.com/categories/%E5%91%A8%E8%AE%B0/"/>
     
     
-    <category term="Essay" scheme="https://jzy-planet.com/tags/Essay/"/>
+    <category term="Ｗeeklyournal" scheme="https://jzy-planet.com/tags/Weeklyournal/"/>
     
   </entry>
   
@@ -189,31 +189,6 @@
     <category term="C++" scheme="https://jzy-planet.com/tags/C/"/>
     
     <category term="Debug" scheme="https://jzy-planet.com/tags/Debug/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++ learning notes</title>
-    <link href="https://jzy-planet.com/2021/05/24/c-learning-notes/"/>
-    <id>https://jzy-planet.com/2021/05/24/c-learning-notes/</id>
-    <published>2021-05-25T06:00:00.000Z</published>
-    <updated>2022-11-08T14:12:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;strong&gt;自用笔记&lt;/strong&gt;：仅供参考&lt;br&gt; note of 《C++ Primer》, written in English</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="Computer Science" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/"/>
-    
-    <category term="C++" scheme="https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/C/"/>
-    
-    
-    <category term="C++" scheme="https://jzy-planet.com/tags/C/"/>
-    
-    <category term="Notes" scheme="https://jzy-planet.com/tags/Notes/"/>
     
   </entry>
   

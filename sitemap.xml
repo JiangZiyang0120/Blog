@@ -29,15 +29,6 @@
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/2021/05/24/c-learning-notes/</loc>
-    
-    <lastmod>2022-11-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jzy-planet.com/2022/10/09/1932.merge-bsts-to-create-single-bst/</loc>
     
     <lastmod>2022-11-08</lastmod>
@@ -83,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/game/index.html</loc>
+    <loc>https://jzy-planet.com/movie/index.html</loc>
     
     <lastmod>2022-10-15</lastmod>
     
@@ -92,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/movie/index.html</loc>
+    <loc>https://jzy-planet.com/game/index.html</loc>
     
     <lastmod>2022-10-15</lastmod>
     
@@ -137,15 +128,6 @@
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/contact/index.html</loc>
-    
-    <lastmod>2022-09-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jzy-planet.com/atom/index.html</loc>
     
     <lastmod>2022-09-05</lastmod>
@@ -181,19 +163,10 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://jzy-planet.com/playlist/index.html</loc>
-    
-    <lastmod>2021-09-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://jzy-planet.com/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -201,56 +174,56 @@
   
   <url>
     <loc>https://jzy-planet.com/tags/LeetCode/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jzy-planet.com/tags/Algorithms/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jzy-planet.com/tags/C/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jzy-planet.com/tags/Debug/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/tags/Notes/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <loc>https://jzy-planet.com/tags/Weeklyournal/</loc>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jzy-planet.com/tags/Web/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jzy-planet.com/tags/Tutorial/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jzy-planet.com/tags/Essay/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -259,49 +232,42 @@
   
   <url>
     <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <loc>https://jzy-planet.com/categories/%E5%91%A8%E8%AE%B0/</loc>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/</loc>
-    <lastmod>2022-11-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jzy-planet.com/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Science/C/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jzy-planet.com/categories/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2022-11-09</lastmod>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
