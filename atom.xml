@@ -24,83 +24,14 @@
     <updated>2022-11-09T12:30:00.000Z</updated>
     
     
-    <summary type="html">记录随想之事。努力不让它变成流水账，也不要半途而废。</summary>
+    <summary type="html">记录随想之事。</summary>
     
     
     
-    <category term="周记" scheme="https://jzy-planet.com/Blog/categories/%E5%91%A8%E8%AE%B0/"/>
+    <category term="随笔" scheme="https://jzy-planet.com/Blog/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="Ｗeeklyournal" scheme="https://jzy-planet.com/Blog/tags/Weeklyournal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 1932. Merge BSTs to Create Single BST</title>
-    <link href="https://jzy-planet.com/Blog/2022/10/09/1932.merge-bsts-to-create-single-bst/"/>
-    <id>https://jzy-planet.com/Blog/2022/10/09/1932.merge-bsts-to-create-single-bst/</id>
-    <published>2022-10-09T08:17:00.000Z</published>
-    <updated>2022-11-08T12:03:00.000Z</updated>
-    
-    
-    <summary type="html">LeetCode第[1932]题的笔记</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="LeetCode笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="LeetCode" scheme="https://jzy-planet.com/Blog/tags/LeetCode/"/>
-    
-    <category term="Algorithms" scheme="https://jzy-planet.com/Blog/tags/Algorithms/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 188. Best Time to Buy and Sell Stock IV</title>
-    <link href="https://jzy-planet.com/Blog/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/"/>
-    <id>https://jzy-planet.com/Blog/2022/09/10/188.best-time-to-buy-and-sell-stock-iv/</id>
-    <published>2022-09-10T07:14:00.000Z</published>
-    <updated>2022-09-10T07:44:00.000Z</updated>
-    
-    
-    <summary type="html">LeetCode第[188]题的笔记</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="LeetCode笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="LeetCode" scheme="https://jzy-planet.com/Blog/tags/LeetCode/"/>
-    
-    <category term="Algorithms" scheme="https://jzy-planet.com/Blog/tags/Algorithms/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode 1687. Delivering Boxes from Storage to Ports</title>
-    <link href="https://jzy-planet.com/Blog/2022/09/01/1687.delivering-boxes-from-storage-to-ports/"/>
-    <id>https://jzy-planet.com/Blog/2022/09/01/1687.delivering-boxes-from-storage-to-ports/</id>
-    <published>2022-09-02T02:31:00.000Z</published>
-    <updated>2022-09-02T14:22:00.000Z</updated>
-    
-    
-    <summary type="html">LeetCode第[1687]题的笔记</summary>
-    
-    
-    
-    <category term="技术笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="LeetCode笔记" scheme="https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/LeetCode%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="LeetCode" scheme="https://jzy-planet.com/Blog/tags/LeetCode/"/>
-    
-    <category term="Algorithms" scheme="https://jzy-planet.com/Blog/tags/Algorithms/"/>
+    <category term="Essay" scheme="https://jzy-planet.com/Blog/tags/Essay/"/>
     
   </entry>
   
