@@ -406,54 +406,34 @@ C++为我们提供了强大的智能指针，用来管理资源的生命周期�
       </tags>
   </entry>
   <entry>
-    <title>链接器查找范围</title>
-    <url>/Blog/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/Blog/assets/css/APlayer.min.css"><script src="/Blog/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/Blog/assets/js/Meting.min.js"></script><h1>解决Visual Studio的 LNK2019 和 LNK1120 错误</h1>
-<h2 id="问题描述">问题描述</h2>
-<p>写了一个 text searching 的代码。该代码设计了数个类，并有一个 interface class 通过指向 base class 的 shared_ptr 通过 dynamic binding 来运行。然而结构设计的不是特别好，这也就导致我遇到了下面的问题：</p>
-<span id="more"></span>
-<blockquote>
-<p>interface class header file：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="type">const</span> QueryResult &amp;);</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>interface class source file</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;os, <span class="type">const</span> QueryResult &amp;query) &#123;</span><br><span class="line">	<span class="comment">// details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>base class header file, which is included by interface class header file</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">QueryResult</span> &#123;</span><br><span class="line">		<span class="comment">//下面的语句是错误来源</span></span><br><span class="line">		<span class="keyword">friend</span> <span class="keyword">inline</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="type">const</span> QueryResult &amp;);</span><br><span class="line">		<span class="comment">//details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>接着在尝试运行时就发现了 <a href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk2019?f1url=%3FappId%3DDev16IDEF1%26l%3DZH-CN%26k%3Dk(LNK2019)%26rd%3Dtrue&amp;view=msvc-160">LNK2019</a> 和 <a href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk1120?f1url=%3FappId%3DDev16IDEF1%26l%3DZH-CN%26k%3Dk(LNK1120)%26rd%3Dtrue&amp;view=msvc-160">LNK1120</a> 错误。以下为错误描述：</p>
-<blockquote>
-<p>无法解析的外部符号 “class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp; __cdecl operator&lt;&lt;(class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp;,class QueryResult const &amp;)” (??6@YAAEAV?<img src="https://math.now.sh?inline=basic_ostream%40DU%3F" style="display:inline-block;margin: 0;">char_traits@D@std@@@std@@AEAV01@AEBVQueryResult@@@Z)，函数 main 中引用了该符号</char></char></p>
-</blockquote>
-<h2 id="尝试分析">尝试分析</h2>
-<p>根据错误描述，可以锁定错误出自上面的第一行代码。Visual Studio给出的错误是无法解析，这样一个错误描述有些宽泛，放到 dev cpp 里就会好得多，它的错误提示长下面这样子：</p>
-<blockquote>
-<p>[警告] inline 函数 ‘std::ostream&amp; 运算符&lt;&lt;(std::ostream&amp;, const QueryResult&amp;)’ used but never defined</p>
-</blockquote>
-<p>然而我一开始并没有用 dev ，而是自己看 web 调了半天，还找了我的两个同学帮我看了一下。他们的解决方案是把 source file 给 include 进来（这也让我有点吃惊，为什么大二的计科同学会没有 package 的概念）。这样的方案我显然没办法满意，我无法理解，为什么编译器会找不到一个已经 declaration 并且 defining 的函数。出于这种疑惑，我友善地提醒了一下编译器——产生了我的第一个解决方案：</p>
-<blockquote>
-<p>interface class header file：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">extern</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="type">const</span> QueryResult &amp;);</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>不得不说vs的 MSVC 编译器是真的强大，加个 extern 就能联想到同名的inline函数。如果我没有写这个blog的话，我也许会沾沾自喜于这个解决方案并且依然想破头皮都想不明白为什么会出现这种错误。直到我为了验证这个错误用 dev 上又跑了一遍。我的 dev 编译器是 g++ （版本我也不是很清楚，小白都是一键装环境的），没有这么智能，很实诚地提醒了我。由于 <code>operator&lt;&lt;</code> 函数需要调用 QueryResult object 的 members ，再加上这个函数最开始是在base_Query.h 里 declaration 的，且我的 Query.h has included the base_Query.h，所以编译器找到了 inline 版本的 declaration ，而很不幸，这个函数我没有定义。于是，我得到了第二个解决方案：</p>
-<blockquote>
-<p>base class header file, which is included by interface class header file</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">QueryResult</span> &#123;</span><br><span class="line">		<span class="comment">//该文件前面的 declaration 也要改</span></span><br><span class="line">		<span class="keyword">friend</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="type">const</span> QueryResult &amp;);</span><br><span class="line">		<span class="comment">//details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>顺便提一下我的下一个问题：为什么我会在 base_Query.h 里加上 inline 并且在后面的文件里忘记呢？</p>
-<p>此事说来话长。我的C++是从《C++ Primer》入门的。在这本书里， Lippman 很细致地讲述了 inline 的作用（也就是没啥作用），但他的示例代码里还是会习惯性地带上 inline ，这个习惯也影响到了我。事实上，我原来的 source file 里全部加了 inline declaration ，这使得我一开始遇到的错误比现在多得多——也同样因为这个原因，我只有将 interface class source file 也 include 进来才能工作。后来一个同学在 STFW （Searching The Fucking Web）后告诉我分离式编程不能使用 inline 。然后这个函数是唯一一个声明了两次的函数，所以被我忘记了（笑）。</p>
-<p>关于为什么分离式编程不能使用inline可以看<a href="https://www.cnblogs.com/GodA/p/6554591.html">这里</a>，这个作者讲得非常细致。也希望我有一天能够变成这样的内容输出者。</p>
+    <title>圣人不死，大盗不止</title>
+    <url>/Blog/2022/11/15/sheng-ren-bu-si-da-dao-bu-zhi/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/Blog/assets/css/APlayer.min.css"><script src="/Blog/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/Blog/assets/js/Meting.min.js"></script><p>《盗跖》一篇记述了“圣人”柳下惠的弟弟——盗跖。不同于他的哥哥，盗跖本人是一个无恶不作的大盗。孔子因而想去教化盗跖。不承想却被盗跖讽刺了回去。关于这篇，读者感兴趣可以去搜一搜原文；《庄子》文笔绚烂飘脱，读之非常赏心悦目。杂篇虽不是大多庄子原文，但依旧继承了许多老庄思想。</p>
+<p>这篇文章提出了一个观点：“圣人不死，大盗不止”。但一个群友对这一句的理解似乎略有偏颇：他认为盗跖只是杀人越货，孔子却是封建制度剥削阶级的代言人；孔子才是大盗。对二者的定性单纯以马列的角度来讲的确如此，但似乎并非老庄的本意——况且他们彼时还跳不出那个时代。庄子在这句话中实际阐述了这样一个观念：圣人绑架了道德，进而创造出了大盗。<br>
+庄子嘲讽孔子拿文武礼教等等东西忝居圣人，但实际上孔子的道不过是通过欺骗得来的 。正是因为他们划出了所谓道德、所谓标准。将人们分化成两部分，并恬不知耻地自居君子圣人。但是道德这玩意，一旦将它拿来划分人群。一部分人成为“圣人”的代价是必然有一部分人成为“大盗” 。<br>
+这种“想要成为圣人的野心，和害怕成为大盗的担忧”，很容易使本来正常的助人之心被异化。小学生扶老奶奶过马路，很正常的事情。但一旦用来给大家评奖，或是要求大家写“学雷锋日记”，那就会多无数个人扶老奶奶过马路。最后反而对大家，对老奶奶都不好。事实上《二十四孝》就是个典型的例子，让我们看到道德极端化会发生什么荒唐的事情<br>
+这就是《盗跖》中“小人殉财，君子殉名。其所以变其情，易其性，则异矣；”的意思。这里的君子同样是被异化的例子。他们为名而死，和小人为利而死，本质上是相似的。<br>
+这种对“道德标准化”的抨击，联系到老子的：“绝圣弃智，民利百倍；绝仁弃义，民复孝慈；绝巧弃利，盗贼无有”也是一样的观点。他们主张放弃这些“标准”，回到自然的天性。</p>
+<p>然而，我觉得老庄的思想是有历史局限性的。人在打破了道德的枷锁后，应该更自由地起舞，而非继续保持一种蒙昧的状态（以获得幸福）。尼采在宣告“上帝已死”后随之告诉我们：我们应当在自己身上探索那些曾经被上帝僭取的品质。这是我更欣赏的哲学。不要让道德成为枷锁，或 judge/classify 他人的网。而要变成自己真切认同并追求的品质。</p>
+<p>那什么是“道德标准化”呢？显然，过去已经为我们提供了无比丰富的例子：三字经、弟子规、二十四孝图……不一而足。而更惊世骇俗地说，我们现今生活中，那些国家宣传的、身边人耳提面命的、社会表扬的道德都是标准化的道德。孔子绑架了道德成为一个欺世盗名的圣人，而追逐这些“标准化道德”的人中，必然也少不了欺世盗名之徒。<br>
+举个例子，在浙大评奖评优活动中有一个“星级志愿者”的称号。它要求你必须完成一定小时数的志愿小时数才能评定相应级别的“星级志愿者”。这个称号为我在群里的论述提供了不少便利——因为群友都是浙大校友，且为“星级志愿者”刷小时数过程中的龌龊众所周知——我大一起就听 过有人好意埋怨我不会刷小时数，或者听学长学姐介绍“容易水小时数”的志愿活动，以及fake location盗刷小时数等等……</p>
+<details class="toggle"><summary class="toggle-button" style>关于志愿活动的个人经历</summary><div class="toggle-content"><p>很遗憾我大一时还没能看清这个“崇高”的事业背后的龌龊，尚陷入这个垃圾评比系统的幻梦中未能自拔。为了一个（对某些人来说）“虚幻”的头衔投进去了相当多的精力，却做了许多实际上毫无意义的志愿活动。有一次，我将我做志愿活动的照片发给了我妈妈。我妈妈很高兴地回复我：“做志愿活动很能提高能力的”。我茫然环视活动场所，一点不明白这个一大早请我们过去，穿上活动服装装作人形雕像的志愿活动提高了我什么能力。几次打击下来，我很快地完成了对它的批判+解构活动，彻底抛之脑后。</p>
+</div></details>
+<p>大家可以看到，在我们将道德标准化（用小时数衡量）并功利化（给予评奖评优）后，会催生出什么样的乱象。那我们再退一步，如果做志愿活动不是因为物质上的奖励，而是因为大家都称赞志愿者呢？这也许是个困难的话题。但我们必须坚决地给出同样的回答：这同样是“道德标准化”做的恶。社会通过垄断对道德的解释权来绑架道德。<br>
+在俄罗斯东干族（他们自认为是回族，语言以通过俄罗斯注音符表示汉语发音和语言口语化著称）歌曲<a href="https://www.bilibili.com/video/BV1pg411e7B5/?spm_id_from=333.337.search-card.all.click&amp;vd_source=b7c06a39f8d6e48af309eb2da02ab6ed">《回族》</a>中有这样一句歌词：“把谁都不哄，人家的不拿。因为我们，害怕胡大（神）。” 这句歌曲中的不欺骗本身是<strong>个人</strong>的良好品质，但却被宗教绑上了“神的旨意”。将个人的品质<strong>夺走</strong>奉献给了神。从此良好品质不再是个人的崇高选择，而变成了在神的领导下的行为。我们从此失去了追求个人品质的快乐和满足，而成为了一个追随神的奴隶。这是神对个人品质的绑架。<br>
+同样的，社会也是这样绑架道德的。于社会而言，社会将“道德”绑上了社会利益和集体的战车，并抨击，或不鼓励那些个性化的、于集体无益的行为。通过曲解词义<a href="https://www.psychspace.com/exist/On%20The%20Genealogy%20Of%20Morals.htm">（可以查查moral这个词词义的流变）</a>，为它赋媚。进而将道德解释为于社会有益，甚至单纯社会鼓励的行为。这种做法实际上不但消解了道德的部分价值，还消解了部分人的个人价值实现和价值认同（它让一部分人选择丢弃自己转而拥抱集体）。</p>
+<p>这意味着，社会实际上在做一件相当“邪恶”的事情。它通过绑架“道德”进而绑架他人的价值。每个将道德教条化并用于规训他人的都可以说是绑架者，而那些被社会声音所鼓动的人——也许他们意识不到——实际上是被绑架者。大家不要觉得这种“绑架”是很微不足道的事情——你过度低估人的脆弱了。我们总有融入集体的需求，又极端容易被群体中的主流意见所影响。比如《三体》中的那几个将叶哲泰迫害致死的小红卫兵，最后为了救集体的猪葬身洪水——物质的匮乏使他们对精神世界的依赖更高，而又不幸地生活在那样一个文化管控、社会声音高度集中的年代。这种社会绑架可以让她们轻易献出自己年轻的生命。<br>
+再回到“星级志愿者”的问题上。这种龌龊的事情实际上也是社会绑架道德的直接后果之一。由于人们需要借助“被绑架的道德”来获取某些东西，于是原来稀缺的志愿岗位瞬间变得僧多粥少。社会反而不得不创造更多的无价值岗位来让这些人（实际上毫无意义地）做志愿活动，进而造成了社会资源的无端浪费。这创造了一种巨大的荒诞性。社会绑架了“道德”本意是为了用尽可能少的代价虏获公民的价值，最后反而不得不付出额外的社会成本。这种被绑架的“道德”本身就有着强烈的创造<strong>表演</strong>的倾向。</p>
+<p>那我们该怎样为“道德”松绑呢？我必须承认：对这个问题我思考甚少。我只能提出一个大致的想法：<br>
+第一步，砸碎圣人的道德牌坊，砸掉绑在“道德”上的利益链条。为一件事去功利化的最好方式就是让它不涉及任何利益。<br>
+第二步，提高自己，以及社会的整体素质。若一个人无法接触多方观点，学不会独立思考，则终究无法逃脱“回到老路”的命运。在砸去身上枷锁的同时，也要砸去心中的枷锁。<br>
+第三步，回归本源。道德是我们对自身价值和追求的高度凝结（显然我也绑架了一部分道德的释义权，我确实不认可老庄）。它不该，也不能是一套社会模板，用来束缚和绑架社会的每一个人。相反，它应该是每一个人内心的道德律。我们应当放下狭隘的目光，停止用“被绑架的道德”这把尺衡量他人。我们应当坚强我们的内心，审慎地看待社会和他人的声音。最重要的是，聆听自己的内心，找到自己的道德律。</p>
 ]]></content>
       <categories>
-        <category>技术笔记</category>
-        <category>coding过程中踩过的坑</category>
+        <category>随笔</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>Debug</tag>
+        <tag>Essay</tag>
       </tags>
   </entry>
   <entry>
@@ -517,6 +497,57 @@ C++为我们提供了强大的智能指针，用来管理资源的生命周期�
       </categories>
       <tags>
         <tag>Essay</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>链接器查找范围</title>
+    <url>/Blog/2021/07/08/lian-jie-qi-cha-zhao-fan-wei/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/Blog/assets/css/APlayer.min.css"><script src="/Blog/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/Blog/assets/js/Meting.min.js"></script><h1>解决Visual Studio的 LNK2019 和 LNK1120 错误</h1>
+<h2 id="问题描述">问题描述</h2>
+<p>写了一个 text searching 的代码。该代码设计了数个类，并有一个 interface class 通过指向 base class 的 shared_ptr 通过 dynamic binding 来运行。然而结构设计的不是特别好，这也就导致我遇到了下面的问题：</p>
+<span id="more"></span>
+<blockquote>
+<p>interface class header file：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="type">const</span> QueryResult &amp;);</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>interface class source file</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;os, <span class="type">const</span> QueryResult &amp;query) &#123;</span><br><span class="line">	<span class="comment">// details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>base class header file, which is included by interface class header file</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">QueryResult</span> &#123;</span><br><span class="line">		<span class="comment">//下面的语句是错误来源</span></span><br><span class="line">		<span class="keyword">friend</span> <span class="keyword">inline</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="type">const</span> QueryResult &amp;);</span><br><span class="line">		<span class="comment">//details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>接着在尝试运行时就发现了 <a href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk2019?f1url=%3FappId%3DDev16IDEF1%26l%3DZH-CN%26k%3Dk(LNK2019)%26rd%3Dtrue&amp;view=msvc-160">LNK2019</a> 和 <a href="https://docs.microsoft.com/zh-cn/cpp/error-messages/tool-errors/linker-tools-error-lnk1120?f1url=%3FappId%3DDev16IDEF1%26l%3DZH-CN%26k%3Dk(LNK1120)%26rd%3Dtrue&amp;view=msvc-160">LNK1120</a> 错误。以下为错误描述：</p>
+<blockquote>
+<p>无法解析的外部符号 “class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp; __cdecl operator&lt;&lt;(class std::basic_ostream&lt;char,struct std::char_traits<char> &gt; &amp;,class QueryResult const &amp;)” (??6@YAAEAV?<img src="https://math.now.sh?inline=basic_ostream%40DU%3F" style="display:inline-block;margin: 0;">char_traits@D@std@@@std@@AEAV01@AEBVQueryResult@@@Z)，函数 main 中引用了该符号</char></char></p>
+</blockquote>
+<h2 id="尝试分析">尝试分析</h2>
+<p>根据错误描述，可以锁定错误出自上面的第一行代码。Visual Studio给出的错误是无法解析，这样一个错误描述有些宽泛，放到 dev cpp 里就会好得多，它的错误提示长下面这样子：</p>
+<blockquote>
+<p>[警告] inline 函数 ‘std::ostream&amp; 运算符&lt;&lt;(std::ostream&amp;, const QueryResult&amp;)’ used but never defined</p>
+</blockquote>
+<p>然而我一开始并没有用 dev ，而是自己看 web 调了半天，还找了我的两个同学帮我看了一下。他们的解决方案是把 source file 给 include 进来（这也让我有点吃惊，为什么大二的计科同学会没有 package 的概念）。这样的方案我显然没办法满意，我无法理解，为什么编译器会找不到一个已经 declaration 并且 defining 的函数。出于这种疑惑，我友善地提醒了一下编译器——产生了我的第一个解决方案：</p>
+<blockquote>
+<p>interface class header file：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">extern</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="type">const</span> QueryResult &amp;);</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>不得不说vs的 MSVC 编译器是真的强大，加个 extern 就能联想到同名的inline函数。如果我没有写这个blog的话，我也许会沾沾自喜于这个解决方案并且依然想破头皮都想不明白为什么会出现这种错误。直到我为了验证这个错误用 dev 上又跑了一遍。我的 dev 编译器是 g++ （版本我也不是很清楚，小白都是一键装环境的），没有这么智能，很实诚地提醒了我。由于 <code>operator&lt;&lt;</code> 函数需要调用 QueryResult object 的 members ，再加上这个函数最开始是在base_Query.h 里 declaration 的，且我的 Query.h has included the base_Query.h，所以编译器找到了 inline 版本的 declaration ，而很不幸，这个函数我没有定义。于是，我得到了第二个解决方案：</p>
+<blockquote>
+<p>base class header file, which is included by interface class header file</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">QueryResult</span> &#123;</span><br><span class="line">		<span class="comment">//该文件前面的 declaration 也要改</span></span><br><span class="line">		<span class="keyword">friend</span> std::ostream &amp;<span class="keyword">operator</span>&lt;&lt;(std::ostream &amp;, <span class="type">const</span> QueryResult &amp;);</span><br><span class="line">		<span class="comment">//details</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>顺便提一下我的下一个问题：为什么我会在 base_Query.h 里加上 inline 并且在后面的文件里忘记呢？</p>
+<p>此事说来话长。我的C++是从《C++ Primer》入门的。在这本书里， Lippman 很细致地讲述了 inline 的作用（也就是没啥作用），但他的示例代码里还是会习惯性地带上 inline ，这个习惯也影响到了我。事实上，我原来的 source file 里全部加了 inline declaration ，这使得我一开始遇到的错误比现在多得多——也同样因为这个原因，我只有将 interface class source file 也 include 进来才能工作。后来一个同学在 STFW （Searching The Fucking Web）后告诉我分离式编程不能使用 inline 。然后这个函数是唯一一个声明了两次的函数，所以被我忘记了（笑）。</p>
+<p>关于为什么分离式编程不能使用inline可以看<a href="https://www.cnblogs.com/GodA/p/6554591.html">这里</a>，这个作者讲得非常细致。也希望我有一天能够变成这样的内容输出者。</p>
+]]></content>
+      <categories>
+        <category>技术笔记</category>
+        <category>coding过程中踩过的坑</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>Debug</tag>
       </tags>
   </entry>
 </search>
