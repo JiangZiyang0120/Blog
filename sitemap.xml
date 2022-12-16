@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jzy-planet.com/Blog/book/index.html</loc>
+    
+    <lastmod>2022-12-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jzy-planet.com/Blog/2022/12/11/fan-gu-shu-ping/</loc>
+    
+    <lastmod>2022-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jzy-planet.com/Blog/2022/12/03/shen-fen-zheng-zhi-dui-zun-yan-yu-ren-tong-de-ke-qiu-shu-ping/</loc>
     
     <lastmod>2022-12-03</lastmod>
@@ -30,15 +48,6 @@
   
   <url>
     <loc>https://jzy-planet.com/Blog/2022/11/09/kui-tan-ji/</loc>
-    
-    <lastmod>2022-11-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jzy-planet.com/Blog/book/index.html</loc>
     
     <lastmod>2022-11-09</lastmod>
     
@@ -208,6 +217,20 @@
   </url>
   
   <url>
+    <loc>https://jzy-planet.com/Blog/tags/History/</loc>
+    <lastmod>2022-12-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jzy-planet.com/Blog/tags/Anthropology/</loc>
+    <lastmod>2022-12-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jzy-planet.com/Blog/tags/Politics/</loc>
     <lastmod>2022-12-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -238,14 +261,21 @@
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/Blog/categories/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E8%A7%82%E5%AF%9F/</loc>
+    <loc>https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</loc>
     <lastmod>2022-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/coding%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</loc>
+    <loc>https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/</loc>
+    <lastmod>2022-12-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jzy-planet.com/Blog/categories/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E8%A7%82%E5%AF%9F/</loc>
     <lastmod>2022-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -259,7 +289,7 @@
   </url>
   
   <url>
-    <loc>https://jzy-planet.com/Blog/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/Computer-Networking/</loc>
+    <loc>https://jzy-planet.com/Blog/categories/%E7%A4%BE%E4%BC%9A%E5%AD%A6%E8%A7%82%E5%AF%9F/%E5%8E%86%E5%8F%B2%E4%B8%8E%E4%BA%BA%E6%96%87/</loc>
     <lastmod>2022-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
